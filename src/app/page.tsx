@@ -1,0 +1,561 @@
+import CTA from "@/components/CTA";
+import type { Metadata } from "next";
+import Offers from "@/components/Offers";
+import Link from "next/link";
+import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Air2Cool Heating & Cooling | HVAC Repair & Installation in North NJ",
+  description:
+    "Air2Cool Heating & Cooling provides fast, reliable HVAC repair, installation, and maintenance across North New Jersey. Call to schedule service.",
+};
+
+const SERVICES = [
+  {
+    name: "Heating Repair",
+    href: "/services/heating-repair",
+    desc: "Fast furnace & boiler repairs - hydronic, steam, NTI, and all makes. 24/7 emergency service.",
+    iconName: "flame",
+    gradient: "from-red-500 to-orange-600"
+  },
+  {
+    name: "Heating Installation",
+    href: "/services/heating-installation",
+    desc: "New furnaces & boilers professionally installed. Free house cleaning included with every install.",
+    iconName: "flame",
+    gradient: "from-red-600 to-orange-700"
+  },
+  {
+    name: "Cooling Repair",
+    href: "/services/ac-repair",
+    desc: "Quick AC diagnostics and reliable repairs. Same-day service to beat the heat.",
+    iconName: "snowflake",
+    gradient: "from-blue-500 to-cyan-600"
+  },
+  {
+    name: "Cooling Installation",
+    href: "/services/cooling-installation",
+    desc: "New AC, heat pumps & mini splits. Expert sizing and installation. Free house cleaning!",
+    iconName: "snowflake",
+    gradient: "from-cyan-500 to-blue-600"
+  },
+  {
+    name: "Complete HVAC Systems",
+    href: "/services/hvac-installation",
+    desc: "Full heating + cooling replacement. Professional sizing and setup for whole-home comfort.",
+    iconName: "zap",
+    gradient: "from-purple-500 to-pink-600"
+  },
+  {
+    name: "Air Filtration",
+    href: "/services/air-filtration",
+    desc: "Breathe cleaner air with professional filtration systems. Protect your family's health.",
+    iconName: "wind",
+    gradient: "from-green-500 to-teal-600"
+  },
+  {
+    name: "Whole-Home Humidifier",
+    href: "/humidifier",
+    desc: "Eliminate dry winter air. Aprilaire 865 ductless steam humidifier for healthier, more comfortable homes.",
+    iconName: "droplets",
+    gradient: "from-cyan-400 to-blue-500"
+  },
+  {
+    name: "Preventative Maintenance",
+    href: "/services/preventative-maintenance",
+    desc: "Keep your system running smoothly with regular maintenance. Extend equipment life and prevent costly repairs.",
+    iconName: "wrench",
+    gradient: "from-orange-500 to-amber-600"
+  },
+  {
+    name: "Commercial Refrigeration",
+    href: "/services/commercial-refrigeration",
+    desc: "Expert commercial refrigeration service and repair for businesses across North NJ.",
+    iconName: "thermometer",
+    gradient: "from-cyan-500 to-blue-600"
+  },
+];
+
+// Icon mapping
+const ICON_MAP = {
+  flame: Flame,
+  snowflake: Snowflake,
+  zap: Zap,
+  wind: Wind,
+  wrench: Wrench,
+  thermometer: Thermometer,
+  droplets: Droplets,
+};
+
+const TRUST = [
+  "All makes & models",
+  "Transparent pricing",
+  "Emergency service",
+  "Over 20 years of service",
+];
+
+export default function HomePage() {
+  return (
+    <main className="bg-white">
+      {/* PROMINENT GOOGLE REVIEWS BANNER - Right after header */}
+      <section className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-6 shadow-2xl relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">
+            {/* Star Rating */}
+            <div className="flex flex-col items-center">
+              <div className="flex gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-8 h-8 fill-yellow-300"
+                    viewBox="0 0 20 20"
+                    style={{
+                      filter: 'drop-shadow(0 0 6px rgba(253, 224, 71, 0.6))',
+                      animation: `pulse ${2 + i * 0.2}s infinite`
+                    }}
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-5xl font-extrabold mb-1" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
+                5.0
+              </p>
+              <p className="text-xs font-semibold opacity-90">PERFECT RATING</p>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden md:block w-px h-20 bg-white/30"></div>
+
+            {/* Review Count */}
+            <div className="text-center">
+              <p className="text-4xl font-extrabold mb-2" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
+                150+
+              </p>
+              <p className="text-base font-semibold">Google Reviews</p>
+              <p className="text-xs opacity-90 mt-1">Real customers, real results</p>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden md:block w-px h-20 bg-white/30"></div>
+
+            {/* Trust Statement */}
+            <div className="text-center max-w-xs">
+              <p className="text-xl font-bold mb-1">Most Trusted HVAC</p>
+              <p className="text-base font-semibold mb-2">in North New Jersey</p>
+              <a 
+                href="/reviews" 
+                className="inline-block text-xs font-semibold bg-white text-blue-600 px-5 py-2 rounded-full hover:bg-blue-50 transition-all hover:scale-105 shadow-lg"
+              >
+                Read Our Reviews →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HERO (full bleed) */}
+      <section className="relative overflow-hidden min-h-[85vh]">
+        {/* Background video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/finalvid (1).mp4" type="video/mp4" />
+        </video>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+
+        {/* HERO CONTENT */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24">
+          <div className="max-w-4xl">
+            {/* Urgency Banner */}
+            <div className="inline-flex items-center gap-2 bg-red-600 text-white px-5 py-2.5 rounded-full font-bold text-sm mb-6 animate-pulse shadow-lg">
+              <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
+              24/7 EMERGENCY SERVICE AVAILABLE
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6">
+              HVAC Problems?
+              <br />
+              <span className="text-blue-400">We Fix It Fast.</span>
+            </h1>
+
+            {/* Subheadline with urgency */}
+            <p className="text-xl sm:text-2xl text-gray-100 font-semibold mb-4">
+              Same-Day Service • No Upsell BS • 20+ Years Trusted
+            </p>
+            
+            <p className="text-lg text-gray-300 max-w-2xl leading-relaxed mb-8">
+              Furnace out in the cold? AC dead in the heat? We're your Morris County HVAC experts with honest pricing and clean installs. Family owned since 2008.
+            </p>
+
+            {/* Trust Badges */}
+            <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-2 rounded-full">
+                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
+                  <Star className="w-4 h-4 text-white fill-white" />
+                </div>
+                <div className="text-left">
+                  <div className="font-bold text-sm">5.0 Google Rating</div>
+                  <div className="text-xs text-gray-300">150+ Reviews</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-2 rounded-full">
+                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                  <Award className="w-4 h-4 text-white" />
+                </div>
+                <div className="text-left">
+                  <div className="font-bold text-sm">Licensed & Insured</div>
+                  <div className="text-xs text-gray-300">Master HVAC Techs</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-2 rounded-full">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <DollarSign className="w-4 h-4 text-white" />
+                </div>
+                <div className="text-left">
+                  <div className="font-bold text-sm">0% Financing</div>
+                  <div className="text-xs text-gray-300">Up to $25k Available</div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="/contact"
+                className="group relative inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl transition-all hover:scale-105"
+              >
+                <span>Get Free Estimate</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+              
+              <a
+                href="tel:+12017875657"
+                className="group relative inline-flex items-center gap-3 bg-white/10 backdrop-blur hover:bg-white/20 text-white px-10 py-5 rounded-full font-bold text-lg border-2 border-white/30 transition-all hover:scale-105"
+                style={{
+                  boxShadow: '0 0 40px rgba(59, 130, 246, 0.6), 0 0 80px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.2)'
+                }}
+              >
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <Phone className="w-4 h-4 text-white" />
+                </div>
+                <div className="text-left">
+                  <div className="text-xs font-normal text-gray-300">Call Now</div>
+                  <div 
+                    className="font-bold text-2xl"
+                    style={{
+                      textShadow: '0 0 20px rgba(96, 165, 250, 0.8), 0 0 40px rgba(96, 165, 250, 0.4), 0 0 60px rgba(59, 130, 246, 0.3)'
+                    }}
+                  >
+                    (201) 787-5657
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            {/* Urgency Text */}
+            <p className="mt-6 text-sm text-yellow-300 font-semibold flex items-center justify-center gap-2">
+              <Zap className="w-4 h-4" />
+              Emergency calls answered in under 5 minutes
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* OFFERS (Goettl-style) */}
+      <Offers
+        heading="Winter Specials - Limited Time!"
+        offers={[
+          {
+            title: "$25 OFF SERVICE OR ANY REPAIR",
+            expiresText: "Never expires! • Cannot be applied to service fee",
+            imageSrc: "/2021-02-15.webp",
+            imageAlt: "Air2Cool HVAC technician performing professional ductwork installation",
+            details: [
+              "Valid on any repair service",
+              "Not valid with other offers or discounts",
+              "Cannot be applied to diagnostic service fee",
+              "Present coupon at time of service",
+            ],
+            ctaLabel: "Call (201) 787-5657",
+            ctaHref: "tel:+12017875657",
+          },
+          {
+            title: "$99 EMERGENCY FURNACE REPAIR",
+            expiresText: "Available 24/7 - Call Now!",
+            imageSrc: "/2025-01-08.webp",
+            imageAlt: "Professional NTI boiler installation by Air2Cool technicians",
+            details: [
+              "$99 diagnostic (waived if repaired)",
+              "Same-day service 7 days/week",
+              "All makes & models",
+              "Licensed Master HVAC Technicians",
+            ],
+            ctaLabel: "Call (201) 787-5657",
+            ctaHref: "tel:+12017875657",
+          },
+          {
+            title: "$500 OFF NEW FURNACE",
+            expiresText: "Limited time offer",
+            imageSrc: "/2025-12-12.webp",
+            imageAlt: "Air2Cool truck delivering new HVAC equipment to North NJ home",
+            details: [
+              "High-efficiency furnaces save on gas bills",
+              "FREE house cleaning included",
+              "0% financing available",
+              "Up to 12-year warranties",
+            ],
+            ctaLabel: "Get Free Estimate",
+            ctaHref: "/contact",
+          },
+          {
+            title: "0% APR - NO PAYMENTS TIL SPRING!",
+            expiresText: "Up to $25,000 financing",
+            imageSrc: "/2022-12-19.webp",
+            imageAlt: "Air2Cool providing professional HVAC service to residential homes in North New Jersey",
+            details: [
+              "Stay warm NOW, pay later",
+              "No payments for 6 months*",
+              "Instant approval available",
+              "*With approved credit via NJNG SaveGreen",
+            ],
+            ctaLabel: "Learn More",
+            ctaHref: "/financing",
+          },
+        ]}
+      />
+
+      {/* BODY */}
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        {/* SERVICES HEADER - Removed button CTAs, keeping as navigation only */}
+        <section className="mb-10">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
+              Complete HVAC Services
+            </h2>
+            <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+              From repairs to installations to air quality - we handle everything for your home comfort.
+            </p>
+          </div>
+        </section>
+
+        {/* SERVICE CARDS - All 9 services */}
+        <section className="mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">{SERVICES.map((s) => {
+              const Icon = ICON_MAP[s.iconName as keyof typeof ICON_MAP];
+              return (
+                <a
+                  key={s.name}
+                  href={s.href}
+                  className="group rounded-2xl border-2 border-gray-200 bg-white p-8 shadow-sm
+                             hover:shadow-xl transition-all duration-300 hover:border-blue-500 hover:-translate-y-1"
+                >
+                  {/* Icon with gradient background */}
+                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${s.gradient} text-white mb-5 shadow-lg`}>
+                    <Icon className="w-7 h-7" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-extrabold text-gray-900 text-xl mb-3 group-hover:text-blue-700 transition-colors">
+                    {s.name}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    {s.desc}
+                  </p>
+
+                  {/* Arrow indicator */}
+                  <div className="flex items-center text-blue-700 font-semibold text-sm group-hover:gap-2 transition-all">
+                    Learn More
+                    <span className="inline-block transition-transform group-hover:translate-x-1">
+                      →
+                    </span>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* RECENT PROJECTS - Call to Action */}
+        <section className="mb-16">
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Recent Projects */}
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-8 text-white shadow-2xl">
+              <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
+                See Our Work
+              </h2>
+              <p className="text-blue-100 mb-6">
+                Browse our recent HVAC installations across North New Jersey.
+              </p>
+              <Link
+                href="/projects"
+                className="inline-block bg-white text-blue-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition-all"
+              >
+                View Projects →
+              </Link>
+            </div>
+
+            {/* Troubleshooting Hub */}
+            <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl p-8 text-white shadow-2xl">
+              <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
+                HVAC Not Working?
+              </h2>
+              <p className="text-orange-100 mb-6">
+                Quick fixes for common furnace, AC, and thermostat problems.
+              </p>
+              <Link
+                href="/troubleshooting"
+                className="inline-block bg-white text-red-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition-all"
+              >
+                Get Help Now →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* WHY CHOOSE AIR2COOL - With Truck Photo */}
+        <section className="mb-16 py-20 bg-gradient-to-b from-white to-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-12">
+              Why North Jersey Chooses Air2Cool
+            </h2>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Image - Truck with Google 5-star badge */}
+              <div className="order-2 lg:order-1">
+                <img
+                  src="/images/side-truck.jpg"
+                  alt="Air2Cool HVAC service truck - Google 5-star rated contractor serving North New Jersey"
+                  className="rounded-2xl shadow-2xl w-full"
+                />
+                <p className="text-center text-sm text-gray-600 mt-4 italic">
+                  Proudly serving North New Jersey since 1998
+                </p>
+              </div>
+
+              {/* Content */}
+              <div className="order-1 lg:order-2 space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                    <Award className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">26+ Years Experience</h3>
+                    <p className="text-gray-600">Family owned and operated since 1998. Nearly three decades of keeping North Jersey comfortable.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center shrink-0">
+                    <Star className="w-6 h-6 text-white fill-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">250+ 5-Star Reviews</h3>
+                    <p className="text-gray-600">Perfect Google rating. Real customers, real results. Our reputation speaks for itself.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Licensed Master Technicians</h3>
+                    <p className="text-gray-600">All work performed by certified professionals. Fully licensed and insured in NJ.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center shrink-0">
+                    <DollarSign className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">0% Financing Available</h3>
+                    <p className="text-gray-600">Up to $25,000 with approved credit. Make your home comfortable now, pay over time.</p>
+                  </div>
+                </div>
+
+                <a
+                  href="/about"
+                  className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-all hover:scale-105"
+                >
+                  Learn More About Us →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICE AREAS BLOCK - Simplified CTAs */}
+        <section className="mb-16">
+          <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
+            <div className="bg-linear-to-r from-brand-blue to-brand-red p-px">
+              <div className="bg-white p-8 sm:p-10">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
+                  Service Areas
+                </h2>
+                <p className="mt-3 text-gray-700 max-w-3xl leading-relaxed">
+                  Proudly serving Morris, Sussex, Warren, Essex, Passaic, Union,
+                  and Bergen County.
+                </p>
+
+                <div className="mt-6">
+                  <a
+                    href="/service-areas"
+                    className="inline-flex items-center text-brand-blue font-semibold hover:underline"
+                  >
+                    View all towns we serve →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FINAL CTA - One strong call to action before footer */}
+        <section className="mb-8">
+          <div className="bg-gradient-to-r from-brand-blue to-brand-red rounded-3xl p-12 text-center text-white shadow-xl">
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg sm:text-xl mb-8 text-blue-50 max-w-2xl mx-auto">
+              Get a free estimate or schedule service today. Our team is standing by.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a
+                href="/contact"
+                className="rounded-full bg-white px-8 py-4 text-brand-blue font-bold shadow-lg hover:bg-gray-50 text-lg"
+              >
+                Get Free Estimate
+              </a>
+              <a
+                href="tel:+12017875657"
+                className="rounded-full bg-white/10 px-8 py-4 text-white font-semibold ring-2 ring-white hover:bg-white/20 text-lg backdrop-blur"
+              >
+                Call (201) 787-5657
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}

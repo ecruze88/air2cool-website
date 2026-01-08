@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+}
+@theme {
+  --color-brand-blue: #1f5fbf;
+  --color-brand-red: #c62828;
+  --color-brand-gray: #6b7280;
+  
+}
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

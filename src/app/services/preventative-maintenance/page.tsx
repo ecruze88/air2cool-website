@@ -1,0 +1,215 @@
+import type { Metadata } from "next";
+import { Wrench, CheckCircle, Calendar, DollarSign } from "lucide-react";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Preventative Maintenance | Air2Cool - North NJ",
+  description:
+    "Affordable HVAC preventative maintenance in North NJ. Extend equipment life, prevent costly repairs, and keep your system running smoothly. One visit per year with great perks!",
+};
+
+export default function PreventativeMaintenancePage() {
+  return (
+    <main className="bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-linear-to-br from-orange-900 via-amber-800 to-orange-800 text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+              backgroundSize: "40px 40px",
+            }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-28">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-wide mb-4">
+              <Wrench className="w-4 h-4" />
+              PREVENTATIVE MAINTENANCE
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+              Keep Your Comfort System Running Smoothly
+            </h1>
+
+            <p className="text-xl text-gray-200 leading-relaxed max-w-3xl mb-8">
+              Preventative maintenance is key to the longevity and reliability of your comfort system. If you're looking for a company that can take care of this important task for you, choose Air2Cool Heating/AC & Refrigeration. With over 20 years of experience, we know how to prevent future problems and keep your equipment running smoothly for years to come!
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/maintenance-contract"
+                className="bg-white text-orange-700 px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:bg-gray-50"
+              >
+                Sign Up Today
+              </Link>
+              <a
+                href="tel:+12017875657"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur text-white px-8 py-4 rounded-full font-semibold text-lg transition-all border border-white/20"
+              >
+                Call (201) 787-5657
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16 fill-white">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+          </svg>
+        </div>
+      </section>
+
+      {/* Program Benefits */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="bg-linear-to-br from-orange-100 to-amber-100 rounded-3xl p-8">
+                {/* Placeholder - replace with actual image */}
+                <div className="rounded-2xl bg-linear-to-br from-orange-600 to-amber-600 aspect-4/3 flex items-center justify-center shadow-lg">
+                  <Wrench className="w-32 h-32 text-white opacity-20" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
+                Benefit From Our Preventative Maintenance Program
+              </h2>
+              
+              <p className="text-lg text-gray-700 mb-6">
+                When you sign up for our preventative HVAC maintenance program, you'll enjoy the following services and perks:
+              </p>
+
+              <div className="space-y-4">
+                {[
+                  "One visit per year",
+                  "Filter replacement, if provided, will be done for free, or we can install a standard one-inch thick filter for an additional fee",
+                  "Refrigerant levels check",
+                  "All electrical components checked and loose connections tightened",
+                  "Condensate drain lines cleaned to avoid water damage to ceilings",
+                  "Discharge temperatures checked",
+                  "Visual inspection for mold",
+                  "Odor neutralizer applied to drain pan",
+                  "Evaporator coil disinfection",
+                  "Outdoor unit coil washing",
+                  "10% discounts on all parts",
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-orange-600 shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Important Note */}
+      <section className="py-12 bg-orange-50 border-y border-orange-200">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border-2 border-orange-300">
+            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+              <Calendar className="w-6 h-6 text-orange-600" />
+              Important Information
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Please note that our agreement is only for preventative maintenance. It does not cover any repairs, service calls, ductwork imperfections, thermostats, or refrigerant leaks. For more information about our pricing, please contact us today.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Maintenance Matters */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12 text-center">
+            Why Regular Maintenance Matters
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-linear-to-br from-orange-50 to-amber-50 rounded-2xl p-8 border-2 border-orange-200">
+              <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <DollarSign className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Lower Energy Bills
+              </h3>
+              <p className="text-gray-700">
+                A well-maintained system runs more efficiently, reducing your monthly utility costs and saving you money.
+              </p>
+            </div>
+
+            <div className="bg-linear-to-br from-orange-50 to-amber-50 rounded-2xl p-8 border-2 border-orange-200">
+              <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <Wrench className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Prevent Costly Repairs
+              </h3>
+              <p className="text-gray-700">
+                Catch small issues before they become expensive problems. Regular maintenance prevents major breakdowns.
+              </p>
+            </div>
+
+            <div className="bg-linear-to-brrom-orange-50 to-amber-50 rounded-2xl p-8 border-2 border-orange-200">
+              <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <Calendar className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Extend Equipment Life
+              </h3>
+              <p className="text-gray-700">
+                Proper maintenance can add years to your HVAC system's lifespan, delaying the need for expensive replacement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Testimonial */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-block bg-white rounded-2xl p-8 shadow-lg border-2 border-orange-200">
+            <p className="text-gray-700 italic text-lg mb-4">
+              "Hector and his crew are absolutely professional! We are ready for winter! Honest and fair business... totally recommend!"
+            </p>
+            <p className="font-semibold text-gray-900">
+              - Sandra Clark, Google Review
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-linear-to-r from-orange-700 to-amber-600">
+        <div className="max-w-4xl mx-auto px-6 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            Affordably Priced Preventative Maintenance
+          </h2>
+          <p className="text-xl text-orange-100 mb-8">
+            Protect your investment and keep your system running smoothly. Sign up for our maintenance program today!
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="/maintenance-contract"
+              className="bg-white text-orange-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition"
+            >
+              Contact Us Today
+            </Link>
+            <a
+              href="tel:+12017875657"
+              className="bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white/20 transition"
+            >
+              Call (201) 787-5657
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
