@@ -422,6 +422,7 @@ export default function ContactClientDual() {
                         name="email"
                         type="email"
                         placeholder="john@email.com"
+                        required
                         maxLength={140}
                         className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
                       />
@@ -435,6 +436,7 @@ export default function ContactClientDual() {
                         name="phone"
                         type="tel"
                         placeholder="(201) 555-1234"
+                        required
                         maxLength={32}
                         className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
                       />
