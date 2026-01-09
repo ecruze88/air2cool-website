@@ -147,7 +147,7 @@ export default function HomePage() {
 
             {/* Trust Statement */}
             <div className="text-center max-w-xs">
-              <p className="text-xl font-bold mb-1">Most Trusted HVAC</p>
+              <p className="text-xl font-bold mb-1">Most Trusted HVACshal;fjsdaih;f</p>
               <p className="text-base font-semibold mb-2">in North New Jersey</p>
               <a 
                 href="/reviews" 
