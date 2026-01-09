@@ -171,7 +171,7 @@ export default function HomePage() {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/finalvid%20(1).mp4" type="video/mp4" />
+          <source src="/finalvid.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
