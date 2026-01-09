@@ -1,4 +1,3 @@
-import CTA from "@/components/CTA";
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -16,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/financing',
     '/maintenance-contract',
+    '/troubleshooting',
+    '/projects',
   ]
   
   // Service pages
@@ -23,9 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/heating-repair',
     '/services/ac-repair',
     '/services/hvac-installation',
+    '/services/heating-installation',
     '/services/air-filtration',
     '/services/preventative-maintenance',
     '/services/commercial-refrigeration',
+    '/humidifier',
   ]
   
   // Location pages (you can add these as you create them)
