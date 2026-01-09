@@ -171,7 +171,7 @@ export default function HomePage() {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/finalvid (1).mp4" type="video/mp4" />
+          <source src="/finalvid%20(1).mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
@@ -442,7 +442,7 @@ export default function HomePage() {
               {/* Image - Truck with Google 5-star badge */}
               <div className="order-2 lg:order-1">
                 <img
-                  src="/images/side-truck.jpg"
+                  src="/side-truck.jpg"
                   alt="Air2Cool HVAC service truck - Google 5-star rated contractor serving North New Jersey"
                   className="rounded-2xl shadow-2xl w-full"
                 />
