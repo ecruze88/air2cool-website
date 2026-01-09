@@ -30,19 +30,19 @@ export default function MobileMenu() {
       {/* Overlay - Only shows when menu is open */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-[10000] lg:hidden"
+          className="fixed inset-0 bg-black/50 z-[99998] lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Slide-out Menu - Only shows on mobile */}
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] bg-white z-[10001] shadow-2xl lg:hidden transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[280px] bg-white z-[99999] shadow-2xl lg:hidden transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Menu Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-200">
+        <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-white">
           <div>
             <div className="font-bold text-gray-900">Menu</div>
             <div className="text-sm text-gray-600">Air2Cool HVAC</div>
@@ -70,7 +70,7 @@ export default function MobileMenu() {
         </div>
 
         {/* Navigation Links */}
-        <nav className="py-4">
+        <nav className="py-4 bg-white">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -89,7 +89,7 @@ export default function MobileMenu() {
         </nav>
 
         {/* Call Button */}
-        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200 bg-gray-50">
+        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200 bg-white">
           <a
             href="tel:+12017875657"
             className="flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-full font-bold transition-colors shadow-lg"
