@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AlertTriangle, CheckCircle, Flame, Snowflake, Thermometer, Wrench, Phone, Clock, DollarSign } from "lucide-react";
+import { AlertTriangle, CheckCircle, Flame, Snowflake, Thermometer, Wrench, Phone, Clock, DollarSign, ArrowRight, MessageSquare } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,6 +12,8 @@ const HEATING_ISSUES = [
   {
     problem: "Furnace Won't Start or Ignite",
     icon: Flame,
+    severity: "high",
+    estimatedTime: "10-15 minutes",
     quickChecks: [
       "Thermostat set to HEAT and above current room temperature",
       "Circuit breaker hasn't tripped",
@@ -26,11 +28,14 @@ const HEATING_ISSUES = [
       "Pressure switch failure",
       "Gas valve issue",
     ],
-    callIf: "Furnace still won't start after basic checks. Igniters and flame sensors require professional diagnosis.",
+    callIf: "Furnace still won't start after basic checks. Igniters and flame sensors require professional diagnosis and replacement.",
+    proTip: "80% of no-heat calls are igniter failures. If your furnace is 5+ years old and won't ignite, this is the likely culprit.",
   },
   {
     problem: "Furnace Blowing Cold Air",
     icon: Flame,
+    severity: "high",
+    estimatedTime: "5-10 minutes",
     quickChecks: [
       "Thermostat set to HEAT (not just fan ON)",
       "Give it 5 minutes - furnace needs time to warm up",
@@ -41,14 +46,17 @@ const HEATING_ISSUES = [
       "Pilot light or ignition failure",
       "Faulty gas valve",
       "Dirty flame sensor shutting off burners",
-      "Ductwork disconnected",
+      "Ductwork disconnected or leaking",
       "Thermostat wiring issue",
     ],
     callIf: "Cold air continues after 10+ minutes. Could be ignition system failure or gas supply issue.",
+    proTip: "If the blower is running but no heat comes on within 3-5 minutes, turn it OFF to avoid circulating cold air and wasting energy.",
   },
   {
     problem: "Boiler Not Firing or Producing Heat",
     icon: Flame,
+    severity: "high",
+    estimatedTime: "5-15 minutes",
     quickChecks: [
       "Thermostat calling for heat",
       "Boiler power and circuit breaker ON",
@@ -63,11 +71,14 @@ const HEATING_ISSUES = [
       "Bad zone valve",
       "Ignition failure",
     ],
-    callIf: "Boiler pressure low, making strange noises, or not responding to thermostat. These systems are complex.",
+    callIf: "Boiler pressure low, making strange noises, or not responding to thermostat. These systems are complex and require professional service.",
+    proTip: "Most homeowners can safely add water to a boiler if pressure is low. Check your manual for the fill valve location - but call us if you're unsure.",
   },
   {
     problem: "Furnace Short Cycling (Turning On/Off Repeatedly)",
     icon: Flame,
+    severity: "medium",
+    estimatedTime: "15-20 minutes",
     quickChecks: [
       "Replace air filter if dirty",
       "Check all vents are open",
@@ -82,6 +93,7 @@ const HEATING_ISSUES = [
       "Failed limit switch",
     ],
     callIf: "Problem persists after filter change. Short cycling wastes gas and wears out equipment.",
+    proTip: "Short cycling can reduce your furnace's lifespan by years. Address this issue quickly to avoid a costly premature replacement.",
   },
 ];
 
@@ -89,6 +101,8 @@ const COOLING_ISSUES = [
   {
     problem: "AC Not Cooling or Blowing Warm Air",
     icon: Snowflake,
+    severity: "high",
+    estimatedTime: "10-20 minutes",
     quickChecks: [
       "Thermostat set to COOL below current room temperature",
       "Air filter clean",
@@ -103,11 +117,14 @@ const COOLING_ISSUES = [
       "Frozen evaporator coil",
       "Bad capacitor",
     ],
-    callIf: "Unit running but not cooling, or if you see ice. Low refrigerant requires EPA-certified technician.",
+    callIf: "Unit running but not cooling, or if you see ice. Low refrigerant requires EPA-certified technician to diagnose and repair.",
+    proTip: "If your AC is over 10 years old and needs major repairs, replacement is often more cost-effective. We'll give you honest advice on repair vs. replace.",
   },
   {
     problem: "AC Won't Turn On At All",
     icon: Snowflake,
+    severity: "high",
+    estimatedTime: "10-15 minutes",
     quickChecks: [
       "Both circuit breakers ON (one inside, one outside)",
       "Thermostat has power (screen lit up)",
@@ -122,11 +139,14 @@ const COOLING_ISSUES = [
       "Condensate overflow safety shutoff activated",
       "Bad capacitor",
     ],
-    callIf: "No power to unit or breakers keep tripping. Could be electrical issue or failed component.",
+    callIf: "No power to unit or breakers keep tripping. Could be electrical issue or failed component that needs professional diagnosis.",
+    proTip: "If the breaker keeps tripping immediately when you turn on the AC, DO NOT keep resetting it. This indicates a serious electrical problem.",
   },
   {
     problem: "AC Frozen or Iced Up",
     icon: Snowflake,
+    severity: "medium",
+    estimatedTime: "4-6 hours (ice melt time)",
     quickChecks: [
       "Turn AC OFF immediately",
       "Set thermostat to FAN ONLY to melt ice",
@@ -141,11 +161,14 @@ const COOLING_ISSUES = [
       "Bad blower motor",
       "Thermostat set too low",
     ],
-    callIf: "Ice returns after melting, or if you suspect refrigerant leak. Continuing to run frozen AC damages compressor.",
+    callIf: "Ice returns after melting, or if you suspect refrigerant leak. Continuing to run a frozen AC can damage the compressor.",
+    proTip: "Never chip ice off the coils! Let it melt naturally with the fan running. Chipping can damage the delicate aluminum fins.",
   },
   {
     problem: "AC Making Loud or Strange Noises",
     icon: Snowflake,
+    severity: "high",
+    estimatedTime: "5 minutes",
     quickChecks: [
       "Clear debris around outdoor unit",
       "Tighten any loose panels",
@@ -154,12 +177,13 @@ const COOLING_ISSUES = [
     ],
     likelyCauses: [
       "Loose or broken fan blade",
-      "Failed compressor (grinding)",
+      "Failed compressor (grinding noise)",
       "Bad bearings (squealing)",
       "Refrigerant leak (hissing)",
       "Debris in unit",
     ],
-    callIf: "Loud grinding, banging, or squealing. Turn OFF to prevent further damage. These noises indicate failing parts.",
+    callIf: "Loud grinding, banging, or squealing. Turn OFF to prevent further damage. These noises indicate failing parts that need immediate attention.",
+    proTip: "A loud 'BANG' when the AC starts often means a failing compressor. This is one of the most expensive repairs - we'll help you decide if repair or replacement makes sense.",
   },
 ];
 
@@ -167,6 +191,8 @@ const THERMOSTAT_ISSUES = [
   {
     problem: "Thermostat Blank Screen or Not Responding",
     icon: Thermometer,
+    severity: "medium",
+    estimatedTime: "5-10 minutes",
     quickChecks: [
       "Replace batteries (if wireless)",
       "Check circuit breaker for furnace/AC",
@@ -182,10 +208,13 @@ const THERMOSTAT_ISSUES = [
       "Failed transformer",
     ],
     callIf: "Screen stays blank after battery replacement. Could be wiring issue or blown transformer at furnace.",
+    proTip: "Most thermostats beep or flash when batteries are low. Change them annually in the fall before heating season to avoid surprises.",
   },
   {
     problem: "Thermostat Not Reaching Set Temperature",
     icon: Thermometer,
+    severity: "low",
+    estimatedTime: "30+ minutes (testing)",
     quickChecks: [
       "Verify correct mode (HEAT in winter, COOL in summer)",
       "Check if temperature is reasonable (not set to 85° in winter)",
@@ -201,12 +230,24 @@ const THERMOSTAT_ISSUES = [
       "Refrigerant leak (AC)",
     ],
     callIf: "System runs constantly but never reaches temp. May need system evaluation or thermostat relocation.",
+    proTip: "If your system runs 24/7 in extreme weather but keeps you comfortable, it may just be working at capacity. This is normal and not necessarily a problem.",
   },
 ];
 
 export default function TroubleshootingPage() {
   return (
     <main className="bg-white">
+      {/* Sticky Call Button - Mobile */}
+      <div className="fixed bottom-6 right-6 z-50 lg:hidden">
+        <a
+          href="tel:+12017875657"
+          className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-full font-bold shadow-2xl transition-all hover:scale-105"
+        >
+          <Phone className="w-5 h-5" />
+          Emergency Call
+        </a>
+      </div>
+
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-red-900 via-orange-800 to-red-800 text-white overflow-hidden py-20">
         <div className="absolute inset-0 opacity-10">
@@ -260,7 +301,7 @@ export default function TroubleshootingPage() {
               </div>
               <div className="bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
                 <DollarSign className="inline w-4 h-4 mr-1" />
-                $99 Diagnostic (Waived if Repaired)
+                Upfront Pricing - No Hidden Fees
               </div>
               <div className="bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
                 <CheckCircle className="inline w-4 h-4 mr-1" />
@@ -278,7 +319,7 @@ export default function TroubleshootingPage() {
       </section>
 
       {/* Quick Jump Navigation */}
-      <section className="py-8 bg-gray-50 border-b border-gray-200">
+      <section className="py-8 bg-gray-50 border-b border-gray-200 sticky top-0 z-40 shadow-sm">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap items-center justify-center gap-4">
             <span className="text-sm font-semibold text-gray-700">Jump to:</span>
@@ -317,18 +358,33 @@ export default function TroubleshootingPage() {
           <div className="space-y-8">
             {HEATING_ISSUES.map((issue, index) => {
               const Icon = issue.icon;
+              const severityConfig = {
+                high: { badge: '🔴 URGENT', color: 'bg-red-100 text-red-700 border-red-300' },
+                medium: { badge: '🟠 IMPORTANT', color: 'bg-orange-100 text-orange-700 border-orange-300' },
+                low: { badge: '🟡 LOW PRIORITY', color: 'bg-yellow-100 text-yellow-700 border-yellow-300' }
+              }[issue.severity];
+
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 border-2 border-red-200"
+                  className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 border-2 border-red-200 hover:shadow-lg transition-shadow"
                 >
+                  {/* Header with severity badge */}
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center shrink-0">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{issue.problem}</h3>
-                      <p className="text-sm text-gray-600">Try these quick checks first:</p>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-center gap-3 mb-2">
+                        <h3 className="text-2xl font-bold text-gray-900">{issue.problem}</h3>
+                        <span className={`text-xs font-bold px-3 py-1 rounded-full border ${severityConfig.color}`}>
+                          {severityConfig.badge}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-600 flex items-center gap-2">
+                        <Clock className="w-4 h-4" />
+                        Estimated troubleshooting time: {issue.estimatedTime}
+                      </p>
                     </div>
                   </div>
 
@@ -337,12 +393,12 @@ export default function TroubleshootingPage() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                         <CheckCircle className="w-5 h-5 text-green-600" />
-                        Quick Checks (DIY)
+                        Quick Checks (DIY - Try These First!)
                       </h4>
                       <ul className="space-y-2">
                         {issue.quickChecks.map((check, i) => (
                           <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
-                            <span className="text-green-600 mt-0.5 shrink-0">✓</span>
+                            <span className="text-green-600 mt-0.5 shrink-0 font-bold">✓</span>
                             <span>{check}</span>
                           </li>
                         ))}
@@ -353,7 +409,7 @@ export default function TroubleshootingPage() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                         <AlertTriangle className="w-5 h-5 text-orange-600" />
-                        Likely Causes (Need Pro)
+                        Likely Causes (Professional Repair)
                       </h4>
                       <ul className="space-y-2">
                         {issue.likelyCauses.map((cause, i) => (
@@ -366,11 +422,36 @@ export default function TroubleshootingPage() {
                     </div>
                   </div>
 
+                  {/* Pro Tip */}
+                  {issue.proTip && (
+                    <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-4">
+                      <p className="text-sm text-blue-900">
+                        <strong className="text-blue-700">💡 Pro Tip:</strong> {issue.proTip}
+                      </p>
+                    </div>
+                  )}
+
                   {/* When to Call */}
                   <div className="bg-white rounded-xl p-4 border-2 border-red-300">
-                    <p className="text-sm text-gray-900">
+                    <p className="text-sm text-gray-900 mb-3">
                       <strong className="text-red-600">Call Air2Cool if:</strong> {issue.callIf}
                     </p>
+                    <div className="flex flex-wrap gap-3">
+                      <a
+                        href="tel:+12017875657"
+                        className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all"
+                      >
+                        <Phone className="w-4 h-4" />
+                        Call (201) 787-5657
+                      </a>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 bg-white border-2 border-red-600 text-red-600 hover:bg-red-50 px-4 py-2 rounded-full text-sm font-semibold transition-all"
+                      >
+                        Get Free Estimate
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );
@@ -395,18 +476,32 @@ export default function TroubleshootingPage() {
           <div className="space-y-8">
             {COOLING_ISSUES.map((issue, index) => {
               const Icon = issue.icon;
+              const severityConfig = {
+                high: { badge: '🔴 URGENT', color: 'bg-red-100 text-red-700 border-red-300' },
+                medium: { badge: '🟠 IMPORTANT', color: 'bg-orange-100 text-orange-700 border-orange-300' },
+                low: { badge: '🟡 LOW PRIORITY', color: 'bg-yellow-100 text-yellow-700 border-yellow-300' }
+              }[issue.severity];
+
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-200"
+                  className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border-2 border-blue-200 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shrink-0">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{issue.problem}</h3>
-                      <p className="text-sm text-gray-600">Try these quick checks first:</p>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-center gap-3 mb-2">
+                        <h3 className="text-2xl font-bold text-gray-900">{issue.problem}</h3>
+                        <span className={`text-xs font-bold px-3 py-1 rounded-full border ${severityConfig.color}`}>
+                          {severityConfig.badge}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-600 flex items-center gap-2">
+                        <Clock className="w-4 h-4" />
+                        Estimated troubleshooting time: {issue.estimatedTime}
+                      </p>
                     </div>
                   </div>
 
@@ -414,12 +509,12 @@ export default function TroubleshootingPage() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                         <CheckCircle className="w-5 h-5 text-green-600" />
-                        Quick Checks (DIY)
+                        Quick Checks (DIY - Try These First!)
                       </h4>
                       <ul className="space-y-2">
                         {issue.quickChecks.map((check, i) => (
                           <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
-                            <span className="text-green-600 mt-0.5 shrink-0">✓</span>
+                            <span className="text-green-600 mt-0.5 shrink-0 font-bold">✓</span>
                             <span>{check}</span>
                           </li>
                         ))}
@@ -429,7 +524,7 @@ export default function TroubleshootingPage() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                         <AlertTriangle className="w-5 h-5 text-orange-600" />
-                        Likely Causes (Need Pro)
+                        Likely Causes (Professional Repair)
                       </h4>
                       <ul className="space-y-2">
                         {issue.likelyCauses.map((cause, i) => (
@@ -442,10 +537,34 @@ export default function TroubleshootingPage() {
                     </div>
                   </div>
 
+                  {issue.proTip && (
+                    <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-4">
+                      <p className="text-sm text-blue-900">
+                        <strong className="text-blue-700">💡 Pro Tip:</strong> {issue.proTip}
+                      </p>
+                    </div>
+                  )}
+
                   <div className="bg-white rounded-xl p-4 border-2 border-blue-300">
-                    <p className="text-sm text-gray-900">
+                    <p className="text-sm text-gray-900 mb-3">
                       <strong className="text-blue-600">Call Air2Cool if:</strong> {issue.callIf}
                     </p>
+                    <div className="flex flex-wrap gap-3">
+                      <a
+                        href="tel:+12017875657"
+                        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all"
+                      >
+                        <Phone className="w-4 h-4" />
+                        Call (201) 787-5657
+                      </a>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-full text-sm font-semibold transition-all"
+                      >
+                        Get Free Estimate
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );
@@ -470,18 +589,32 @@ export default function TroubleshootingPage() {
           <div className="space-y-8">
             {THERMOSTAT_ISSUES.map((issue, index) => {
               const Icon = issue.icon;
+              const severityConfig = {
+                high: { badge: '🔴 URGENT', color: 'bg-red-100 text-red-700 border-red-300' },
+                medium: { badge: '🟠 IMPORTANT', color: 'bg-orange-100 text-orange-700 border-orange-300' },
+                low: { badge: '🟡 LOW PRIORITY', color: 'bg-yellow-100 text-yellow-700 border-yellow-300' }
+              }[issue.severity];
+
               return (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-200"
+                  className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border-2 border-purple-200 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center shrink-0">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{issue.problem}</h3>
-                      <p className="text-sm text-gray-600">Try these quick checks first:</p>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-center gap-3 mb-2">
+                        <h3 className="text-2xl font-bold text-gray-900">{issue.problem}</h3>
+                        <span className={`text-xs font-bold px-3 py-1 rounded-full border ${severityConfig.color}`}>
+                          {severityConfig.badge}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-600 flex items-center gap-2">
+                        <Clock className="w-4 h-4" />
+                        Estimated troubleshooting time: {issue.estimatedTime}
+                      </p>
                     </div>
                   </div>
 
@@ -489,12 +622,12 @@ export default function TroubleshootingPage() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                         <CheckCircle className="w-5 h-5 text-green-600" />
-                        Quick Checks (DIY)
+                        Quick Checks (DIY - Try These First!)
                       </h4>
                       <ul className="space-y-2">
                         {issue.quickChecks.map((check, i) => (
                           <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
-                            <span className="text-green-600 mt-0.5 shrink-0">✓</span>
+                            <span className="text-green-600 mt-0.5 shrink-0 font-bold">✓</span>
                             <span>{check}</span>
                           </li>
                         ))}
@@ -504,7 +637,7 @@ export default function TroubleshootingPage() {
                     <div>
                       <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
                         <AlertTriangle className="w-5 h-5 text-orange-600" />
-                        Likely Causes (Need Pro)
+                        Likely Causes (Professional Repair)
                       </h4>
                       <ul className="space-y-2">
                         {issue.likelyCauses.map((cause, i) => (
@@ -517,10 +650,34 @@ export default function TroubleshootingPage() {
                     </div>
                   </div>
 
+                  {issue.proTip && (
+                    <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-4">
+                      <p className="text-sm text-blue-900">
+                        <strong className="text-blue-700">💡 Pro Tip:</strong> {issue.proTip}
+                      </p>
+                    </div>
+                  )}
+
                   <div className="bg-white rounded-xl p-4 border-2 border-purple-300">
-                    <p className="text-sm text-gray-900">
+                    <p className="text-sm text-gray-900 mb-3">
                       <strong className="text-purple-600">Call Air2Cool if:</strong> {issue.callIf}
                     </p>
+                    <div className="flex flex-wrap gap-3">
+                      <a
+                        href="tel:+12017875657"
+                        className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all"
+                      >
+                        <Phone className="w-4 h-4" />
+                        Call (201) 787-5657
+                      </a>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-4 py-2 rounded-full text-sm font-semibold transition-all"
+                      >
+                        Get Free Estimate
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );
@@ -542,7 +699,7 @@ export default function TroubleshootingPage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 mb-8">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Call Air2Cool immediately if:</h3>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -647,6 +804,33 @@ export default function TroubleshootingPage() {
               </div>
             </div>
           </div>
+
+          {/* Quick Contact Options */}
+          <div className="grid md:grid-cols-3 gap-4">
+            <a
+              href="tel:+12017875657"
+              className="bg-red-600 hover:bg-red-700 text-white p-6 rounded-2xl text-center transition-all hover:scale-105 shadow-lg"
+            >
+              <Phone className="w-8 h-8 mx-auto mb-2" />
+              <div className="font-bold mb-1">Call Now</div>
+              <div className="text-sm">(201) 787-5657</div>
+            </a>
+
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-2xl text-center transition-all hover:scale-105 shadow-lg"
+            >
+              <MessageSquare className="w-8 h-8 mx-auto mb-2" />
+              <div className="font-bold mb-1">Get Free Estimate</div>
+              <div className="text-sm">Schedule Online</div>
+            </Link>
+
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-6 rounded-2xl text-center border-2 border-gray-300">
+              <CheckCircle className="w-8 h-8 mx-auto mb-2 text-gray-700" />
+              <div className="font-bold text-gray-900 mb-1">26+ Years</div>
+              <div className="text-sm text-gray-600">Licensed & Insured</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -668,9 +852,9 @@ export default function TroubleshootingPage() {
                 <div className="text-white/80">Available Anytime</div>
               </div>
               <div>
-                <DollarSign className="w-8 h-8 mx-auto mb-2" />
-                <div className="font-bold">$99 Diagnostic</div>
-                <div className="text-white/80">Waived if Repaired</div>
+                <CheckCircle className="w-8 h-8 mx-auto mb-2" />
+                <div className="font-bold">Upfront Pricing</div>
+                <div className="text-white/80">No Hidden Fees</div>
               </div>
               <div>
                 <CheckCircle className="w-8 h-8 mx-auto mb-2" />
@@ -691,7 +875,7 @@ export default function TroubleshootingPage() {
               href="/contact"
               className="bg-white/10 backdrop-blur text-white px-10 py-5 rounded-full font-semibold text-lg border-2 border-white/30 transition-all hover:bg-white/20"
             >
-              Schedule Online
+              Get Free Estimate
             </Link>
           </div>
         </div>
@@ -705,8 +889,8 @@ export default function TroubleshootingPage() {
           </h2>
           
           <div className="space-y-6">
-            <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <summary className="font-bold text-gray-900 cursor-pointer">
+            <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 group">
+              <summary className="font-bold text-gray-900 cursor-pointer group-hover:text-blue-600 transition-colors">
                 Why won't my furnace ignite?
               </summary>
               <p className="text-gray-600 mt-3 text-sm">
@@ -716,8 +900,8 @@ export default function TroubleshootingPage() {
               </p>
             </details>
 
-            <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <summary className="font-bold text-gray-900 cursor-pointer">
+            <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 group">
+              <summary className="font-bold text-gray-900 cursor-pointer group-hover:text-blue-600 transition-colors">
                 Why is my AC freezing up?
               </summary>
               <p className="text-gray-600 mt-3 text-sm">
@@ -727,8 +911,8 @@ export default function TroubleshootingPage() {
               </p>
             </details>
 
-            <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <summary className="font-bold text-gray-900 cursor-pointer">
+            <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 group">
+              <summary className="font-bold text-gray-900 cursor-pointer group-hover:text-blue-600 transition-colors">
                 How often should I change my air filter?
               </summary>
               <p className="text-gray-600 mt-3 text-sm">
@@ -739,14 +923,25 @@ export default function TroubleshootingPage() {
               </p>
             </details>
 
-            <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-              <summary className="font-bold text-gray-900 cursor-pointer">
+            <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 group">
+              <summary className="font-bold text-gray-900 cursor-pointer group-hover:text-blue-600 transition-colors">
                 When should I call for emergency HVAC service?
               </summary>
               <p className="text-gray-600 mt-3 text-sm">
                 Call immediately for: gas smell, carbon monoxide alarm, no heat in freezing weather, 
                 water leaks, electrical sparks/burning smell, or loud grinding/banging noises. 
                 Air2Cool provides 24/7 emergency service across North NJ at (201) 787-5657.
+              </p>
+            </details>
+
+            <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 group">
+              <summary className="font-bold text-gray-900 cursor-pointer group-hover:text-blue-600 transition-colors">
+                Should I repair or replace my old HVAC system?
+              </summary>
+              <p className="text-gray-600 mt-3 text-sm">
+                If your system is 15+ years old and needs major repairs, replacement is often more 
+                cost-effective. We'll give you honest advice on both options, including energy savings 
+                with new equipment, financing options, and long-term value. Call for a free consultation.
               </p>
             </details>
           </div>

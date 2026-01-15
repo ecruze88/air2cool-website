@@ -2,7 +2,7 @@ import CTA from "@/components/CTA";
 import type { Metadata } from "next";
 import Offers from "@/components/Offers";
 import Link from "next/link";
-import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets } from "lucide-react";
+import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Air2Cool Heating & Cooling | HVAC Repair & Installation in North NJ",
@@ -76,6 +76,58 @@ const SERVICES = [
   },
 ];
 
+// Troubleshooting quick fixes for homepage
+const TROUBLESHOOTING_PREVIEW = [
+  {
+    problem: "Furnace Not Heating",
+    icon: Flame,
+    quickFixes: [
+      "Check thermostat set to HEAT mode",
+      "Replace thermostat batteries",
+      "Check circuit breaker",
+      "Replace dirty air filter",
+    ],
+    color: "red",
+    href: "/troubleshooting#heating"
+  },
+  {
+    problem: "AC Not Cooling",
+    icon: Snowflake,
+    quickFixes: [
+      "Check thermostat set to COOL",
+      "Replace air filter",
+      "Clear debris from outdoor unit",
+      "Check both circuit breakers",
+    ],
+    color: "blue",
+    href: "/troubleshooting#cooling"
+  },
+  {
+    problem: "Thermostat Issues",
+    icon: Thermometer,
+    quickFixes: [
+      "Replace batteries",
+      "Check furnace/AC breaker",
+      "Verify furnace door fully closed",
+      "Clean dust from thermostat",
+    ],
+    color: "purple",
+    href: "/troubleshooting#thermostat"
+  },
+  {
+    problem: "Strange Noises",
+    icon: AlertTriangle,
+    quickFixes: [
+      "Turn system OFF immediately",
+      "Check for loose panels",
+      "Clear debris from unit",
+      "Call for professional diagnosis",
+    ],
+    color: "orange",
+    href: "/troubleshooting#heating"
+  },
+];
+
 // Icon mapping
 const ICON_MAP = {
   flame: Flame,
@@ -98,7 +150,7 @@ export default function HomePage() {
   return (
     <main className="bg-white">
       {/* PROMINENT GOOGLE REVIEWS BANNER - Right after header */}
-      <section className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-6 shadow-2xl relative overflow-hidden">
+      <section className="bg-linear-to-r from-blue-600 via-blue-500 to-cyan-500 py-6 shadow-2xl relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
@@ -136,7 +188,7 @@ export default function HomePage() {
             {/* Review Count */}
             <div className="text-center">
               <p className="text-4xl font-extrabold mb-2" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
-                150+
+                250+
               </p>
               <p className="text-base font-semibold">Google Reviews</p>
               <p className="text-xs opacity-90 mt-1">Real customers, real results</p>
@@ -175,7 +227,7 @@ export default function HomePage() {
         </video>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/60 to-black/30" />
 
         {/* HERO CONTENT */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24">
@@ -195,11 +247,11 @@ export default function HomePage() {
 
             {/* Subheadline with urgency */}
             <p className="text-xl sm:text-2xl text-gray-100 font-semibold mb-4">
-              Same-Day Service • No Upsell BS • 20+ Years Trusted
+              Same-Day Service • No Upsell BS • 26+ Years Trusted
             </p>
             
             <p className="text-lg text-gray-300 max-w-2xl leading-relaxed mb-8">
-              Furnace out in the cold? AC dead in the heat? We're your Morris County HVAC experts with honest pricing and clean installs. Family owned since 2008.
+              Furnace out in the cold? AC dead in the heat? We're your NJ HVAC experts with honest pricing and clean installs. Family owned since 1998.
             </p>
 
             {/* Trust Badges */}
@@ -210,7 +262,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-left">
                   <div className="font-bold text-sm">5.0 Google Rating</div>
-                  <div className="text-xs text-gray-300">150+ Reviews</div>
+                  <div className="text-xs text-gray-300">250+ Reviews</div>
                 </div>
               </div>
               
@@ -325,7 +377,7 @@ export default function HomePage() {
             ctaHref: "/contact",
           },
           {
-            title: "0% APR - NO PAYMENTS TIL SPRING!",
+            title: "0% APR !",
             expiresText: "Up to $25,000 financing",
             imageSrc: "/2022-12-19.webp",
             imageAlt: "Air2Cool providing professional HVAC service to residential homes in North New Jersey",
@@ -343,7 +395,7 @@ export default function HomePage() {
 
       {/* BODY */}
       <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* SERVICES HEADER - Removed button CTAs, keeping as navigation only */}
+        {/* SERVICES HEADER */}
         <section className="mb-10">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
@@ -394,6 +446,131 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ========================================
+            TROUBLESHOOTING HUB - EXPANDED SECTION
+        ======================================== */}
+        <section className="mb-16">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 px-4 py-2 rounded-full font-semibold text-sm mb-4">
+              <AlertTriangle className="w-4 h-4" />
+              DIY HELP CENTER
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+              HVAC Not Working? Try These Quick Fixes
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Before calling for service, check these common issues. Many HVAC problems have simple DIY solutions that can save you time and money.
+            </p>
+          </div>
+
+          {/* Quick Troubleshooting Cards */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {TROUBLESHOOTING_PREVIEW.map((item) => {
+              const IconComponent = item.icon;
+              const colorConfig = {
+                red: {
+                  gradient: 'from-red-500 to-orange-600',
+                  bg: 'bg-red-50',
+                  border: 'border-red-200',
+                  iconBg: 'bg-red-600',
+                  textColor: 'text-red-700'
+                },
+                blue: {
+                  gradient: 'from-blue-500 to-cyan-600',
+                  bg: 'bg-blue-50',
+                  border: 'border-blue-200',
+                  iconBg: 'bg-blue-600',
+                  textColor: 'text-blue-700'
+                },
+                purple: {
+                  gradient: 'from-purple-500 to-pink-600',
+                  bg: 'bg-purple-50',
+                  border: 'border-purple-200',
+                  iconBg: 'bg-purple-600',
+                  textColor: 'text-purple-700'
+                },
+                orange: {
+                  gradient: 'from-orange-500 to-amber-600',
+                  bg: 'bg-orange-50',
+                  border: 'border-orange-200',
+                  iconBg: 'bg-orange-600',
+                  textColor: 'text-orange-700'
+                }
+              }[item.color];
+
+              return (
+                <div
+                  key={item.problem}
+                  className={`bg-white rounded-2xl border-2 ${colorConfig.border} p-6 hover:shadow-xl transition-all duration-300 group`}
+                >
+                  {/* Icon & Title */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className={`w-12 h-12 rounded-xl ${colorConfig.iconBg} flex items-center justify-center shrink-0`}>
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {item.problem}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Quick Fixes */}
+                  <div className={`${colorConfig.bg} rounded-xl p-4 mb-4`}>
+                    <p className="font-semibold text-sm mb-3 flex items-center gap-2 text-gray-900">
+                      <CheckCircle className="w-4 h-4" />
+                      Quick Checks to Try:
+                    </p>
+                    <ul className="space-y-2">
+                      {item.quickFixes.map((fix, i) => (
+                        <li key={i} className="text-sm text-gray-700 flex items-start gap-2">
+                          <span className="text-green-600 mt-0.5 shrink-0 font-bold">✓</span>
+                          <span>{fix}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Learn More Link */}
+                  <a
+                    href={item.href}
+                    className={`inline-flex items-center gap-2 ${colorConfig.textColor} font-semibold text-sm hover:gap-3 transition-all`}
+                  >
+                    See Full Troubleshooting Guide
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Full Guide CTA */}
+          <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl p-8 text-white shadow-2xl text-center">
+            <AlertTriangle className="w-12 h-12 mx-auto mb-4" />
+            <h3 className="text-2xl md:text-3xl font-extrabold mb-3">
+              Need More Help?
+            </h3>
+            <p className="text-red-100 mb-6 max-w-2xl mx-auto">
+              Our complete troubleshooting guide covers furnace, AC, boiler, and thermostat problems with step-by-step fixes. Or call us for same-day professional service.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                href="/troubleshooting"
+                className="inline-block bg-white text-red-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition-all"
+              >
+                View Full Guide →
+              </Link>
+              <a
+                href="tel:+12017875657"
+                className="inline-block bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full font-bold text-lg border-2 border-white/30 hover:bg-white/20 transition-all"
+              >
+                Call (201) 787-5657
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* RECENT PROJECTS - Call to Action */}
         <section className="mb-16">
           <div className="grid md:grid-cols-2 gap-6">
@@ -413,19 +590,19 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Troubleshooting Hub */}
-            <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl p-8 text-white shadow-2xl">
+            {/* About Us */}
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 text-white shadow-2xl">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
-                HVAC Not Working?
+                26+ Years of Excellence
               </h2>
-              <p className="text-orange-100 mb-6">
-                Quick fixes for common furnace, AC, and thermostat problems.
+              <p className="text-purple-100 mb-6">
+                Family owned since 1998. Learn about our commitment to North Jersey.
               </p>
               <Link
-                href="/troubleshooting"
-                className="inline-block bg-white text-red-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition-all"
+                href="/about"
+                className="inline-block bg-white text-purple-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition-all"
               >
-                Get Help Now →
+                About Air2Cool →
               </Link>
             </div>
           </div>

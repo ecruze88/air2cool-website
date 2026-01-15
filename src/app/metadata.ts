@@ -105,6 +105,25 @@ export const metadata: Metadata = {
     canonical: "https://www.air2cool.com",
   },
   
+  // Icons/Favicon configuration
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
+  
   // Geo tags for local SEO
   other: {
     'geo.region': 'US-NJ',
@@ -131,7 +150,7 @@ export const localBusinessSchema = {
     "streetAddress": "Wharton", // Add your actual street address
     "addressLocality": "Wharton",
     "addressRegion": "NJ",
-    "postalCode": "07885", // Add your actual ZIP
+    "postalCode": "07885",
     "addressCountry": "US"
   },
   "geo": {
@@ -164,7 +183,47 @@ export const localBusinessSchema = {
         "name": "New Jersey"
       }
     },
-    // Add more cities as needed
+    {
+      "@type": "City",
+      "name": "Wharton",
+      "containedIn": {
+        "@type": "State",
+        "name": "New Jersey"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Rockaway",
+      "containedIn": {
+        "@type": "State",
+        "name": "New Jersey"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Denville",
+      "containedIn": {
+        "@type": "State",
+        "name": "New Jersey"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Parsippany",
+      "containedIn": {
+        "@type": "State",
+        "name": "New Jersey"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Madison",
+      "containedIn": {
+        "@type": "State",
+        "name": "New Jersey"
+      }
+    },
+    // Counties
     {
       "@type": "AdministrativeArea",
       "name": "Morris County"
@@ -224,7 +283,7 @@ export const localBusinessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "150",
+    "reviewCount": "250",
     "bestRating": "5",
     "worstRating": "1"
   },
@@ -236,7 +295,7 @@ export const localBusinessSchema = {
   ],
   "founder": {
     "@type": "Person",
-    "name": "Hector" // Add last name if you want
+    "name": "Hector"
   },
   "foundingDate": "2008",
   "slogan": "Clean installs, honest pricing, fast service",

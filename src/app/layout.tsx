@@ -1,8 +1,9 @@
 import "./globals.css";
 export { metadata, localBusinessSchema } from "./metadata";
-import { Facebook, Instagram, Youtube, Star } from "lucide-react";
+import { Facebook, Instagram, Youtube, Star, Wrench } from "lucide-react";
 import Script from "next/script";
 import MobileMenu from "@/components/MobileMenu";
+import { Analytics } from "@vercel/analytics/next"
 
 const businessName = process.env.BUSINESS_NAME || "Air2Cool Heating & Cooling";
 
@@ -163,22 +164,56 @@ export default function RootLayout({
 
               {/* Desktop Navigation - Hidden on mobile */}
               <nav className="hidden lg:flex items-center gap-1">
-                {[
-                  { label: "Services", href: "/services" },
-                  { label: "Areas", href: "/service-areas" },
-                  { label: "About", href: "/about" },
-                  { label: "Reviews", href: "/reviews" },
-                  { label: "FAQ", href: "/faq" },
-                ].map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
-                               hover:bg-gray-100 hover:text-brand-blue transition-colors"
-                  >
-                    {item.label}
-                  </a>
-                ))}
+                <a
+                  href="/services"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
+                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
+                >
+                  Services
+                </a>
+
+                {/* NEW - Troubleshooting Link */}
+                <a
+                  href="/troubleshooting"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
+                             hover:bg-gray-100 hover:text-orange-600 transition-colors
+                             inline-flex items-center gap-1.5 group"
+                >
+                  <Wrench className="w-4 h-4 group-hover:text-orange-500 transition-colors" />
+                  Troubleshooting
+                </a>
+
+                <a
+                  href="/service-areas"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
+                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
+                >
+                  Areas
+                </a>
+
+                <a
+                  href="/about"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
+                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
+                >
+                  About
+                </a>
+
+                <a
+                  href="/reviews"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
+                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
+                >
+                  Reviews
+                </a>
+
+                <a
+                  href="/faq"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
+                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
+                >
+                  FAQ
+                </a>
                 
                 <a
                   href="/financing"
@@ -250,6 +285,7 @@ export default function RootLayout({
                 <h4 className="text-white font-semibold mb-4">Quick Links</h4>
                 <ul className="space-y-2 text-sm">
                   <li><a href="/services" className="hover:text-white transition">Services</a></li>
+                  <li><a href="/troubleshooting" className="hover:text-white transition">Troubleshooting Guide</a></li>
                   <li><a href="/financing" className="hover:text-white transition">Financing Options</a></li>
                   <li><a href="/service-areas" className="hover:text-white transition">Service Areas</a></li>
                   <li><a href="/about" className="hover:text-white transition">About Us</a></li>
