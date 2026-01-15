@@ -63,18 +63,16 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Air2Cool Heating & Cooling was founded in 1998 with a simple mission: 
-                  provide honest, reliable HVAC service to our North New Jersey neighbors.
+Air2Cool Heating/AC & Refrigeration provides high quality, affordable HVAC repair, installation, and maintenance services for residential and commercial customers across North and Central New Jersey. We specialize in heating and air conditioning service, furnace and AC replacement, preventative maintenance, and commercial refrigeration for restaurants, retail locations, and small businesses.
+Whether you need emergency HVAC repair, seasonal maintenance, or a full system installation, Air2Cool delivers dependable service without unnecessary upsells or hidden fees. With decades of experience and a strong local reputation, we are a trusted HVAC contractor for homeowners and businesses throughout New Jersey.
                 </p>
                 <p>
-                  Over the past 26+ years, we've grown from a one-truck operation to a 
-                  full-service HVAC company serving Morris, Sussex, Warren, Essex, Passaic, 
-                  Union, and Bergen County. But we've never lost sight of what matters most: 
-                  treating every customer like family.
+We proudly serve Morris, Essex, Somerset, Middlesex, Union, Passaic, Bergen, Sussex, and Warren Counties, offering fast response times, upfront pricing, and reliable workmanship. Our licensed and experienced HVAC technicians work with all major brands and system types, ensuring efficient, long lasting solutions for homes and commercial properties.
+
                 </p>
                 <p>
-                  <strong>No high-pressure sales. No hidden fees. No upsell tactics.</strong> Just honest 
-                  recommendations, upfront pricing, and quality work backed by our reputation.
+Whether you need emergency HVAC repair, seasonal maintenance, or a full system installation, Air2Cool delivers dependable service without unnecessary upsells or hidden fees. With decades of experience and a strong local reputation, we are a trusted HVAC contractor for homeowners and businesses throughout New Jersey.
+
                 </p>
                 <p>
                   With 250+ 5-star Google reviews and thousands of satisfied customers, 
@@ -220,7 +218,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Proper Sizing</h3>
                   <p className="text-gray-600">
-                    Manual J load calculations on every installation. We size equipment correctly 
+                    We size equipment correctly 
                     for maximum efficiency and comfort - not based on what fits or what's in stock.
                   </p>
                 </div>

@@ -179,7 +179,6 @@ export default function RootLayout({
                              hover:bg-gray-100 hover:text-orange-600 transition-colors
                              inline-flex items-center gap-1.5 group"
                 >
-                  <Wrench className="w-4 h-4 group-hover:text-orange-500 transition-colors" />
                   Troubleshooting
                 </a>
 
