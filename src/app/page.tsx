@@ -150,7 +150,7 @@ export default function HomePage() {
   return (
     <main className="bg-white">
       {/* PROMINENT GOOGLE REVIEWS BANNER - Right after header */}
-      <section className="bg-linear-to-r from-blue-600 via-blue-500 to-cyan-500 py-6 shadow-2xl relative overflow-hidden">
+      <section className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-6 shadow-2xl relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
@@ -227,7 +227,7 @@ export default function HomePage() {
         </video>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/60 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
 
         {/* HERO CONTENT */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24">
@@ -377,7 +377,7 @@ export default function HomePage() {
             ctaHref: "/contact",
           },
           {
-            title: "0% APR !",
+            title: "0% APR - NO PAYMENTS TIL SPRING!",
             expiresText: "Up to $25,000 financing",
             imageSrc: "/2022-12-19.webp",
             imageAlt: "Air2Cool providing professional HVAC service to residential homes in North New Jersey",
@@ -684,7 +684,7 @@ export default function HomePage() {
         {/* SERVICE AREAS BLOCK - Simplified CTAs */}
         <section className="mb-16">
           <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
-            <div className="bg-linear-to-r from-brand-blue to-brand-red p-px">
+            <div className="bg-gradient-to-r from-brand-blue to-brand-red p-px">
               <div className="bg-white p-8 sm:p-10">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
                   Service Areas

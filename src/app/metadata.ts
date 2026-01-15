@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     template: "%s | Air2Cool Heating & Cooling",
   },
   description:
-    "Air2Cool: Family-owned HVAC contractor serving Morris, Sussex, Warren, Essex, Passaic, Union & Bergen County since 2008. 24/7 emergency service. Furnace repair, AC installation, heat pumps. Licensed & insured. Call (201) 787-5657.",
+    "Air2Cool: Family-owned HVAC contractor serving Morris, Sussex, Warren, Essex, Passaic, Union & Bergen County since 1998. 24/7 emergency service. Furnace repair, AC installation, heat pumps. Licensed & insured. Call (201) 787-5657.",
   keywords: [
     // Primary Keywords
     "HVAC North NJ",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Air2Cool Heating & Cooling | HVAC Repair & Installation North NJ",
     description:
-      "Family-owned HVAC contractor serving North NJ since 2008. 24/7 emergency furnace & AC repair. Licensed, insured, 5.0 Google rating. Call (201) 787-5657 for service.",
+      "Family-owned HVAC contractor serving North NJ since 1998. 24/7 emergency furnace & AC repair. Licensed, insured, 5.0 Google rating. Call (201) 787-5657 for service.",
     url: "https://www.air2cool.com",
     siteName: "Air2Cool Heating & Cooling",
     images: [
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Air2Cool Heating & Cooling | HVAC Services North NJ",
     description:
-      "24/7 HVAC repair & installation in Morris County. Family-owned since 2008. Licensed & insured. 5.0 ⭐ rated. Emergency service available.",
+      "24/7 HVAC repair & installation in Morris County. Family-owned since 1998. Licensed & insured. 5.0 ⭐ rated. Emergency service available.",
     images: ["/og-image.jpg"],
     creator: "@air2cool",
   },
@@ -136,12 +136,12 @@ export const localBusinessSchema = {
   "url": "https://www.air2cool.com",
   "logo": "https://www.air2cool.com/Air2Cool-HeatingAC-&-Refrigeration-Logo-237w.webp",
   "image": "https://www.air2cool.com/og-image.jpg",
-  "description": "Family-owned HVAC contractor serving North New Jersey since 2008. Specializing in furnace repair, AC installation, heat pumps, and 24/7 emergency service.",
+  "description": "Family-owned HVAC contractor serving North New Jersey since 1998. Specializing in furnace repair, AC installation, heat pumps, and 24/7 emergency service.",
   "telephone": "+1-201-787-5657",
   "email": "air2cool1@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Wharton", // Add your actual street address
+    "streetAddress": "Wharton",
     "addressLocality": "Wharton",
     "addressRegion": "NJ",
     "postalCode": "07885",
@@ -291,7 +291,7 @@ export const localBusinessSchema = {
     "@type": "Person",
     "name": "Hector"
   },
-  "foundingDate": "2008",
+  "foundingDate": "1998",
   "slogan": "Clean installs, honest pricing, fast service",
   "serviceArea": {
     "@type": "GeoCircle",

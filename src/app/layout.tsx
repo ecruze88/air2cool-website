@@ -1,6 +1,6 @@
 import "./globals.css";
 export { metadata, localBusinessSchema } from "./metadata";
-import { Facebook, Instagram, Youtube, Star, Wrench } from "lucide-react";
+import { Facebook, Instagram, Youtube, Star } from "lucide-react";
 import Script from "next/script";
 import MobileMenu from "@/components/MobileMenu";
 import { Analytics } from "@vercel/analytics/next"
@@ -51,7 +51,7 @@ export default function RootLayout({
               "url": "https://www.air2cool.com",
               "logo": "https://www.air2cool.com/Air2Cool-HeatingAC-&-Refrigeration-Logo-237w.webp",
               "image": "https://www.air2cool.com/og-image.jpg",
-              "description": "Family-owned HVAC contractor serving North New Jersey since 2008. Specializing in furnace repair, AC installation, heat pumps, and 24/7 emergency service.",
+              "description": "Family-owned HVAC contractor serving North New Jersey since 1998. Specializing in furnace repair, AC installation, heat pumps, and 24/7 emergency service.",
               "telephone": "+1-201-787-5657",
               "email": "air2cool1@gmail.com",
               "address": {
@@ -93,7 +93,7 @@ export default function RootLayout({
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "5.0",
-                "reviewCount": "150"
+                "reviewCount": "250"
               },
               "sameAs": [
                 "https://www.facebook.com/profile.php?id=100063904906666",
@@ -172,12 +172,11 @@ export default function RootLayout({
                   Services
                 </a>
 
-                {/* NEW - Troubleshooting Link */}
+                {/* Troubleshooting Link - NO WRENCH ICON */}
                 <a
                   href="/troubleshooting"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
-                             hover:bg-gray-100 hover:text-orange-600 transition-colors
-                             inline-flex items-center gap-1.5 group"
+                             hover:bg-gray-100 hover:text-orange-600 transition-colors"
                 >
                   Troubleshooting
                 </a>
@@ -377,6 +376,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <Analytics />
       </body>
     </html>
   );
