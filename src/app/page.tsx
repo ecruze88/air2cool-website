@@ -150,63 +150,59 @@ export default function HomePage() {
   return (
     <main className="bg-white">
       {/* PROMINENT GOOGLE REVIEWS BANNER - Right after header */}
-      <section className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-6 shadow-2xl relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">
-            {/* Star Rating */}
-            <div className="flex flex-col items-center">
-              <div className="flex gap-1 mb-2">
+      <section className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-3 md:py-6 shadow-lg relative overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+          <div className="flex items-center justify-center gap-3 md:gap-6 text-white text-center">
+            {/* Mobile: Compact single row */}
+            <div className="flex items-center gap-2 md:hidden">
+              <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-8 h-8 fill-yellow-300"
-                    viewBox="0 0 20 20"
-                    style={{
-                      filter: 'drop-shadow(0 0 6px rgba(253, 224, 71, 0.6))',
-                      animation: `pulse ${2 + i * 0.2}s infinite`
-                    }}
-                  >
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                  <Star key={i} className="w-3.5 h-3.5 fill-yellow-300 text-yellow-300" />
                 ))}
               </div>
-              <p className="text-5xl font-extrabold mb-1" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
-                5.0
-              </p>
-              <p className="text-xs font-semibold opacity-90">PERFECT RATING</p>
+              <span className="font-bold text-lg">5.0</span>
+              <span className="text-xs opacity-80">• 250+ Reviews</span>
             </div>
 
-            {/* Divider */}
-            <div className="hidden md:block w-px h-20 bg-white/30"></div>
+            {/* Desktop: Original layout */}
+            <div className="hidden md:flex md:flex-row items-center justify-center gap-6 text-white">
+              {/* Star Rating */}
+              <div className="flex flex-col items-center">
+                <div className="flex gap-1 mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className="w-8 h-8 fill-yellow-300"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-5xl font-extrabold mb-1">5.0</p>
+                <p className="text-xs font-semibold opacity-90">PERFECT RATING</p>
+              </div>
 
-            {/* Review Count */}
-            <div className="text-center">
-              <p className="text-4xl font-extrabold mb-2" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
-                250+
-              </p>
-              <p className="text-base font-semibold">Google Reviews</p>
-              <p className="text-xs opacity-90 mt-1">Real customers, real results</p>
-            </div>
+              <div className="w-px h-20 bg-white/30"></div>
 
-            {/* Divider */}
-            <div className="hidden md:block w-px h-20 bg-white/30"></div>
+              <div className="text-center">
+                <p className="text-4xl font-extrabold mb-2">250+</p>
+                <p className="text-base font-semibold">Google Reviews</p>
+                <p className="text-xs opacity-90 mt-1">Real customers, real results</p>
+              </div>
 
-            {/* Trust Statement */}
-            <div className="text-center max-w-xs">
-              <p className="text-xl font-bold mb-1">Most Trusted HVAC</p>
-              <p className="text-base font-semibold mb-2">in North New Jersey</p>
-              <a 
-                href="/reviews" 
-                className="inline-block text-xs font-semibold bg-white text-blue-600 px-5 py-2 rounded-full hover:bg-blue-50 transition-all hover:scale-105 shadow-lg"
-              >
-                Read Our Reviews →
-              </a>
+              <div className="w-px h-20 bg-white/30"></div>
+
+              <div className="text-center max-w-xs">
+                <p className="text-xl font-bold mb-1">Most Trusted HVAC</p>
+                <p className="text-base font-semibold mb-2">in North New Jersey</p>
+                <a 
+                  href="/reviews" 
+                  className="inline-block text-xs font-semibold bg-white text-blue-600 px-5 py-2 rounded-full hover:bg-blue-50 transition-all hover:scale-105 shadow-lg"
+                >
+                  Read Our Reviews →
+                </a>
+              </div>
             </div>
           </div>
         </div>
