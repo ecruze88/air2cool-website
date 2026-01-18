@@ -405,33 +405,33 @@ export default function HomePage() {
 
         {/* SERVICE CARDS - All 9 services */}
         <section className="mb-16">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">{SERVICES.map((s) => {
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">{SERVICES.map((s) => {
               const Icon = ICON_MAP[s.iconName as keyof typeof ICON_MAP];
               return (
                 <a
                   key={s.name}
                   href={s.href}
-                  className="group rounded-2xl border-2 border-gray-200 bg-white p-8 shadow-sm
+                  className="group rounded-xl md:rounded-2xl border border-gray-200 bg-white p-3 md:p-8 shadow-sm
                              hover:shadow-xl transition-all duration-300 hover:border-blue-500 hover:-translate-y-1"
                 >
                   {/* Icon with gradient background */}
-                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${s.gradient} text-white mb-5 shadow-lg`}>
-                    <Icon className="w-7 h-7" />
+                  <div className={`inline-flex items-center justify-center w-9 h-9 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-to-br ${s.gradient} text-white mb-2 md:mb-5 shadow-lg`}>
+                    <Icon className="w-4 h-4 md:w-7 md:h-7" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-extrabold text-gray-900 text-xl mb-3 group-hover:text-blue-700 transition-colors">
+                  <h3 className="font-bold md:font-extrabold text-gray-900 text-xs md:text-xl mb-1 md:mb-3 group-hover:text-blue-700 transition-colors leading-tight">
                     {s.name}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  {/* Description - Hide on mobile */}
+                  <p className="hidden md:block text-sm text-gray-600 leading-relaxed mb-4">
                     {s.desc}
                   </p>
 
                   {/* Arrow indicator */}
-                  <div className="flex items-center text-blue-700 font-semibold text-sm group-hover:gap-2 transition-all">
-                    Learn More
+                  <div className="flex items-center text-blue-700 font-semibold text-xs md:text-sm group-hover:gap-2 transition-all">
+                    <span className="hidden md:inline">Learn More</span>
                     <span className="inline-block transition-transform group-hover:translate-x-1">
                       →
                     </span>
