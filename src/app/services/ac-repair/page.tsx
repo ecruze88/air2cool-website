@@ -85,14 +85,14 @@ export default function ACRepairPage() {
               
               <div className="grid md:grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
                 {[
-                  "Compressor repair",
+                  "Compressor replacement",
                   "Condensate drain lines",
                   "Air conditioner repair",
                   "Air conditioner service and cleaning",
                   "Ductless mini-split systems",
                   "Residential zoning systems",
                   "Thermostat service",
-                  "Weather sealing and home efficiency",
+                  "Heat pump installation and repair",
                   "Whole-house humidifiers",
                   "Wi-Fi/smartphone thermostats",
                 ].map((item, idx) => (
