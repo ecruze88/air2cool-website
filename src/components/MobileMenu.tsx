@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { X, Menu, Phone, Star } from "lucide-react";
+import { X, Menu, Phone } from "lucide-react";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,105 +9,86 @@ export default function MobileMenu() {
   const navLinks = [
     { label: "Services", href: "/services" },
     { label: "Troubleshooting", href: "/troubleshooting" },
-    { label: "Areas", href: "/service-areas" },
-    { label: "About", href: "/about" },
+    { label: "Service Areas", href: "/service-areas" },
     { label: "Reviews", href: "/reviews" },
+    { label: "About", href: "/about" },
     { label: "FAQ", href: "/faq" },
-    { label: "Financing", href: "/financing" },
+    { label: "Financing", href: "/financing", badge: "0% APR" },
     { label: "Contact", href: "/contact" },
   ];
 
   return (
     <>
-      {/* Hamburger Button - Only shows on mobile */}
+      {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors"
-        aria-label="Open menu"
+        className="lg:hidden p-2 -mr-2"
+        aria-label="Menu"
       >
-        <Menu className="w-6 h-6 text-gray-900" />
+        <Menu className="w-7 h-7 text-gray-900" />
       </button>
 
-      {/* Overlay - Only shows when menu is open */}
+      {/* Full Screen Overlay */}
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-[9998] lg:hidden"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/60 z-[9998] lg:hidden transition-opacity"
+            onClick={() => setIsOpen(false)}
+          />
 
-      {/* Slide-out Menu - Only shows on mobile when isOpen is true */}
-      {isOpen && (
-        <div
-          className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white z-[9999] shadow-2xl lg:hidden overflow-y-auto"
-        >
-          {/* Menu Header */}
-          <div className="flex items-center justify-between p-8 border-b border-gray-200 bg-white">
-            <div>
-              <div className="font-bold text-gray-900 text-lg">Menu</div>
-              <div className="text-sm text-gray-600 mt-1">Air2Cool HVAC</div>
-            </div>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors"
-              aria-label="Close menu"
-            >
-              <X className="w-6 h-6 text-gray-900" />
-            </button>
-          </div>
-
-          {/* Google Rating */}
-          <div className="px-6 py-5 bg-blue-50 border-b border-blue-200">
-            <div className="flex items-center gap-2">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="font-semibold text-gray-900 text-base">5.0</span>
-              <span className="text-sm text-gray-600">• 250+ Google Reviews</span>
-            </div>
-          </div>
-
-          {/* Navigation Links */}
-          <nav className="py-6 bg-white">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
+          {/* Menu Panel */}
+          <div className="fixed inset-0 z-[9999] lg:hidden bg-white overflow-y-auto">
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200">
+              <span className="text-lg font-bold text-gray-900">Menu</span>
+              <button
                 onClick={() => setIsOpen(false)}
-                className="block px-6 py-5 text-gray-900 text-lg font-semibold hover:bg-gray-50 active:bg-gray-100 transition-colors border-b border-gray-100"
+                className="p-2 -mr-2"
+                aria-label="Close"
               >
-                {link.label}
-                {link.label === "Financing" && (
-                  <span className="ml-2 text-xs bg-green-600 text-white px-2 py-0.5 rounded-full font-bold">
-                    0% APR
-                  </span>
-                )}
-                {link.label === "Troubleshooting" && (
-                  <span className="ml-2 text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full font-bold">
-                    DIY
-                  </span>
-                )}
-              </a>
-            ))}
-          </nav>
-
-          {/* Call Button */}
-          <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200 bg-white">
-            <a
-              href="tel:+12017875657"
-              className="flex items-center justify-center gap-2 w-full bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-full font-bold transition-colors shadow-lg"
-              onClick={() => setIsOpen(false)}
-            >
-              <Phone className="w-5 h-5" />
-              Call (201) 787-5657
-            </a>
-            <div className="text-center mt-3 text-xs text-gray-600">
-              24/7 Emergency Service Available
+                <X className="w-7 h-7 text-gray-900" />
+              </button>
             </div>
+
+            {/* Navigation */}
+            <nav className="px-4 py-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-between px-4 py-4 text-gray-900 text-lg font-medium rounded-xl hover:bg-gray-50 active:bg-gray-100 transition-colors mb-1"
+                >
+                  <span>{link.label}</span>
+                  {link.badge && (
+                    <span className="text-xs font-bold bg-green-100 text-green-700 px-2.5 py-1 rounded-full">
+                      {link.badge}
+                    </span>
+                  )}
+                </a>
+              ))}
+            </nav>
+
+            {/* Call Button - Fixed to bottom */}
+            <div className="fixed bottom-0 left-0 right-0 p-6 bg-white border-t border-gray-200">
+              <a
+                href="tel:+12017875657"
+                className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-2xl font-bold text-lg transition-colors shadow-lg"
+                onClick={() => setIsOpen(false)}
+              >
+                <Phone className="w-6 h-6" />
+                (201) 787-5657
+              </a>
+              <p className="text-center text-sm text-gray-600 mt-3">
+                24/7 Emergency Service
+              </p>
+            </div>
+
+            {/* Spacer for fixed button */}
+            <div className="h-32" />
           </div>
-        </div>
+        </>
       )}
     </>
   );

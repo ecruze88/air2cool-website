@@ -121,8 +121,8 @@ export default function RootLayout({
         </a>
 
         <header className="sticky top-0 z-[1000]">
-          {/* Top utility bar */}
-          <div className="bg-gray-900 text-white text-sm">
+          {/* Top utility bar - Desktop only */}
+          <div className="hidden md:block bg-gray-900 text-white text-sm">
             <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <span className="opacity-90">Serving North New Jersey</span>
