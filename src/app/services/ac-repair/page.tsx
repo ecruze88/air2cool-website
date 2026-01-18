@@ -92,7 +92,7 @@ export default function ACRepairPage() {
                   "Ductless mini-split systems",
                   "Residential zoning systems",
                   "Thermostat service",
-                  "Heat pump installation and repair",
+                  "Heat pump repair",
                   "Whole-house humidifiers",
                   "Wi-Fi/smartphone thermostats",
                 ].map((item, idx) => (

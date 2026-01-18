@@ -14,13 +14,7 @@ export default function CoolingInstallationPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-cyan-800 to-blue-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-              backgroundSize: "40px 40px",
-            }}
-          ></div>
+          <div className="absolute inset-0" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`, backgroundSize: "40px 40px" }}></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 md:py-20">
@@ -39,41 +33,35 @@ export default function CoolingInstallationPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 md:mb-8">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-all shadow-lg hover:bg-gray-50 text-center"
-              >
+              <Link href="/contact" className="bg-white text-blue-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-all shadow-lg hover:bg-gray-50 text-center">
                 Get Free Estimate
               </Link>
-              <a
-                href="tel:+12017875657"
-                className="bg-white/10 hover:bg-white/20 backdrop-blur text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all border border-white/20 text-center"
-              >
+              <a href="tel:+12017875657" className="bg-white/10 hover:bg-white/20 backdrop-blur text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all border border-white/20 text-center">
                 Call (201) 787-5657
               </a>
             </div>
 
             {/* Quick Benefits */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
-              <div className="bg-white/10 backdrop-blur rounded-xl p-3 md:p-4 border border-white/20">
-                <div className="text-xl md:text-2xl mb-1 md:mb-2">💰</div>
-                <div className="text-xs md:text-sm font-semibold">0% Financing</div>
-                <div className="text-[10px] md:text-xs text-gray-300">Up to $25k</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
+                <div className="text-xl mb-1">💰</div>
+                <div className="text-xs font-semibold">0% Financing</div>
+                <div className="text-[10px] text-gray-300">Up to $25k</div>
               </div>
-              <div className="bg-white/10 backdrop-blur rounded-xl p-3 md:p-4 border border-white/20">
-                <div className="text-xl md:text-2xl mb-1 md:mb-2">🏠</div>
-                <div className="text-xs md:text-sm font-semibold">Free Cleaning</div>
-                <div className="text-[10px] md:text-xs text-gray-300">Every install</div>
+              <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
+                <div className="text-xl mb-1">🏠</div>
+                <div className="text-xs font-semibold">Free Cleaning</div>
+                <div className="text-[10px] text-gray-300">Every install</div>
               </div>
-              <div className="bg-white/10 backdrop-blur rounded-xl p-3 md:p-4 border border-white/20">
-                <div className="text-xl md:text-2xl mb-1 md:mb-2">⭐</div>
-                <div className="text-xs md:text-sm font-semibold">5.0 Rating</div>
-                <div className="text-[10px] md:text-xs text-gray-300">150+ reviews</div>
+              <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
+                <div className="text-xl mb-1">⭐</div>
+                <div className="text-xs font-semibold">5.0 Rating</div>
+                <div className="text-[10px] text-gray-300">150+ reviews</div>
               </div>
-              <div className="bg-white/10 backdrop-blur rounded-xl p-3 md:p-4 border border-white/20">
-                <div className="text-xl md:text-2xl mb-1 md:mb-2">🛡️</div>
-                <div className="text-xs md:text-sm font-semibold">10-Year</div>
-                <div className="text-[10px] md:text-xs text-gray-300">Warranties</div>
+              <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
+                <div className="text-xl mb-1">🛡️</div>
+                <div className="text-xs font-semibold">10-Year</div>
+                <div className="text-[10px] text-gray-300">Warranties</div>
               </div>
             </div>
           </div>
@@ -86,304 +74,178 @@ export default function CoolingInstallationPage() {
         </div>
       </section>
 
-      {/* Cooling System Types */}
-      <section className="py-12 md:py-20 bg-white">
+      {/* Cooling System Types - Compact */}
+      <section className="py-10 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
+          <div className="text-center mb-6 md:mb-8">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
               Which Cooling System is Right for You?
             </h2>
-            <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm md:text-base text-gray-600">
               We install all types of cooling systems to fit your home and budget
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-6">
             {/* Central AC */}
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-6 md:p-8 border-2 border-blue-200">
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-3 md:mb-4">
-                <Snowflake className="w-6 h-6 md:w-7 md:h-7 text-white" />
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-5 md:p-6 border-2 border-blue-200">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-3">
+                <Snowflake className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Central Air Conditioning</h3>
-              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Whole-home cooling through ductwork</p>
-
-              <div className="space-y-2 mb-4 md:mb-6 text-xs md:text-sm">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0 mt-0.5" />
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Central Air Conditioning</h3>
+              <p className="text-xs md:text-sm text-gray-600 mb-3">Whole-home cooling through ductwork</p>
+              <div className="space-y-1 text-xs md:text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0" />
                   <span className="text-gray-700">Cools entire home evenly</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0 mt-0.5" />
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0" />
                   <span className="text-gray-700">Works with existing ducts</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0 mt-0.5" />
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0" />
                   <span className="text-gray-700">High SEER ratings available</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Proven, reliable technology</span>
-                </div>
               </div>
-
-              <p className="text-[10px] md:text-xs text-gray-600 italic">
-                <strong>Best for:</strong> Homes with ductwork, cooling-only needs
-              </p>
             </div>
 
             {/* Heat Pumps */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-6 md:p-8 border-2 border-green-200">
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-green-600 rounded-xl flex items-center justify-center mb-3 md:mb-4">
-                <Zap className="w-6 h-6 md:w-7 md:h-7 text-white" />
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-5 md:p-6 border-2 border-green-200">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-green-600 rounded-xl flex items-center justify-center mb-3">
+                <Zap className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Heat Pumps</h3>
-              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Cool in summer, heat in winter</p>
-
-              <div className="space-y-2 mb-4 md:mb-6 text-xs md:text-sm">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0 mt-0.5" />
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Heat Pumps</h3>
+              <p className="text-xs md:text-sm text-gray-600 mb-3">Cool in summer, heat in winter</p>
+              <div className="space-y-1 text-xs md:text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0" />
                   <span className="text-gray-700">Two systems in one</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0 mt-0.5" />
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0" />
                   <span className="text-gray-700">Ultra energy-efficient</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0 mt-0.5" />
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0" />
                   <span className="text-gray-700">Lower operating costs</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Eligible for rebates</span>
-                </div>
               </div>
-
-              <p className="text-[10px] md:text-xs text-gray-600 italic">
-                <strong>Best for:</strong> Year-round comfort, energy savings
-              </p>
             </div>
 
             {/* Mini Splits */}
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-6 md:p-8 border-2 border-purple-200">
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-purple-600 rounded-xl flex items-center justify-center mb-3 md:mb-4">
-                <Wind className="w-6 h-6 md:w-7 md:h-7 text-white" />
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-5 md:p-6 border-2 border-purple-200">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-3">
+                <Wind className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Ductless Mini Splits</h3>
-              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Zone cooling without ductwork</p>
-
-              <div className="space-y-2 mb-4 md:mb-6 text-xs md:text-sm">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-purple-600 shrink-0 mt-0.5" />
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Ductless Mini Splits</h3>
+              <p className="text-xs md:text-sm text-gray-600 mb-3">Zone cooling without ductwork</p>
+              <div className="space-y-1 text-xs md:text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-purple-600 shrink-0" />
                   <span className="text-gray-700">No ductwork needed</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-purple-600 shrink-0 mt-0.5" />
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-purple-600 shrink-0" />
                   <span className="text-gray-700">Cool specific rooms/zones</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-purple-600 shrink-0 mt-0.5" />
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-purple-600 shrink-0" />
                   <span className="text-gray-700">Whisper-quiet operation</span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-purple-600 shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Also provides heating</span>
-                </div>
               </div>
-
-              <p className="text-[10px] md:text-xs text-gray-600 italic">
-                <strong>Best for:</strong> Additions, no ducts, zone control
-              </p>
             </div>
           </div>
 
           {/* Brand trust */}
           <div className="text-center">
-            <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">We install and service all major brands:</p>
-            <div className="flex flex-wrap justify-center gap-3 md:gap-6 text-xs md:text-sm font-semibold text-gray-700">
-              <span className="bg-gray-100 px-3 md:px-4 py-1.5 md:py-2 rounded-full">Trane</span>
-              <span className="bg-gray-100 px-3 md:px-4 py-1.5 md:py-2 rounded-full">Carrier</span>
-              <span className="bg-gray-100 px-3 md:px-4 py-1.5 md:py-2 rounded-full">Lennox</span>
-              <span className="bg-gray-100 px-3 md:px-4 py-1.5 md:py-2 rounded-full">Mitsubishi</span>
-              <span className="bg-gray-100 px-3 md:px-4 py-1.5 md:py-2 rounded-full">Daikin</span>
-              <span className="bg-gray-100 px-3 md:px-4 py-1.5 md:py-2 rounded-full">Rheem</span>
-              <span className="bg-gray-100 px-3 md:px-4 py-1.5 md:py-2 rounded-full">Goodman</span>
+            <p className="text-xs md:text-sm text-gray-600 mb-3">We install all major brands:</p>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3 text-xs md:text-sm font-semibold text-gray-700">
+              <span className="bg-gray-100 px-3 py-1.5 rounded-full">Trane</span>
+              <span className="bg-gray-100 px-3 py-1.5 rounded-full">Carrier</span>
+              <span className="bg-gray-100 px-3 py-1.5 rounded-full">Lennox</span>
+              <span className="bg-gray-100 px-3 py-1.5 rounded-full">Mitsubishi</span>
+              <span className="bg-gray-100 px-3 py-1.5 rounded-full">Daikin</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Installation Process */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white">
+      {/* Installation Process - Compact */}
+      <section className="py-10 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
+          <div className="text-center mb-6 md:mb-8">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
               Professional Installation Process
             </h2>
-            <p className="text-sm md:text-lg text-gray-600">
-              From sizing to startup, we do it right
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-            {[
-              {
-                icon: Shield,
-                title: "1. Proper Sizing",
-                desc: "Manual J load calculations ensure your system is sized perfectly. Not too big, not too small—just right for maximum efficiency.",
-              },
-              {
-                icon: Award,
-                title: "2. Expert Installation",
-                desc: "Licensed Master HVAC Technicians install your system to manufacturer specs. Clean lines, proper drainage, code-compliant work.",
-              },
-              {
-                icon: Clock,
-                title: "3. Testing & Cleanup",
-                desc: "Complete system testing, refrigerant charge verification, and startup. Then we clean your entire house—free!",
-              },
-            ].map((step, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-gray-200">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-3 md:mb-4">
-                  <step.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                </div>
-                <h3 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3">{step.title}</h3>
-                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{step.desc}</p>
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+            <div className="bg-white rounded-xl p-5 shadow-lg border-2 border-gray-200">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-3">
+                <Shield className="w-6 h-6 text-white" />
               </div>
-            ))}
-          </div>
-
-          <div className="mt-8 md:mt-12 bg-blue-50 rounded-2xl p-6 md:p-8 border-2 border-blue-200">
-            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4 text-center">Also Included:</h3>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 text-xs md:text-sm">
-              {[
-                "Old equipment removal & disposal",
-                "Electrical work & breakers",
-                "Thermostat installation (WiFi available)",
-                "Condensate drain installation",
-                "Refrigerant line installation",
-                "All permits & inspections",
-                "Warranty registration",
-                "System operation training",
-                "24-month parts & labor warranty",
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-2">
-                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0 mt-0.5" />
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              ))}
+              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">1. Proper Sizing</h3>
+              <p className="text-xs md:text-sm text-gray-600">Manual J load calculations ensure perfect sizing for maximum efficiency.</p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* When to Replace */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 md:mb-8 text-center">
-            Signs It's Time for a New AC
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            {[
-              { emoji: "📅", text: "AC over 12-15 years old" },
-              { emoji: "💸", text: "Frequent, expensive repairs" },
-              { emoji: "🌡️", text: "Can't keep house cool" },
-              { emoji: "💰", text: "Energy bills climbing" },
-            ].map((sign, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4 md:p-6 text-center border-2 border-blue-200">
-                <div className="text-3xl md:text-4xl mb-2 md:mb-3">{sign.emoji}</div>
-                <p className="font-semibold text-xs md:text-base text-gray-900">{sign.text}</p>
+            <div className="bg-white rounded-xl p-5 shadow-lg border-2 border-gray-200">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-3">
+                <Award className="w-6 h-6 text-white" />
               </div>
-            ))}
+              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">2. Expert Installation</h3>
+              <p className="text-xs md:text-sm text-gray-600">Licensed Master HVAC Technicians install to manufacturer specs.</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-5 shadow-lg border-2 border-gray-200">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-3">
+                <Clock className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">3. Testing & Cleanup</h3>
+              <p className="text-xs md:text-sm text-gray-600">Complete system testing, then we clean your entire house—free!</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Financing CTA */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+      <section className="py-10 md:py-12 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <DollarSign className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 md:mb-6" />
-          <h2 className="text-2xl md:text-4xl font-extrabold mb-3 md:mb-4">
+          <DollarSign className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-4" />
+          <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
             0% Financing Available
           </h2>
-          <p className="text-base md:text-xl text-green-100 mb-6 md:mb-8">
-            Don't let upfront costs stop you from staying cool. Get a new AC system with $0 down and 0% APR financing up to $25,000.
+          <p className="text-sm md:text-base text-green-100 mb-6">
+            $0 down and 0% APR financing up to $25,000. Don't let upfront costs stop you from staying cool.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/financing"
-              className="bg-white text-green-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-gray-50 transition-all w-full sm:w-auto text-center"
-            >
+            <Link href="/financing" className="bg-white text-green-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-gray-50 transition-all w-full sm:w-auto text-center">
               View Financing Options
             </Link>
-            <Link
-              href="/contact"
-              className="bg-white/10 hover:bg-white/20 backdrop-blur text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg border-2 border-white/30 transition-all w-full sm:w-auto text-center"
-            >
+            <Link href="/contact" className="bg-white/10 hover:bg-white/20 backdrop-blur text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg border-2 border-white/30 transition-all w-full sm:w-auto text-center">
               Get Free Estimate
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Also Interested In */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 md:mb-8 text-center">
-            Also Interested In?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
-            <Link href="/services/cooling-repair" className="group bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-5 md:p-6 border-2 border-blue-200 hover:shadow-lg transition-all">
-              <Snowflake className="w-10 h-10 md:w-12 md:h-12 text-blue-600 mb-3 md:mb-4" />
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700">AC Repair</h3>
-              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Fast AC repairs. Same-day service available.</p>
-              <span className="text-blue-700 font-semibold text-xs md:text-sm">Learn More →</span>
-            </Link>
-
-            <Link href="/services/heating-installation" className="group bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-5 md:p-6 border-2 border-red-200 hover:shadow-lg transition-all">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-red-600 rounded-xl flex items-center justify-center mb-3 md:mb-4">
-                <span className="text-white text-xl md:text-2xl">🔥</span>
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-red-700">Heating Installation</h3>
-              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">New furnaces & boilers professionally installed.</p>
-              <span className="text-red-700 font-semibold text-xs md:text-sm">Learn More →</span>
-            </Link>
-
-            <Link href="/services/preventative-maintenance" className="group bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-5 md:p-6 border-2 border-orange-200 hover:shadow-lg transition-all">
-              <Clock className="w-10 h-10 md:w-12 md:h-12 text-orange-600 mb-3 md:mb-4" />
-              <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-700">Maintenance Plans</h3>
-              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Keep your AC running smoothly year-round.</p>
-              <span className="text-orange-700 font-semibold text-xs md:text-sm">Learn More →</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-10 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">
             Ready for a New Cooling System?
           </h2>
-          <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8">
+          <p className="text-sm md:text-base text-gray-600 mb-6">
             Get your free, no-pressure estimate. We'll assess your home and recommend the perfect cooling solution.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="tel:+12017875657"
-              className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg shadow-lg transition-all w-full sm:w-auto"
-            >
+            <a href="tel:+12017875657" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg transition-all w-full sm:w-auto">
               📞 Call (201) 787-5657
             </a>
-            <Link
-              href="/contact"
-              className="bg-gray-100 hover:bg-gray-200 text-gray-900 px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg transition-all w-full sm:w-auto text-center"
-            >
+            <Link href="/contact" className="bg-gray-100 hover:bg-gray-200 text-gray-900 px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-all w-full sm:w-auto text-center">
               Request Estimate Online
             </Link>
           </div>
-          <p className="mt-4 md:mt-6 text-xs md:text-sm text-gray-500">
-            Serving Morris, Sussex, Warren, Essex, Passaic, Union, and Bergen County
-          </p>
         </div>
       </section>
     </main>
