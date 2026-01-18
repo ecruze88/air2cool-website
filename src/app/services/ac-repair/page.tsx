@@ -77,7 +77,7 @@ export default function ACRepairPage() {
       {/* Complete Solutions */}
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="max-w-4xl mx-auto">
             <div>
               <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4 md:mb-6">
                 Complete Air Conditioning System Solutions
@@ -110,15 +110,6 @@ export default function ACRepairPage() {
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   When you hire us, you'll be working with a locally and family-owned company with integrity and a commitment to your satisfaction. When quality and excellent customer service matter, we're the professionals who will come through for you.
                 </p>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-3xl p-6 md:p-8">
-                {/* Placeholder - replace with actual image */}
-                <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-600 aspect-4/3 flex items-center justify-center shadow-lg">
-                  <Snowflake className="w-24 h-24 md:w-32 md:h-32 text-white opacity-20" />
-                </div>
               </div>
             </div>
           </div>
