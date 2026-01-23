@@ -12,10 +12,31 @@ export default function MobileMenu() {
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'fixed';
       document.body.style.width = '100%';
+      
+      // CRITICAL: Hide Tawk.to widget when menu is open
+      const tawkWidget = document.getElementById('tawk-bubble');
+      if (tawkWidget) {
+        tawkWidget.style.display = 'none';
+      }
+      // Also try this selector
+      const tawkContainer = document.querySelector('.tawk-min-container');
+      if (tawkContainer) {
+        (tawkContainer as HTMLElement).style.display = 'none';
+      }
     } else {
       document.body.style.overflow = '';
       document.body.style.position = '';
       document.body.style.width = '';
+      
+      // Show Tawk.to widget again
+      const tawkWidget = document.getElementById('tawk-bubble');
+      if (tawkWidget) {
+        tawkWidget.style.display = '';
+      }
+      const tawkContainer = document.querySelector('.tawk-min-container');
+      if (tawkContainer) {
+        (tawkContainer as HTMLElement).style.display = '';
+      }
     }
 
     return () => {
@@ -44,10 +65,7 @@ export default function MobileMenu() {
     <div className="lg:hidden">
       {/* Hamburger Button */}
       <button
-        onClick={() => {
-          console.log('Menu button clicked'); // Debug log
-          setIsOpen(true);
-        }}
+        onClick={() => setIsOpen(true)}
         className="p-2 -mr-2 relative z-10 touch-manipulation"
         aria-label="Open menu"
         type="button"
@@ -55,12 +73,12 @@ export default function MobileMenu() {
         <Menu className="w-7 h-7 text-gray-900" />
       </button>
 
-      {/* Menu Overlay - Only renders when open */}
+      {/* Menu Overlay - MAXIMUM Z-INDEX to go above Tawk chat */}
       {isOpen && (
-        <div className="fixed inset-0 z-[99999]">
+        <div className="fixed inset-0 z-[2147483647]" style={{ zIndex: 2147483647 }}>
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-black/60"
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={handleClose}
             aria-hidden="true"
           />
