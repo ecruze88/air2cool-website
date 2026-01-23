@@ -1,10 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, Menu, Phone } from "lucide-react";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, [isOpen]);
 
   const navLinks = [
     { label: "Services", href: "/services" },
@@ -17,45 +36,43 @@ export default function MobileMenu() {
     { label: "Contact", href: "/contact" },
   ];
 
-  // Prevent body scroll when menu is open
-  if (typeof window !== 'undefined') {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }
+  const handleClose = () => {
+    setIsOpen(false);
+  };
 
   return (
-    <>
+    <div className="lg:hidden">
       {/* Hamburger Button */}
       <button
-        onClick={() => setIsOpen(true)}
-        className="lg:hidden p-2 -mr-2 relative z-10"
+        onClick={() => {
+          console.log('Menu button clicked'); // Debug log
+          setIsOpen(true);
+        }}
+        className="p-2 -mr-2 relative z-10 touch-manipulation"
         aria-label="Open menu"
         type="button"
       >
         <Menu className="w-7 h-7 text-gray-900" />
       </button>
 
-      {/* Full Screen Overlay - INCREASED Z-INDEX */}
+      {/* Menu Overlay - Only renders when open */}
       {isOpen && (
-        <>
+        <div className="fixed inset-0 z-[99999]">
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/60 z-[10000] lg:hidden"
-            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-black/60"
+            onClick={handleClose}
             aria-hidden="true"
           />
 
-          {/* Menu Panel - INCREASED Z-INDEX */}
-          <div className="fixed inset-0 z-[10001] lg:hidden bg-white overflow-y-auto">
+          {/* Menu Panel */}
+          <div className="absolute inset-0 bg-white overflow-y-auto">
             {/* Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200">
+            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200 bg-white sticky top-0 z-10">
               <span className="text-lg font-bold text-gray-900">Menu</span>
               <button
-                onClick={() => setIsOpen(false)}
-                className="p-2 -mr-2 hover:bg-gray-100 rounded-lg transition-colors"
+                onClick={handleClose}
+                className="p-2 -mr-2 hover:bg-gray-100 rounded-lg transition-colors touch-manipulation"
                 aria-label="Close menu"
                 type="button"
               >
@@ -63,14 +80,14 @@ export default function MobileMenu() {
               </button>
             </div>
 
-            {/* Navigation */}
-            <nav className="px-4 py-6">
+            {/* Navigation Links */}
+            <nav className="px-4 py-6 pb-32">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between px-4 py-4 text-gray-900 text-lg font-medium rounded-xl hover:bg-gray-50 active:bg-gray-100 transition-colors mb-1"
+                  onClick={handleClose}
+                  className="flex items-center justify-between px-4 py-4 text-gray-900 text-lg font-medium rounded-xl hover:bg-gray-50 active:bg-gray-100 transition-colors mb-1 touch-manipulation"
                 >
                   <span>{link.label}</span>
                   {link.badge && (
@@ -83,11 +100,11 @@ export default function MobileMenu() {
             </nav>
 
             {/* Call Button - Fixed to bottom */}
-            <div className="fixed bottom-0 left-0 right-0 p-6 bg-white border-t border-gray-200">
+            <div className="fixed bottom-0 left-0 right-0 p-6 bg-white border-t border-gray-200 z-20">
               <a
                 href="tel:+12017875657"
-                className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 active:bg-red-800 text-white px-6 py-4 rounded-2xl font-bold text-lg transition-colors shadow-lg"
-                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 active:bg-red-800 text-white px-6 py-4 rounded-2xl font-bold text-lg transition-colors shadow-lg touch-manipulation"
+                onClick={handleClose}
               >
                 <Phone className="w-6 h-6" />
                 (201) 787-5657
@@ -96,12 +113,9 @@ export default function MobileMenu() {
                 24/7 Emergency Service
               </p>
             </div>
-
-            {/* Spacer for fixed button */}
-            <div className="h-32" />
           </div>
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 }
