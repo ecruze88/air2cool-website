@@ -208,7 +208,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* HERO (full bleed) */}
+      {/* HERO (full bleed) - MOBILE OPTIMIZED */}
       <section className="relative overflow-hidden min-h-[85vh]">
         {/* Background video */}
         <video
@@ -226,68 +226,68 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
 
         {/* HERO CONTENT */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 md:pt-32 pb-16 md:pb-24">
           <div className="max-w-4xl">
             {/* Urgency Banner */}
-            <div className="inline-flex items-center gap-2 bg-red-600 text-white px-5 py-2.5 rounded-full font-bold text-sm mb-6 animate-pulse shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-red-600 text-white px-4 md:px-5 py-2 md:py-2.5 rounded-full font-bold text-xs md:text-sm mb-4 md:mb-6 animate-pulse shadow-lg">
               <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
               24/7 EMERGENCY SERVICE AVAILABLE
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-4 md:mb-6">
               HVAC Problems?
               <br />
               <span className="text-blue-400">We Fix It Fast.</span>
             </h1>
 
             {/* Subheadline with urgency */}
-            <p className="text-xl sm:text-2xl text-gray-100 font-semibold mb-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-100 font-semibold mb-3 md:mb-4">
               Same-Day Service • No Upsell BS • 26+ Years Trusted
             </p>
             
-            <p className="text-lg text-gray-300 max-w-2xl leading-relaxed mb-8">
+            <p className="text-base md:text-lg text-gray-300 max-w-2xl leading-relaxed mb-6 md:mb-8">
               Furnace out in the cold? AC dead in the heat? We're your NJ HVAC experts with honest pricing and clean installs. Family owned since 1998.
             </p>
 
-            {/* Trust Badges */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-2 rounded-full">
-                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                  <Star className="w-4 h-4 text-white fill-white" />
+            {/* Trust Badges - IMPROVED MOBILE SPACING */}
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 md:gap-4 mb-6 md:mb-8">
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-3 rounded-full">
+                <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center shrink-0">
+                  <Star className="w-5 h-5 text-white fill-white" />
                 </div>
                 <div className="text-left">
-                  <div className="font-bold text-sm">5.0 Google Rating</div>
+                  <div className="font-bold text-sm md:text-base">5.0 Google Rating</div>
                   <div className="text-xs text-gray-300">250+ Reviews</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-2 rounded-full">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                  <Award className="w-4 h-4 text-white" />
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-3 rounded-full">
+                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center shrink-0">
+                  <Award className="w-5 h-5 text-white" />
                 </div>
                 <div className="text-left">
-                  <div className="font-bold text-sm">Licensed & Insured</div>
+                  <div className="font-bold text-sm md:text-base">Licensed & Insured</div>
                   <div className="text-xs text-gray-300">Master HVAC Techs</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-2 rounded-full">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                  <DollarSign className="w-4 h-4 text-white" />
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-3 rounded-full">
+                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shrink-0">
+                  <DollarSign className="w-5 h-5 text-white" />
                 </div>
                 <div className="text-left">
-                  <div className="font-bold text-sm">0% Financing</div>
+                  <div className="font-bold text-sm md:text-base">0% Financing</div>
                   <div className="text-xs text-gray-300">Up to $25k Available</div>
                 </div>
               </div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-4">
+            {/* CTAs - STACKED ON MOBILE */}
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-0">
               <a
                 href="/contact"
-                className="group relative inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl transition-all hover:scale-105"
+                className="group relative inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg shadow-2xl transition-all hover:scale-105"
               >
                 <span>Get Free Estimate</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -295,18 +295,18 @@ export default function HomePage() {
               
               <a
                 href="tel:+12017875657"
-                className="group relative inline-flex items-center gap-3 bg-white/10 backdrop-blur hover:bg-white/20 text-white px-10 py-5 rounded-full font-bold text-lg border-2 border-white/30 transition-all hover:scale-105"
+                className="group relative inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur hover:bg-white/20 text-white px-6 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg border-2 border-white/30 transition-all hover:scale-105"
                 style={{
                   boxShadow: '0 0 40px rgba(59, 130, 246, 0.6), 0 0 80px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.2)'
                 }}
               >
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <Phone className="w-4 h-4 text-white" />
+                <div className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4 md:w-5 md:h-5 text-white" />
                 </div>
                 <div className="text-left">
                   <div className="text-xs font-normal text-gray-300">Call Now</div>
                   <div 
-                    className="font-bold text-2xl"
+                    className="font-bold text-xl md:text-2xl"
                     style={{
                       textShadow: '0 0 20px rgba(96, 165, 250, 0.8), 0 0 40px rgba(96, 165, 250, 0.4), 0 0 60px rgba(59, 130, 246, 0.3)'
                     }}
@@ -317,8 +317,8 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Urgency Text */}
-            <p className="mt-6 text-sm text-yellow-300 font-semibold flex items-center justify-center gap-2">
+            {/* Urgency Text - HIDDEN ON MOBILE */}
+            <p className="hidden md:flex mt-6 text-sm text-yellow-300 font-semibold items-center gap-2">
               <Zap className="w-4 h-4" />
               Emergency calls answered in under 5 minutes
             </p>

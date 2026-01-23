@@ -1,150 +1,207 @@
 "use client";
 
-import { useState } from "react";
-import { X, Menu, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 export default function MobileMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    // Toggle body scroll
-    if (!isOpen) {
+  const openMenu = () => {
+    const menu = document.getElementById('mobile-menu-overlay');
+    if (menu) {
+      menu.style.display = 'flex';
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
       document.body.style.height = '100vh';
-    } else {
-      document.body.style.overflow = '';
-      document.body.style.height = '';
     }
+
+    // AGGRESSIVE: Hide ALL Tawk.to elements with multiple selectors
+    const tawkSelectors = [
+      '.tawk-min-container',
+      '#tawk-bubble',
+      'iframe[title*="chat"]',
+      'iframe[src*="tawk"]',
+      '[id*="tawk"]',
+      '[class*="tawk"]',
+    ];
+
+    tawkSelectors.forEach(selector => {
+      const elements = document.querySelectorAll(selector);
+      elements.forEach(el => {
+        (el as HTMLElement).style.setProperty('display', 'none', 'important');
+        (el as HTMLElement).style.setProperty('visibility', 'hidden', 'important');
+        (el as HTMLElement).style.setProperty('opacity', '0', 'important');
+        (el as HTMLElement).style.setProperty('pointer-events', 'none', 'important');
+      });
+    });
   };
 
   const closeMenu = () => {
-    setIsOpen(false);
-    document.body.style.overflow = '';
-    document.body.style.height = '';
+    const menu = document.getElementById('mobile-menu-overlay');
+    if (menu) {
+      menu.style.display = 'none';
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
+    }
+
+    // Show ALL Tawk.to elements again
+    const tawkSelectors = [
+      '.tawk-min-container',
+      '#tawk-bubble',
+      'iframe[title*="chat"]',
+      'iframe[src*="tawk"]',
+      '[id*="tawk"]',
+      '[class*="tawk"]',
+    ];
+
+    tawkSelectors.forEach(selector => {
+      const elements = document.querySelectorAll(selector);
+      elements.forEach(el => {
+        (el as HTMLElement).style.removeProperty('display');
+        (el as HTMLElement).style.removeProperty('visibility');
+        (el as HTMLElement).style.removeProperty('opacity');
+        (el as HTMLElement).style.removeProperty('pointer-events');
+      });
+    });
   };
 
   return (
     <>
       {/* Hamburger Button */}
       <button
-        onClick={toggleMenu}
-        className="lg:hidden p-3 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors"
-        aria-label="Toggle menu"
+        onClick={openMenu}
+        className="lg:hidden p-2 hover:bg-gray-100 rounded-lg"
+        type="button"
       >
-        <Menu className="w-6 h-6 text-gray-900" />
+        <Menu className="w-7 h-7 text-gray-900" />
       </button>
 
-      {/* Full Screen Menu Overlay */}
-      {isOpen && (
+      {/* Mobile Menu - FULL SCREEN */}
+      <div
+        id="mobile-menu-overlay"
+        style={{ 
+          display: 'none',
+          flexDirection: 'column',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: 2147483647,
+          backgroundColor: 'white'
+        }}
+        className="lg:hidden"
+      >
+        {/* Header */}
         <div 
-          className="fixed inset-0 bg-white lg:hidden"
-          style={{ 
-            zIndex: 999999,
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0
-          }}
+          className="flex items-center justify-between px-6 py-5 border-b border-gray-200 bg-white flex-shrink-0"
         >
-          {/* Header with close button */}
-          <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200 bg-white">
-            <span className="text-lg font-bold text-gray-900">Menu</span>
-            <button
-              onClick={closeMenu}
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-              aria-label="Close menu"
-            >
-              <X className="w-6 h-6 text-gray-900" />
-            </button>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="overflow-y-auto bg-white px-4 py-6" style={{ height: 'calc(100vh - 80px - 120px)' }}>
-            <a
-              href="/services"
-              onClick={closeMenu}
-              className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 rounded-xl mb-1 transition-colors"
-            >
-              Services
-            </a>
-
-            <a
-              href="/troubleshooting"
-              onClick={closeMenu}
-              className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 rounded-xl mb-1 transition-colors"
-            >
-              Troubleshooting
-            </a>
-
-            <a
-              href="/service-areas"
-              onClick={closeMenu}
-              className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 rounded-xl mb-1 transition-colors"
-            >
-              Service Areas
-            </a>
-
-            <a
-              href="/reviews"
-              onClick={closeMenu}
-              className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 rounded-xl mb-1 transition-colors"
-            >
-              Reviews
-            </a>
-
-            <a
-              href="/about"
-              onClick={closeMenu}
-              className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 rounded-xl mb-1 transition-colors"
-            >
-              About
-            </a>
-
-            <a
-              href="/faq"
-              onClick={closeMenu}
-              className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 rounded-xl mb-1 transition-colors"
-            >
-              FAQ
-            </a>
-
-            <a
-              href="/financing"
-              onClick={closeMenu}
-              className="flex items-center justify-between px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 rounded-xl mb-1 transition-colors"
-            >
-              <span>Financing</span>
-              <span className="text-xs font-bold bg-green-100 text-green-700 px-2.5 py-1 rounded-full">
-                0% APR
-              </span>
-            </a>
-
-            <a
-              href="/contact"
-              onClick={closeMenu}
-              className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 rounded-xl mb-1 transition-colors"
-            >
-              Contact
-            </a>
-          </div>
-
-          {/* Call Button - Fixed to Bottom */}
-          <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-6">
-            <a
-              href="tel:+12017875657"
-              onClick={closeMenu}
-              className="flex items-center justify-center gap-3 w-full bg-red-600 text-white px-6 py-4 rounded-2xl font-bold text-lg shadow-lg active:bg-red-700 transition-colors"
-            >
-              <Phone className="w-5 h-5" />
-              (201) 787-5657
-            </a>
-            <p className="text-center text-sm text-gray-600 mt-3">
-              24/7 Emergency Service
-            </p>
-          </div>
+          <span className="text-lg font-bold text-gray-900">Menu</span>
+          <button
+            onClick={closeMenu}
+            className="p-2 hover:bg-gray-100 rounded-lg"
+            type="button"
+          >
+            <X className="w-7 h-7 text-gray-900" />
+          </button>
         </div>
-      )}
+
+        {/* Links - Scrollable middle section */}
+        <div 
+          className="flex-1 overflow-y-auto px-4 py-6 bg-white"
+          style={{ backgroundColor: 'white' }}
+        >
+          <a 
+            href="/services" 
+            onClick={closeMenu} 
+            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            Services
+          </a>
+          <a 
+            href="/troubleshooting" 
+            onClick={closeMenu} 
+            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            Troubleshooting
+          </a>
+          <a 
+            href="/service-areas" 
+            onClick={closeMenu} 
+            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            Service Areas
+          </a>
+          <a 
+            href="/reviews" 
+            onClick={closeMenu} 
+            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            Reviews
+          </a>
+          <a 
+            href="/about" 
+            onClick={closeMenu} 
+            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            About
+          </a>
+          <a 
+            href="/faq" 
+            onClick={closeMenu} 
+            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            FAQ
+          </a>
+          <a 
+            href="/maintenance-contract" 
+            onClick={closeMenu} 
+            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            Preventative Maintenance
+          </a>
+          <a 
+            href="/financing" 
+            onClick={closeMenu} 
+            className="flex items-center justify-between px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            <span>Financing</span>
+            <span className="text-xs font-bold bg-green-100 text-green-700 px-2.5 py-1 rounded-full">
+              0% APR
+            </span>
+          </a>
+          <a 
+            href="/contact" 
+            onClick={closeMenu} 
+            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            Contact
+          </a>
+
+          {/* Extra padding at bottom so last item isn't hidden behind call button */}
+          <div className="h-32"></div>
+        </div>
+
+        {/* Call Button - Pinned to bottom */}
+        <div 
+          className="flex-shrink-0 bg-white border-t border-gray-200 p-6"
+          style={{ backgroundColor: 'white' }}
+        >
+          <a
+            href="tel:+12017875657"
+            onClick={closeMenu}
+            className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 active:bg-red-800 text-white px-6 py-4 rounded-2xl font-bold text-lg shadow-xl"
+          >
+            <Phone className="w-5 h-5" />
+            (201) 787-5657
+          </a>
+          <p className="text-center text-sm text-gray-600 mt-3">
+            24/7 Emergency Service
+          </p>
+        </div>
+      </div>
     </>
   );
 }

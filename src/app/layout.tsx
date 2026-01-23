@@ -153,9 +153,9 @@ export default function RootLayout({
               {/* Mobile Logo - Only shows on mobile */}
               <a href="/" className="lg:hidden">
                 <img
-                  src="/Air2Cool-HeatingAC-&-Refrigeration-Logo-237w.webp"
-                  alt="Air2Cool Heating & Cooling"
-                  className="h-12 w-auto"
+                  src="/mobile-logo.png"
+                  alt="Air2Cool"
+                  className="h-20 w-auto -ml-2"
                 />
               </a>
 
@@ -211,6 +211,13 @@ export default function RootLayout({
                              hover:bg-gray-100 hover:text-brand-blue transition-colors"
                 >
                   FAQ
+                </a>
+                <a
+                  href="/maintenance-plans"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
+                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
+                >
+                  Maintenance
                 </a>
                 
                 <a

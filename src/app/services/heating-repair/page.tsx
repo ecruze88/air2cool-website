@@ -193,15 +193,15 @@ export default function HeatingRepairPage() {
         </div>
       </section>
 
-      {/* Partnership with Trane */}
+      {/* Quality Service & Customer Testimonial */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Shield className="w-12 h-12 md:w-16 md:h-16 text-red-600 mx-auto mb-4 md:mb-6" />
           <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
-            Our Partnership with Trane
+            Quality Service You Can Trust
           </h2>
           <p className="text-sm md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
-            Our exclusive partnership with Trane provides our customers with the most reliable and technologically advanced product in the market. When you choose Air2Cool, you're getting the best equipment backed by industry-leading warranties.
+            We service all major heating brands and provide honest, reliable service backed by our 26+ years of experience. When you choose Air2Cool, you're getting expert technicians who truly care about keeping your family warm.
           </p>
           <div className="inline-block bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200">
             <p className="text-sm md:text-base text-gray-600 italic">

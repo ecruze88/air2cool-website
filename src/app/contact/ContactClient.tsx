@@ -68,105 +68,105 @@ export default function ContactClientDual() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-blue-50">
-      {/* Emergency Banner */}
-      <div className="bg-red-600 text-white py-3">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-3 text-sm font-semibold">
+      {/* Emergency Banner - MOBILE OPTIMIZED */}
+      <div className="bg-red-600 text-white py-2 md:py-3">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-2 md:gap-3 text-xs md:text-sm font-semibold">
           <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-          <span>24/7 Emergency Service Available</span>
+          <span>24/7 Emergency Service</span>
           <span className="hidden sm:inline">•</span>
           <a href={telHref} className="hidden sm:inline hover:underline">
-            Call Now: (201) 787-5657
+            (201) 787-5657
           </a>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+      <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
+        {/* Header - MOBILE OPTIMIZED */}
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-3 md:mb-4">
             Contact Air2Cool
           </h1>
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="text-base md:text-xl text-gray-600 mb-4 md:mb-6">
             Emergency service or planning ahead? We're here to help.
           </p>
 
-          {/* Social Proof */}
-          <div className="flex items-center justify-center gap-4 flex-wrap">
-            <div className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm border border-gray-200">
+          {/* Social Proof - MOBILE OPTIMIZED */}
+          <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap">
+            <div className="flex items-center gap-2 bg-white rounded-full px-3 md:px-4 py-1.5 md:py-2 shadow-sm border border-gray-200">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <span className="font-semibold text-gray-900">5.0</span>
-              <span className="text-sm text-gray-600">(150+ reviews)</span>
+              <span className="font-semibold text-gray-900 text-sm md:text-base">5.0</span>
+              <span className="text-xs md:text-sm text-gray-600">(150+)</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-700">
-              <CheckCircle className="w-5 h-5 text-green-600" />
+            <div className="flex items-center gap-1.5 md:gap-2 text-gray-700 text-xs md:text-base">
+              <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600" />
               <span className="font-semibold">Licensed & Insured</span>
             </div>
           </div>
         </div>
 
-        {/* Two Forms Side by Side */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        {/* Two Forms - MOBILE OPTIMIZED */}
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
           
           {/* EMERGENCY FORM */}
-          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-3xl p-1">
-            <div className="bg-white rounded-[22px] p-8 h-full">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
-                  <AlertCircle className="w-6 h-6 text-white" />
+          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl md:rounded-3xl p-0.5 md:p-1">
+            <div className="bg-white rounded-[15px] md:rounded-[22px] p-5 md:p-8 h-full">
+              <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-red-600 rounded-lg md:rounded-xl flex items-center justify-center shrink-0">
+                  <AlertCircle className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-extrabold text-gray-900">
+                  <h2 className="text-xl md:text-2xl font-extrabold text-gray-900">
                     Emergency Service
                   </h2>
-                  <p className="text-sm text-gray-600">Response within 2 hours</p>
+                  <p className="text-xs md:text-sm text-gray-600">Response within 2 hours</p>
                 </div>
               </div>
 
               {/* Quick Call Buttons */}
-              <div className="space-y-3 mb-6">
+              <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
                 <a
                   href={telHref}
-                  className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-xl font-bold text-lg shadow-lg transition-all hover:scale-[1.02]"
+                  className="flex items-center justify-center gap-2 md:gap-3 w-full bg-red-600 hover:bg-red-700 text-white px-5 md:px-6 py-3 md:py-4 rounded-lg md:rounded-xl font-bold text-base md:text-lg shadow-lg transition-all"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4 md:w-5 md:h-5" />
                   Call (201) 787-5657
                 </a>
                 <a
                   href="sms:+12017875657"
-                  className="flex items-center justify-center gap-3 w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-bold text-lg shadow-lg transition-all hover:scale-[1.02]"
+                  className="flex items-center justify-center gap-2 md:gap-3 w-full bg-blue-600 hover:bg-blue-700 text-white px-5 md:px-6 py-3 md:py-4 rounded-lg md:rounded-xl font-bold text-base md:text-lg shadow-lg transition-all"
                 >
-                  <MessageSquare className="w-5 h-5" />
+                  <MessageSquare className="w-4 h-4 md:w-5 md:h-5" />
                   Text Us Now
                 </a>
               </div>
 
-              <div className="relative mb-6">
+              <div className="relative mb-4 md:mb-6">
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-gray-300"></div>
                 </div>
-                <div className="relative flex justify-center text-sm">
-                  <span className="px-4 bg-white text-gray-500">Or submit emergency request</span>
+                <div className="relative flex justify-center text-xs md:text-sm">
+                  <span className="px-3 md:px-4 bg-white text-gray-500">Or submit request</span>
                 </div>
               </div>
 
               {emergencySent ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-green-600" />
+                <div className="text-center py-6 md:py-8">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                    <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                     Emergency Request Sent!
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                     We'll call you within 2 hours.
                   </p>
                   <a
                     href={telHref}
-                    className="inline-flex items-center gap-2 text-red-700 font-semibold hover:underline"
+                    className="inline-flex items-center gap-2 text-red-700 font-semibold hover:underline text-sm md:text-base"
                   >
                     <Phone className="w-4 h-4" />
                     Need immediate help? Call now
@@ -174,7 +174,7 @@ export default function ContactClientDual() {
                 </div>
               ) : (
                 <form
-                  className="space-y-4"
+                  className="space-y-3 md:space-y-4"
                   onSubmit={async (e) => {
                     e.preventDefault();
                     setEmergencyError("");
@@ -215,7 +215,7 @@ export default function ContactClientDual() {
                 >
                   {/* Name */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       Your Name <span className="text-red-600">*</span>
                     </label>
                     <input
@@ -223,13 +223,13 @@ export default function ContactClientDual() {
                       placeholder="John Smith"
                       required
                       maxLength={80}
-                      className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
                     />
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       Phone Number <span className="text-red-600">*</span>
                     </label>
                     <input
@@ -238,13 +238,13 @@ export default function ContactClientDual() {
                       placeholder="(201) 555-1234"
                       required
                       maxLength={32}
-                      className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
                     />
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       Email <span className="text-red-600">*</span>
                     </label>
                     <input
@@ -253,13 +253,13 @@ export default function ContactClientDual() {
                       placeholder="john@email.com"
                       required
                       maxLength={140}
-                      className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
                     />
                   </div>
 
                   {/* Address */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       Service Address <span className="text-red-600">*</span>
                     </label>
                     <input
@@ -267,19 +267,19 @@ export default function ContactClientDual() {
                       placeholder="123 Main St, Dover, NJ 07801"
                       required
                       maxLength={200}
-                      className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
                     />
                   </div>
 
                   {/* Problem Type */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       What's the problem? <span className="text-red-600">*</span>
                     </label>
                     <select
                       name="problem"
                       required
-                      className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
                       defaultValue=""
                     >
                       <option value="" disabled>Select problem type</option>
@@ -289,8 +289,8 @@ export default function ContactClientDual() {
                     </select>
                   </div>
 
-                  {/* Brief Description */}
-                  <div>
+                  {/* Brief Description - Hide on mobile */}
+                  <div className="hidden md:block">
                     <label className="block text-sm font-semibold text-gray-900 mb-2">
                       Brief Description <span className="text-gray-500 text-xs">(optional)</span>
                     </label>
@@ -306,20 +306,20 @@ export default function ContactClientDual() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-xl font-bold text-lg shadow-lg transition-all hover:scale-[1.02]"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white px-5 md:px-6 py-3 md:py-4 rounded-lg md:rounded-xl font-bold text-base md:text-lg shadow-lg transition-all"
                   >
                     Send Emergency Request →
                   </button>
 
                   {emergencyError && (
-                    <div className="rounded-xl border-2 border-red-200 bg-red-50 p-3 text-sm text-red-800 font-medium">
+                    <div className="rounded-lg md:rounded-xl border-2 border-red-200 bg-red-50 p-2.5 md:p-3 text-xs md:text-sm text-red-800 font-medium">
                       {emergencyError}
                     </div>
                   )}
 
                   <p className="text-xs text-center text-gray-500 flex items-center justify-center gap-1">
                     <Clock className="w-3 h-3" />
-                    We'll call you within 2 hours
+                    We'll call within 2 hours
                   </p>
                 </form>
               )}
@@ -327,38 +327,38 @@ export default function ContactClientDual() {
           </div>
 
           {/* ESTIMATE FORM */}
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-1">
-            <div className="bg-white rounded-[22px] p-8 h-full">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-                  <DollarSign className="w-6 h-6 text-white" />
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl md:rounded-3xl p-0.5 md:p-1">
+            <div className="bg-white rounded-[15px] md:rounded-[22px] p-5 md:p-8 h-full">
+              <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-600 rounded-lg md:rounded-xl flex items-center justify-center shrink-0">
+                  <DollarSign className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-extrabold text-gray-900">
+                  <h2 className="text-xl md:text-2xl font-extrabold text-gray-900">
                     Free Estimate
                   </h2>
-                  <p className="text-sm text-gray-600">Response within 24 hours</p>
+                  <p className="text-xs md:text-sm text-gray-600">Response within 24 hours</p>
                 </div>
               </div>
 
               {estimateSent ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-8 h-8 text-green-600" />
+                <div className="text-center py-6 md:py-8">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                    <CheckCircle className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                     Estimate Request Received!
                   </h3>
-                  <p className="text-gray-600 mb-4">
-                    We'll contact you within 24 hours to schedule your free in-home estimate.
+                  <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
+                    We'll contact you within 24 hours to schedule your free estimate.
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-xs md:text-sm text-gray-500">
                     Check your email for confirmation.
                   </p>
                 </div>
               ) : (
                 <form
-                  className="space-y-4"
+                  className="space-y-3 md:space-y-4"
                   onSubmit={async (e) => {
                     e.preventDefault();
                     setEstimateError("");
@@ -400,7 +400,7 @@ export default function ContactClientDual() {
                 >
                   {/* Name */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       Your Name <span className="text-red-600">*</span>
                     </label>
                     <input
@@ -408,14 +408,14 @@ export default function ContactClientDual() {
                       placeholder="John Smith"
                       required
                       maxLength={80}
-                      className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
                     />
                   </div>
 
                   {/* Email & Phone */}
                   <div className="grid sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
+                      <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                         Email <span className="text-red-600">*</span>
                       </label>
                       <input
@@ -424,12 +424,12 @@ export default function ContactClientDual() {
                         placeholder="john@email.com"
                         required
                         maxLength={140}
-                        className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                        className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-gray-900 mb-2">
+                      <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                         Phone <span className="text-red-600">*</span>
                       </label>
                       <input
@@ -438,14 +438,14 @@ export default function ContactClientDual() {
                         placeholder="(201) 555-1234"
                         required
                         maxLength={32}
-                        className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                        className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
                       />
                     </div>
                   </div>
 
                   {/* Address */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       Service Address <span className="text-red-600">*</span>
                     </label>
                     <input
@@ -453,19 +453,19 @@ export default function ContactClientDual() {
                       placeholder="123 Main St, Dover, NJ 07801"
                       required
                       maxLength={200}
-                      className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
                     />
                   </div>
 
                   {/* Service Type */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       What do you need? <span className="text-red-600">*</span>
                     </label>
                     <select
                       name="service"
                       required
-                      className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
                       defaultValue=""
                     >
                       <option value="" disabled>Select a service</option>
@@ -477,7 +477,7 @@ export default function ContactClientDual() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       Additional Details <span className="text-red-600">*</span>
                     </label>
                     <textarea
@@ -486,40 +486,40 @@ export default function ContactClientDual() {
                       required
                       maxLength={1000}
                       rows={3}
-                      className="w-full rounded-xl border-2 border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors resize-none"
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors resize-none"
                     />
                   </div>
 
                   {/* Financing Checkbox */}
-                  <div className="flex items-start gap-3 bg-green-50 p-4 rounded-xl border border-green-200">
+                  <div className="flex items-start gap-2 md:gap-3 bg-green-50 p-3 md:p-4 rounded-lg md:rounded-xl border border-green-200">
                     <input
                       type="checkbox"
                       name="financing"
                       id="financing"
-                      className="mt-1 w-4 h-4 text-green-600 rounded"
+                      className="mt-0.5 md:mt-1 w-4 h-4 text-green-600 rounded"
                     />
-                    <label htmlFor="financing" className="text-sm text-gray-700 cursor-pointer">
-                      <span className="font-semibold">I'm interested in 0% financing</span> (up to $25,000)
+                    <label htmlFor="financing" className="text-xs md:text-sm text-gray-700 cursor-pointer">
+                      <span className="font-semibold">Interested in 0% financing</span> (up to $25k)
                     </label>
                   </div>
 
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-bold text-lg shadow-lg transition-all hover:scale-[1.02]"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-5 md:px-6 py-3 md:py-4 rounded-lg md:rounded-xl font-bold text-base md:text-lg shadow-lg transition-all"
                   >
                     Get Your Free Estimate →
                   </button>
 
                   {estimateError && (
-                    <div className="rounded-xl border-2 border-red-200 bg-red-50 p-3 text-sm text-red-800 font-medium">
+                    <div className="rounded-lg md:rounded-xl border-2 border-red-200 bg-red-50 p-2.5 md:p-3 text-xs md:text-sm text-red-800 font-medium">
                       {estimateError}
                     </div>
                   )}
 
                   <p className="text-xs text-center text-gray-500 flex items-center justify-center gap-1">
                     <Mail className="w-3 h-3" />
-                    We'll email you within 24 hours to schedule
+                    Response within 24 hours
                   </p>
                 </form>
               )}
@@ -527,28 +527,28 @@ export default function ContactClientDual() {
           </div>
         </div>
 
-        {/* Trust Section */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-200">
-          <div className="grid md:grid-cols-4 gap-6 text-center">
+        {/* Trust Section - MOBILE OPTIMIZED */}
+        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl md:rounded-2xl p-5 md:p-8 border-2 border-green-200">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
             <div>
-              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-2" />
-              <p className="font-bold text-gray-900">Family Owned</p>
-              <p className="text-sm text-gray-600">Since 1998</p>
+              <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-green-600 mx-auto mb-1.5 md:mb-2" />
+              <p className="font-bold text-gray-900 text-xs md:text-base">Family Owned</p>
+              <p className="text-xs md:text-sm text-gray-600">Since 1998</p>
             </div>
             <div>
-              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-2" />
-              <p className="font-bold text-gray-900">No Upsell BS</p>
-              <p className="text-sm text-gray-600">Honest pricing</p>
+              <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-green-600 mx-auto mb-1.5 md:mb-2" />
+              <p className="font-bold text-gray-900 text-xs md:text-base">Honest Pricing</p>
+              <p className="text-xs md:text-sm text-gray-600">No upsells</p>
             </div>
             <div>
-              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-2" />
-              <p className="font-bold text-gray-900">Same-Day Service</p>
-              <p className="text-sm text-gray-600">When you need it</p>
+              <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-green-600 mx-auto mb-1.5 md:mb-2" />
+              <p className="font-bold text-gray-900 text-xs md:text-base">Same-Day</p>
+              <p className="text-xs md:text-sm text-gray-600">When needed</p>
             </div>
             <div>
-              <CheckCircle className="w-10 h-10 text-green-600 mx-auto mb-2" />
-              <p className="font-bold text-gray-900">0% Financing</p>
-              <p className="text-sm text-gray-600">Up to $25k</p>
+              <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-green-600 mx-auto mb-1.5 md:mb-2" />
+              <p className="font-bold text-gray-900 text-xs md:text-base">0% Financing</p>
+              <p className="text-xs md:text-sm text-gray-600">Up to $25k</p>
             </div>
           </div>
         </div>
