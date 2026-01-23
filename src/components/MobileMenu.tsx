@@ -17,35 +17,47 @@ export default function MobileMenu() {
     { label: "Contact", href: "/contact" },
   ];
 
+  // Prevent body scroll when menu is open
+  if (typeof window !== 'undefined') {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }
+
   return (
     <>
       {/* Hamburger Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden p-2 -mr-2"
-        aria-label="Menu"
+        className="lg:hidden p-2 -mr-2 relative z-10"
+        aria-label="Open menu"
+        type="button"
       >
         <Menu className="w-7 h-7 text-gray-900" />
       </button>
 
-      {/* Full Screen Overlay */}
+      {/* Full Screen Overlay - INCREASED Z-INDEX */}
       {isOpen && (
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/60 z-[9998] lg:hidden transition-opacity"
+            className="fixed inset-0 bg-black/60 z-[10000] lg:hidden"
             onClick={() => setIsOpen(false)}
+            aria-hidden="true"
           />
 
-          {/* Menu Panel */}
-          <div className="fixed inset-0 z-[9999] lg:hidden bg-white overflow-y-auto">
+          {/* Menu Panel - INCREASED Z-INDEX */}
+          <div className="fixed inset-0 z-[10001] lg:hidden bg-white overflow-y-auto">
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200">
               <span className="text-lg font-bold text-gray-900">Menu</span>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 -mr-2"
-                aria-label="Close"
+                className="p-2 -mr-2 hover:bg-gray-100 rounded-lg transition-colors"
+                aria-label="Close menu"
+                type="button"
               >
                 <X className="w-7 h-7 text-gray-900" />
               </button>
@@ -74,7 +86,7 @@ export default function MobileMenu() {
             <div className="fixed bottom-0 left-0 right-0 p-6 bg-white border-t border-gray-200">
               <a
                 href="tel:+12017875657"
-                className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 text-white px-6 py-4 rounded-2xl font-bold text-lg transition-colors shadow-lg"
+                className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 active:bg-red-800 text-white px-6 py-4 rounded-2xl font-bold text-lg transition-colors shadow-lg"
                 onClick={() => setIsOpen(false)}
               >
                 <Phone className="w-6 h-6" />
