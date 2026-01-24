@@ -213,7 +213,7 @@ export default function RootLayout({
                   FAQ
                 </a>
                 <a
-                  href="/preventative-maintenance"
+                  href="/services/preventative-maintenance"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
                              hover:bg-gray-100 hover:text-brand-blue transition-colors"
                 >
