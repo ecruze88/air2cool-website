@@ -3,7 +3,8 @@ export { metadata, localBusinessSchema } from "./metadata";
 import { Facebook, Instagram, Youtube, Star } from "lucide-react";
 import Script from "next/script";
 import MobileMenu from "@/components/MobileMenu";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import StickyCallButton from "@/components/StickyCallButton";
 
 const businessName = process.env.BUSINESS_NAME || "Air2Cool Heating & Cooling";
 
@@ -110,7 +111,7 @@ export default function RootLayout({
         <a
           href="/"
           aria-label="Go to homepage"
-          className="hidden lg:block fixed left-6 top-[74px] z-[9999] rounded-2xl bg-gray-900/95 px-5 py-4 shadow-2xl ring-1 ring-white/10 backdrop-blur
+          className="hidden lg:block fixed left-6 top-[140px] z-[9999] rounded-2xl bg-gray-900/95 px-5 py-4 shadow-2xl ring-1 ring-white/10 backdrop-blur
                      hover:opacity-95 active:scale-95"
         >
           <img
@@ -151,13 +152,15 @@ export default function RootLayout({
           <div className="bg-white/98 backdrop-blur border-b border-gray-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
               {/* Mobile Logo - Only shows on mobile */}
-              <a href="/" className="lg:hidden">
-                <img
-                  src="/mobile-logo.png"
-                  alt="Air2Cool"
-                  className="h-20 w-auto -ml-2"
-                />
-              </a>
+<a href="/" className="lg:hidden">
+  <div className="bg-gray-900/95 backdrop-blur rounded-2xl px-1 py-1 shadow-2xl ring-1 ring-white/10">
+    <img
+      src="/air2cool-logo-transparent-clean.png"
+      alt="Air2Cool"
+      className="h-18 w-auto"
+    />
+  </div>
+</a>
 
               {/* Desktop spacer for floating logo */}
               <div className="hidden lg:block w-60" />
@@ -384,6 +387,7 @@ export default function RootLayout({
           }}
         />
         <Analytics />
+        <StickyCallButton />
       </body>
     </html>
   );
