@@ -111,13 +111,13 @@ export default function RootLayout({
         <a
           href="/"
           aria-label="Go to homepage"
-          className="hidden lg:block fixed left-6 top-[140px] z-[9999] rounded-2xl bg-gray-900/95 px-5 py-4 shadow-2xl ring-1 ring-white/10 backdrop-blur
+          className="hidden lg:block fixed left-6 top-[50px] z-[9999] rounded-2xl bg-gray-900/95 px-5 py-4 shadow-2xl ring-1 ring-white/10 backdrop-blur
                      hover:opacity-95 active:scale-95"
         >
           <img
             src="/Air2Cool-HeatingAC-&-Refrigeration-Logo-237w.webp"
             alt="Air2Cool Heating & Cooling"
-            className="h-16 w-auto"
+            className="h-32 w-auto"
           />
         </a>
 
@@ -152,12 +152,12 @@ export default function RootLayout({
           <div className="bg-white/98 backdrop-blur border-b border-gray-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
               {/* Mobile Logo - Only shows on mobile */}
-<a href="/" className="lg:hidden">
-  <div className="bg-gray-900/95 backdrop-blur rounded-2xl px-1 py-1 shadow-2xl ring-1 ring-white/10">
+<a href="/" className="xl:hidden">
+  <div className="bg-white backdrop-blur rounded-2xl px-1 py-1 shadow-2xl ring-1 ring-white/10">
     <img
       src="/air2cool-logo-transparent-clean.png"
       alt="Air2Cool"
-      className="h-18 w-auto"
+      className="h-24 w-auto"
     />
   </div>
 </a>
@@ -166,7 +166,7 @@ export default function RootLayout({
               <div className="hidden lg:block w-60" />
 
               {/* Desktop Navigation - Hidden on mobile */}
-              <nav className="hidden lg:flex items-center gap-1">
+              <nav className="hidden xl:flex items-center gap-1">
                 <a
                   href="/services"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
@@ -248,7 +248,7 @@ export default function RootLayout({
                 {/* Desktop CTA Button - Hidden on mobile */}
                 <a
                   href="/contact"
-                  className="hidden lg:block bg-brand-red text-white px-6 py-2.5 rounded-full font-bold 
+                  className="hidden xl:block bg-brand-red text-white px-6 py-2.5 rounded-full font-bold 
                              hover:opacity-90 transition-opacity shadow-sm text-sm whitespace-nowrap"
                 >
                   Schedule Service

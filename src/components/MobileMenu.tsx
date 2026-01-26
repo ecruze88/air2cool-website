@@ -13,6 +13,12 @@ export default function MobileMenu() {
       document.body.style.height = '100vh';
     }
 
+    // Hide floating logo
+    const floatingLogo = document.querySelector('a[aria-label="Go to homepage"]');
+    if (floatingLogo) {
+      (floatingLogo as HTMLElement).style.setProperty('display', 'none', 'important');
+    }
+
     // AGGRESSIVE: Hide ALL Tawk.to elements with multiple selectors
     const tawkSelectors = [
       '.tawk-min-container',
@@ -44,6 +50,12 @@ export default function MobileMenu() {
       document.body.style.height = '';
     }
 
+    // Show floating logo again
+    const floatingLogo = document.querySelector('a[aria-label="Go to homepage"]');
+    if (floatingLogo) {
+      (floatingLogo as HTMLElement).style.removeProperty('display');
+    }
+
     // Show ALL Tawk.to elements again
     const tawkSelectors = [
       '.tawk-min-container',
@@ -70,7 +82,7 @@ export default function MobileMenu() {
       {/* Hamburger Button */}
       <button
         onClick={openMenu}
-        className="lg:hidden p-2 hover:bg-gray-100 rounded-lg"
+        className="xl:hidden p-2 hover:bg-gray-100 rounded-lg"
         type="button"
       >
         <Menu className="w-7 h-7 text-gray-900" />
