@@ -5,6 +5,7 @@ export const metadata: Metadata = {
     default: "Air2Cool Heating & Cooling | HVAC Repair & Installation North NJ | Morris County",
     template: "%s | Air2Cool Heating & Cooling",
   },
+  
   description:
     "Air2Cool: Family-owned HVAC contractor serving Morris, Sussex, Warren, Essex, Passaic, Union & Bergen County since 1998. 24/7 emergency service. Furnace repair, AC installation, heat pumps. Licensed & insured. Call (201) 787-5657.",
   keywords: [
@@ -95,7 +96,7 @@ export const metadata: Metadata = {
   
   // Verification tags
   verification: {
-    google: "your-google-verification-code-here",
+    google: "c2C2TRmiBcuVHC2eExcNJkpNVJHPYpWpQsaojeTeaEI",
     // yandex: "your-yandex-verification-code",
     // bing: "your-bing-verification-code",
   },

@@ -208,17 +208,7 @@ const THERMOSTAT_ISSUES = [
 export default function TroubleshootingPage() {
   return (
     <main className="bg-white">
-      {/* Sticky Call Button - Mobile */}
-      <div className="fixed bottom-6 right-6 z-50 lg:hidden">
-        <a
-          href="tel:+12017875657"
-          className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-5 py-3 rounded-full font-bold shadow-2xl"
-        >
-          <Phone className="w-4 h-4" />
-          Call
-        </a>
-      </div>
-
+ 
       {/* Hero - MOBILE OPTIMIZED */}
       <section className="relative bg-gradient-to-br from-red-900 via-orange-800 to-red-800 text-white overflow-hidden py-12 md:py-20">
         <div className="absolute inset-0 opacity-10">
@@ -264,6 +254,7 @@ export default function TroubleshootingPage() {
               </Link>
             </div>
 
+
             {/* Hide badges on mobile */}
             <div className="hidden md:flex flex-wrap items-center justify-center gap-3 text-sm">
               <div className="bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
@@ -288,6 +279,12 @@ export default function TroubleshootingPage() {
           </svg>
         </div>
       </section>
+            {/* Scroll Indicator - Between sections */}
+      <div className="py-4 flex justify-center">
+        <svg className="w-8 h-8 text-red-600 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
 
       {/* Quick Jump - Hide on mobile */}
       <section className="hidden md:block py-6 bg-gray-50 border-b border-gray-200 sticky top-0 z-40 shadow-sm">
