@@ -109,16 +109,15 @@ export default function RootLayout({
       <body className="text-gray-900 min-h-screen" suppressHydrationWarning>
         {/* FLOATING LOGO (desktop only - hidden on mobile) */}
         <a
-          href="/"
-          aria-label="Go to homepage"
-          className="hidden lg:block fixed left-6 top-[50px] z-[9999] rounded-2xl bg-gray-900/95 px-5 py-4 shadow-2xl ring-1 ring-white/10 backdrop-blur
-                     hover:opacity-95 active:scale-95"
-        >
-          <img
-            src="/Air2Cool-HeatingAC-&-Refrigeration-Logo-237w.webp"
-            alt="Air2Cool Heating & Cooling"
-            className="h-32 w-auto"
-          />
+href="/"
+  aria-label="Go to homepage"
+  className="hidden xl:block fixed left-6 top-[140px] z-[9999] rounded-2xl bg-white px-5 py-4 shadow-2xl"
+>
+  <img
+    src="/Air2Cool-HeatingAC-&-Refrigeration-Logo-237w.webp"
+    alt="Air2Cool Heating & Cooling"
+    className="h-28 w-auto"
+  />
         </a>
 
         <header className="sticky top-0 z-[1000] bg-white">
