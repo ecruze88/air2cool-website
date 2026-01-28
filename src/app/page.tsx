@@ -363,14 +363,15 @@ export default function HomePage() {
           },
           {
             title: "$500 OFF NEW FURNACE",
-            expiresText: "Limited time offer",
+            expiresText: "With qualifying rebate program • Limited time offer",
             imageSrc: "/2025-12-12.webp",
             imageAlt: "Air2Cool truck delivering new HVAC equipment to North NJ home",
             details: [
+              "Save $500 on qualifying furnace installations",
               "High-efficiency furnaces save on gas bills",
               "FREE house cleaning included",
               "0% financing available",
-              "Up to 12-year warranties",
+              "Up to 10-year warranties",
             ],
             ctaLabel: "Get Free Estimate",
             ctaHref: "/contact",
