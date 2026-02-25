@@ -3,14 +3,62 @@ import { Wrench, CheckCircle, Calendar, DollarSign } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Preventative Maintenance | Air2Cool - North NJ",
+  title: "HVAC Preventative Maintenance in Morris County NJ | Air2Cool | (201) 787-5657",
   description:
-    "Affordable HVAC preventative maintenance in North NJ. Extend equipment life, prevent costly repairs, and keep your system running smoothly. One visit per year with great perks!",
+    "Affordable HVAC preventative maintenance in Morris County & North NJ. Annual tune-ups, coil cleaning, refrigerant checks, 10% parts discount. Extend equipment life, prevent costly breakdowns. 26+ years experience. Call (201) 787-5657.",
+  keywords: [
+    "HVAC maintenance Morris County NJ",
+    "AC tune up North NJ",
+    "furnace tune up Morris County",
+    "preventative HVAC maintenance NJ",
+    "HVAC maintenance plan Morris County",
+    "air conditioner maintenance North Jersey",
+    "HVAC annual service NJ",
+    "AC maintenance contract Morris County",
+  ],
+  alternates: {
+    canonical: "/services/preventative-maintenance",
+  },
+  openGraph: {
+    title: "HVAC Preventative Maintenance in Morris County NJ | Air2Cool",
+    description:
+      "Annual HVAC tune-ups, coil cleaning, refrigerant checks, 10% parts discount. Prevent breakdowns & extend equipment life. Morris County & North NJ. Call (201) 787-5657.",
+    url: "/services/preventative-maintenance",
+  },
 };
 
 export default function PreventativeMaintenancePage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "HVAC Preventative Maintenance",
+            "description": "Annual HVAC maintenance program in Morris County & North NJ. Includes refrigerant check, coil cleaning, electrical inspection, condensate drain cleaning, 10% discount on parts, and more. Extends equipment life and prevents costly breakdowns.",
+            "provider": {
+              "@type": "HVACBusiness",
+              "@id": "https://www.air2cool.com/#organization",
+              "name": "Air2Cool Heating & Cooling",
+              "telephone": "+1-201-787-5657",
+              "url": "https://www.air2cool.com"
+            },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Morris County, NJ" },
+              { "@type": "AdministrativeArea", "name": "North New Jersey" }
+            ],
+            "url": "https://www.air2cool.com/services/preventative-maintenance",
+            "serviceType": "HVAC Maintenance",
+            "offers": {
+              "@type": "Offer",
+              "description": "One visit per year. Includes refrigerant check, coil cleaning, 10% parts discount.",
+              "availability": "https://schema.org/InStock"
+            }
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-900 via-amber-800 to-orange-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">

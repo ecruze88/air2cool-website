@@ -3,14 +3,63 @@ import { Flame, CheckCircle, Shield, Award, DollarSign, Wrench, Clock } from "lu
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Furnace & Boiler Installation in North NJ | Air2Cool Heating & Cooling",
+  title: "Furnace & Boiler Installation in Morris County NJ | Air2Cool | (201) 787-5657",
   description:
-    "Professional furnace and boiler installation in North New Jersey. Hydronic, steam, NTI systems. Free house cleaning with every install. Licensed Master HVAC Technicians. 0% financing available. Call (201) 787-5657.",
+    "Professional furnace and boiler installation in Morris County & North NJ. Lochinvar, NTI & Weil-McLain boilers. Hydronic & steam systems. Free house cleaning. 0% financing up to $25k. Licensed Master HVAC Technicians. Call (201) 787-5657.",
+  keywords: [
+    "furnace installation Morris County NJ",
+    "boiler installation North NJ",
+    "heating system installation NJ",
+    "Lochinvar boiler installation NJ",
+    "NTI boiler installation Morris County",
+    "gas furnace installation North NJ",
+    "hydronic boiler installation NJ",
+    "new furnace Morris County NJ",
+  ],
+  alternates: {
+    canonical: "/services/heating-installation",
+  },
+  openGraph: {
+    title: "Furnace & Boiler Installation in Morris County NJ | Air2Cool",
+    description:
+      "Lochinvar, NTI & Weil-McLain boilers. High-efficiency gas furnaces. Free house cleaning. 0% financing. Morris County & North NJ. Call (201) 787-5657.",
+    url: "/services/heating-installation",
+  },
 };
 
 export default function HeatingInstallationPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Furnace & Boiler Installation",
+            "alternateName": "Heating System Installation",
+            "description": "Professional installation of high-efficiency furnaces and boilers in Morris County & North NJ. Specializing in Lochinvar, NTI Trinity, and Weil-McLain systems. Includes free house cleaning and 0% financing.",
+            "provider": {
+              "@type": "HVACBusiness",
+              "@id": "https://www.air2cool.com/#organization",
+              "name": "Air2Cool Heating & Cooling",
+              "telephone": "+1-201-787-5657",
+              "url": "https://www.air2cool.com"
+            },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Morris County, NJ" },
+              { "@type": "AdministrativeArea", "name": "North New Jersey" }
+            ],
+            "url": "https://www.air2cool.com/services/heating-installation",
+            "serviceType": "HVAC Installation",
+            "offers": {
+              "@type": "Offer",
+              "description": "Free in-home estimate. 0% APR financing up to $25,000. Free house cleaning included.",
+              "availability": "https://schema.org/InStock"
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-red-900 via-orange-800 to-red-800 text-white overflow-hidden py-12 md:py-20">
         <div className="absolute inset-0 opacity-10">

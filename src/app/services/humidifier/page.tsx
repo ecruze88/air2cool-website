@@ -3,14 +3,61 @@ import { CheckCircle, Droplets, Home, Shield, Zap, Clock, DollarSign, AlertTrian
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Aprilaire 865 Humidifier Installation | Whole-Home Humidity Control | Air2Cool NJ",
+  title: "Whole-Home Humidifier Installation in Morris County NJ | Air2Cool | (201) 787-5657",
   description:
-    "Professional installation of Aprilaire 865 ductless steam humidifier. Eliminate dry air, protect your home, improve health. Serving North NJ. 0% financing available. Call (201) 787-5657.",
+    "Professional whole-home humidifier installation in Morris County & North NJ. Aprilaire 865 ductless steam humidifier — covers up to 3,400 sq ft, no ductwork needed. Eliminate dry winter air. 0% financing. Call (201) 787-5657.",
+  keywords: [
+    "whole home humidifier installation NJ",
+    "Aprilaire humidifier Morris County",
+    "ductless steam humidifier NJ",
+    "humidifier installation North NJ",
+    "indoor humidity control Morris County",
+    "whole house humidifier installation NJ",
+    "Aprilaire 865 installation NJ",
+  ],
+  alternates: {
+    canonical: "/services/humidifier",
+  },
+  openGraph: {
+    title: "Whole-Home Humidifier Installation in Morris County NJ | Air2Cool",
+    description:
+      "Aprilaire 865 ductless steam humidifier. Covers 3,400 sq ft. No ductwork needed. 5-year warranty. Morris County NJ. 0% financing. Call (201) 787-5657.",
+    url: "/services/humidifier",
+  },
 };
 
 export default function HumidifierPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Whole-Home Humidifier Installation",
+            "description": "Professional installation of the Aprilaire 865 ductless steam humidifier in Morris County & North NJ. Covers up to 3,400 sq ft. Works without ductwork — ideal for homes with boilers, radiators, or radiant floor heating.",
+            "provider": {
+              "@type": "HVACBusiness",
+              "@id": "https://www.air2cool.com/#organization",
+              "name": "Air2Cool Heating & Cooling",
+              "telephone": "+1-201-787-5657",
+              "url": "https://www.air2cool.com"
+            },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Morris County, NJ" },
+              { "@type": "AdministrativeArea", "name": "North New Jersey" }
+            ],
+            "url": "https://www.air2cool.com/services/humidifier",
+            "serviceType": "Indoor Air Quality",
+            "offers": {
+              "@type": "Offer",
+              "description": "Free estimate. 0% APR financing available.",
+              "availability": "https://schema.org/InStock"
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-cyan-900 via-blue-800 to-cyan-800 text-white overflow-hidden py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6">

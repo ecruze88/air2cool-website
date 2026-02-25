@@ -3,14 +3,61 @@ import { Home, CheckCircle, Wrench, Clock, Phone, Building2 } from "lucide-react
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Commercial Refrigeration & HVAC Services in North NJ | Air2Cool",
+  title: "Commercial HVAC & Refrigeration in Morris County NJ | Air2Cool | (201) 787-5657",
   description:
-    "Professional commercial refrigeration, rooftop HVAC, and walk-in cooler services in North New Jersey. Restaurants, retail, offices. Licensed commercial HVAC contractors. 24/7 emergency service. Call (201) 787-5657.",
+    "Expert commercial HVAC and refrigeration services in Morris County & North NJ. Rooftop units, walk-in coolers, freezers, ice machines. Restaurants, retail, offices. 24/7 emergency. Licensed commercial contractors. Call (201) 787-5657.",
+  keywords: [
+    "commercial HVAC Morris County NJ",
+    "commercial refrigeration North NJ",
+    "walk-in cooler repair Morris County",
+    "rooftop unit installation NJ",
+    "commercial AC contractor Morris County",
+    "restaurant refrigeration repair NJ",
+    "commercial HVAC contractor North Jersey",
+    "walk-in freezer repair NJ",
+  ],
+  alternates: {
+    canonical: "/services/commercial-refrigeration",
+  },
+  openGraph: {
+    title: "Commercial HVAC & Refrigeration in Morris County NJ | Air2Cool",
+    description:
+      "Rooftop units, walk-in coolers, refrigeration systems for restaurants & businesses. 24/7 emergency. Morris County & North NJ. Call (201) 787-5657.",
+    url: "/services/commercial-refrigeration",
+  },
 };
 
 export default function CommercialRefrigerationPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Commercial HVAC & Refrigeration",
+            "description": "Professional commercial HVAC installation, service, and repair in Morris County & North NJ. Rooftop units, walk-in coolers, freezers, ice machines, and refrigeration systems for restaurants, retail, and offices.",
+            "provider": {
+              "@type": "HVACBusiness",
+              "@id": "https://www.air2cool.com/#organization",
+              "name": "Air2Cool Heating & Cooling",
+              "telephone": "+1-201-787-5657",
+              "url": "https://www.air2cool.com"
+            },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Morris County, NJ" },
+              { "@type": "AdministrativeArea", "name": "North New Jersey" }
+            ],
+            "url": "https://www.air2cool.com/services/commercial-refrigeration",
+            "serviceType": "Commercial HVAC & Refrigeration",
+            "audience": {
+              "@type": "BusinessAudience",
+              "audienceType": "Commercial businesses including restaurants, retail stores, and office buildings"
+            }
+          })
+        }}
+      />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-hidden py-12 md:py-20">
         <div className="absolute inset-0 opacity-10">

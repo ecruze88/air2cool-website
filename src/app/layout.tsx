@@ -110,15 +110,15 @@ export default function RootLayout({
       <body className="text-gray-900 min-h-screen" suppressHydrationWarning>
         {/* FLOATING LOGO (desktop only - hidden on mobile) */}
         <a
-href="/"
-  aria-label="Go to homepage"
-  className="hidden xl:block fixed left-6 top-[140px] z-[9999] rounded-2xl bg-white px-5 py-4 shadow-2xl"
->
-  <img
-    src="/Air2Cool-HeatingAC-&-Refrigeration-Logo-237w.webp"
-    alt="Air2Cool Heating & Cooling"
-    className="h-28 w-auto"
-  />
+          href="/"
+          aria-label="Go to homepage"
+          className="hidden xl:block fixed left-6 top-35 z-9999"
+        >
+          <img
+            src="/air2cool-hollow-background.png"
+            alt="Air2Cool Heating & Cooling"
+            className="w-52.5 h-auto 2xl:w-90"
+          />
         </a>
         
 
@@ -154,15 +154,16 @@ href="/"
           <div className="bg-white/98 backdrop-blur border-b border-gray-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
               {/* Mobile Logo - Only shows on mobile */}
-<a href="/" className="xl:hidden">
-  <div className="bg-white backdrop-blur rounded-2xl px-1 py-1 shadow-2xl ring-1 ring-white/10">
-    <img
-      src="/air2cool-logo-transparent-clean.png"
-      alt="Air2Cool"
-      className="h-24 w-auto"
-    />
-  </div>
-</a>
+              <a href="/" className="xl:hidden">
+                {/* Wrapper crops the ~22% transparent bottom padding in the PNG */}
+                <div className="w-44 h-24 overflow-hidden sm:w-52 sm:h-28">
+                  <img
+                    src="/air2cool-hollow-background.png"
+                    alt="Air2Cool"
+                    className="w-full h-auto drop-shadow-sm"
+                  />
+                </div>
+              </a>
 
               {/* Desktop spacer for floating logo */}
               <div className="hidden lg:block w-60" />
@@ -218,6 +219,13 @@ href="/"
                   FAQ
                 </a>
                 <a
+                  href="/blog"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
+                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
+                >
+                  Blog
+                </a>
+                <a
                   href="/services/preventative-maintenance"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
                              hover:bg-gray-100 hover:text-brand-blue transition-colors"
@@ -263,7 +271,7 @@ href="/"
             </div>
           </div>
                  {/* STICKY GOOGLE REVIEWS BANNER */}
-        <section className="sticky top-[60px] md:top-[73px] z-[999] bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-3 md:py-6 shadow-lg">
+        <section id="sticky-reviews-banner" className="sticky top-[60px] md:top-[73px] z-[999] bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-3 md:py-6 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex items-center justify-center gap-3 md:gap-6 text-white text-center">
               {/* Mobile: Compact single row */}
@@ -381,6 +389,7 @@ href="/"
                   <li><a href="/about" className="hover:text-white transition">About Us</a></li>
                   <li><a href="/reviews" className="hover:text-white transition">Reviews</a></li>
                   <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
+                  <li><a href="/blog" className="hover:text-white transition">Blog</a></li>
                   <li><a href="/contact" className="hover:text-white transition">Contact Us</a></li>
                   <li><a href="/maintenance-contract" className="hover:text-white transition">Maintenance Plans</a></li>
                 </ul>

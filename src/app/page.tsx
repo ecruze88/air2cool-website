@@ -1,4 +1,3 @@
-import CTA from "@/components/CTA";
 import type { Metadata } from "next";
 import Offers from "@/components/Offers";
 import Link from "next/link";
@@ -169,7 +168,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
 
         {/* HERO CONTENT */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 md:pt-32 pb-16 md:pb-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pt-12 md:pt-32 pb-12 md:pb-24">
           <div className="max-w-4xl">
             {/* Urgency Banner */}
           {/* Emergency Call Button */}
@@ -197,35 +196,35 @@ export default function HomePage() {
               Furnace out in the cold? AC dead in the heat? We're your NJ HVAC experts with honest pricing and clean installs. Family owned since 1998.
             </p>
 
-            {/* Trust Badges - IMPROVED MOBILE SPACING */}
-            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 md:gap-4 mb-6 md:mb-8">
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-3 rounded-full">
-                <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center shrink-0">
-                  <Star className="w-5 h-5 text-white fill-white" />
+            {/* Trust Badges - 3-column compact on mobile, row on tablet+ */}
+            <div className="grid grid-cols-3 sm:flex sm:flex-row sm:flex-wrap gap-2 sm:gap-3 md:gap-4 mb-5 md:mb-8">
+              <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-full text-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-500 rounded-full flex items-center justify-center shrink-0 mx-auto sm:mx-0">
+                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-white fill-white" />
                 </div>
-                <div className="text-left">
-                  <div className="font-bold text-sm md:text-base">5.0 Google Rating</div>
-                  <div className="text-xs text-gray-300">250+ Reviews</div>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-3 rounded-full">
-                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center shrink-0">
-                  <Award className="w-5 h-5 text-white" />
-                </div>
-                <div className="text-left">
-                  <div className="font-bold text-sm md:text-base">Licensed & Insured</div>
-                  <div className="text-xs text-gray-300">Master HVAC Techs</div>
+                <div>
+                  <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">5.0 Google Rating</div>
+                  <div className="hidden sm:block text-xs text-gray-300">250+ Reviews</div>
                 </div>
               </div>
-              
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-4 py-3 rounded-full">
-                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shrink-0">
-                  <DollarSign className="w-5 h-5 text-white" />
+
+              <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-full text-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-500 rounded-full flex items-center justify-center shrink-0 mx-auto sm:mx-0">
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
-                <div className="text-left">
-                  <div className="font-bold text-sm md:text-base">0% Financing</div>
-                  <div className="text-xs text-gray-300">Up to $25k Available</div>
+                <div>
+                  <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">Licensed &amp; Insured</div>
+                  <div className="hidden sm:block text-xs text-gray-300">Master HVAC Techs</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-full text-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-500 rounded-full flex items-center justify-center shrink-0 mx-auto sm:mx-0">
+                  <DollarSign className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                </div>
+                <div>
+                  <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">0% Financing</div>
+                  <div className="hidden sm:block text-xs text-gray-300">Up to $25k Available</div>
                 </div>
               </div>
             </div>
@@ -239,8 +238,13 @@ export default function HomePage() {
                 <span>Get Free Estimate</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </a>
-              
-
+              <a
+                href="tel:+12017875657"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg transition-all hover:bg-white/20"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
             </div>
 
             {/* Urgency Text - HIDDEN ON MOBILE */}
@@ -252,7 +256,45 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* OFFERS (Goettl-style) */}
+{/* COMMUNITY & AWARDS */}
+
+
+
+{/* COMMUNITY AWARDS - Compact Version */}
+<section className="py-12 bg-gradient-to-r from-green-50 to-blue-50">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-2 gap-3 md:gap-8 max-w-4xl mx-auto">
+      {/* Nextdoor Badge */}
+      <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 rounded-2xl shadow-lg border-2 border-green-200">
+        <img 
+          src="/neighborhood-fave-2025.webp" 
+          alt="Nextdoor Neighborhood Fave 2025 badge" 
+          className="w-12 h-12 md:w-24 md:h-24 object-contain shrink-0 mb-2 md:mb-0" 
+        />
+        <div className="text-center md:text-left"> 
+          <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">Nextdoor Neighborhood Fave</div>
+          <div className="text-[10px] md:text-sm text-green-600 font-semibold">2025 Winner</div>
+        </div>
+      </div>
+
+      {/* Little League Badge */}
+      <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 rounded-2xl shadow-lg border-2 border-blue-200">
+        <img 
+          src="/wharton-little-league.png" 
+          alt="Wharton Little League logo" 
+          className="w-12 h-12 md:w-24 md:h-24 object-contain shrink-0 mb-2 md:mb-0" 
+        />
+        <div className="text-center md:text-left">
+          <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">Wharton Little League</div>
+          <div className="text-[10px] md:text-sm text-blue-600 font-semibold">Proud Sponsor</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      {/* OFFERS */}
       <Offers
         heading="Winter Specials - Limited Time!"
         offers={[
@@ -509,24 +551,24 @@ export default function HomePage() {
           </div>
 
           {/* Full Guide CTA */}
-          <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl p-8 text-white shadow-2xl text-center">
-            <AlertTriangle className="w-12 h-12 mx-auto mb-4" />
+          <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl p-6 md:p-8 text-white shadow-2xl text-center">
+            <AlertTriangle className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4" />
             <h3 className="text-2xl md:text-3xl font-extrabold mb-3">
               Need More Help?
             </h3>
-            <p className="text-red-100 mb-6 max-w-2xl mx-auto">
+            <p className="text-red-100 mb-6 max-w-2xl mx-auto text-sm md:text-base">
               Our complete troubleshooting guide covers furnace, AC, boiler, and thermostat problems with step-by-step fixes. Or call us for same-day professional service.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Link
                 href="/troubleshooting"
-                className="inline-block bg-white text-red-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition-all"
+                className="inline-flex justify-center bg-white text-red-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition-all"
               >
                 View Full Guide →
               </Link>
               <a
                 href="tel:+12017875657"
-                className="inline-block bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full font-bold text-lg border-2 border-white/30 hover:bg-white/20 transition-all"
+                className="inline-flex justify-center bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full font-bold text-lg border-2 border-white/30 hover:bg-white/20 transition-all"
               >
                 Call (201) 787-5657
               </a>
@@ -538,7 +580,7 @@ export default function HomePage() {
         <section className="mb-16">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Recent Projects */}
-            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-8 text-white shadow-2xl">
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-6 md:p-8 text-white shadow-2xl">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
                 See Our Work
               </h2>
@@ -554,7 +596,7 @@ export default function HomePage() {
             </div>
 
             {/* About Us */}
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 text-white shadow-2xl">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 md:p-8 text-white shadow-2xl">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
                 26+ Years of Excellence
               </h2>
@@ -572,13 +614,13 @@ export default function HomePage() {
         </section>
 
         {/* WHY CHOOSE AIR2COOL - With Truck Photo */}
-        <section className="mb-16 py-20 bg-gradient-to-b from-white to-gray-50">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-12">
+        <section className="mb-16 py-10 md:py-20 bg-gradient-to-b from-white to-gray-50">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-8 md:mb-12">
               Why North Jersey Chooses Air2Cool
             </h2>
-            
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
               {/* Image - Truck with Google 5-star badge */}
               <div className="order-2 lg:order-1">
                 <img
@@ -648,7 +690,7 @@ export default function HomePage() {
         <section className="mb-16">
           <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
             <div className="bg-gradient-to-r from-brand-blue to-brand-red p-px">
-              <div className="bg-white p-8 sm:p-10">
+              <div className="bg-white p-5 sm:p-10">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
                   Service Areas
                 </h2>
@@ -672,7 +714,7 @@ export default function HomePage() {
 
         {/* FINAL CTA - One strong call to action before footer */}
         <section className="mb-8">
-          <div className="bg-gradient-to-r from-brand-blue to-brand-red rounded-3xl p-12 text-center text-white shadow-xl">
+          <div className="bg-gradient-to-r from-brand-blue to-brand-red rounded-3xl p-6 md:p-12 text-center text-white shadow-xl">
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
               Ready to Get Started?
             </h2>

@@ -252,7 +252,7 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      {/* JCP&L - MOBILE OPTIMIZED */}
+  {/* JCP&L - MOBILE OPTIMIZED */}
       <section className="py-10 md:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -281,20 +281,14 @@ export default function FinancingPage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg md:rounded-xl p-4 md:p-6 border-2 border-blue-200">
-                <h3 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3">How to Apply</h3>
-                <p className="text-xs md:text-base text-gray-700 mb-3 md:mb-4">
-                  Visit:{" "}
-                  <a 
-                    href="https://www.neifund.org/jcpl-residential/" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline font-semibold break-all"
-                  >
-                    neifund.org/jcpl-residential
-                  </a>
-                </p>
-              </div>
+              <a
+                href="https://www.neifund.org/air2cool-a-c-heating-refrigeration/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 md:py-4 rounded-lg transition text-center text-sm md:text-base"
+              >
+                Apply for JCP&L Financing →
+              </a>
             </div>
 
             <div className="bg-gradient-to-br from-blue-600 to-green-600 rounded-xl md:rounded-2xl p-6 md:p-10 text-white">

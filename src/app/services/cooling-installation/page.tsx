@@ -3,14 +3,63 @@ import { Snowflake, CheckCircle, DollarSign, Shield, Clock, Award, Zap, Wind } f
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Cooling Installation - AC, Heat Pumps & Mini Splits | Air2Cool NJ",
+  title: "AC & Cooling System Installation in Morris County NJ | Air2Cool | (201) 787-5657",
   description:
-    "Professional cooling system installation in Morris County & North NJ. New AC, heat pumps, ductless mini splits. 0% financing. Free house cleaning. Licensed HVAC technicians. Call (201) 787-5657.",
+    "Professional AC, heat pump & mini split installation in Morris County & North NJ. 0% financing up to $25k. Free house cleaning with every install. 10-year warranties. Licensed Master HVAC Technicians. Call (201) 787-5657.",
+  keywords: [
+    "AC installation Morris County NJ",
+    "central air conditioning installation NJ",
+    "heat pump installation North NJ",
+    "mini split installation Morris County",
+    "ductless AC installation NJ",
+    "cooling system installation Morris County",
+    "new air conditioner installation NJ",
+    "AC replacement Morris County",
+  ],
+  alternates: {
+    canonical: "/services/cooling-installation",
+  },
+  openGraph: {
+    title: "AC & Cooling System Installation in Morris County NJ | Air2Cool",
+    description:
+      "Central AC, heat pumps & ductless mini splits. 0% financing. Free house cleaning every install. Morris County & North NJ. Call (201) 787-5657.",
+    url: "/services/cooling-installation",
+  },
 };
 
 export default function CoolingInstallationPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Cooling System Installation",
+            "alternateName": "AC Installation",
+            "description": "Professional installation of central air conditioners, heat pumps, and ductless mini-split systems in Morris County & North New Jersey. Includes free house cleaning and 0% financing options.",
+            "provider": {
+              "@type": "HVACBusiness",
+              "@id": "https://www.air2cool.com/#organization",
+              "name": "Air2Cool Heating & Cooling",
+              "telephone": "+1-201-787-5657",
+              "url": "https://www.air2cool.com"
+            },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Morris County, NJ" },
+              { "@type": "AdministrativeArea", "name": "North New Jersey" }
+            ],
+            "url": "https://www.air2cool.com/services/cooling-installation",
+            "serviceType": "HVAC Installation",
+            "offers": {
+              "@type": "Offer",
+              "description": "Free estimate. 0% APR financing up to $25,000. Free house cleaning included.",
+              "availability": "https://schema.org/InStock"
+            }
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-cyan-800 to-blue-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">

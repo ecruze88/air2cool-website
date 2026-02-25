@@ -3,14 +3,78 @@ import { Snowflake, CheckCircle, Clock, Zap } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AC Repair Services | Air2Cool - North NJ",
+  title: "AC Repair in Morris County & North NJ | Air2Cool | (201) 787-5657",
   description:
-    "Prompt and affordable air conditioning repair in North New Jersey. Same-day AC service available. Expert compressor repair, refrigerant recharge, and more. Call now!",
+    "Expert air conditioner repair in Morris County & North NJ. Same-day service available, 24/7 emergency. 26+ years experience. Compressor repair, refrigerant recharge, heat pump repair. Licensed Master HVAC Technicians. Call (201) 787-5657.",
+  keywords: [
+    "AC repair Morris County NJ",
+    "air conditioner repair North NJ",
+    "same day AC repair Morris County",
+    "24/7 emergency AC service NJ",
+    "compressor repair Morris County NJ",
+    "refrigerant recharge North NJ",
+    "heat pump repair Morris County",
+    "air conditioning repair Morristown NJ",
+  ],
+  alternates: {
+    canonical: "/services/ac-repair",
+  },
+  openGraph: {
+    title: "AC Repair in Morris County & North NJ | Air2Cool",
+    description:
+      "Same-day AC repair by licensed technicians. 24/7 emergency service. 26+ years experience in Morris County & North NJ. Call (201) 787-5657.",
+    url: "/services/ac-repair",
+  },
 };
 
 export default function ACRepairPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "AC Repair",
+            "alternateName": "Air Conditioner Repair",
+            "description": "Expert air conditioning repair services including compressor replacement, refrigerant recharge, heat pump repair, and same-day emergency service in Morris County & North New Jersey.",
+            "provider": {
+              "@type": "HVACBusiness",
+              "@id": "https://www.air2cool.com/#organization",
+              "name": "Air2Cool Heating & Cooling",
+              "telephone": "+1-201-787-5657",
+              "url": "https://www.air2cool.com"
+            },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Morris County, NJ" },
+              { "@type": "AdministrativeArea", "name": "North New Jersey" }
+            ],
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "servicePhone": {
+                "@type": "ContactPoint",
+                "telephone": "+1-201-787-5657",
+                "contactType": "customer service",
+                "availableLanguage": "English",
+                "hoursAvailable": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                  "opens": "00:00",
+                  "closes": "23:59"
+                }
+              }
+            },
+            "url": "https://www.air2cool.com/services/ac-repair",
+            "serviceType": "HVAC Repair",
+            "offers": {
+              "@type": "Offer",
+              "description": "Free estimates available. Same-day service.",
+              "availability": "https://schema.org/InStock"
+            }
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-cyan-800 to-blue-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">

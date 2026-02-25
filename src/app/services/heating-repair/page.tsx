@@ -3,14 +3,74 @@ import { Flame, CheckCircle, Clock, Shield } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Heating & Boiler Repair | Hydronic, Steam, NTI | Air2Cool North NJ",
+  title: "Furnace & Boiler Repair in Morris County NJ | Air2Cool | (201) 787-5657",
   description:
-    "Expert heating & boiler repair in North NJ. Hydronic boilers, steam boilers, NTI specialists. All major brands serviced. 24/7 emergency furnace & boiler service. Licensed HVAC technicians.",
+    "Expert furnace & boiler repair in Morris County & North NJ. Hydronic boilers, steam boilers, NTI specialists. 24/7 emergency heating service. All major brands serviced. Licensed Master HVAC Technicians. Call (201) 787-5657.",
+  keywords: [
+    "furnace repair Morris County NJ",
+    "boiler repair North NJ",
+    "heating repair Morris County",
+    "hydronic boiler repair NJ",
+    "steam boiler repair Morris County",
+    "NTI boiler repair NJ",
+    "emergency furnace repair North Jersey",
+    "boiler repair Morristown NJ",
+    "heating system repair Morris County",
+  ],
+  alternates: {
+    canonical: "/services/heating-repair",
+  },
+  openGraph: {
+    title: "Furnace & Boiler Repair in Morris County NJ | Air2Cool",
+    description:
+      "24/7 emergency heating repair. Hydronic, steam & NTI boiler specialists. All major brands. Morris County & North NJ. Call (201) 787-5657.",
+    url: "/services/heating-repair",
+  },
 };
 
 export default function HeatingRepairPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Heating & Boiler Repair",
+            "alternateName": "Furnace Repair",
+            "description": "Expert furnace and boiler repair in Morris County & North NJ. Specialists in hydronic boilers, steam boilers, and NTI systems. 24/7 emergency service available.",
+            "provider": {
+              "@type": "HVACBusiness",
+              "@id": "https://www.air2cool.com/#organization",
+              "name": "Air2Cool Heating & Cooling",
+              "telephone": "+1-201-787-5657",
+              "url": "https://www.air2cool.com"
+            },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Morris County, NJ" },
+              { "@type": "AdministrativeArea", "name": "North New Jersey" }
+            ],
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "servicePhone": {
+                "@type": "ContactPoint",
+                "telephone": "+1-201-787-5657",
+                "contactType": "emergency",
+                "availableLanguage": "English",
+                "hoursAvailable": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                  "opens": "00:00",
+                  "closes": "23:59"
+                }
+              }
+            },
+            "url": "https://www.air2cool.com/services/heating-repair",
+            "serviceType": "HVAC Repair"
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-red-900 via-orange-800 to-red-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">

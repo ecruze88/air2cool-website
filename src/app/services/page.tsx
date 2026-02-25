@@ -3,9 +3,28 @@ import { Flame, Snowflake, Wind, Wrench, Zap, Droplets, Waves, Home } from "luci
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "HVAC Services in North NJ | Air2Cool Heating & Cooling",
+  title: "HVAC Services in Morris County & North NJ | Air2Cool | (201) 787-5657",
   description:
-    "Complete HVAC services in North NJ: heating & cooling repair, furnace & boiler installation, AC & heat pump installation, mini splits, maintenance. Licensed with 26+ years experience. Call (201) 787-5657.",
+    "Complete HVAC services in Morris County & North NJ: heating & cooling repair, furnace & boiler installation, AC & heat pump installation, ductless mini splits, preventative maintenance. 26+ years, 5.0 Google rating. Call (201) 787-5657.",
+  keywords: [
+    "HVAC services Morris County NJ",
+    "HVAC contractor North NJ",
+    "heating cooling repair Morris County",
+    "AC repair North NJ",
+    "furnace installation Morris County",
+    "HVAC contractor North Jersey",
+    "air conditioning repair NJ",
+    "boiler repair Morris County",
+  ],
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "HVAC Services in Morris County & North NJ | Air2Cool",
+    description:
+      "Expert HVAC repair, installation & maintenance. 26+ years experience, 5.0 Google rating. Morris County & North NJ. Call (201) 787-5657.",
+    url: "/services",
+  },
 };
 
 const SERVICES = [
@@ -99,6 +118,35 @@ const COLOR_CLASSES = {
 export default function ServicesPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "HVAC Services by Air2Cool",
+            "description": "Complete heating and cooling services in Morris County & North New Jersey",
+            "provider": {
+              "@type": "HVACBusiness",
+              "@id": "https://www.air2cool.com/#organization",
+              "name": "Air2Cool Heating & Cooling",
+              "telephone": "+1-201-787-5657",
+              "url": "https://www.air2cool.com"
+            },
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Heating Repair", "url": "https://www.air2cool.com/services/heating-repair" },
+              { "@type": "ListItem", "position": 2, "name": "AC Repair", "url": "https://www.air2cool.com/services/ac-repair" },
+              { "@type": "ListItem", "position": 3, "name": "Heating Installation", "url": "https://www.air2cool.com/services/heating-installation" },
+              { "@type": "ListItem", "position": 4, "name": "Cooling Installation", "url": "https://www.air2cool.com/services/cooling-installation" },
+              { "@type": "ListItem", "position": 5, "name": "Preventative Maintenance", "url": "https://www.air2cool.com/services/preventative-maintenance" },
+              { "@type": "ListItem", "position": 6, "name": "Air Filtration", "url": "https://www.air2cool.com/services/air-filtration" },
+              { "@type": "ListItem", "position": 7, "name": "Whole-Home Humidifier", "url": "https://www.air2cool.com/services/humidifier" },
+              { "@type": "ListItem", "position": 8, "name": "Commercial Refrigeration", "url": "https://www.air2cool.com/services/commercial-refrigeration" },
+              { "@type": "ListItem", "position": 9, "name": "HVAC Installation", "url": "https://www.air2cool.com/services/hvac-installation" }
+            ]
+          })
+        }}
+      />
       {/* Hero Section - MOBILE OPTIMIZED */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white overflow-hidden">
         {/* Background pattern */}
