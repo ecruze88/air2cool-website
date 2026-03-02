@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BookOpen, Flame, Wrench, Wind, Calendar, Clock, ArrowRight } from "lucide-react";
+import { BookOpen, Flame, Wrench, Wind, Calendar, Clock, ArrowRight, Zap } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -29,9 +29,23 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: "lower-energy-bills-hvac",
+    category: "Energy Savings",
+    categoryColor: "text-emerald-700 bg-emerald-50",
+    accentColor: "from-emerald-500 to-teal-500",
+    icon: Zap,
+    iconColor: "text-emerald-600",
+    title: "Why Is My Energy Bill So High? 7 HVAC Fixes for NJ Homeowners",
+    excerpt:
+      "Your HVAC system accounts for nearly half your home's energy use — and a struggling system keeps running while quietly wasting 20–40% more energy than it should. Here are the 7 most common causes of high energy bills in North NJ homes, and what to do about each one.",
+    date: "March 1, 2026",
+    readTime: "7 min read",
+  },
+  {
     slug: "diy-furnace-checkup",
     category: "Heating",
     categoryColor: "text-orange-700 bg-orange-50",
+    accentColor: "from-orange-500 to-amber-500",
     icon: Flame,
     iconColor: "text-orange-600",
     title: "DIY Furnace Checkup: 8 Steps to Do Before Winter",
@@ -124,7 +138,7 @@ export default function BlogPage() {
                   className="group bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
                 >
                   {/* Card top accent */}
-                  <div className="h-2 bg-gradient-to-r from-orange-500 to-amber-500" />
+                  <div className={`h-2 bg-linear-to-r ${post.accentColor}`} />
 
                   <div className="p-6 flex flex-col flex-1">
                     {/* Category + Icon */}
