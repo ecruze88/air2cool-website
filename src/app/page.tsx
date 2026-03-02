@@ -269,9 +269,9 @@ export default function HomePage() {
         <img 
           src="/neighborhood-fave-2025.webp" 
           alt="Nextdoor Neighborhood Fave 2025 badge" 
-          className="w-12 h-12 md:w-24 md:h-24 object-contain shrink-0 mb-2 md:mb-0" 
+          className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
         />
-        <div className="text-center md:text-left"> 
+        <div className="text-center md:text-left">
           <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">Nextdoor Neighborhood Fave</div>
           <div className="text-[10px] md:text-sm text-green-600 font-semibold">2025 Winner</div>
         </div>
@@ -282,7 +282,7 @@ export default function HomePage() {
         <img 
           src="/wharton-little-league.png" 
           alt="Wharton Little League logo" 
-          className="w-12 h-12 md:w-24 md:h-24 object-contain shrink-0 mb-2 md:mb-0" 
+          className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
         />
         <div className="text-center md:text-left">
           <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">Wharton Little League</div>
