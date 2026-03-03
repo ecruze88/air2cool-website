@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Air2Cool Heating & Cooling | HVAC Repair & Installation North NJ | Morris County",
+    default: "Air2Cool | North NJ HVAC Company | Heating & Cooling Near Me",
     template: "%s | Air2Cool Heating & Cooling",
   },
   
   description:
-    "Air2Cool: Family-owned HVAC contractor serving Morris, Sussex, Warren, Essex, Passaic, Union & Bergen County since 1998. 24/7 emergency service. Furnace repair, AC installation, heat pumps. Licensed & insured. Call (201) 787-5657.",
+    "Air2Cool — trusted North NJ HVAC company since 1998. Furnace repair, AC installation & 24/7 service near you. 5.0-star Google rated. Call (201) 787-5657.",
   keywords: [
     // Primary Keywords
     "HVAC North NJ",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
   classification: "Local Business - HVAC Contractor",
 
   openGraph: {
-    title: "Air2Cool Heating & Cooling | HVAC Repair & Installation North NJ",
+    title: "Air2Cool | North NJ HVAC Company | Heating & Cooling Near Me",
     description:
-      "Family-owned HVAC contractor serving North NJ since 1998. 24/7 emergency furnace & AC repair. Licensed, insured, 5.0 Google rating. Call (201) 787-5657 for service.",
+      "Family-owned North NJ HVAC company since 1998. Furnace repair, AC installation & 24/7 emergency service near you. 5.0-star Google rated. Call (201) 787-5657.",
     url: "https://www.air2cool.com",
     siteName: "Air2Cool Heating & Cooling",
     images: [
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Air2Cool Heating & Cooling | HVAC Services North NJ",
+    title: "Air2Cool | North NJ HVAC Company | Near Me",
     description:
-      "24/7 HVAC repair & installation in Morris County. Family-owned since 1998. Licensed & insured. 5.0 ⭐ rated. Emergency service available.",
+      "Family-owned North NJ HVAC company since 1998. Furnace repair, AC installation & 24/7 emergency service near you. 5.0-star Google rated. Call (201) 787-5657.",
     images: ["/og-image.jpg"],
     creator: "@air2cool",
   },
