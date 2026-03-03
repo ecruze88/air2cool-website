@@ -1,5 +1,8 @@
 import { MetadataRoute } from 'next'
- 
+import townsData from '@/data/service-areas.json'
+
+type Town = { slug: string; countySlug: string }
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.air2cool.com'
   const currentDate = new Date()
@@ -28,20 +31,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/air-filtration',
     '/services/preventative-maintenance',
     '/services/commercial-refrigeration',
-    '/humidifier',
+    '/services/humidifier',
   ]
-  
-  // Location pages (you can add these as you create them)
-  const locationPages = [
-    '/locations/morris-county',
-    '/locations/sussex-county',
-    '/locations/warren-county',
-    '/locations/essex-county',
-    '/locations/passaic-county',
-    '/locations/union-county',
-    '/locations/bergen-county',
+
+  // County pages - important for local SEO
+  const countyPages = [
+    '/service-areas/morris-county',
+    '/service-areas/sussex-county',
+    '/service-areas/warren-county',
+    '/service-areas/essex-county',
+    '/service-areas/passaic-county',
+    '/service-areas/union-county',
+    '/service-areas/bergen-county',
+    '/service-areas/hunterdon-county',
+    '/service-areas/somerset-county',
   ]
-  
+
+  const towns = (townsData as { towns: Town[] }).towns
+
   return [
     // Homepage - highest priority
     {
@@ -67,9 +74,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })),
     
-    // Location pages - important for local SEO
-    ...locationPages.map((page) => ({
+    // County pages - important for local SEO
+    ...countyPages.map((page) => ({
       url: `${baseUrl}${page}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+
+    // Town pages
+    ...towns.map((town) => ({
+      url: `${baseUrl}/service-areas/${town.slug}`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,

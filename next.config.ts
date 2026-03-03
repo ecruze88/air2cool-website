@@ -53,6 +53,22 @@ const nextConfig: NextConfig = {
     ];
   },
   
+  async redirects() {
+    return [
+      { source: '/schedule-service-now',            destination: '/contact',                            permanent: true },
+      { source: '/commercial-refrigeration',         destination: '/services/commercial-refrigeration', permanent: true },
+      { source: '/air-conditioning-repair-services', destination: '/services/ac-repair',               permanent: true },
+      { source: '/hepa-filter-installation',         destination: '/services/air-filtration',          permanent: true },
+      { source: '/hvac-system-installation',         destination: '/services/hvac-installation',       permanent: true },
+      { source: '/humidifier',                       destination: '/services/humidifier',              permanent: true },
+      { source: '/locations/bergen-county',          destination: '/service-areas/bergen-county',      permanent: true },
+      { source: '/locations/essex-county',           destination: '/service-areas/essex-county',       permanent: true },
+      { source: '/locations/morris-county',          destination: '/service-areas/morris-county',      permanent: true },
+      { source: '/locations/sussex-county',          destination: '/service-areas/sussex-county',      permanent: true },
+      { source: '/request-estimate-form',            destination: '/contact',                            permanent: true },
+    ]
+  },
+
   // Performance optimizations
   experimental: {
     optimizeCss: true,
