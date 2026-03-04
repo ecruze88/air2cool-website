@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import { MapPin, Phone, Clock, CheckCircle } from "lucide-react";
 import Link from "next/link";
-import townsData from "@/data/service-areas.json";
-
-type TownEntry = { name: string; slug: string };
-const townSlugMap = new Map(
-  (townsData as { towns: TownEntry[] }).towns.map((t) => [t.name, t.slug])
-);
 
 export const metadata: Metadata = {
   title: "Service Areas | Air2Cool Heating & Cooling in North NJ",
@@ -169,32 +163,18 @@ export default function ServiceAreasPage() {
                     <MapPin className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                   </div>
                   <h3 className="text-base md:text-xl font-bold text-gray-900">
-                    <Link
-                      href={`/service-areas/${county.name.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="hover:text-blue-700 transition-colors"
-                    >
-                      {county.name}
-                    </Link>
+                    {county.name}
                   </h3>
                 </div>
 
                 <ul className="space-y-1.5 md:space-y-2">
                   {/* Show fewer towns on mobile */}
-                  {county.towns.slice(0, 5).map((town) => {
-                    const slug = townSlugMap.get(town);
-                    return (
-                      <li key={town} className="flex items-center gap-2 text-gray-700">
-                        <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0" />
-                        {slug ? (
-                          <Link href={`/service-areas/${slug}`} className="text-xs md:text-sm hover:text-blue-700 transition-colors">
-                            {town}
-                          </Link>
-                        ) : (
-                          <span className="text-xs md:text-sm">{town}</span>
-                        )}
-                      </li>
-                    );
-                  })}
+                  {county.towns.slice(0, 5).map((town) => (
+                    <li key={town} className="flex items-center gap-2 text-gray-700">
+                      <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0" />
+                      <span className="text-xs md:text-sm">{town}</span>
+                    </li>
+                  ))}
                   {county.towns.length > 5 && (
                     <li className="text-xs md:text-sm text-blue-600 font-medium pt-1 md:pt-2">
                       + {county.towns.length - 5} more towns
@@ -222,27 +202,15 @@ export default function ServiceAreasPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
             {COUNTIES.flatMap(county => county.towns)
               .sort()
-              .map((town) => {
-                const slug = townSlugMap.get(town);
-                return slug ? (
-                  <Link
-                    key={town}
-                    href={`/service-areas/${slug}`}
-                    className="bg-white rounded-lg px-3 py-2 md:px-4 md:py-3 border border-gray-200 flex items-center gap-1.5 md:gap-2 hover:border-blue-400 hover:text-blue-700 transition-all"
-                  >
-                    <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0" />
-                    <span className="text-xs md:text-sm text-gray-800">{town}</span>
-                  </Link>
-                ) : (
-                  <div
-                    key={town}
-                    className="bg-white rounded-lg px-3 py-2 md:px-4 md:py-3 border border-gray-200 flex items-center gap-1.5 md:gap-2"
-                  >
-                    <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0" />
-                    <span className="text-xs md:text-sm text-gray-800">{town}</span>
-                  </div>
-                );
-              })}
+              .map((town) => (
+                <div
+                  key={town}
+                  className="bg-white rounded-lg px-3 py-2 md:px-4 md:py-3 border border-gray-200 flex items-center gap-1.5 md:gap-2"
+                >
+                  <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0" />
+                  <span className="text-xs md:text-sm text-gray-800">{town}</span>
+                </div>
+              ))}
           </div>
 
           <div className="mt-6 md:mt-8 text-center">
