@@ -187,7 +187,7 @@ export default function LowerEnergyBillsPage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 py-10 md:py-24">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-emerald-200 mb-6" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition">Home</Link>
@@ -231,21 +231,21 @@ export default function LowerEnergyBillsPage() {
       </section>
 
       {/* Article Content */}
-      <article className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
+      <article className="py-10 md:py-16">
+        <div className="max-w-4xl mx-auto px-4 md:px-6">
 
           {/* Intro */}
-          <div className="prose prose-lg max-w-none mb-12">
-            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+          <div className="prose max-w-none mb-8 md:mb-12">
+            <p className="text-base md:text-xl text-gray-700 leading-relaxed mb-4 md:mb-6">
               Your HVAC system — the furnace, air conditioner, and all the ductwork between them — accounts for 40–50% of a typical home&apos;s total energy use. So when your electric or gas bill jumps and nothing obvious has changed, there&apos;s a very good chance your heating or cooling equipment is working harder than it should be.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
               The tricky part: a struggling HVAC system usually keeps running. It still heats and cools — it just uses 20–40% more energy doing it. Here are the seven most common HVAC causes of high energy bills in North New Jersey homes, and what you can actually do about each one.
             </p>
           </div>
 
           {/* Quick-scan callout */}
-          <div className="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-6 mb-12">
+          <div className="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-4 md:p-6 mb-8 md:mb-12">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
                 <Zap className="w-6 h-6 text-emerald-600" />
@@ -275,7 +275,7 @@ export default function LowerEnergyBillsPage() {
           </div>
 
           {/* Tips */}
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-8">The 7 Fixes</h2>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 md:mb-8">The 7 Fixes</h2>
 
           <div className="space-y-10">
             {TIPS.map((tip) => {
@@ -331,27 +331,27 @@ export default function LowerEnergyBillsPage() {
       </article>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-emerald-700 to-teal-600">
-        <div className="max-w-4xl mx-auto px-6 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+      <section className="py-10 md:py-16 bg-gradient-to-r from-emerald-700 to-teal-600">
+        <div className="max-w-4xl mx-auto px-4 md:px-6 text-center text-white">
+          <h2 className="text-2xl md:text-4xl font-extrabold mb-3 md:mb-4">
             Ready to Lower Your Energy Bills?
           </h2>
-          <p className="text-xl text-emerald-100 mb-3">
+          <p className="text-base md:text-xl text-emerald-100 mb-3">
             Air2Cool&apos;s certified technicians serve Morris County &amp; North NJ. We offer energy efficiency inspections, annual tune-ups, refrigerant pressure checks, and combustion analysis.
           </p>
-          <p className="text-emerald-200 mb-8">
+          <p className="text-sm md:text-base text-emerald-200 mb-6 md:mb-8">
             Call us at (201) 787-5657 for a tune-up or energy efficiency inspection — most homeowners see the savings on their very next bill.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-emerald-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition"
+              className="bg-white text-emerald-700 px-8 py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-gray-50 transition text-center"
             >
               Schedule an Inspection
             </Link>
             <a
               href="tel:+12017875657"
-              className="bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white/20 transition flex items-center gap-2"
+              className="bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full font-semibold text-base md:text-lg border-2 border-white hover:bg-white/20 transition flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Call (201) 787-5657
@@ -361,10 +361,10 @@ export default function LowerEnergyBillsPage() {
       </section>
 
       {/* Related Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-8">Related Services</h2>
-          <div className="grid sm:grid-cols-3 gap-6">
+      <section className="py-10 md:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-5 md:mb-8">Related Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {[
               {
                 href: "/services/preventative-maintenance",

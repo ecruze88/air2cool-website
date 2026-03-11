@@ -224,7 +224,7 @@ export default function ServicesPage() {
               <Wrench className="w-5 h-5 md:w-6 md:h-6 mr-2 text-gray-700" />
               Repair Services
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
               {SERVICES.filter(s => s.category === 'repair').map((service) => {
                 const Icon = service.icon;
                 return (
@@ -236,23 +236,22 @@ export default function ServicesPage() {
                     <div
                       className={`inline-flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-to-br ${
                         COLOR_CLASSES[service.color as keyof typeof COLOR_CLASSES]
-                      } text-white mb-2 md:mb-4 shadow-lg`}
+                      } text-white mb-3 md:mb-4 shadow-lg`}
                     >
                       <Icon className="w-5 h-5 md:w-7 md:h-7" />
                     </div>
 
-                    <h3 className="text-sm md:text-lg font-bold text-gray-900 mb-1 md:mb-2 group-hover:text-blue-700 transition-colors leading-tight">
+                    <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors leading-tight">
                       {service.title}
                     </h3>
 
-                    {/* Hide description on mobile */}
-                    <p className="hidden md:block text-sm text-gray-600 leading-relaxed mb-4">
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
                       {service.description}
                     </p>
 
-                    <div className="flex items-center text-blue-700 font-semibold text-xs md:text-sm group-hover:gap-2 transition-all">
-                      <span className="hidden md:inline">Learn More</span>
-                      <span className="inline-block transition-transform group-hover:translate-x-1">
+                    <div className="flex items-center text-blue-700 font-semibold text-sm group-hover:gap-2 transition-all">
+                      <span>Learn More</span>
+                      <span className="inline-block ml-1 transition-transform group-hover:translate-x-1">
                         →
                       </span>
                     </div>
@@ -270,7 +269,7 @@ export default function ServicesPage() {
               <Zap className="w-5 h-5 md:w-6 md:h-6 mr-2 text-gray-700" />
               Installation Services
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
               {SERVICES.filter(s => s.category === 'installation').map((service) => {
                 const Icon = service.icon;
                 return (
@@ -282,23 +281,22 @@ export default function ServicesPage() {
                     <div
                       className={`inline-flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl bg-gradient-to-br ${
                         COLOR_CLASSES[service.color as keyof typeof COLOR_CLASSES]
-                      } text-white mb-2 md:mb-4 shadow-lg`}
+                      } text-white mb-3 md:mb-4 shadow-lg`}
                     >
                       <Icon className="w-5 h-5 md:w-7 md:h-7" />
                     </div>
 
-                    <h3 className="text-sm md:text-lg font-bold text-gray-900 mb-1 md:mb-2 group-hover:text-blue-700 transition-colors leading-tight">
+                    <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors leading-tight">
                       {service.title}
                     </h3>
 
-                    {/* Hide description on mobile */}
-                    <p className="hidden md:block text-sm text-gray-600 leading-relaxed mb-4">
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
                       {service.description}
                     </p>
 
-                    <div className="flex items-center text-blue-700 font-semibold text-xs md:text-sm group-hover:gap-2 transition-all">
-                      <span className="hidden md:inline">Learn More</span>
-                      <span className="inline-block transition-transform group-hover:translate-x-1">
+                    <div className="flex items-center text-blue-700 font-semibold text-sm group-hover:gap-2 transition-all">
+                      <span>Learn More</span>
+                      <span className="inline-block ml-1 transition-transform group-hover:translate-x-1">
                         →
                       </span>
                     </div>

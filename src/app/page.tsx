@@ -454,17 +454,17 @@ export default function HomePage() {
         {/* ========================================
             TROUBLESHOOTING HUB - EXPANDED SECTION
         ======================================== */}
-        <section className="mb-16">
+        <section className="mb-10 md:mb-16">
           {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 px-4 py-2 rounded-full font-semibold text-sm mb-4">
+          <div className="text-center mb-6 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-red-50 text-red-700 px-4 py-2 rounded-full font-semibold text-sm mb-3 md:mb-4">
               <AlertTriangle className="w-4 h-4" />
               DIY HELP CENTER
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
               HVAC Not Working? Try These Quick Fixes
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg">
               Before calling for service, check these common issues. Many HVAC problems have simple DIY solutions that can save you time and money.
             </p>
           </div>

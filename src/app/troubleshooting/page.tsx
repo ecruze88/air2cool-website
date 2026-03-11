@@ -286,21 +286,19 @@ export default function TroubleshootingPage() {
         </svg>
       </div>
 
-      {/* Quick Jump - Hide on mobile */}
-      <section className="hidden md:block py-6 bg-gray-50 border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap items-center justify-center gap-4">
+      {/* Quick Jump */}
+      <section className="py-3 md:py-4 bg-gray-50 border-b border-gray-200 sticky top-0 z-40 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
             <span className="text-sm font-semibold text-gray-700">Jump to:</span>
-            <a href="#heating" className="text-sm text-blue-600 hover:text-blue-700 font-semibold hover:underline">
-              Heating
+            <a href="#heating" className="inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-red-50 text-sm text-red-700 font-semibold hover:bg-red-100 transition-colors min-h-[44px]">
+              🔥 Heating
             </a>
-            <span className="text-gray-400">•</span>
-            <a href="#cooling" className="text-sm text-blue-600 hover:text-blue-700 font-semibold hover:underline">
-              Cooling
+            <a href="#cooling" className="inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-blue-50 text-sm text-blue-700 font-semibold hover:bg-blue-100 transition-colors min-h-[44px]">
+              ❄️ Cooling
             </a>
-            <span className="text-gray-400">•</span>
-            <a href="#thermostat" className="text-sm text-blue-600 hover:text-blue-700 font-semibold hover:underline">
-              Thermostat
+            <a href="#thermostat" className="inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-purple-50 text-sm text-purple-700 font-semibold hover:bg-purple-100 transition-colors min-h-[44px]">
+              🌡️ Thermostat
             </a>
           </div>
         </div>

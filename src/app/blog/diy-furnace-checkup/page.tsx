@@ -274,7 +274,7 @@ export default function DIYFurnaceCheckupPage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 py-10 md:py-24">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-orange-200 mb-6" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-white transition">Home</Link>
@@ -318,15 +318,15 @@ export default function DIYFurnaceCheckupPage() {
       </section>
 
       {/* Article Content */}
-      <article className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
+      <article className="py-10 md:py-16">
+        <div className="max-w-4xl mx-auto px-4 md:px-6">
 
           {/* Intro */}
-          <div className="prose prose-lg max-w-none mb-12">
-            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+          <div className="prose max-w-none mb-8 md:mb-12">
+            <p className="text-base md:text-xl text-gray-700 leading-relaxed mb-4 md:mb-6">
               North New Jersey winters are brutal — and the last thing you want is to discover your furnace won&apos;t start on the first genuinely cold night in November. The good news: most furnace problems that cause mid-winter breakdowns show warning signs weeks or months beforehand. A simple 45-minute DIY checkup every fall can catch those issues early, keep your heating bills low, and protect your family.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            <p className="text-sm md:text-lg text-gray-600 leading-relaxed mb-4 md:mb-6">
               This guide walks you through 8 practical steps any homeowner can do without special tools. At each step, we&apos;ll also tell you when what you&apos;re seeing means it&apos;s time to stop and call a licensed HVAC technician.
             </p>
           </div>
@@ -366,7 +366,7 @@ export default function DIYFurnaceCheckupPage() {
           </div>
 
           {/* Steps */}
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-8">The 8-Step Furnace Checkup</h2>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 md:mb-8">The 8-Step Furnace Checkup</h2>
 
           <div className="space-y-10">
             {STEPS.map((step) => {
@@ -438,24 +438,24 @@ export default function DIYFurnaceCheckupPage() {
       </article>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-700 to-amber-600">
-        <div className="max-w-4xl mx-auto px-6 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+      <section className="py-10 md:py-16 bg-gradient-to-r from-orange-700 to-amber-600">
+        <div className="max-w-4xl mx-auto px-4 md:px-6 text-center text-white">
+          <h2 className="text-2xl md:text-4xl font-extrabold mb-3 md:mb-4">
             Want a Pro to Handle It?
           </h2>
-          <p className="text-xl text-orange-100 mb-8">
+          <p className="text-base md:text-xl text-orange-100 mb-6 md:mb-8">
             Air2Cool&apos;s certified technicians serve Morris County &amp; North NJ. We offer annual furnace tune-ups, 24/7 emergency repairs, and honest flat-rate pricing.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-orange-700 px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition"
+              className="bg-white text-orange-700 px-8 py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-gray-50 transition text-center"
             >
               Schedule a Tune-Up
             </Link>
             <a
               href="tel:+12017875657"
-              className="bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-white hover:bg-white/20 transition flex items-center gap-2"
+              className="bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full font-semibold text-base md:text-lg border-2 border-white hover:bg-white/20 transition flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Call (201) 787-5657
@@ -465,10 +465,10 @@ export default function DIYFurnaceCheckupPage() {
       </section>
 
       {/* Related Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-8">Related Services</h2>
-          <div className="grid sm:grid-cols-3 gap-6">
+      <section className="py-10 md:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-5 md:mb-8">Related Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {[
               {
                 href: "/services/heating-repair",
