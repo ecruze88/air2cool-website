@@ -94,10 +94,10 @@ export default function MobileMenu() {
       {/* Hamburger Button */}
       <button
         onClick={openMenu}
-        className="xl:hidden p-2 hover:bg-gray-100 rounded-lg"
+        className="p-2 hover:bg-white/20 rounded-lg"
         type="button"
       >
-        <Menu className="w-7 h-7 text-gray-900" />
+        <Menu className="w-7 h-7 text-white" />
       </button>
 
       {/* Mobile Menu - FULL SCREEN */}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { BookOpen, Flame, Wrench, Wind, Calendar, Clock, ArrowRight } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import Link from "next/link";
+import BlogClient from "./BlogClient";
 
 export const metadata: Metadata = {
   title: "HVAC Tips & Guides Blog | Air2Cool Heating & Cooling",
@@ -29,10 +30,31 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: "ac-repair-morris-county-nj",
+    category: "Cooling",
+    categoryColor: "text-blue-700 bg-blue-50",
+    iconColor: "text-blue-600",
+    title: "AC Repair in Morris County NJ — What to Expect and Who to Call",
+    excerpt:
+      "AC not cooling your Morris County home? Learn the most common causes — from refrigerant leaks to failed capacitors — what to expect during a repair visit, and why Air2Cool is the go-to choice for same-day AC repair across Morris County.",
+    date: "March 10, 2026",
+    readTime: "6 min read",
+  },
+  {
+    slug: "lower-energy-bills-hvac",
+    category: "Maintenance",
+    categoryColor: "text-green-700 bg-green-50",
+    iconColor: "text-green-600",
+    title: "Why Is My Energy Bill So High? 7 HVAC Fixes for NJ Homeowners",
+    excerpt:
+      "Spiking energy bills in New Jersey? Your HVAC system is usually the culprit. Learn how to lower heating and cooling costs with 7 practical fixes — from refrigerant checks to smart thermostats — from Air2Cool's certified technicians.",
+    date: "November 20, 2025",
+    readTime: "7 min read",
+  },
+  {
     slug: "diy-furnace-checkup",
     category: "Heating",
     categoryColor: "text-orange-700 bg-orange-50",
-    icon: Flame,
     iconColor: "text-orange-600",
     title: "DIY Furnace Checkup: 8 Steps to Do Before Winter",
     excerpt:
@@ -109,90 +131,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Blog Posts Grid */}
-      <section className="py-10 md:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 md:mb-10">Latest Articles</h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-            {POSTS.map((post) => {
-              const Icon = post.icon;
-              return (
-                <Link
-                  key={post.slug}
-                  href={`/blog/${post.slug}`}
-                  className="group bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
-                >
-                  {/* Card top accent */}
-                  <div className="h-2 bg-gradient-to-r from-orange-500 to-amber-500" />
-
-                  <div className="p-6 flex flex-col flex-1">
-                    {/* Category + Icon */}
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center">
-                        <Icon className={`w-5 h-5 ${post.iconColor}`} />
-                      </div>
-                      <span className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide ${post.categoryColor}`}>
-                        {post.category}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors leading-snug">
-                      {post.title}
-                    </h2>
-
-                    {/* Excerpt */}
-                    <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-4">
-                      {post.excerpt}
-                    </p>
-
-                    {/* Meta + CTA */}
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                      <div className="flex items-center gap-3 text-xs text-gray-400">
-                        <span className="flex items-center gap-1">
-                          <Calendar className="w-3.5 h-3.5" />
-                          {post.date}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5" />
-                          {post.readTime}
-                        </span>
-                      </div>
-                      <span className="flex items-center gap-1 text-sm font-semibold text-brand-blue group-hover:gap-2 transition-all">
-                        Read Article
-                        <ArrowRight className="w-4 h-4" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Topics */}
-      <section className="py-8 md:py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-5 md:mb-8 text-center">Browse by Topic</h2>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {[
-              { label: "Heating", icon: Flame, color: "bg-orange-50 text-orange-700 border-orange-200" },
-              { label: "Cooling", icon: Wind, color: "bg-blue-50 text-blue-700 border-blue-200" },
-              { label: "Maintenance", icon: Wrench, color: "bg-green-50 text-green-700 border-green-200" },
-            ].map(({ label, icon: Icon, color }) => (
-              <span
-                key={label}
-                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border font-semibold text-sm ${color}`}
-              >
-                <Icon className="w-4 h-4" />
-                {label}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BlogClient posts={POSTS} />
 
       {/* CTA */}
       <section className="py-10 md:py-12 bg-gradient-to-r from-slate-800 to-blue-900 text-white">

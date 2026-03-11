@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import ContactClient from "./ContactClient";
 
 export const metadata: Metadata = {
-  title: "Contact Air2Cool Heating & Cooling | HVAC Service in North NJ",
+  title: "Schedule HVAC Service in North NJ | Air2Cool | (201) 787-5657",
   description:
-    "Contact Air2Cool Heating & Cooling to schedule HVAC repair or installation in North NJ. Send a message or call for quick help.",
+    "Schedule HVAC service in NJ with Air2Cool. Same-day AC repair, furnace repair & HVAC installation across Morris County & North NJ. Free estimates. 24/7 emergency service. Call (201) 787-5657.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

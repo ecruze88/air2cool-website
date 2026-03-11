@@ -3,10 +3,12 @@ import { Flame, CheckCircle, Clock, Shield } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Furnace & Boiler Repair in Morris County NJ | Air2Cool | (201) 787-5657",
+  title: "Furnace Repair NJ — Heating Repair in Morris County | Air2Cool | (201) 787-5657",
   description:
-    "Expert furnace & boiler repair in Morris County & North NJ. Hydronic boilers, steam boilers, NTI specialists. 24/7 emergency heating service. All major brands serviced. Licensed Master HVAC Technicians. Call (201) 787-5657.",
+    "Expert furnace repair NJ. Boilers, heat pumps & all heating systems. 24/7 emergency heating repair in Morris County & North NJ. Licensed Master HVAC Technicians. Call (201) 787-5657.",
   keywords: [
+    "furnace repair NJ",
+    "heating repair NJ",
     "furnace repair Morris County NJ",
     "boiler repair North NJ",
     "heating repair Morris County",
@@ -21,9 +23,9 @@ export const metadata: Metadata = {
     canonical: "/services/heating-repair",
   },
   openGraph: {
-    title: "Furnace & Boiler Repair in Morris County NJ | Air2Cool",
+    title: "Furnace Repair NJ — Heating Repair in Morris County | Air2Cool",
     description:
-      "24/7 emergency heating repair. Hydronic, steam & NTI boiler specialists. All major brands. Morris County & North NJ. Call (201) 787-5657.",
+      "24/7 emergency heating repair. Furnaces, hydronic, steam & NTI boilers. All major brands. Morris County & North NJ. Call (201) 787-5657.",
     url: "/services/heating-repair",
   },
 };
@@ -91,11 +93,11 @@ export default function HeatingRepairPage() {
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
-              Furnace & Boiler Repair Experts
+              Furnace Repair NJ — 24/7 Heating Repair in Morris County
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              Furnace down? Boiler not heating? Get it fixed fast by our Licensed Master HVAC Technicians. We service all types: hydronic boilers, steam boilers, NTI boilers, and all major furnace brands.
+              Furnace down? Boiler not heating? Don't spend a cold New Jersey night without heat. Air2Cool's Licensed Master HVAC Technicians respond fast — 24 hours a day, 7 days a week — to fix furnaces, boilers, heat pumps, and all heating systems across Morris County and North NJ.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
@@ -128,20 +130,52 @@ export default function HeatingRepairPage() {
           <div className="flex items-center justify-center gap-3 text-red-900">
             <Clock className="w-5 h-5 md:w-6 md:h-6 shrink-0" />
             <p className="text-sm md:text-lg font-semibold">
-              We understand that a heating emergency can happen at any time of the day or night, including in the middle of winter. That's why our reliable team is available 24 hours a day. We'll be there whenever you need us!
+              A heating emergency can happen any time — even at midnight in the dead of winter. That's why our reliable team is available 24 hours a day. We'll be there whenever you need us!
             </p>
           </div>
         </div>
       </section>
 
+      {/* Intro Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
+              Morris County's Furnace &amp; Boiler Repair Specialists
+            </h2>
+            <div className="prose prose-gray max-w-none text-gray-700 leading-relaxed space-y-4">
+              <p>
+                When New Jersey temperatures drop below freezing, a broken furnace or boiler isn't just uncomfortable — it's a health and safety emergency. Air2Cool Heating &amp; Cooling has been keeping homes and businesses warm across{" "}
+                <Link href="/service-areas/morris-county" className="text-red-600 hover:underline">Morris County</Link> and North NJ for over 26 years. We're the local heating repair specialists that homeowners in{" "}
+                <Link href="/service-areas/morristown" className="text-red-600 hover:underline">Morristown</Link>,{" "}
+                <Link href="/service-areas/parsippany-troy-hills" className="text-red-600 hover:underline">Parsippany</Link>,{" "}
+                <Link href="/service-areas/randolph" className="text-red-600 hover:underline">Randolph</Link>, and{" "}
+                <Link href="/service-areas/denville" className="text-red-600 hover:underline">Denville</Link> call first.
+              </p>
+              <p>
+                Our Licensed Master HVAC Technicians are trained to diagnose and repair all types of heating systems: gas furnaces, oil furnaces, hydronic boilers, steam boilers, NTI boilers, and heat pumps. We work on all major brands and can typically complete most repairs in a single visit. Same-day appointments are available for urgent situations, and our 24/7 emergency line means you're never left in the cold.
+              </p>
+              <p>
+                One thing that sets Air2Cool apart is our boiler expertise. Many HVAC companies don't fully understand the complexity of hydronic and steam systems — we do. As NTI-certified technicians and boiler specialists, we diagnose issues faster and fix them right the first time. Whether it's a failed circulator pump, zone valve problem, or a no-heat situation, we have the parts and know-how on hand.
+              </p>
+              <p>
+                As a family-owned, locally-operated company, we treat every repair like it's our own home. We'll give you an honest diagnosis, transparent pricing, and no-pressure recommendations. If you need a full heating system replacement, visit our{" "}
+                <Link href="/services/hvac-installation" className="text-red-600 hover:underline">HVAC installation page</Link>. For cooling needs, check our{" "}
+                <Link href="/services/ac-repair" className="text-red-600 hover:underline">AC repair service</Link>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Comprehensive Solutions */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4 md:mb-6">
               Comprehensive Heating System Solutions
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
               {[
                 "Furnace repairs & service",
@@ -164,12 +198,12 @@ export default function HeatingRepairPage() {
               ))}
             </div>
 
-            <div className="bg-gray-50 rounded-2xl p-5 md:p-6 border border-gray-200">
+            <div className="bg-white rounded-2xl p-5 md:p-6 border border-gray-200">
               <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">
                 Heating Repair You Can Trust
               </h3>
               <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                When you hire us to repair your heating system, you can expect high-quality service backed by integrity and honesty. It's something our family-owned and operated company has been providing for over 20 years now. We'll respect your property and work diligently to make sure you're satisfied.
+                When you hire us to repair your heating system, you can expect high-quality service backed by integrity and honesty. It's something our family-owned and operated company has been providing for over 26 years now. We'll respect your property and work diligently to make sure you're satisfied.
               </p>
             </div>
           </div>
@@ -185,7 +219,7 @@ export default function HeatingRepairPage() {
                 Boiler Specialists You Can Trust
               </h2>
               <p className="text-base md:text-xl text-gray-700 max-w-3xl mx-auto">
-                Not all HVAC companies understand boilers. We do. With 20+ years specializing in all boiler systems, we're your North Jersey boiler experts.
+                Not all HVAC companies understand boilers. We do. With 26+ years specializing in all boiler systems, we're your North Jersey boiler experts.
               </p>
             </div>
 
@@ -254,7 +288,7 @@ export default function HeatingRepairPage() {
       </section>
 
       {/* Quality Service & Customer Testimonial */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Shield className="w-12 h-12 md:w-16 md:h-16 text-red-600 mx-auto mb-4 md:mb-6" />
           <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
@@ -274,14 +308,60 @@ export default function HeatingRepairPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-12 md:py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-8 text-center">
+            Frequently Asked Questions — Furnace Repair NJ
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "Do you offer emergency furnace repair in Morris County NJ?",
+                a: "Yes. We provide 24/7 emergency heating repair throughout Morris County and North NJ. If your furnace or boiler fails in the middle of the night or on a weekend, call (201) 787-5657 and we'll dispatch a technician as quickly as possible.",
+              },
+              {
+                q: "What are the most common reasons a furnace stops working?",
+                a: "The most common causes include a dirty or clogged air filter restricting airflow, a faulty igniter or pilot light, a tripped circuit breaker, a malfunctioning thermostat, or a failed blower motor. Some issues are simple fixes; others require professional repair. Our technicians diagnose the root cause quickly so you're not paying for guesswork.",
+              },
+              {
+                q: "Can you repair my boiler, or do you only work on furnaces?",
+                a: "We specialize in both. Air2Cool is one of the few North NJ HVAC companies with deep expertise in all types of boiler systems — hydronic boilers, steam boilers, and NTI boilers. We're NTI-certified technicians and regularly service brands like Weil-McLain, Burnham, and Buderus.",
+              },
+              {
+                q: "How long does a typical heating repair take?",
+                a: "Most heating repairs can be completed in a single visit, typically 1–3 hours. More complex repairs involving parts that need to be ordered may require a follow-up appointment, but we keep common parts on our trucks to minimize delays. We'll always give you a time estimate upfront.",
+              },
+              {
+                q: "When should I replace my furnace instead of repairing it?",
+                a: "If your furnace is over 15–20 years old, requires frequent repairs, or the cost of repair exceeds 50% of a new system's price, replacement is usually the smarter investment. A new high-efficiency furnace can significantly reduce your energy bills. Our technicians will give you an honest assessment — no upselling. See our HVAC installation page for more details.",
+              },
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">{item.q}</h3>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-red-700 to-orange-600">
         <div className="max-w-4xl mx-auto px-6 text-center text-white">
           <h2 className="text-2xl md:text-4xl font-extrabold mb-3 md:mb-4">
-            Need Heating Repair Today?
+            Ready to Schedule Heating Repair?
           </h2>
           <p className="text-base md:text-xl text-red-100 mb-6 md:mb-8">
-            Don't wait in the cold. Our team is ready to restore your heat quickly and efficiently.
+            Call Air2Cool at{" "}
+            <a href="tel:+12017875657" className="font-bold underline hover:no-underline">
+              (201) 787-5657
+            </a>{" "}
+            or get a free estimate at{" "}
+            <Link href="/contact" className="font-bold underline hover:no-underline">
+              /contact
+            </Link>
+            . Don't wait in the cold — our team is standing by.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link
@@ -297,6 +377,15 @@ export default function HeatingRepairPage() {
               Call (201) 787-5657
             </a>
           </div>
+          <p className="mt-6 text-sm text-red-200">
+            Also serving:{" "}
+            <Link href="/service-areas/morris-county" className="underline hover:no-underline">Morris County</Link> ·{" "}
+            <Link href="/service-areas/morristown" className="underline hover:no-underline">Morristown</Link> ·{" "}
+            <Link href="/service-areas/parsippany-troy-hills" className="underline hover:no-underline">Parsippany</Link> ·{" "}
+            <Link href="/service-areas/randolph" className="underline hover:no-underline">Randolph</Link> ·{" "}
+            <Link href="/service-areas/denville" className="underline hover:no-underline">Denville</Link> ·{" "}
+            <Link href="/service-areas/rockaway" className="underline hover:no-underline">Rockaway</Link>
+          </p>
         </div>
       </section>
     </main>

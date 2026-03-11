@@ -66,6 +66,12 @@ const nextConfig: NextConfig = {
       { source: '/locations/morris-county',          destination: '/service-areas/morris-county',      permanent: true },
       { source: '/locations/sussex-county',          destination: '/service-areas/sussex-county',      permanent: true },
       { source: '/request-estimate-form',            destination: '/contact',                            permanent: true },
+      { source: '/heating-system-repair-services',   destination: '/services/heating-repair',            permanent: true },
+      { source: '/air-filtration-system-installation', destination: '/services/air-filtration',          permanent: true },
+      { source: '/what-to-do-if-your-heater-is-not-working', destination: '/services/heating-repair',   permanent: true },
+      { source: '/locations/warren-county',           destination: '/service-areas/warren-county',        permanent: true },
+      { source: '/locations/passaic-county',          destination: '/service-areas/passaic-county',       permanent: true },
+      { source: '/preventative-hvac-maintenance',     destination: '/services/preventative-maintenance',  permanent: true },
     ]
   },
 

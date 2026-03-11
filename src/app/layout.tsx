@@ -5,6 +5,8 @@ import Script from "next/script";
 import MobileMenu from "@/components/MobileMenu";
 import { Analytics } from "@vercel/analytics/next";
 import StickyCallButton from "@/components/StickyCallButton";
+import Image from "next/image";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const businessName = process.env.BUSINESS_NAME || "Air2Cool Heating & Cooling";
 
@@ -115,61 +117,51 @@ export default function RootLayout({
           className="hidden xl:block fixed left-6 top-35 z-9999"
         >
           <img
-            src="/air2cool-hollow-background.png"
+            src="/air2cool-logo-transparent.png"
             alt="Air2Cool Heating & Cooling"
-            className="w-52.5 h-auto 2xl:w-90"
+            className="w-63 h-auto 2xl:w-108"
           />
         </a>
         
 
         <header className="sticky top-0 z-[1000] bg-white">
-          {/* Top utility bar - Desktop only */}
-          <div className="hidden md:block bg-gray-900 text-white text-sm">
-            <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <span className="opacity-90">Serving North New Jersey</span>
-                <span className="opacity-30">|</span>
-                <span className="opacity-90">24/7 Emergency Service</span>
-              </div>
 
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full">
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <span className="font-semibold text-white">5.0</span>
-                  <span className="text-gray-300 text-xs">Google Reviews</span>
-                </div>
-                
-                <a href="tel:+12017875657" className="font-bold hover:underline hidden sm:inline">
-                  (201) 787-5657
-                </a>
+          {/* MOBILE: Two-row layout */}
+          <div className="xl:hidden">
+            {/* Row 1 — Logo (white, centered) */}
+            <div className="bg-white flex justify-center items-center py-1 border-b border-gray-100">
+              <a href="/">
+                <Image
+                  src="/air2cool-logo-transparent-clean.png"
+                  alt="Air2Cool"
+                  width={220}
+                  height={110}
+                  priority
+                  style={{ objectFit: "contain" }}
+                />
+              </a>
+            </div>
+
+            {/* Row 2 — Menu bar (blue) */}
+            <div className="bg-brand-red flex items-center justify-between px-4 py-2.5">
+              <div className="flex items-center gap-2">
+                <MobileMenu />
+                <span className="text-white font-bold uppercase text-sm tracking-wide">Menu</span>
               </div>
+              <a href="tel:+12017875657" className="text-white font-bold text-sm">
+                (201) 787-5657
+              </a>
             </div>
           </div>
-          
 
-          <div className="bg-white/98 backdrop-blur border-b border-gray-200 shadow-sm">
+          {/* DESKTOP: Single-row nav */}
+          <div className="hidden xl:block bg-white/98 backdrop-blur border-b border-gray-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-              {/* Mobile Logo - Only shows on mobile */}
-              <a href="/" className="xl:hidden">
-                {/* Wrapper crops the ~22% transparent bottom padding in the PNG */}
-                <div className="w-44 h-24 overflow-hidden sm:w-52 sm:h-28">
-                  <img
-                    src="/air2cool-hollow-background.png"
-                    alt="Air2Cool"
-                    className="w-full h-auto drop-shadow-sm"
-                  />
-                </div>
-              </a>
+              {/* Spacer for floating logo */}
+              <div className="w-60" />
 
-              {/* Desktop spacer for floating logo */}
-              <div className="hidden lg:block w-60" />
-
-              {/* Desktop Navigation - Hidden on mobile */}
-              <nav className="hidden xl:flex items-center gap-1">
+              {/* Desktop Navigation */}
+              <nav className="flex items-center gap-1">
                 <a
                   href="/services"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
@@ -178,7 +170,6 @@ export default function RootLayout({
                   Services
                 </a>
 
-                {/* Troubleshooting Link - NO WRENCH ICON */}
                 <a
                   href="/troubleshooting"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
@@ -218,6 +209,7 @@ export default function RootLayout({
                 >
                   FAQ
                 </a>
+
                 <a
                   href="/blog"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
@@ -225,14 +217,7 @@ export default function RootLayout({
                 >
                   Blog
                 </a>
-                <a
-                  href="/services/preventative-maintenance"
-                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
-                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
-                >
-                  Maintenance
-                </a>
-                
+
                 <a
                   href="/financing"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-green-700 bg-green-50
@@ -243,35 +228,28 @@ export default function RootLayout({
                     0% APR
                   </span>
                 </a>
-                
-                <a
-                  href="/contact"
-                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
-                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
-                >
-                  Contact
-                </a>
               </nav>
-              
 
-              {/* Right side - Desktop CTA + Mobile Menu */}
+              {/* Right side */}
               <div className="flex items-center gap-3">
-                {/* Desktop CTA Button - Hidden on mobile */}
+                <a
+                  href="tel:+12017875657"
+                  className="text-sm font-bold text-gray-700 hover:text-brand-blue transition-colors whitespace-nowrap"
+                >
+                  (201) 787-5657
+                </a>
                 <a
                   href="/contact"
-                  className="hidden xl:block bg-brand-red text-white px-6 py-2.5 rounded-full font-bold 
+                  className="bg-brand-red text-white px-6 py-2.5 rounded-full font-bold
                              hover:opacity-90 transition-opacity shadow-sm text-sm whitespace-nowrap"
                 >
                   Schedule Service
                 </a>
-
-                {/* Mobile Menu - Only shows on mobile */}
-                <MobileMenu />
               </div>
             </div>
           </div>
                  {/* STICKY GOOGLE REVIEWS BANNER */}
-        <section id="sticky-reviews-banner" className="sticky top-[60px] md:top-[73px] z-[999] bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-3 md:py-6 shadow-lg">
+        <section id="sticky-reviews-banner" className="sticky top-[60px] md:top-[73px] z-[999] bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-3 md:py-4 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex items-center justify-center gap-3 md:gap-6 text-white text-center">
               {/* Mobile: Compact single row */}
@@ -294,11 +272,11 @@ export default function RootLayout({
               </div>
 
               {/* Desktop: Original layout */}
-              <div className="hidden md:flex md:flex-row items-center justify-center gap-6 text-white">
+              <div className="hidden md:flex md:flex-row items-center justify-center gap-5 text-white">
                 {/* Star Rating with Google Logo on LEFT side */}
                 <div className="flex items-center gap-4">
                   {/* Google Logo on the left */}
-                  <svg className="w-12 h-12 shrink-0" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10 shrink-0" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                     <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                     <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
@@ -307,38 +285,38 @@ export default function RootLayout({
                   
                   {/* Star rating section on the right */}
                   <div className="flex flex-col items-center">
-                    <div className="flex gap-1 mb-2">
+                    <div className="flex gap-0.5 mb-1.5">
                       {[...Array(5)].map((_, i) => (
                         <svg
                           key={i}
-                          className="w-8 h-8 fill-yellow-300"
+                          className="w-6 h-6 fill-yellow-300"
                           viewBox="0 0 20 20"
                         >
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                       ))}
                     </div>
-                    <p className="text-5xl font-extrabold mb-1">5.0</p>
+                    <p className="text-4xl font-extrabold mb-1">5.0</p>
                     <p className="text-xs font-semibold opacity-90">PERFECT RATING</p>
                   </div>
                 </div>
 
-                <div className="w-px h-20 bg-white/30"></div>
+                <div className="w-px h-16 bg-white/30"></div>
 
                 <div className="text-center">
-                  <p className="text-4xl font-extrabold mb-2">250+</p>
-                  <p className="text-base font-semibold">Google Reviews</p>
+                  <p className="text-3xl font-extrabold mb-1.5">250+</p>
+                  <p className="text-sm font-semibold">Google Reviews</p>
                   <p className="text-xs opacity-90 mt-1">Real customers, real results</p>
                 </div>
 
-                <div className="w-px h-20 bg-white/30"></div>
+                <div className="w-px h-16 bg-white/30"></div>
 
                 <div className="text-center max-w-xs">
-                  <p className="text-xl font-bold mb-1">Most Trusted HVAC</p>
-                  <p className="text-base font-semibold mb-2">in North New Jersey</p>
-                  <a 
-                    href="/reviews" 
-                    className="inline-block text-xs font-semibold bg-white text-blue-600 px-5 py-2 rounded-full hover:bg-blue-50 transition-all hover:scale-105 shadow-lg"
+                  <p className="text-lg font-bold mb-1">Most Trusted HVAC</p>
+                  <p className="text-sm font-semibold mb-1.5">in North New Jersey</p>
+                  <a
+                    href="/reviews"
+                    className="inline-block text-xs font-semibold bg-white text-blue-600 px-4 py-1.5 rounded-full hover:bg-blue-50 transition-all hover:scale-105 shadow-lg"
                   >
                     Read Our Reviews →
                   </a>
@@ -455,28 +433,9 @@ export default function RootLayout({
           </div>
         </footer>
 
-        {/* Tawk.to Live Chat Widget */}
-        <Script
-          id="tawk-to-chat"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-                (function(){
-                  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-                  s1.async=true;
-                  s1.src='https://embed.tawk.to/69582f5b562358197db48257/1je07hvlh';
-                  s1.charset='UTF-8';
-                  s1.setAttribute('crossorigin','*');
-                  s0.parentNode.insertBefore(s1,s0);
-                })();
-              } catch(e) {
-                // Suppress Tawk.to console errors
-              }
-            `,
-          }}
-        />
+        {/* Tawk.to Live Chat Widget — temporarily disabled */}
+        {/* <Script id="tawk-to-chat" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `...` }} /> */}
+        <ScrollToTop />
         <Analytics />
         <StickyCallButton />
       </body>

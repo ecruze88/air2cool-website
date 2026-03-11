@@ -66,6 +66,10 @@ const COUNTIES = [
   }
 ];
 
+function toSlug(town: string) {
+  return town.toLowerCase().replace(/\s+/g, "-");
+}
+
 export default function ServiceAreasPage() {
   return (
     <main className="bg-white">
@@ -154,15 +158,16 @@ export default function ServiceAreasPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {COUNTIES.map((county) => (
-              <div
+              <Link
                 key={county.name}
-                className="bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 p-4 md:p-6 hover:border-blue-500 hover:shadow-lg transition-all"
+                href={`/service-areas/${toSlug(county.name)}`}
+                className="block bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 p-4 md:p-6 hover:border-blue-500 hover:shadow-lg transition-all"
               >
                 <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
                   <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
                     <MapPin className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                   </div>
-                  <h3 className="text-base md:text-xl font-bold text-gray-900">
+                  <h3 className="text-base md:text-xl font-bold text-blue-700">
                     {county.name}
                   </h3>
                 </div>
@@ -181,7 +186,7 @@ export default function ServiceAreasPage() {
                     </li>
                   )}
                 </ul>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -203,13 +208,14 @@ export default function ServiceAreasPage() {
             {COUNTIES.flatMap(county => county.towns)
               .sort()
               .map((town) => (
-                <div
+                <Link
                   key={town}
-                  className="bg-white rounded-lg px-3 py-2 md:px-4 md:py-3 border border-gray-200 flex items-center gap-1.5 md:gap-2"
+                  href={`/service-areas/${toSlug(town)}`}
+                  className="bg-white rounded-lg px-3 py-2 md:px-4 md:py-3 border border-gray-200 flex items-center gap-1.5 md:gap-2 hover:border-blue-400 transition-colors"
                 >
                   <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0" />
-                  <span className="text-xs md:text-sm text-gray-800">{town}</span>
-                </div>
+                  <span className="text-xs md:text-sm text-blue-700 hover:underline">{town}</span>
+                </Link>
               ))}
           </div>
 

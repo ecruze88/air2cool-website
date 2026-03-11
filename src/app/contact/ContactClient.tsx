@@ -84,10 +84,10 @@ export default function ContactClientDual() {
         {/* Header - MOBILE OPTIMIZED */}
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-3 md:mb-4">
-            Contact Air2Cool
+            Schedule HVAC Service in North NJ
           </h1>
           <p className="text-base md:text-xl text-gray-600 mb-4 md:mb-6">
-            Emergency service or planning ahead? We're here to help.
+            Emergency AC repair, furnace repair, or planning a new installation? We're here 24/7.
           </p>
 
           {/* Social Proof - MOBILE OPTIMIZED */}
