@@ -132,10 +132,10 @@ export default function RootLayout({
             <div className="bg-white flex justify-center items-center py-1 border-b border-gray-100">
               <a href="/">
                 <Image
-                  src="/air2cool-logo-transparent-clean.png"
+                  src="/air2cool-logo-600x200 (1).png"
                   alt="Air2Cool"
-                  width={220}
-                  height={110}
+                  width={300}
+                  height={100}
                   priority
                   style={{ objectFit: "contain" }}
                 />
@@ -143,7 +143,7 @@ export default function RootLayout({
             </div>
 
             {/* Row 2 — Menu bar (blue) */}
-            <div className="bg-brand-red flex items-center justify-between px-4 py-2.5">
+            <div className="bg-brand-red flex items-center justify-between px-4 py-1">
               <div className="flex items-center gap-2">
                 <MobileMenu />
                 <span className="text-white font-bold uppercase text-sm tracking-wide">Menu</span>
