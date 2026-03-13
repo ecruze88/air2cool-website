@@ -132,6 +132,21 @@ export default function ReviewsCarousel() {
   const maxStartIndex = Math.max(0, REVIEWS.length - slidesPerView);
   const totalDots = maxStartIndex + 1;
 
+  // Sync active dot on scroll/swipe
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const handleScroll = () => {
+      const cards = el.querySelectorAll<HTMLElement>("[data-review-card]");
+      if (!cards.length) return;
+      const cardWidth = cards[0].getBoundingClientRect().width;
+      const idx = Math.round(el.scrollLeft / (cardWidth + 24)); // gap-6 = 24px
+      setStartIndex(clamp(idx, 0, maxStartIndex));
+    };
+    el.addEventListener("scroll", handleScroll, { passive: true });
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, [maxStartIndex]);
+
   function scrollToStart(idx: number) {
     const el = scrollerRef.current;
     if (!el) return;

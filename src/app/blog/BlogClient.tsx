@@ -2,7 +2,7 @@
 
 import { Wind, Wrench, Flame, Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 type Post = {
   slug: string;
@@ -50,7 +50,15 @@ const TOPICS = [
 
 export default function BlogClient({ posts }: { posts: Post[] }) {
   const [active, setActive] = useState("All");
+  const articleListRef = useRef<HTMLDivElement>(null);
   const filtered = active === "All" ? posts : posts.filter((p) => p.category === active);
+
+  function handleCategoryChange(cat: string) {
+    setActive(cat);
+    setTimeout(() => {
+      articleListRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
+  }
 
   return (
     <>
@@ -63,7 +71,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
             North Jersey&apos;s climate is demanding — brutally cold winters, humid summers, and everything in between. Keeping your home comfortable year-round requires more than just turning a thermostat. Our HVAC technicians have put together these guides to help Morris County and North NJ homeowners understand their heating and cooling systems, catch small problems before they become expensive breakdowns, and make smarter decisions when it&apos;s time to repair or replace. Whether you&apos;re troubleshooting a furnace mid-January or trying to figure out why your AC can&apos;t keep up in July, you&apos;ll find practical, honest advice here — the same kind our techs give every customer. Have a question not covered here? Call us at (201) 787-5657 any time.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          <div ref={articleListRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {filtered.map((post) => {
               const Icon = CATEGORY_ICONS[post.category] ?? Wind;
               return (
@@ -84,7 +92,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
                       </span>
                     </div>
 
-                    <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors leading-snug">
+                    <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors leading-snug">
                       {post.title}
                     </h2>
 
@@ -93,7 +101,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
                     </p>
 
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                      <div className="flex items-center gap-3 text-xs text-gray-400">
+                      <div className="flex items-center gap-3 text-xs text-gray-500">
                         <span className="flex items-center gap-1">
                           <Calendar className="w-3.5 h-3.5" />
                           {post.date}
@@ -103,7 +111,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
                           {post.readTime}
                         </span>
                       </div>
-                      <span className="flex items-center gap-1 text-sm font-semibold text-brand-blue group-hover:gap-2 transition-all">
+                      <span className="flex items-center gap-1 text-sm font-semibold text-blue-700 group-hover:gap-2 transition-all">
                         Read Article
                         <ArrowRight className="w-4 h-4" />
                       </span>
@@ -132,7 +140,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
             {TOPICS.map(({ label, icon: Icon, activeClass, inactiveClass }) => (
               <button
                 key={label}
-                onClick={() => setActive(label)}
+                onClick={() => handleCategoryChange(label)}
                 className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border font-semibold text-sm transition-all ${
                   active === label ? activeClass : inactiveClass
                 }`}
