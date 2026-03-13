@@ -30,6 +30,61 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: "hvac-maintenance-plan-nj",
+    category: "Maintenance",
+    categoryColor: "text-green-700 bg-green-50",
+    iconColor: "text-green-600",
+    title: "HVAC Maintenance Plans in NJ — What's Included & Is It Worth It?",
+    excerpt:
+      "Is an HVAC maintenance plan worth it in New Jersey? Learn what bi-annual tune-ups cover, how they compare to the cost of emergency repairs, and what Air2Cool's plan includes for Morris County homeowners.",
+    date: "March 13, 2026",
+    readTime: "6 min read",
+  },
+  {
+    slug: "ac-not-cooling-nj",
+    category: "Cooling",
+    categoryColor: "text-blue-700 bg-blue-50",
+    iconColor: "text-blue-600",
+    title: "AC Running But Not Cooling Your NJ Home? Here's Why",
+    excerpt:
+      "AC on but no cold air in New Jersey? Learn the 6 most common causes — low refrigerant, dirty coils, frozen evaporator, failed compressor — what you can check yourself, and when to call for same-day repair.",
+    date: "March 13, 2026",
+    readTime: "5 min read",
+  },
+  {
+    slug: "boiler-repair-morris-county-nj",
+    category: "Heating",
+    categoryColor: "text-red-700 bg-red-50",
+    iconColor: "text-red-600",
+    title: "Boiler Repair in Morris County NJ — Common Problems & What They Cost",
+    excerpt:
+      "Boiler not working in Morris County? Learn the most common boiler problems, what repairs typically cost, when to replace vs. repair, and which towns Air2Cool serves for 24/7 emergency boiler repair.",
+    date: "March 13, 2026",
+    readTime: "5 min read",
+  },
+  {
+    slug: "mini-split-installation-nj",
+    category: "Cooling",
+    categoryColor: "text-blue-700 bg-blue-50",
+    iconColor: "text-blue-600",
+    title: "Mini Split Installation in NJ — Cost, Brands & What to Expect",
+    excerpt:
+      "Considering a ductless mini split in NJ? See 2026 installed cost ranges for single and multi-zone systems, how Mitsubishi, Daikin, and LG compare, and what the installation process looks like from start to finish.",
+    date: "March 13, 2026",
+    readTime: "6 min read",
+  },
+  {
+    slug: "furnace-replacement-cost-nj",
+    category: "Heating",
+    categoryColor: "text-orange-700 bg-orange-50",
+    iconColor: "text-orange-600",
+    title: "How Much Does Furnace Replacement Cost in NJ? (2026 Guide)",
+    excerpt:
+      "Furnace replacement in NJ costs $3,500–$12,000+ depending on fuel type, efficiency rating, and brand. See 2026 price ranges for gas, oil, and electric systems, and learn about 0% APR financing options.",
+    date: "March 13, 2026",
+    readTime: "6 min read",
+  },
+  {
     slug: "ac-repair-morris-county-nj",
     category: "Cooling",
     categoryColor: "text-blue-700 bg-blue-50",
