@@ -164,7 +164,7 @@ export default function BlogPage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 md:py-20 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 pb-24 md:py-20 text-center">
           <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-wide mb-4">
             <BookOpen className="w-4 h-4" />
             HVAC TIPS &amp; GUIDES
