@@ -199,10 +199,8 @@ export default function HomePage() {
             {/* Trust Badges - 3-column compact on mobile, row on tablet+ */}
             <div className="grid grid-cols-3 sm:flex sm:flex-row sm:flex-wrap gap-2 sm:gap-3 md:gap-4 mb-5 md:mb-8">
               {/* Badge 1 — Google Rating */}
-              <a
-                href="https://g.page/r/CXTBM21G_0CKEAI/review"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/reviews"
                 className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-full text-center min-h-[44px] hover:bg-white/20 transition-colors"
               >
                 <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-500 rounded-full flex items-center justify-center shrink-0 mx-auto sm:mx-0">
@@ -212,7 +210,7 @@ export default function HomePage() {
                   <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">5.0 Google Rating</div>
                   <div className="hidden sm:block text-xs text-gray-300">250+ Reviews</div>
                 </div>
-              </a>
+              </Link>
 
               {/* Badge 2 — Licensed & Insured */}
               <Link
