@@ -54,10 +54,10 @@ export default function FinancingPage() {
             Choose Your Financing Program
           </h2>
           <p className="text-center text-gray-500 text-sm md:text-base mb-8 md:mb-10">
-            Both programs offer 0% APR — select the one that matches your utility provider.
+            All programs offer 0% APR — select the one that matches your situation.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
 
             {/* Card 1 — NJ Natural Gas SaveGreen */}
             <div className="flex flex-col rounded-2xl border-2 border-green-400 shadow-lg overflow-hidden">
@@ -142,6 +142,53 @@ export default function FinancingPage() {
                     className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition text-center text-sm"
                   >
                     Apply for JCP&amp;L Financing →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3 — SaveGreen Direct Install (Commercial) */}
+            <div className="flex flex-col rounded-2xl border-2 border-emerald-400 shadow-lg overflow-hidden">
+              <div className="bg-emerald-700 px-6 py-5 text-white">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full mb-3">
+                  For Businesses
+                </span>
+                <h3 className="text-2xl font-extrabold leading-tight">SaveGreen Direct Install</h3>
+                <p className="text-emerald-100 text-sm mt-1 font-semibold">Up to 80% of upgrade costs covered</p>
+              </div>
+
+              <div className="flex flex-col flex-1 bg-white px-6 py-6 gap-4">
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700"><strong>Up to 80% incentive</strong> on qualifying projects</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700"><strong>0% APR</strong> On-Bill Repayment Program</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Covers HVAC, refrigeration, and LED lighting upgrades</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Available for small to mid-sized NJ businesses</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">Program valid through <strong>June 30, 2027</strong></span>
+                  </li>
+                </ul>
+
+                <div className="mt-auto pt-4">
+                  <a
+                    href="https://www.savegreen.com/applications/business-applications/direct-install-application.aspx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3 rounded-xl transition text-center text-sm"
+                  >
+                    Learn More &amp; Apply →
                   </a>
                 </div>
               </div>

@@ -57,7 +57,7 @@ export default function BlogClient({ posts }: { posts: Post[] }) {
     setActive(cat);
     setTimeout(() => {
       articleListRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 0);
+    }, 50);
   }
 
   return (

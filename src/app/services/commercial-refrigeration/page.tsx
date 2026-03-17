@@ -30,6 +30,18 @@ export const metadata: Metadata = {
 export default function CommercialRefrigerationPage() {
   return (
     <main className="bg-white">
+      {/* Breadcrumb */}
+      <div className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 py-3">
+          <Link
+            href="/services/commercial"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors py-1"
+          >
+            ← All Commercial Services
+          </Link>
+        </div>
+      </div>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -396,6 +408,48 @@ export default function CommercialRefrigerationPage() {
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">{item.a}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Commercial Services */}
+      <section className="py-10 md:py-12 bg-white border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-xl md:text-2xl font-extrabold text-gray-900 mb-2 text-center">
+            Other Commercial Services
+          </h2>
+          <p className="text-sm md:text-base text-gray-500 text-center mb-6 md:mb-8">
+            Air2Cool handles all aspects of commercial mechanical work — one contractor for everything.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+            {[
+              { title: "LED & High-Efficiency Lighting", desc: "Commercial LED retrofits with utility rebates." },
+              { title: "Rooftop Units (RTU)", desc: "Installation, repair & maintenance of commercial RTUs." },
+              { title: "Commercial Furnaces", desc: "High-capacity heating for warehouses, offices & garages." },
+              { title: "Commercial AC", desc: "Split systems, VRF/VRV, ductless & custom ductwork." },
+              { title: "Chiller Servicing", desc: "Scroll, screw & absorption chiller maintenance & repair." },
+              { title: "Commercial Boilers", desc: "Hydronic & steam boiler installation, repair & maintenance." },
+              { title: "Aerators", desc: "Ventilation & air circulation for large commercial spaces." },
+            ].map((s) => (
+              <Link
+                key={s.title}
+                href="/services/commercial"
+                className="group flex flex-col gap-1 bg-gray-50 hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-300 rounded-xl px-4 py-4 transition-all"
+              >
+                <span className="text-sm font-bold text-gray-900 group-hover:text-blue-700 transition-colors">
+                  {s.title}
+                </span>
+                <span className="text-xs text-gray-500 leading-relaxed">{s.desc}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link
+              href="/services/commercial"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors py-2"
+            >
+              View All Commercial Services →
+            </Link>
           </div>
         </div>
       </section>

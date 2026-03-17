@@ -47,7 +47,7 @@ const SERVICES = [
   },
   {
     name: "Air Filtration",
-    href: "/services/air-filtration",
+    href: "/services/air-quality",
     desc: "Breathe cleaner air with professional filtration systems. Protect your family's health.",
     iconName: "wind",
     gradient: "from-green-500 to-teal-600"

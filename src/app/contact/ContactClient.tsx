@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Phone, MessageSquare, Clock, CheckCircle, Star, AlertCircle, Mail, DollarSign } from "lucide-react";
 
 const EMERGENCY_SERVICES = [
@@ -31,6 +31,28 @@ export default function ContactClientDual() {
 
   const phoneNumber = "+1-201-787-5657";
   const telHref = "tel:+12017875657";
+
+  useEffect(() => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return;
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    document.head.appendChild(script);
+    return () => { document.head.removeChild(script); };
+  }, []);
+
+  async function getRecaptchaToken(action: string): Promise<string> {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return '';
+    return new Promise((resolve) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).grecaptcha.ready(() => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).grecaptcha.execute(siteKey, { action }).then(resolve);
+      });
+    });
+  }
 
   function isValidEmergency(fields: Record<string, FormDataEntryValue>) {
     const name = String(fields.name || "").trim();
@@ -188,10 +210,12 @@ export default function ContactClientDual() {
                     }
 
                     try {
+                      const recaptchaToken = await getRecaptchaToken('emergency');
                       const res = await fetch("/api/contact", {
                         method: "POST",
                         body: JSON.stringify({
                           type: "emergency",
+                          recaptchaToken,
                           name: data.name,
                           email: data.email,
                           phone: data.phone,
@@ -372,10 +396,12 @@ export default function ContactClientDual() {
                     }
 
                     try {
+                      const recaptchaToken = await getRecaptchaToken('estimate');
                       const res = await fetch("/api/contact", {
                         method: "POST",
                         body: JSON.stringify({
                           type: "estimate",
+                          recaptchaToken,
                           name: data.name,
                           email: data.email,
                           phone: data.phone,

@@ -20,7 +20,28 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-    
+
+    // reCAPTCHA v3 verification
+    const recaptchaToken = body.recaptchaToken;
+    if (!recaptchaToken) {
+      return NextResponse.json({ error: "Invalid submission" }, { status: 400 });
+    }
+    const recaptchaRes = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`
+    });
+    const recaptchaData = await recaptchaRes.json();
+    if (!recaptchaData.success || recaptchaData.score < 0.5) {
+      return NextResponse.json({ error: "Invalid submission" }, { status: 400 });
+    }
+
+    // Basic bot detection
+    const isRandomString = (str: string | undefined) => !!str && str.length > 20 && !str.includes(' ');
+    if (isRandomString(name) || isRandomString(address)) {
+      return NextResponse.json({ error: "Invalid submission" }, { status: 400 });
+    }
+
     // Validate based on form type
     if (type === "emergency") {
       if (!name || !problem || !address) {

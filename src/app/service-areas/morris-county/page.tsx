@@ -147,7 +147,7 @@ export default function MorrisCountyPage() {
               { label: "Furnace & Boiler Installation", href: "/services/hvac-installation" },
               { label: "Heat Pump Installation", href: "/services/hvac-installation" },
               { label: "Heating Repair", href: "/services/heating-repair" },
-              { label: "Air Filtration Systems", href: "/services/air-filtration" },
+              { label: "Air Filtration Systems", href: "/services/air-quality" },
               { label: "Whole-Home Humidifiers", href: "/services/humidifier" },
               { label: "Commercial Refrigeration", href: "/services/commercial-refrigeration" },
               { label: "Preventative Maintenance Plans", href: "/services/preventative-maintenance" },

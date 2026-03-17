@@ -1,8 +1,35 @@
 "use client";
 
-import { Menu, X, Phone, Star } from "lucide-react";
+import { Menu, X, Phone, Star, ChevronDown } from "lucide-react";
+import { useState } from "react";
+
+const COOLING_LINKS = [
+  { label: "AC Repair",       href: "/services/ac-repair" },
+  { label: "AC Installation", href: "/services/cooling-installation" },
+];
+
+const HEATING_LINKS = [
+  { label: "Heating Repair",       href: "/services/heating-repair" },
+  { label: "Heating Installation", href: "/services/heating-installation" },
+];
+
+const AIR_QUALITY_LINKS = [
+  { label: "Air Quality & Filtration", href: "/services/air-quality" },
+  { label: "Whole-Home Humidifier",    href: "/services/humidifier" },
+];
+
+const MAINTENANCE_LINKS = [
+  { label: "Preventative Maintenance", href: "/services/preventative-maintenance" },
+  { label: "Complete HVAC Systems",    href: "/services/hvac-installation" },
+];
+
+const COMMERCIAL_LINKS = [
+  { label: "All Commercial Services",  href: "/services/commercial" },
+  { label: "Commercial Refrigeration", href: "/services/commercial-refrigeration" },
+];
 
 export default function MobileMenu() {
+  const [servicesOpen, setServicesOpen] = useState(false);
   const openMenu = () => {
     const menu = document.getElementById('mobile-menu-overlay');
     if (menu) {
@@ -156,14 +183,52 @@ export default function MobileMenu() {
           className="flex-1 overflow-y-auto px-4 py-6 bg-white"
           style={{ backgroundColor: 'white' }}
         >
-          <a 
-            href="/services" 
-            onClick={closeMenu} 
-            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
-          >
-            Services
-          </a>
-          <a 
+          {/* Services accordion */}
+          <div className="mb-2">
+            <button
+              type="button"
+              onClick={() => setServicesOpen((o) => !o)}
+              className="flex items-center justify-between w-full px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl"
+            >
+              <span>Services</span>
+              <ChevronDown
+                className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
+                  servicesOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {servicesOpen && (
+              <div className="pb-2">
+                {[
+                  { heading: "Cooling",     links: COOLING_LINKS },
+                  { heading: "Heating",     links: HEATING_LINKS },
+                  { heading: "Air Quality", links: AIR_QUALITY_LINKS },
+                  { heading: "Maintenance", links: MAINTENANCE_LINKS },
+                  { heading: "Commercial",  links: COMMERCIAL_LINKS },
+                ].map(({ heading, links }, i) => (
+                  <div key={heading}>
+                    {i > 0 && <div className="mx-4 border-t border-gray-100" />}
+                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-5 pt-3 pb-1">
+                      {heading}
+                    </p>
+                    {links.map((item) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        onClick={closeMenu}
+                        className="flex items-center min-h-[44px] pl-7 pr-4 py-2 text-base font-medium text-gray-800 hover:bg-gray-50 active:bg-gray-100 rounded-lg mx-2"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <a
             href="/troubleshooting" 
             onClick={closeMenu} 
             className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"

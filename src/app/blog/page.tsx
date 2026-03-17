@@ -30,6 +30,17 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: "hvac-allergy-season-nj",
+    category: "Maintenance",
+    categoryColor: "text-teal-700 bg-teal-50",
+    iconColor: "text-teal-600",
+    title: "NJ Allergy Season is Here — How Your HVAC System Can Help (or Hurt)",
+    excerpt:
+      "Spring allergies hitting hard in NJ? Your HVAC system could be making it worse. Learn 4 upgrades — media filters, dehumidifiers, air ionizers, and smart thermostats — that actually reduce indoor allergens, plus a quick DIY checklist.",
+    date: "March 17, 2026",
+    readTime: "6 min read",
+  },
+  {
     slug: "hvac-maintenance-plan-nj",
     category: "Maintenance",
     categoryColor: "text-green-700 bg-green-50",

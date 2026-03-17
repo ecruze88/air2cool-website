@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Flame, Snowflake, Wind, Wrench, Zap, Droplets, Waves, Home } from "lucide-react";
+import { Flame, Snowflake, Wind, Wrench, Zap, Droplets, Waves, Leaf } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ const SERVICES = [
     icon: Wind,
     title: "Air Filtration",
     description: "Breathe cleaner air with professional filtration systems. Protect your family's health year-round.",
-    href: "/services/air-filtration",
+    href: "/services/air-quality",
     color: "green",
     category: "repair",
   },
@@ -95,11 +95,11 @@ const SERVICES = [
     category: "installation",
   },
   {
-    icon: Home,
-    title: "Commercial Refrigeration",
-    description: "Expert commercial refrigeration service and repair for businesses across North NJ.",
-    href: "/services/commercial-refrigeration",
-    color: "indigo",
+    icon: Leaf,
+    title: "Indoor Air Quality",
+    description: "Dehumidifiers, air ionizers, smart thermostats & media filters. Breathe cleaner, healthier air year-round.",
+    href: "/services/air-quality",
+    color: "teal",
     category: "installation",
   },
 ];
@@ -112,7 +112,7 @@ const COLOR_CLASSES = {
   orange: "from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700",
   cyan: "from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700",
   amber: "from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700",
-  indigo: "from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700",
+  teal: "from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700",
 };
 
 export default function ServicesPage() {
@@ -139,10 +139,10 @@ export default function ServicesPage() {
               { "@type": "ListItem", "position": 3, "name": "Heating Installation", "url": "https://www.air2cool.com/services/heating-installation" },
               { "@type": "ListItem", "position": 4, "name": "Cooling Installation", "url": "https://www.air2cool.com/services/cooling-installation" },
               { "@type": "ListItem", "position": 5, "name": "Preventative Maintenance", "url": "https://www.air2cool.com/services/preventative-maintenance" },
-              { "@type": "ListItem", "position": 6, "name": "Air Filtration", "url": "https://www.air2cool.com/services/air-filtration" },
+              { "@type": "ListItem", "position": 6, "name": "Air Filtration", "url": "https://www.air2cool.com/services/air-quality" },
               { "@type": "ListItem", "position": 7, "name": "Whole-Home Humidifier", "url": "https://www.air2cool.com/services/humidifier" },
-              { "@type": "ListItem", "position": 8, "name": "Commercial Refrigeration", "url": "https://www.air2cool.com/services/commercial-refrigeration" },
-              { "@type": "ListItem", "position": 9, "name": "HVAC Installation", "url": "https://www.air2cool.com/services/hvac-installation" }
+              { "@type": "ListItem", "position": 8, "name": "HVAC Installation", "url": "https://www.air2cool.com/services/hvac-installation" },
+              { "@type": "ListItem", "position": 9, "name": "Indoor Air Quality", "url": "https://www.air2cool.com/services/air-quality" }
             ]
           })
         }}
@@ -407,6 +407,35 @@ export default function ServicesPage() {
                 Family owned since 1998
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Commercial Callout */}
+      <section className="py-10 md:py-14 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <div className="flex-1">
+            <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">For Businesses</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
+              Looking for Commercial Services?
+            </h2>
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+              We handle RTUs, chillers, commercial boilers, LED lighting retrofits, commercial refrigeration, and more. Licensed Master HVACR technicians with 26+ years of commercial experience across North NJ.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto shrink-0">
+            <Link
+              href="/services/commercial"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold text-base transition text-center whitespace-nowrap"
+            >
+              View Commercial Services →
+            </Link>
+            <a
+              href="tel:+12017875657"
+              className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full font-semibold text-base border border-white/20 transition text-center whitespace-nowrap"
+            >
+              Call (201) 787-5657
+            </a>
           </div>
         </div>
       </section>

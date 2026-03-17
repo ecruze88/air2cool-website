@@ -3,6 +3,7 @@ export { metadata, localBusinessSchema } from "./metadata";
 import { Facebook, Instagram, Youtube, Star } from "lucide-react";
 import Script from "next/script";
 import MobileMenu from "@/components/MobileMenu";
+import ServicesDropdown from "@/components/ServicesDropdown";
 import { Analytics } from "@vercel/analytics/next";
 import StickyCallButton from "@/components/StickyCallButton";
 import Image from "next/image";
@@ -114,7 +115,7 @@ export default function RootLayout({
         <a
           href="/"
           aria-label="Go to homepage"
-          className="hidden xl:block fixed left-6 top-35 z-9999"
+          className="hidden xl:block fixed left-6 top-35 z-[99999999]"
         >
           <img
             src="/air2cool-logo-transparent.png"
@@ -124,7 +125,7 @@ export default function RootLayout({
         </a>
         
 
-        <header className="sticky top-0 z-[1000] bg-white">
+        <header className="sticky top-0 z-[9999] bg-white relative overflow-visible" style={{ '--header-height': '57px' } as React.CSSProperties}>
 
           {/* MOBILE: Two-row layout */}
           <div className="xl:hidden">
@@ -155,20 +156,15 @@ export default function RootLayout({
           </div>
 
           {/* DESKTOP: Single-row nav */}
-          <div className="hidden xl:block bg-white/98 backdrop-blur border-b border-gray-200 shadow-sm">
+          <div className="hidden xl:block bg-white/98 backdrop-blur border-b border-gray-200 shadow-sm overflow-visible">
             <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
               {/* Spacer for floating logo */}
               <div className="w-60" />
 
               {/* Desktop Navigation */}
               <nav className="flex items-center gap-1">
-                <a
-                  href="/services"
-                  className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
-                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
-                >
-                  Services
-                </a>
+                {/* Services dropdown */}
+                <ServicesDropdown />
 
                 <a
                   href="/troubleshooting"
@@ -248,8 +244,9 @@ export default function RootLayout({
               </div>
             </div>
           </div>
+
                  {/* STICKY GOOGLE REVIEWS BANNER */}
-        <section id="sticky-reviews-banner" className="sticky top-[60px] md:top-[73px] z-[999] bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-3 md:py-4 shadow-lg">
+        <section id="sticky-reviews-banner" className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-3 md:py-4 shadow-lg" style={{ position: 'relative', zIndex: 1, isolation: 'auto' }}>
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex items-center justify-center gap-3 md:gap-6 text-white text-center">
               {/* Mobile: Compact single row */}

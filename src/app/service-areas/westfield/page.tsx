@@ -16,7 +16,7 @@ const SERVICES = [
   { name: "AC Installation", href: "/services/cooling-installation", desc: "Energy-efficient systems with 0% financing." },
   { name: "Heating Repair", href: "/services/heating-repair", desc: "Furnace, boiler & heat pump repair." },
   { name: "Heating Installation", href: "/services/heating-installation", desc: "New furnace or heat pump with warranty." },
-  { name: "Air Filtration", href: "/services/air-filtration", desc: "Whole-home air purifiers & filters." },
+  { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Commercial Refrigeration", href: "/services/commercial-refrigeration", desc: "Coolers & freezers for businesses." },
   { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
