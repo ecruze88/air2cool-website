@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Air2Cool Heating & Cooling | HVAC Repair & Installation in North NJ",
+  title: "Air2Cool | North NJ HVAC | AC Repair, Heating & Cooling Since 1998",
   description:
-    "Air2Cool Heating & Cooling provides fast, reliable HVAC repair, installation, and maintenance across North New Jersey. Call to schedule service.",
+    "North Jersey's trusted HVAC company since 1998. AC repair, furnace repair, boiler service, mini splits & more. 9 counties. 24/7 emergency service. (201) 787-5657.",
 };
 
 const SERVICES = [
@@ -148,7 +148,57 @@ const TRUST = [
 export default function HomePage() {
   return (
     <main className="bg-white">
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HVACBusiness",
+            "name": "Air2Cool Heating & Cooling",
+            "url": "https://www.air2cool.com",
+            "telephone": "+12017875657",
+            "email": "air2cool1@gmail.com",
+            "foundingDate": "1998",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "20 Kitchell Ave",
+              "addressLocality": "Wharton",
+              "addressRegion": "NJ",
+              "postalCode": "07885",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 40.8987,
+              "longitude": -74.5765
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday"],
+                "opens": "08:00",
+                "closes": "14:00"
+              }
+            ],
+            "areaServed": [
+              "Morris County NJ","Essex County NJ","Passaic County NJ","Bergen County NJ",
+              "Sussex County NJ","Warren County NJ","Hunterdon County NJ","Somerset County NJ","Union County NJ"
+            ],
+            "priceRange": "$$",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "250"
+            }
+          })
+        }}
+      />
 
       {/* HERO (full bleed) - MOBILE OPTIMIZED */}
       <section className="relative overflow-hidden min-h-[85vh]">

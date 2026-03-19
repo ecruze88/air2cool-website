@@ -73,6 +73,7 @@ const nextConfig: NextConfig = {
       { source: '/locations/warren-county',           destination: '/service-areas/warren-county',        permanent: true },
       { source: '/locations/passaic-county',          destination: '/service-areas/passaic-county',       permanent: true },
       { source: '/preventative-hvac-maintenance',     destination: '/services/preventative-maintenance',  permanent: true },
+      { source: '/financing-available',               destination: '/financing',                           permanent: true },
     ]
   },
 

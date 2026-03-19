@@ -3,9 +3,9 @@ import { Snowflake, CheckCircle, DollarSign, Shield, Clock, Award, Zap, Wind } f
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AC & Cooling System Installation in Morris County NJ | Air2Cool | (201) 787-5657",
+  title: "AC & Cooling System Installation in North Jersey | Air2Cool | (201) 787-5657",
   description:
-    "Professional AC, heat pump & mini split installation in Morris County & North NJ. 0% financing up to $25k. Free house cleaning with every install. 10-year warranties. Licensed Master HVAC Technicians. Call (201) 787-5657.",
+    "Professional AC installation in North Jersey. Central air, heat pumps & mini splits for Morris County, Essex County & beyond. Free estimates, 0% financing, 10-year warranties. Licensed since 1998. Call (201) 787-5657.",
   keywords: [
     "AC installation Morris County NJ",
     "central air conditioning installation NJ",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: "/services/cooling-installation",
   },
   openGraph: {
-    title: "AC & Cooling System Installation in Morris County NJ | Air2Cool",
+    title: "AC & Cooling System Installation in North Jersey | Air2Cool",
     description:
       "Central AC, heat pumps & ductless mini splits. 0% financing. Free house cleaning every install. Morris County & North NJ. Call (201) 787-5657.",
     url: "/services/cooling-installation",
@@ -74,11 +74,11 @@ export default function CoolingInstallationPage() {
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
-              New AC, Heat Pumps & Mini Splits
+              AC & Cooling System Installation in North Jersey
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              Beat the heat with a professionally installed cooling system. We install central air conditioners, energy-efficient heat pumps, and ductless mini-splits. Free house cleaning with every installation.
+              Air2Cool has been installing cooling systems across Morris County, Essex County, and North Jersey since 1998. Whether you need central AC in Rockaway, a heat pump in Randolph, or a ductless mini split in Short Hills or Millburn — we size it right and back it with a 10-year warranty.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 md:mb-8">
@@ -275,6 +275,30 @@ export default function CoolingInstallationPage() {
               Get Free Estimate
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* AC Installation Near You */}
+      <section className="py-10 md:py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
+              AC Installation Near You
+            </h2>
+            <p className="text-sm md:text-base text-gray-600">
+              We install cooling systems throughout Morris County, Essex County, and surrounding areas of North Jersey.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-center text-sm text-gray-700">
+            {["Rockaway", "Randolph", "Morristown", "Denville", "Parsippany", "Dover", "Wharton", "Short Hills", "Millburn", "Livingston", "Montclair", "West Orange", "Wayne", "Montville", "Lincoln Park", "Boonton"].map((town) => (
+              <div key={town} className="bg-gray-50 rounded-xl py-2.5 px-3 font-medium border border-gray-200">
+                {town}, NJ
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-gray-500 mt-4">
+            Don&apos;t see your town? <a href="tel:+12017875657" className="text-blue-600 font-semibold hover:underline">Call us — we likely serve your area.</a>
+          </p>
         </div>
       </section>
 

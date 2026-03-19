@@ -3,9 +3,9 @@ import { Snowflake, CheckCircle, Clock, Zap } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AC Repair NJ — Same-Day Air Conditioning Repair | Air2Cool | (201) 787-5657",
+  title: "AC Repair Morris County NJ | Same-Day Service | Air2Cool",
   description:
-    "Expert AC repair NJ. Same-day service available, 24/7 emergency. Serving Morris County, Bergen County & all of North NJ. 26+ years experience. Licensed Master HVAC Technicians. Call (201) 787-5657.",
+    "Fast, affordable AC repair in Morris County, NJ. Air2Cool has served North Jersey since 1998. Licensed technicians, 24/7 emergency service. Call (201) 787-5657.",
   keywords: [
     "AC repair NJ",
     "AC repair Morris County NJ",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     canonical: "/services/ac-repair",
   },
   openGraph: {
-    title: "AC Repair NJ — Same-Day Air Conditioning Repair | Air2Cool",
+    title: "AC Repair Morris County NJ | Same-Day Service | Air2Cool",
     description:
-      "Same-day AC repair by licensed technicians. 24/7 emergency service. 26+ years experience in Morris County & North NJ. Call (201) 787-5657.",
+      "Fast, affordable AC repair in Morris County, NJ. Licensed technicians, 24/7 emergency service. Call (201) 787-5657.",
     url: "/services/ac-repair",
   },
 };
@@ -77,6 +77,57 @@ export default function ACRepairPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does AC repair cost in New Jersey?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "AC repair in New Jersey typically costs between $150 and $600 depending on the repair. Simple fixes like a capacitor replacement or thermostat swap run $150–$300. Refrigerant recharges are $200–$450 depending on refrigerant type. A compressor replacement is a larger investment, typically $800–$1,800 all-in. Air2Cool provides a free estimate before any work begins so you know exactly what you're paying — no surprises."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer emergency AC repair in Morris County NJ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Air2Cool provides 24/7 emergency AC repair throughout Morris County, NJ and all of North Jersey. Whether your AC fails on the hottest night of the year or stops working on a holiday weekend, call (201) 787-5657 and a licensed technician will respond as quickly as possible."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How quickly can Air2Cool respond to an AC repair call in Morris County?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Same-day AC repair service is available across Morris County and North NJ. In most cases we can have a technician at your home within a few hours of your call. For 24/7 emergencies we prioritize getting to you as fast as possible — often within 2–4 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are common signs my air conditioner needs repair?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Common warning signs include warm air blowing from vents, the system running constantly but not cooling, unusual noises (grinding, banging, squealing), ice forming on the unit, water leaking near the indoor unit, and a sudden spike in your electric bill. If you notice any of these, call us before the problem gets worse."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you repair all brands of air conditioners?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Our technicians are trained on all major brands including Carrier, Trane, Lennox, Rheem, York, Goodman, Bryant, and more. We service both central air conditioning systems and ductless mini-split systems."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-cyan-800 to-blue-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -97,11 +148,11 @@ export default function ACRepairPage() {
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
-              AC Repair NJ — Fast, Affordable Air Conditioning Repair
+              AC Repair in Morris County, NJ
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              New Jersey summers are no joke — when your AC goes down, you need it fixed today, not next week. Air2Cool's Licensed Master HVAC Technicians are available 24/7 for same-day AC repair across Morris County and all of North NJ.
+              Air2Cool has been the trusted name for AC repair in Morris County, NJ since 1998. Whether you need emergency AC repair on the hottest day of the year or routine air conditioner repair, our licensed technicians respond fast — often same day.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
@@ -148,6 +199,9 @@ export default function ACRepairPage() {
               North NJ's Trusted AC Repair Company
             </h2>
             <div className="prose prose-gray max-w-none text-gray-700 leading-relaxed space-y-4">
+              <p>
+                Air2Cool has been the trusted name for <strong>AC repair in Morris County, NJ</strong> since 1998. Whether you need <strong>emergency AC repair</strong> on the hottest day of the year or routine <strong>air conditioner repair</strong> in Morris County, our Licensed Master HVAC Technicians respond fast — often the same day you call. We serve all of Morris County including <strong>Morristown, Rockaway, Randolph, Denville, Parsippany, Dover, Wharton</strong>, and surrounding areas.
+              </p>
               <p>
                 When your air conditioner breaks down in the middle of a New Jersey heat wave, every hour matters. Air2Cool Heating &amp; Cooling has been providing fast, reliable AC repair in NJ for over 26 years. We serve homeowners and businesses across{" "}
                 <Link href="/service-areas/morris-county" className="text-blue-600 hover:underline">Morris County</Link>,{" "}
@@ -251,7 +305,11 @@ export default function ACRepairPage() {
               },
               {
                 q: "How much does AC repair cost in New Jersey?",
-                a: "AC repair costs vary depending on the issue. Simple repairs like a capacitor replacement or refrigerant recharge are generally affordable, while a compressor replacement is a larger investment. We provide a free estimate before any work begins so you know exactly what you're paying for. No surprises.",
+                a: "AC repair in New Jersey typically costs between $150 and $600 depending on the repair. Simple fixes like a capacitor replacement or thermostat swap run $150–$300. Refrigerant recharges are $200–$450. A compressor replacement is typically $800–$1,800 all-in. We provide a free estimate before any work begins — no surprises.",
+              },
+              {
+                q: "Do you offer emergency AC repair in Morris County?",
+                a: "Yes. Air2Cool provides 24/7 emergency AC repair throughout Morris County and all of North Jersey. Whether your AC fails on the hottest night of the year or stops working on a holiday weekend, call (201) 787-5657 and a licensed technician will respond as quickly as possible.",
               },
               {
                 q: "Do you repair all brands of air conditioners?",

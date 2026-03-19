@@ -78,7 +78,9 @@ export default function RootLayout({
                 { "@type": "AdministrativeArea", "name": "Essex County" },
                 { "@type": "AdministrativeArea", "name": "Passaic County" },
                 { "@type": "AdministrativeArea", "name": "Union County" },
-                { "@type": "AdministrativeArea", "name": "Bergen County" }
+                { "@type": "AdministrativeArea", "name": "Bergen County" },
+                { "@type": "AdministrativeArea", "name": "Hunterdon County" },
+                { "@type": "AdministrativeArea", "name": "Somerset County" }
               ],
               "openingHoursSpecification": [
                 {
@@ -421,6 +423,9 @@ export default function RootLayout({
 
             <div className="border-t border-white/10 my-10" />
 
+            <p className="text-xs text-gray-500 text-center mb-6">
+              Serving: Morris County · Essex County · Bergen County · Passaic County · Sussex County · Warren County · Hunterdon County · Somerset County · Union County
+            </p>
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
               <p>
                 © {new Date().getFullYear()} Air2Cool Heating & Cooling. All rights reserved.

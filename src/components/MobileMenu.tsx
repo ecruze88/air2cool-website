@@ -6,6 +6,7 @@ import { useState } from "react";
 const COOLING_LINKS = [
   { label: "AC Repair",       href: "/services/ac-repair" },
   { label: "AC Installation", href: "/services/cooling-installation" },
+  { label: "Mini Split",      href: "/services/mini-split" },
 ];
 
 const HEATING_LINKS = [

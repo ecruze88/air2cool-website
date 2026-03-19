@@ -3,9 +3,9 @@ import { Flame, CheckCircle, Clock, Shield } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Furnace Repair NJ — Heating Repair in Morris County | Air2Cool | (201) 787-5657",
+  title: "Heating Repair Morris County NJ | 24/7 Furnace & Boiler | Air2Cool",
   description:
-    "Expert furnace repair NJ. Boilers, heat pumps & all heating systems. 24/7 emergency heating repair in Morris County & North NJ. Licensed Master HVAC Technicians. Call (201) 787-5657.",
+    "Heating repair in Morris County & North Jersey. Furnace repair, boiler service, heat pump repair. 24/7 emergency heating service. Licensed since 1998. (201) 787-5657.",
   keywords: [
     "furnace repair NJ",
     "heating repair NJ",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     canonical: "/services/heating-repair",
   },
   openGraph: {
-    title: "Furnace Repair NJ — Heating Repair in Morris County | Air2Cool",
+    title: "Heating Repair Morris County NJ | 24/7 Furnace & Boiler | Air2Cool",
     description:
-      "24/7 emergency heating repair. Furnaces, hydronic, steam & NTI boilers. All major brands. Morris County & North NJ. Call (201) 787-5657.",
+      "Furnace repair, boiler service, heat pump repair. 24/7 emergency heating service. Morris County & North NJ. Licensed since 1998. (201) 787-5657.",
     url: "/services/heating-repair",
   },
 };
@@ -73,6 +73,49 @@ export default function HeatingRepairPage() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do you repair all furnace brands?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Air2Cool services all major furnace brands including Carrier, Trane, Lennox, Rheem, York, Goodman, Bryant, Weil-McLain, Burnham, Buderus, and more. Our Licensed Master HVAC Technicians are trained on both gas and oil furnaces, as well as all types of boiler systems."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are signs my furnace needs repair?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Common signs your furnace needs repair include: (1) No heat or insufficient heat despite the thermostat being set correctly, (2) Unusual noises like banging, rattling, or squealing when the system runs, (3) The system cycling on and off frequently without reaching the set temperature, (4) A yellow or flickering pilot light instead of a steady blue flame, which can indicate a carbon monoxide issue. If you notice any of these signs, call Air2Cool at (201) 787-5657."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer 24/7 heating repair in Morris County?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Air2Cool provides 24/7 emergency heating repair throughout Morris County and all of North Jersey. We serve Morristown, Randolph, Rockaway, Dover, Wharton, Denville, Parsippany, and surrounding towns. If your furnace or boiler fails in the middle of the night or on a weekend, call (201) 787-5657 and we'll dispatch a technician as quickly as possible."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does furnace repair cost in New Jersey?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Furnace repair costs in NJ typically range from $150 to $600 for most common repairs. A simple igniter replacement runs $150–$300. A blower motor replacement is typically $300–$600. More complex repairs like a heat exchanger replacement can be $600–$1,500+. We provide a free estimate before any work begins so you know exactly what you're paying."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-red-900 via-orange-800 to-red-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -93,11 +136,11 @@ export default function HeatingRepairPage() {
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
-              Furnace Repair NJ — 24/7 Heating Repair in Morris County
+              Heating Repair in Morris County, NJ
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              Furnace down? Boiler not heating? Don't spend a cold New Jersey night without heat. Air2Cool's Licensed Master HVAC Technicians respond fast — 24 hours a day, 7 days a week — to fix furnaces, boilers, heat pumps, and all heating systems across Morris County and North NJ.
+              Furnace repair, boiler service, heat pump repair — Air2Cool has handled all of it in Morris County and North Jersey since 1998. Our Licensed Master HVAC Technicians are available 24/7 for emergency heating service so you&apos;re never left in the cold.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
@@ -144,6 +187,9 @@ export default function HeatingRepairPage() {
               Morris County's Furnace &amp; Boiler Repair Specialists
             </h2>
             <div className="prose prose-gray max-w-none text-gray-700 leading-relaxed space-y-4">
+              <p>
+                Air2Cool specializes in <strong>furnace repair</strong>, <strong>boiler repair</strong>, and <strong>heat pump repair</strong> across Morris County and all of North Jersey. Our <strong>24/7 emergency heating service</strong> means you're covered day or night — we serve <strong>Morristown, Randolph, Rockaway, Dover, Wharton, Denville, Parsippany</strong>, and surrounding communities.
+              </p>
               <p>
                 When New Jersey temperatures drop below freezing, a broken furnace or boiler isn't just uncomfortable — it's a health and safety emergency. Air2Cool Heating &amp; Cooling has been keeping homes and businesses warm across{" "}
                 <Link href="/service-areas/morris-county" className="text-red-600 hover:underline">Morris County</Link> and North NJ for over 26 years. We're the local heating repair specialists that homeowners in{" "}

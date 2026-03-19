@@ -30,6 +30,17 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: "emergency-ac-repair-rockaway-nj",
+    category: "Cooling",
+    categoryColor: "text-blue-700 bg-blue-50",
+    iconColor: "text-blue-600",
+    title: "Emergency AC Repair in Rockaway, NJ — What to Do When Your AC Breaks Down",
+    excerpt:
+      "AC broke down in Rockaway on the hottest day of the year? Learn what to check first, what causes summer AC failures, what repairs cost in Morris County, and how to get same-day service from Air2Cool.",
+    date: "March 17, 2026",
+    readTime: "5 min read",
+  },
+  {
     slug: "hvac-allergy-season-nj",
     category: "Maintenance",
     categoryColor: "text-teal-700 bg-teal-50",

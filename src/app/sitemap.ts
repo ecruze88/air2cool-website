@@ -28,10 +28,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/ac-repair',
     '/services/hvac-installation',
     '/services/heating-installation',
-    '/services/air-filtration',
+    '/services/cooling-installation',
+    '/services/air-quality',
+    '/services/mini-split',
     '/services/preventative-maintenance',
+    '/services/commercial',
     '/services/commercial-refrigeration',
     '/services/humidifier',
+  ]
+
+  // Blog pages
+  const blogPages = [
+    '/blog',
+    '/blog/emergency-ac-repair-rockaway-nj',
+    '/blog/hvac-allergy-season-nj',
+    '/blog/hvac-maintenance-plan-nj',
+    '/blog/ac-not-cooling-nj',
+    '/blog/boiler-repair-morris-county-nj',
+    '/blog/mini-split-installation-nj',
+    '/blog/furnace-replacement-cost-nj',
+    '/blog/ac-repair-morris-county-nj',
+    '/blog/lower-energy-bills-hvac',
+    '/blog/diy-furnace-checkup',
   ]
 
   // County pages - important for local SEO
@@ -80,6 +98,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    })),
+
+    // Blog pages
+    ...blogPages.map((page) => ({
+      url: `${baseUrl}${page}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     })),
 
     // Town pages

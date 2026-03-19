@@ -7,6 +7,7 @@ import { ChevronDown } from "lucide-react";
 const COOLING = [
   { label: "AC Repair",       href: "/services/ac-repair" },
   { label: "AC Installation", href: "/services/cooling-installation" },
+  { label: "Mini Split",      href: "/services/mini-split" },
 ];
 
 const HEATING = [
