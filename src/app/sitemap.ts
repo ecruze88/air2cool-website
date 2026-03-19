@@ -37,6 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/humidifier',
   ]
 
+  // Tool pages
+  const toolPages = [
+    '/tools/hvac-sizing',
+  ]
+
   // Blog pages
   const blogPages = [
     '/blog',
@@ -98,6 +103,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    })),
+
+    // Tool pages
+    ...toolPages.map((page) => ({
+      url: `${baseUrl}${page}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     })),
 
     // Blog pages

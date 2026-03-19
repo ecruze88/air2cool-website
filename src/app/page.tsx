@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Offers from "@/components/Offers";
+import SizingTool from "@/components/SizingTool";
 import Link from "next/link";
 import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets, AlertTriangle } from "lucide-react";
 
@@ -511,6 +512,24 @@ export default function HomePage() {
               );
             })}
           </div>
+        </section>
+
+        {/* ========================================
+            HVAC SIZING TOOL
+        ======================================== */}
+        <section className="mb-10 md:mb-16 bg-gray-50 rounded-3xl px-6 py-8 md:py-12">
+          <div className="text-center mb-6 md:mb-8">
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-semibold text-sm mb-3 md:mb-4">
+              FREE TOOL
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
+              What size HVAC system does your home need?
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-lg">
+              Answer 5 quick questions and get an instant estimate. Oversized and undersized systems both cost more — sizing matters.
+            </p>
+          </div>
+          <SizingTool compact={true} />
         </section>
 
         {/* ========================================
