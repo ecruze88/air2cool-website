@@ -126,8 +126,9 @@ export default function EmergencyACRepairRockawayPage() {
 
         <h2>Serving Rockaway and All of Morris County</h2>
         <p>
-          Air2Cool provides emergency AC repair throughout <strong>Rockaway Township, Rockaway Borough,
-          Randolph, Denville, Morristown, Dover, Wharton, Parsippany, Mine Hill, Mount Olive,</strong> and
+          Air2Cool provides <Link href="/services/ac-repair" className="text-blue-600 hover:underline font-semibold">AC repair</Link> throughout{" "}
+          <Link href="/service-areas/rockaway" className="text-blue-600 hover:underline font-semibold">Rockaway Township and Rockaway Borough</Link>,
+          Randolph, Denville, Morristown, Dover, Wharton, Parsippany, Mine Hill, Mount Olive, and
           surrounding Morris County communities. We&apos;ve served North Jersey homeowners since 1998 — locally
           owned, fully licensed, and backed by hundreds of 5-star reviews.
         </p>

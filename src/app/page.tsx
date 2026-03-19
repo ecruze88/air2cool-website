@@ -358,7 +358,7 @@ export default function HomePage() {
 
       {/* OFFERS */}
       <Offers
-        heading="Winter Specials - Limited Time!"
+        heading="Current Specials"
         offers={[
           {
             title: "$25 OFF SERVICE OR ANY REPAIR",
@@ -757,8 +757,7 @@ export default function HomePage() {
                   Service Areas
                 </h2>
                 <p className="mt-3 text-gray-700 max-w-3xl leading-relaxed">
-                  Proudly serving Morris, Sussex, Warren, Essex, Passaic, Union,
-                  and Bergen County.
+                  Proudly serving Morris, Essex, Passaic, Bergen, Sussex, Warren, Hunterdon, Somerset, and Union County.
                 </p>
 
                 <div className="mt-6">

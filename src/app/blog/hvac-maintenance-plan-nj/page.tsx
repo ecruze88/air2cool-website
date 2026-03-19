@@ -219,9 +219,9 @@ export default function HvacMaintenancePlanBlogPost() {
           </div>
           <p className="mt-5 text-green-200 text-sm">
             Also see:{" "}
-            <Link href="/services/preventative-maintenance" className="underline hover:text-white">Preventative Maintenance</Link>
+            <Link href="/maintenance-contract" className="underline hover:text-white">Sign Up for a Maintenance Plan</Link>
             {" · "}
-            <Link href="/contact" className="underline hover:text-white">Contact Us</Link>
+            <Link href="/services/preventative-maintenance" className="underline hover:text-white">Preventative Maintenance</Link>
             {" · "}
             <Link href="/financing" className="underline hover:text-white">Financing Options</Link>
           </p>

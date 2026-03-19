@@ -422,9 +422,9 @@ export default function AllergySeasonBlogPage() {
                 color: "from-teal-500 to-cyan-500",
               },
               {
-                href: "/services/air-quality",
-                label: "Air Filtration",
-                desc: "UV filtration, HEPA filters, iWave-R purifiers, and duct cleaning.",
+                href: "/services/humidifier",
+                label: "Whole-Home Humidifier",
+                desc: "Aprilaire whole-house humidifiers and dehumidifiers for year-round comfort.",
                 color: "from-green-500 to-teal-500",
               },
               {

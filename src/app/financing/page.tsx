@@ -3,9 +3,18 @@ import { DollarSign, CheckCircle, Zap } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Financing Options | Air2Cool Heating & Cooling",
+  title: "0% APR HVAC Financing NJ | SaveGreen & JCP&L | Air2Cool",
   description:
-    "Flexible financing options for your HVAC project. NJNG SaveGreen rebates and JCP&L energy efficiency programs available. Make your upgrade affordable!",
+    "Finance your new HVAC system with 0% APR through NJ Natural Gas SaveGreen or JCP&L. Up to $25,000. Air2Cool is an approved contractor. (201) 787-5657.",
+  alternates: {
+    canonical: "/financing",
+  },
+  openGraph: {
+    title: "0% APR HVAC Financing NJ | SaveGreen & JCP&L | Air2Cool",
+    description:
+      "Finance your new HVAC system with 0% APR through NJ Natural Gas SaveGreen or JCP&L. Up to $25,000. Air2Cool is an approved contractor. (201) 787-5657.",
+    url: "/financing",
+  },
 };
 
 export default function FinancingPage() {

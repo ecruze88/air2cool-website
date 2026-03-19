@@ -3,14 +3,53 @@ import { Award, Star, CheckCircle, Users, Truck, Shield, Heart, Phone } from "lu
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Air2Cool | Family-Owned HVAC Since 1998 | North NJ",
+  title: "About Air2Cool | Family-Owned HVAC Since 1998 | Wharton NJ",
   description:
-    "Learn about Air2Cool Heating & Cooling. Family-owned HVAC company serving North New Jersey since 1998. 250+ 5-star Google reviews. Licensed Master HVAC Technicians. Honest service, no gimmicks.",
+    "Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed master technicians, 250+ five-star reviews. Based in Wharton, NJ.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Air2Cool | Family-Owned HVAC Since 1998 | Wharton NJ",
+    description:
+      "Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed master technicians, 250+ five-star reviews. Based in Wharton, NJ.",
+    url: "/about",
+  },
 };
 
 export default function AboutPage() {
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HVACBusiness",
+            "name": "Air2Cool Heating & Cooling",
+            "url": "https://www.air2cool.com",
+            "telephone": "+12017875657",
+            "foundingDate": "1998",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "20 Kitchell Ave",
+              "addressLocality": "Wharton",
+              "addressRegion": "NJ",
+              "postalCode": "07885",
+              "addressCountry": "US"
+            },
+            "employee": {
+              "@type": "Person",
+              "name": "Hector",
+              "jobTitle": "Owner & Master HVAC Technician"
+            },
+            "areaServed": [
+              "Morris County NJ","Essex County NJ","Passaic County NJ","Bergen County NJ",
+              "Sussex County NJ","Warren County NJ","Hunterdon County NJ","Somerset County NJ","Union County NJ"
+            ]
+          })
+        }}
+      />
       {/* Hero - MOBILE OPTIMIZED */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-800 text-white py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -69,7 +108,7 @@ export default function AboutPage() {
                   We specialize in heating and air conditioning service, furnace and AC replacement, preventative maintenance, and commercial refrigeration for restaurants, retail locations, and small businesses.
                 </p>
                 <p className="hidden md:block">
-                  We proudly serve Morris, Essex, Somerset, Middlesex, Union, Passaic, Bergen, Sussex, and Warren Counties, offering fast response times, upfront pricing, and reliable workmanship.
+                  We proudly serve Morris, Essex, Passaic, Bergen, Sussex, Warren, Hunterdon, Somerset, and Union County — offering fast response times, upfront pricing, and reliable workmanship.
                 </p>
                 <p>
                   With 250+ 5-star Google reviews and thousands of satisfied customers, 
@@ -307,18 +346,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Service Areas - MOBILE OPTIMIZED */}
+      {/* Service Areas */}
       <section className="py-10 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-2 md:mb-4">
-            Serving North New Jersey
+          <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4">
+            Serving All of North Jersey
           </h2>
-          <p className="text-base md:text-xl text-gray-600 mb-4 md:mb-6">
-            Morris, Sussex, Warren, Essex, Passaic, Union, and Bergen County.
+          <p className="text-base md:text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+            Air2Cool serves homeowners and businesses across 9 counties in North and Central New Jersey. From our base in Wharton, we can reach most service areas within 30–45 minutes.
           </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6 text-sm font-medium text-gray-700">
+            {["Morris County","Essex County","Passaic County","Bergen County","Sussex County","Warren County","Hunterdon County","Somerset County","Union County"].map((county) => (
+              <div key={county} className="bg-blue-50 border border-blue-200 rounded-xl py-2.5 px-3">
+                {county}
+              </div>
+            ))}
+          </div>
           <Link
             href="/service-areas"
-            className="inline-block text-sm md:text-base text-blue-600 hover:text-blue-700 font-semibold hover:underline"
+            className="inline-block text-base text-blue-600 hover:text-blue-700 font-semibold hover:underline"
           >
             View all towns we serve →
           </Link>

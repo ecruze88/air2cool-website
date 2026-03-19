@@ -40,6 +40,16 @@ export async function generateMetadata({
   };
 }
 
+const TOWN_UNIQUE_CONTENT: Record<string, string> = {
+  morristown: "Morristown's mix of historic Victorians, colonial homes, and newer condo developments means we work on every type of heating and cooling system imaginable — from century-old steam boilers to brand new heat pump installs. The town's elevation and exposure to winter winds off the Watchung Ridge can push older furnaces hard. If your system is over 15 years old and struggling, we can assess it honestly and tell you whether repair or replacement makes more financial sense.",
+  "parsippany-troy-hills": "Parsippany-Troy Hills has one of the highest concentrations of commercial and light-industrial properties in Morris County, and our team handles both sides — residential HVAC for the dense neighborhoods around Lake Hiawatha and Parsippany Hills, and commercial rooftop unit service for businesses along Route 46 and 202. If you're a property manager or business owner, ask about our commercial maintenance contracts.",
+  randolph: "Randolph's newer residential developments tend to have modern high-efficiency systems, but we also service plenty of older homes in the Ironia and Center Grove areas with original equipment that's overdue for an upgrade. We're just a few miles away in Wharton, so response times to Randolph are among our fastest in Morris County.",
+  "rockaway-township": "Rockaway Borough and Rockaway Township sit right in our backyard — we're based in Wharton and have been serving the Rockaway area for over 26 years. We know the neighborhoods, the housing stock, and the kind of system problems that come up in homes near the Rockaway River corridor. When you call us for emergency service, you're getting a neighbor, not a dispatch center 50 miles away.",
+  rockaway: "Rockaway Borough and Rockaway Township sit right in our backyard — we're based in Wharton and have been serving the Rockaway area for over 26 years. We know the neighborhoods, the housing stock, and the kind of system problems that come up in homes near the Rockaway River corridor. When you call us for emergency service, you're getting a neighbor, not a dispatch center 50 miles away.",
+  denville: "Denville's lakefront communities — Indian Lake, Openaki, and others — can present unique HVAC challenges: seasonal homes converting to year-round use often need full system evaluations, and the humidity near the water means air quality and dehumidification are frequent topics. We've done dozens of mini split installs and full HVAC overhauls in the lake communities and know what works.",
+  madison: "Madison's older housing stock — particularly around the Hartley Dodge Memorial area and the Kings Road neighborhoods — includes a lot of homes still running on aging oil-to-gas conversion setups and original boiler systems. We're comfortable working on all of it, and we'll give you a straight answer on whether your existing system has life left or whether a new high-efficiency install makes more sense financially.",
+};
+
 const SERVICES = [
   { name: "AC Repair", href: "/services/ac-repair", desc: "Fast diagnosis for all makes and models." },
   { name: "AC Installation", href: "/services/cooling-installation", desc: "Energy-efficient systems with 0% financing." },
@@ -212,6 +222,9 @@ export default async function TownPage({
                 We also cover {town.nearbyTowns.join(", ")} and the surrounding area, so if you have
                 neighbors or family looking for HVAC help, we&apos;re already in the area.
               </p>
+              {TOWN_UNIQUE_CONTENT[town.slug] && (
+                <p>{TOWN_UNIQUE_CONTENT[town.slug]}</p>
+              )}
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">

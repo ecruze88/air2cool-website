@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Star } from "lucide-react";
+import { Star, Phone } from "lucide-react";
+import Link from "next/link";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 
 export const metadata: Metadata = {
@@ -102,6 +103,32 @@ export default function ReviewsPage() {
           </div>
         </div>
       </div>
+
+      {/* Bottom CTA */}
+      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-700 to-cyan-600 text-white">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-2xl md:text-4xl font-extrabold mb-3 md:mb-4">
+            Ready to Experience the Air2Cool Difference?
+          </h2>
+          <p className="text-base md:text-lg text-blue-100 mb-6 md:mb-8">
+            Join hundreds of satisfied North Jersey homeowners. Get a free estimate or call us now for same-day service.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-700 px-7 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition-all w-full sm:w-auto text-center min-h-[52px] flex items-center justify-center"
+            >
+              Get Free Estimate
+            </Link>
+            <a
+              href="tel:+12017875657"
+              className="bg-white/10 border-2 border-white/40 text-white px-7 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all w-full sm:w-auto min-h-[52px] inline-flex items-center justify-center gap-2"
+            >
+              <Phone className="w-5 h-5" /> Call (201) 787-5657
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

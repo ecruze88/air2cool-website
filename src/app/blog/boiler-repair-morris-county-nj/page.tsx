@@ -206,9 +206,9 @@ export default function BoilerRepairMorrisCountyBlogPost() {
             Also see:{" "}
             <Link href="/services/heating-repair" className="underline hover:text-white">Heating Repair Services</Link>
             {" · "}
-            <Link href="/service-areas/morris-county" className="underline hover:text-white">Morris County Service Area</Link>
+            <Link href="/services/hvac-installation" className="underline hover:text-white">New HVAC System Installation</Link>
             {" · "}
-            <Link href="/troubleshooting" className="underline hover:text-white">Troubleshooting Guide</Link>
+            <Link href="/service-areas/morris-county" className="underline hover:text-white">Morris County Service Area</Link>
           </p>
         </div>
       </article>
