@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Award, Star, CheckCircle, Users, Truck, Shield, Heart, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Air2Cool | Family-Owned HVAC Since 1998 | Wharton NJ",
@@ -157,6 +158,50 @@ export default function AboutPage() {
                 Same-day service. 24/7 emergency response.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Recognition */}
+      <section className="py-10 md:py-16 bg-gradient-to-b from-amber-50 to-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-center text-gray-900 mb-6 md:mb-10">
+            Community Recognition
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto mb-6 md:mb-8">
+            <div className="relative w-full overflow-hidden rounded-2xl shadow-lg bg-gray-100" style={{ aspectRatio: "4/3" }}>
+              <Image
+                src="/headstart_community_program_group_photo_indoor_event.webp"
+                alt="NJBPU President Christine Guhl-Sadovy visits Head Start Community Program Dover Morris County NJ — Air2Cool project"
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative w-full overflow-hidden rounded-2xl shadow-lg bg-gray-100" style={{ aspectRatio: "4/3" }}>
+              <Image
+                src="/team_group_photo_indoor_event.webp"
+                alt="Air2Cool team at Head Start Community Program recognition event Dover NJ"
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">
+              Air2Cool completed a major energy efficiency upgrade at the Head Start Community Program facility in Dover, Morris County through the New Jersey Natural Gas Direct Install Program. The project included a new furnace, water heater, insulation, smart thermostat, and lighting upgrades. NJBPU President Christine Guhl-Sadovy and Morris County Government recognized the completed project — delivering energy savings equivalent to powering 140 homes per year and permanently removing the equivalent of 48 gas cars from the road.
+            </p>
+            <a
+              href="https://www.facebook.com/share/1ANnxnnjN4/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-600 font-semibold hover:underline text-sm md:text-base min-h-[44px]"
+            >
+              View the official NJBPU recognition post →
+            </a>
           </div>
         </div>
       </section>

@@ -326,12 +326,12 @@ export default function HomePage() {
 {/* COMMUNITY AWARDS - Compact Version */}
 <section className="py-12 bg-gradient-to-r from-green-50 to-blue-50">
   <div className="max-w-7xl mx-auto px-6">
-    <div className="grid grid-cols-2 gap-3 md:gap-8 max-w-4xl mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-5xl mx-auto">
       {/* Nextdoor Badge */}
       <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 rounded-2xl shadow-lg border-2 border-green-200">
-        <img 
-          src="/neighborhood-fave-2025.webp" 
-          alt="Nextdoor Neighborhood Fave 2025 badge" 
+        <img
+          src="/neighborhood-fave-2025.webp"
+          alt="Nextdoor Neighborhood Fave 2025 badge"
           className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
         />
         <div className="text-center md:text-left">
@@ -342,14 +342,37 @@ export default function HomePage() {
 
       {/* Little League Badge */}
       <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 rounded-2xl shadow-lg border-2 border-blue-200">
-        <img 
-          src="/wharton-little-league.png" 
-          alt="Wharton Little League logo" 
+        <img
+          src="/wharton-little-league.png"
+          alt="Wharton Little League logo"
           className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
         />
         <div className="text-center md:text-left">
           <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">Wharton Little League</div>
           <div className="text-[10px] md:text-sm text-blue-600 font-semibold">Proud Sponsor</div>
+        </div>
+      </div>
+
+      {/* NJ BPU Recognition */}
+      <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 rounded-2xl shadow-lg border-2 border-amber-200 sm:col-span-2 lg:col-span-1">
+        <div className="w-20 h-20 md:w-28 md:h-28 shrink-0 mb-2 md:mb-0 relative overflow-hidden rounded-xl">
+          <img
+            src="/headstart_community_program_group_photo_indoor_event.webp"
+            alt="Air2Cool recognized by NJ Board of Public Utilities President Christine Guhl-Sadovy at Head Start Community Program Dover NJ"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="text-center md:text-left">
+          <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">NJ Board of Public Utilities</div>
+          <div className="text-[10px] md:text-sm text-amber-600 font-semibold mb-1">Energy savings equivalent to powering 140 homes/year — Head Start Community Program, Dover NJ</div>
+          <a
+            href="https://www.facebook.com/share/1ANnxnnjN4/?mibextid=wwXIfr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] md:text-sm text-blue-600 font-semibold hover:underline min-h-[44px] inline-flex items-center"
+          >
+            See the recognition →
+          </a>
         </div>
       </div>
     </div>

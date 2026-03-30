@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CheckCircle, Award, MapPin } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Recent HVAC Projects | Air2Cool Installations in North NJ",
@@ -8,18 +9,92 @@ export const metadata: Metadata = {
     "See our recent HVAC installations across North New Jersey. Boilers, furnaces, AC systems, and commercial HVAC. Professional installation with 26+ years experience. Licensed & insured.",
 };
 
+const GALLERY_PHOTOS = [
+  {
+    src: "/nti_wall_hung_boiler_install_with_primary_secondary_piping.webp",
+    alt: "NTI wall hung boiler installation with primary secondary piping — Air2Cool NJ",
+    caption: "NTI wall-hung boiler install with primary/secondary hydronic piping",
+  },
+  {
+    src: "/hydronic_heating_system_copper_piping_with_zone_controls.webp",
+    alt: "Hydronic heating system copper piping with zone controls — Air2Cool North NJ",
+    caption: "Hydronic heating system — copper piping with multi-zone controls",
+  },
+  {
+    src: "/hvac_installation_in_progress_mechanical_room.webp",
+    alt: "HVAC installation in progress mechanical room — Air2Cool NJ",
+    caption: "Full mechanical room HVAC installation in progress",
+  },
+  {
+    src: "/tankless_water_heater_install_with_pvc_venting.webp",
+    alt: "Tankless water heater installation with PVC venting — Air2Cool NJ",
+    caption: "Tankless water heater install with PVC venting",
+  },
+  {
+    src: "/hvac_piping_connections_closeup_detail.webp",
+    alt: "HVAC piping connections closeup detail — Air2Cool NJ",
+    caption: "Piping connections — closeup detail",
+  },
+  {
+    src: "/hvac_valves_and_fittings_closeup_detail.webp",
+    alt: "HVAC valves and fittings closeup detail — Air2Cool NJ",
+    caption: "Valves and fittings — precision install",
+  },
+  {
+    src: "/hvac_pipe_connections_and_insulation_detail.webp",
+    alt: "HVAC pipe connections and insulation detail — Air2Cool NJ",
+    caption: "Pipe connections and insulation detail",
+  },
+  {
+    src: "/mechanical_room_equipment_and_piping_detail.webp",
+    alt: "Mechanical room equipment and piping detail — Air2Cool NJ",
+    caption: "Mechanical room — equipment and piping detail",
+  },
+  {
+    src: "/hvac_jobsite_install_progress_equipment_setup.webp",
+    alt: "HVAC jobsite installation progress equipment setup — Air2Cool NJ",
+    caption: "Jobsite installation progress — equipment setup",
+  },
+  {
+    src: "/hvac_equipment_gas_and_water_line_connections.webp",
+    alt: "HVAC equipment gas and water line connections — Air2Cool NJ",
+    caption: "Gas and water line connections — clean install",
+  },
+];
+
 export default function RecentProjectsPage() {
   return (
     <main className="bg-white">
+      {/* JSON-LD ImageObject schema for each photo */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": GALLERY_PHOTOS.map((photo) => ({
+              "@type": "ImageObject",
+              "contentUrl": `https://www.air2cool.com${photo.src}`,
+              "description": photo.alt,
+              "name": photo.caption,
+              "author": {
+                "@type": "Organization",
+                "name": "Air2Cool Heating & Cooling",
+                "url": "https://www.air2cool.com",
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* Hero - MOBILE OPTIMIZED */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-800 text-white py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-5xl font-extrabold mb-4 md:mb-6">
-              Recent HVAC Installations
+              Our Work
             </h1>
             <p className="text-base md:text-xl text-gray-200 mb-6 md:mb-8">
-              See the quality of our work across North New Jersey. Every project done right.
+              Real jobs, real results. Browse recent HVAC installations, mechanical room builds, and commercial projects completed by Air2Cool across North New Jersey.
             </p>
             <div className="flex flex-wrap gap-2 md:gap-3">
               <div className="bg-white/10 backdrop-blur px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm border border-white/20">
@@ -34,6 +109,78 @@ export default function RecentProjectsPage() {
                 <MapPin className="inline w-3 h-3 md:w-4 md:h-4 mr-1" />
                 North NJ
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PHOTO GALLERY */}
+      <section className="py-10 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {GALLERY_PHOTOS.map((photo) => (
+              <div key={photo.src} className="flex flex-col">
+                <div className="relative w-full overflow-hidden rounded-xl shadow-lg bg-gray-100" style={{ aspectRatio: "4/3" }}>
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <p className="mt-2 text-sm text-gray-600 text-center px-1">
+                  {photo.caption}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BEHIND THE WORK — VIDEOS */}
+      <section className="py-10 md:py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
+              Behind the Work
+            </h2>
+            <p className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto">
+              Watch our team in action — tools, materials, and mechanical work on real jobsites across North NJ.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10">
+            {/* Video 1 */}
+            <div className="flex flex-col gap-3">
+              <video
+                controls
+                preload="none"
+                playsInline
+                style={{ width: "100%", maxWidth: "700px", borderRadius: "12px", display: "block", margin: "0 auto" }}
+              >
+                <source src="/hvac_field_work_installation_tools_and_materials.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p className="text-sm text-gray-600 text-center">
+                Field work — tools and materials in action
+              </p>
+            </div>
+
+            {/* Video 2 */}
+            <div className="flex flex-col gap-3">
+              <video
+                controls
+                preload="none"
+                playsInline
+                style={{ width: "100%", maxWidth: "700px", borderRadius: "12px", display: "block", margin: "0 auto" }}
+              >
+                <source src="/hvac_jobsite_misc_mechanical_work_clip.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p className="text-sm text-gray-600 text-center">
+                Mechanical work — jobsite progress clip
+              </p>
             </div>
           </div>
         </div>
