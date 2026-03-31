@@ -12,6 +12,7 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
+import VideoCard from "@/components/VideoCard";
 
 export const metadata: Metadata = {
   title: "Commercial HVAC & Refrigeration Services in North NJ | Air2Cool",
@@ -352,6 +353,58 @@ export default function CommercialServicesPage() {
                 Serving all commercial properties throughout North New Jersey. Emergency response available 24 hours a day, 7 days a week.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Commercial Work — Photos */}
+      <section className="py-10 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 text-center">
+            Recent Commercial Work
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto">
+            <div className="overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
+              <img
+                src="/commercial_install_ductwork_setup.webp"
+                alt="Commercial HVAC ductwork installation setup North NJ — Air2Cool"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
+              <img
+                src="/trane_3_phase_scroll_compressor_rooftop_unit_replacement.webp"
+                alt="Trane 3-phase scroll compressor rooftop unit replacement NJ — Air2Cool"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* See Our Work — Commercial HVAC Videos */}
+      <section className="py-10 md:py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 text-center">
+            See Our Work
+          </h2>
+          <div className="grid grid-cols-2 gap-4 md:gap-6">
+            <VideoCard
+              src="/commercial_mechanical_blower_running.mp4"
+              caption="Commercial blower system — serviced and running at full capacity"
+            />
+            <VideoCard
+              src="/commercial_triple_Boiler_install.mp4"
+              caption="Triple boiler installation — large-scale commercial heating done right"
+            />
+            <VideoCard
+              src="/commercial_massive_filter_replacement.mp4"
+              caption="Commercial-grade filter replacement — protecting your HVAC investment"
+            />
+            <VideoCard
+              src="/completed_commercial_hvac_installation_final_system_walkthrough.mp4"
+              caption="Completed commercial HVAC system — final walkthrough and commissioning"
+            />
           </div>
         </div>
       </section>

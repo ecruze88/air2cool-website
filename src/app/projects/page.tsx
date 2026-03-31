@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CheckCircle, Award, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import VideoCard from "@/components/VideoCard";
 
 export const metadata: Metadata = {
   title: "Recent HVAC Projects | Air2Cool Installations in North NJ",
@@ -16,19 +17,9 @@ const GALLERY_PHOTOS = [
     caption: "NTI wall-hung boiler install with primary/secondary hydronic piping",
   },
   {
-    src: "/hydronic_heating_system_copper_piping_with_zone_controls.webp",
-    alt: "Hydronic heating system copper piping with zone controls — Air2Cool North NJ",
-    caption: "Hydronic heating system — copper piping with multi-zone controls",
-  },
-  {
-    src: "/hvac_installation_in_progress_mechanical_room.webp",
-    alt: "HVAC installation in progress mechanical room — Air2Cool NJ",
-    caption: "Full mechanical room HVAC installation in progress",
-  },
-  {
-    src: "/tankless_water_heater_install_with_pvc_venting.webp",
-    alt: "Tankless water heater installation with PVC venting — Air2Cool NJ",
-    caption: "Tankless water heater install with PVC venting",
+    src: "/nti_boiler_completed_install.webp",
+    alt: "NTI boiler completed installation — Air2Cool NJ",
+    caption: "NTI boiler — completed installation",
   },
   {
     src: "/hvac_piping_connections_closeup_detail.webp",
@@ -36,29 +27,19 @@ const GALLERY_PHOTOS = [
     caption: "Piping connections — closeup detail",
   },
   {
-    src: "/hvac_valves_and_fittings_closeup_detail.webp",
-    alt: "HVAC valves and fittings closeup detail — Air2Cool NJ",
-    caption: "Valves and fittings — precision install",
+    src: "/hvac_control_panel_electrical_contactors_wiring_closeup.webp",
+    alt: "HVAC control panel electrical contactors wiring closeup — Air2Cool NJ",
+    caption: "Control panel — electrical contactors & wiring",
   },
   {
-    src: "/hvac_pipe_connections_and_insulation_detail.webp",
-    alt: "HVAC pipe connections and insulation detail — Air2Cool NJ",
-    caption: "Pipe connections and insulation detail",
+    src: "/commercial_install_ductwork_setup.webp",
+    alt: "Commercial HVAC install ductwork setup — Air2Cool North NJ",
+    caption: "Commercial ductwork installation setup",
   },
   {
-    src: "/mechanical_room_equipment_and_piping_detail.webp",
-    alt: "Mechanical room equipment and piping detail — Air2Cool NJ",
-    caption: "Mechanical room — equipment and piping detail",
-  },
-  {
-    src: "/hvac_jobsite_install_progress_equipment_setup.webp",
-    alt: "HVAC jobsite installation progress equipment setup — Air2Cool NJ",
-    caption: "Jobsite installation progress — equipment setup",
-  },
-  {
-    src: "/hvac_equipment_gas_and_water_line_connections.webp",
-    alt: "HVAC equipment gas and water line connections — Air2Cool NJ",
-    caption: "Gas and water line connections — clean install",
+    src: "/trane_3_phase_scroll_compressor_rooftop_unit_replacement.webp",
+    alt: "Trane 3-phase scroll compressor rooftop unit replacement — Air2Cool NJ",
+    caption: "Trane 3-phase scroll compressor — rooftop unit replacement",
   },
 ];
 
@@ -150,38 +131,15 @@ export default function RecentProjectsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-            {/* Video 1 */}
-            <div className="flex flex-col gap-3">
-              <video
-                controls
-                preload="none"
-                playsInline
-                style={{ width: "100%", maxWidth: "700px", borderRadius: "12px", display: "block", margin: "0 auto" }}
-              >
-                <source src="/hvac_field_work_installation_tools_and_materials.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <p className="text-sm text-gray-600 text-center">
-                Field work — tools and materials in action
-              </p>
-            </div>
-
-            {/* Video 2 */}
-            <div className="flex flex-col gap-3">
-              <video
-                controls
-                preload="none"
-                playsInline
-                style={{ width: "100%", maxWidth: "700px", borderRadius: "12px", display: "block", margin: "0 auto" }}
-              >
-                <source src="/hvac_jobsite_misc_mechanical_work_clip.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <p className="text-sm text-gray-600 text-center">
-                Mechanical work — jobsite progress clip
-              </p>
-            </div>
+          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-2xl mx-auto">
+            <VideoCard
+              src="/nti_boiler_installation_in_progress.mp4"
+              caption="NTI boiler installation in progress — Morris County, NJ"
+            />
+            <VideoCard
+              src="/complete_air_handler_attic_install.mp4"
+              caption="Complete air handler attic installation — North NJ"
+            />
           </div>
         </div>
       </section>

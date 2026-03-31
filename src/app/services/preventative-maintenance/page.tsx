@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Wrench, CheckCircle, Calendar, DollarSign } from "lucide-react";
 import Link from "next/link";
+import VideoShowcase from "@/components/VideoShowcase";
 
 export const metadata: Metadata = {
   title: "HVAC Preventative Maintenance in Morris County NJ | Air2Cool | (201) 787-5657",
@@ -161,6 +162,13 @@ export default function PreventativeMaintenancePage() {
         </div>
       </section>
 
+      <VideoShowcase
+        title="What Neglect Actually Looks Like"
+        src="/neglected_hvac_system_damage_due_to_lack_of_maintenance.mp4"
+        caption="This is what years without maintenance does to an HVAC system — annual tune-ups prevent failures like this and keep your family safe"
+        sectionClassName="py-10 md:py-16 bg-white"
+      />
+
       {/* Why Maintenance Matters */}
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -219,27 +227,6 @@ export default function PreventativeMaintenancePage() {
               - Sandra Clark, Google Review
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Why Maintenance Matters — Video (Task 2) */}
-      <section className="py-10 md:py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 text-center">
-            Why Maintenance Matters — Real Consequences of Neglect
-          </h2>
-          <video
-            controls
-            preload="none"
-            playsInline
-            style={{ width: "100%", maxWidth: "700px", borderRadius: "12px", display: "block", margin: "0 auto" }}
-          >
-            <source src="/neglected_hvac_system_damage_due_to_lack_of_maintenance.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <p className="text-sm text-gray-600 text-center mt-3 max-w-2xl mx-auto">
-            This is what happens to an HVAC system without regular maintenance. Annual tune-ups prevent exactly this kind of damage — and keep your family safe.
-          </p>
         </div>
       </section>
 

@@ -239,6 +239,22 @@ export default function MiniSplitPage() {
         </div>
       </section>
 
+      {/* Mini Split Install Photo */}
+      <section className="py-10 md:py-14 bg-white">
+        <div className="max-w-3xl mx-auto px-4 md:px-6">
+          <div className="overflow-hidden rounded-2xl shadow-lg" style={{ aspectRatio: "4/3" }}>
+            <img
+              src="/mini_split_advanced_system_install.webp"
+              alt="Mini split advanced system installation North NJ — Air2Cool"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <p className="text-sm text-gray-600 text-center mt-3">
+            Advanced mini split system installation by Air2Cool — North NJ
+          </p>
+        </div>
+      </section>
+
       {/* Brands */}
       <section className="py-10 md:py-16 bg-white">
         <div className="max-w-5xl mx-auto px-6">

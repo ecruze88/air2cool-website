@@ -30,6 +30,28 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: "ac-tune-up-nj",
+    category: "Cooling",
+    categoryColor: "text-blue-700 bg-blue-50",
+    iconColor: "text-blue-600",
+    title: "AC Tune-Up in NJ — What's Included, Cost & When to Schedule",
+    excerpt:
+      "Spring is the right time to tune up your AC in NJ — before HVAC companies get slammed with emergency calls. Learn what a professional tune-up includes, what it costs ($80–$150), and the signs your system needs more than just a checkup.",
+    date: "March 30, 2026",
+    readTime: "5 min read",
+  },
+  {
+    slug: "ac-not-cooling-enough-nj",
+    category: "Cooling",
+    categoryColor: "text-blue-700 bg-blue-50",
+    iconColor: "text-blue-600",
+    title: "AC Running But Not Cooling Enough? 6 Common Causes in NJ Homes",
+    excerpt:
+      "AC on but still hot in your NJ home? These 6 issues — dirty filter, low refrigerant, frozen coil, dirty condenser, wrong sizing, thermostat problems — are the most common reasons your AC can't keep up in summer, and what to do about each.",
+    date: "March 30, 2026",
+    readTime: "6 min read",
+  },
+  {
     slug: "emergency-ac-repair-rockaway-nj",
     category: "Cooling",
     categoryColor: "text-blue-700 bg-blue-50",

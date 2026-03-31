@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Flame, CheckCircle, Shield, Award, DollarSign, Wrench, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import VideoShowcase from "@/components/VideoShowcase";
 
 export const metadata: Metadata = {
   title: "Furnace & Boiler Installation in Morris County NJ | Air2Cool | (201) 787-5657",
@@ -391,90 +392,41 @@ export default function HeatingInstallationPage() {
         </div>
       </section>
 
-      {/* Recent Installation Work — Photo Row (Task 5) */}
+      {/* Recent Installation Work — Photo Row */}
       <section className="py-10 md:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="max-w-4xl mx-auto px-4 md:px-6">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 text-center">
             Recent Installation Work
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
-            <div className="flex flex-col gap-2">
-              <div className="relative w-full overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
-                <Image
-                  src="/tankless_water_heater_install_with_pvc_venting.webp"
-                  alt="Tankless water heater installation PVC venting NJ — Air2Cool"
-                  fill
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            <div className="relative w-full overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
+              <Image
+                src="/nti_wall_hung_boiler_install_with_primary_secondary_piping.webp"
+                alt="NTI wall hung boiler installation North NJ — Air2Cool"
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover"
+              />
             </div>
-            <div className="flex flex-col gap-2">
-              <div className="relative w-full overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
-                <Image
-                  src="/hvac_valves_and_fittings_closeup_detail.webp"
-                  alt="HVAC valves and fittings installation detail NJ"
-                  fill
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <div className="relative w-full overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
-                <Image
-                  src="/mechanical_room_equipment_and_piping_detail.webp"
-                  alt="Mechanical room equipment piping installation NJ"
-                  fill
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
+            <div className="relative w-full overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
+              <Image
+                src="/nti_boiler_completed_install.webp"
+                alt="NTI boiler completed installation North NJ — Air2Cool"
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* See Our Work — Videos (Task 2) */}
-      <section className="py-10 md:py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto px-4 md:px-6">
-          <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 text-center">
-              See Our Work — Mechanical Room &amp; Hydronic System
-            </h2>
-            <video
-              controls
-              preload="none"
-              playsInline
-              style={{ width: "100%", maxWidth: "700px", borderRadius: "12px", display: "block", margin: "0 auto" }}
-            >
-              <source src="/mechanical_room_full_walkthrough_hydronic_system.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p className="text-sm text-gray-600 text-center mt-3">
-              Full walkthrough of a completed mechanical room and hydronic heating system installation by Air2Cool.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 text-center">
-              Installation Process — Mechanical Room Build
-            </h2>
-            <video
-              controls
-              preload="none"
-              playsInline
-              style={{ width: "100%", maxWidth: "700px", borderRadius: "12px", display: "block", margin: "0 auto" }}
-            >
-              <source src="/hvac_equipment_installation_process_mechanical_room.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p className="text-sm text-gray-600 text-center mt-3">
-              Air2Cool technicians completing a full mechanical room HVAC equipment installation.
-            </p>
-          </div>
-        </div>
-      </section>
+      <VideoShowcase
+        title="NTI Boiler Installation — North NJ"
+        src="/nti_boiler_installation_in_progress.mp4"
+        caption="High-efficiency NTI boiler installed and commissioned by Air2Cool — Morris County, NJ"
+        sectionClassName="py-10 md:py-16 bg-gradient-to-b from-gray-50 to-white"
+      />
 
       {/* CTA */}
       <section className="py-12 md:py-20 bg-white">

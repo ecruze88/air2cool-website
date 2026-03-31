@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Snowflake, CheckCircle, DollarSign, Shield, Clock, Award, Zap, Wind } from "lucide-react";
 import Link from "next/link";
+import VideoShowcase from "@/components/VideoShowcase";
 
 export const metadata: Metadata = {
   title: "AC & Cooling System Installation in North Jersey | Air2Cool | (201) 787-5657",
@@ -256,6 +257,13 @@ export default function CoolingInstallationPage() {
           </div>
         </div>
       </section>
+
+      <VideoShowcase
+        title="Air Handler Attic Installation — North NJ"
+        src="/complete_air_handler_attic_install.mp4"
+        caption="Complete air handler attic installation — precision-fitted for maximum efficiency and long-term reliability"
+        sectionClassName="py-10 md:py-14 bg-gray-50"
+      />
 
       {/* Financing CTA */}
       <section className="py-10 md:py-12 bg-gradient-to-r from-green-600 to-emerald-600 text-white">

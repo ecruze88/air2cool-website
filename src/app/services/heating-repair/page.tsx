@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Flame, CheckCircle, Clock, Shield } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import VideoShowcase from "@/components/VideoShowcase";
 
 export const metadata: Metadata = {
   title: "Heating Repair Morris County NJ | 24/7 Furnace & Boiler | Air2Cool",
@@ -393,20 +394,27 @@ export default function HeatingRepairPage() {
         </div>
       </section>
 
+      <VideoShowcase
+        title="NTI Boiler Installation — Morris County"
+        src="/nti_boiler_installation_in_progress.mp4"
+        caption="High-efficiency NTI boiler installed and running — same craftsmanship on every repair call"
+        sectionClassName="py-10 md:py-16 bg-gradient-to-b from-gray-50 to-white"
+      />
+
       {/* Recent Heating Installations — Photo Row (Task 5) */}
       <section className="py-10 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 text-center">
             Recent Heating Installations
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-2xl mx-auto">
             <div>
               <div className="relative w-full overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
                 <Image
                   src="/nti_wall_hung_boiler_install_with_primary_secondary_piping.webp"
-                  alt="NTI wall hung boiler installation North NJ — Air2Cool"
+                  alt="NTI wall hung boiler with primary secondary piping NJ — Air2Cool"
                   fill
-                  sizes="(max-width: 640px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -414,47 +422,15 @@ export default function HeatingRepairPage() {
             <div>
               <div className="relative w-full overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/hydronic_heating_system_copper_piping_with_zone_controls.webp"
-                  alt="Hydronic heating system copper piping zone controls NJ"
+                  src="/nti_boiler_completed_install.webp"
+                  alt="NTI boiler completed installation North NJ — Air2Cool"
                   fill
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div>
-              <div className="relative w-full overflow-hidden rounded-xl shadow-md bg-gray-100" style={{ aspectRatio: "4/3" }}>
-                <Image
-                  src="/hvac_installation_in_progress_mechanical_room.webp"
-                  alt="HVAC installation in progress mechanical room NJ"
-                  fill
-                  sizes="(max-width: 640px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* See Our Work — Video (Task 2) */}
-      <section className="py-10 md:py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 text-center">
-            See Our Work — Equipment &amp; Piping Installation
-          </h2>
-          <video
-            controls
-            preload="none"
-            playsInline
-            style={{ width: "100%", maxWidth: "700px", borderRadius: "12px", display: "block", margin: "0 auto" }}
-          >
-            <source src="/hvac_installation_progress_equipment_and_piping.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <p className="text-sm text-gray-600 text-center mt-3">
-            Air2Cool completing a full heating system equipment and piping installation in North NJ.
-          </p>
         </div>
       </section>
 

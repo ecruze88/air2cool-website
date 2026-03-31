@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Home, CheckCircle, Wrench, Clock, Phone, Building2 } from "lucide-react";
 import Link from "next/link";
+import VideoShowcase from "@/components/VideoShowcase";
 
 export const metadata: Metadata = {
   title: "Commercial HVAC & Refrigeration in Morris County NJ | Air2Cool | (201) 787-5657",
@@ -352,6 +353,13 @@ export default function CommercialRefrigerationPage() {
           </div>
         </div>
       </section>
+
+      <VideoShowcase
+        title="Walk-In Freezer Installation — North NJ"
+        src="/walk_in_freezer_install.mp4"
+        caption="Commercial walk-in freezer built to spec and fully commissioned — protecting your inventory around the clock"
+        sectionClassName="py-10 md:py-16 bg-white"
+      />
 
       {/* 24/7 Emergency Service */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-red-600 to-orange-600 text-white">

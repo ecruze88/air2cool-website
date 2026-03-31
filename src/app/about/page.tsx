@@ -181,7 +181,7 @@ export default function AboutPage() {
             </div>
             <div className="relative w-full overflow-hidden rounded-2xl shadow-lg bg-gray-100" style={{ aspectRatio: "4/3" }}>
               <Image
-                src="/team_group_photo_indoor_event.webp"
+                src="/headstart_community_program_group_photo_indoor_event2.webp"
                 alt="Air2Cool team at Head Start Community Program recognition event Dover NJ"
                 fill
                 sizes="(max-width: 640px) 100vw, 50vw"

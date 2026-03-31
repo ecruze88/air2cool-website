@@ -553,6 +553,14 @@ export default function HomePage() {
             </p>
           </div>
           <SizingTool compact={true} />
+          <div className="mt-4 text-center">
+            <Link
+              href="/tools/hvac-sizing"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full border-2 border-blue-800 text-blue-800 bg-white hover:bg-blue-50 text-sm md:text-base font-semibold transition-colors min-h-[44px]"
+            >
+              Open Full Sizing Tool →
+            </Link>
+          </div>
         </section>
 
         {/* ========================================
