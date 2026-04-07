@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { BookOpen } from "lucide-react";
 import Link from "next/link";
 import BlogClient from "./BlogClient";
+import { getPublishedPosts, formatDate } from "@/lib/blog";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "HVAC Tips & Guides Blog | Air2Cool Heating & Cooling",
@@ -28,142 +31,38 @@ export const metadata: Metadata = {
   },
 };
 
-const POSTS = [
-  {
-    slug: "ac-tune-up-nj",
-    category: "Cooling",
-    categoryColor: "text-blue-700 bg-blue-50",
-    iconColor: "text-blue-600",
-    title: "AC Tune-Up in NJ — What's Included, Cost & When to Schedule",
-    excerpt:
-      "Spring is the right time to tune up your AC in NJ — before HVAC companies get slammed with emergency calls. Learn what a professional tune-up includes, what it costs ($80–$150), and the signs your system needs more than just a checkup.",
-    date: "March 30, 2026",
-    readTime: "5 min read",
-  },
-  {
-    slug: "ac-not-cooling-enough-nj",
-    category: "Cooling",
-    categoryColor: "text-blue-700 bg-blue-50",
-    iconColor: "text-blue-600",
-    title: "AC Running But Not Cooling Enough? 6 Common Causes in NJ Homes",
-    excerpt:
-      "AC on but still hot in your NJ home? These 6 issues — dirty filter, low refrigerant, frozen coil, dirty condenser, wrong sizing, thermostat problems — are the most common reasons your AC can't keep up in summer, and what to do about each.",
-    date: "March 30, 2026",
-    readTime: "6 min read",
-  },
-  {
-    slug: "emergency-ac-repair-rockaway-nj",
-    category: "Cooling",
-    categoryColor: "text-blue-700 bg-blue-50",
-    iconColor: "text-blue-600",
-    title: "Emergency AC Repair in Rockaway, NJ — What to Do When Your AC Breaks Down",
-    excerpt:
-      "AC broke down in Rockaway on the hottest day of the year? Learn what to check first, what causes summer AC failures, what repairs cost in Morris County, and how to get same-day service from Air2Cool.",
-    date: "March 17, 2026",
-    readTime: "5 min read",
-  },
-  {
-    slug: "hvac-allergy-season-nj",
-    category: "Maintenance",
-    categoryColor: "text-teal-700 bg-teal-50",
-    iconColor: "text-teal-600",
-    title: "NJ Allergy Season is Here — How Your HVAC System Can Help (or Hurt)",
-    excerpt:
-      "Spring allergies hitting hard in NJ? Your HVAC system could be making it worse. Learn 4 upgrades — media filters, dehumidifiers, air ionizers, and smart thermostats — that actually reduce indoor allergens, plus a quick DIY checklist.",
-    date: "March 17, 2026",
-    readTime: "6 min read",
-  },
-  {
-    slug: "hvac-maintenance-plan-nj",
-    category: "Maintenance",
-    categoryColor: "text-green-700 bg-green-50",
-    iconColor: "text-green-600",
-    title: "HVAC Maintenance Plans in NJ — What's Included & Is It Worth It?",
-    excerpt:
-      "Is an HVAC maintenance plan worth it in New Jersey? Learn what bi-annual tune-ups cover, how they compare to the cost of emergency repairs, and what Air2Cool's plan includes for Morris County homeowners.",
-    date: "March 13, 2026",
-    readTime: "6 min read",
-  },
-  {
-    slug: "ac-not-cooling-nj",
-    category: "Cooling",
-    categoryColor: "text-blue-700 bg-blue-50",
-    iconColor: "text-blue-600",
-    title: "AC Running But Not Cooling Your NJ Home? Here's Why",
-    excerpt:
-      "AC on but no cold air in New Jersey? Learn the 6 most common causes — low refrigerant, dirty coils, frozen evaporator, failed compressor — what you can check yourself, and when to call for same-day repair.",
-    date: "March 13, 2026",
-    readTime: "5 min read",
-  },
-  {
-    slug: "boiler-repair-morris-county-nj",
-    category: "Heating",
-    categoryColor: "text-red-700 bg-red-50",
-    iconColor: "text-red-600",
-    title: "Boiler Repair in Morris County NJ — Common Problems & What They Cost",
-    excerpt:
-      "Boiler not working in Morris County? Learn the most common boiler problems, what repairs typically cost, when to replace vs. repair, and which towns Air2Cool serves for 24/7 emergency boiler repair.",
-    date: "March 13, 2026",
-    readTime: "5 min read",
-  },
-  {
-    slug: "mini-split-installation-nj",
-    category: "Cooling",
-    categoryColor: "text-blue-700 bg-blue-50",
-    iconColor: "text-blue-600",
-    title: "Mini Split Installation in NJ — Cost, Brands & What to Expect",
-    excerpt:
-      "Considering a ductless mini split in NJ? See 2026 installed cost ranges for single and multi-zone systems, how Mitsubishi, Daikin, and LG compare, and what the installation process looks like from start to finish.",
-    date: "March 13, 2026",
-    readTime: "6 min read",
-  },
-  {
-    slug: "furnace-replacement-cost-nj",
-    category: "Heating",
-    categoryColor: "text-orange-700 bg-orange-50",
-    iconColor: "text-orange-600",
-    title: "How Much Does Furnace Replacement Cost in NJ? (2026 Guide)",
-    excerpt:
-      "Furnace replacement in NJ costs $3,500–$12,000+ depending on fuel type, efficiency rating, and brand. See 2026 price ranges for gas, oil, and electric systems, and learn about 0% APR financing options.",
-    date: "March 13, 2026",
-    readTime: "6 min read",
-  },
-  {
-    slug: "ac-repair-morris-county-nj",
-    category: "Cooling",
-    categoryColor: "text-blue-700 bg-blue-50",
-    iconColor: "text-blue-600",
-    title: "AC Repair in Morris County NJ — What to Expect and Who to Call",
-    excerpt:
-      "AC not cooling your Morris County home? Learn the most common causes — from refrigerant leaks to failed capacitors — what to expect during a repair visit, and why Air2Cool is the go-to choice for same-day AC repair across Morris County.",
-    date: "March 10, 2026",
-    readTime: "6 min read",
-  },
-  {
-    slug: "lower-energy-bills-hvac",
-    category: "Maintenance",
-    categoryColor: "text-green-700 bg-green-50",
-    iconColor: "text-green-600",
-    title: "Why Is My Energy Bill So High? 7 HVAC Fixes for NJ Homeowners",
-    excerpt:
-      "Spiking energy bills in New Jersey? Your HVAC system is usually the culprit. Learn how to lower heating and cooling costs with 7 practical fixes — from refrigerant checks to smart thermostats — from Air2Cool's certified technicians.",
-    date: "November 20, 2025",
-    readTime: "7 min read",
-  },
-  {
-    slug: "diy-furnace-checkup",
-    category: "Heating",
-    categoryColor: "text-orange-700 bg-orange-50",
-    iconColor: "text-orange-600",
-    title: "DIY Furnace Checkup: 8 Steps to Do Before Winter",
-    excerpt:
-      "Don't wait for the first cold snap to find out your furnace has a problem. Run through this 8-step DIY inspection every fall to catch small issues before they become expensive breakdowns — and know when it's time to call a pro.",
-    date: "October 15, 2025",
-    readTime: "8 min read",
-  },
-];
+const CATEGORY_COLOR: Record<string, string> = {
+  Cooling: "text-blue-700 bg-blue-50",
+  Heating: "text-orange-700 bg-orange-50",
+  Maintenance: "text-green-700 bg-green-50",
+};
 
-export default function BlogPage() {
+const ICON_COLOR: Record<string, string> = {
+  Cooling: "text-blue-600",
+  Heating: "text-orange-600",
+  Maintenance: "text-green-600",
+};
+
+function calcReadTime(content: string): string {
+  const words = content.trim().split(/\s+/).length;
+  const minutes = Math.max(1, Math.round(words / 250));
+  return `${minutes} min read`;
+}
+
+export default async function BlogPage() {
+  const rawPosts = await getPublishedPosts();
+
+  const posts = rawPosts.map((post) => ({
+    slug: post.slug,
+    category: post.category,
+    categoryColor: CATEGORY_COLOR[post.category] ?? "text-slate-700 bg-slate-100",
+    iconColor: ICON_COLOR[post.category] ?? "text-slate-600",
+    title: post.title,
+    excerpt: post.excerpt,
+    date: formatDate(post.publishDate),
+    readTime: calcReadTime(post.content),
+  }));
+
   return (
     <main className="bg-white">
       <script
@@ -173,7 +72,7 @@ export default function BlogPage() {
             "@context": "https://schema.org",
             "@type": "Blog",
             "name": "Air2Cool HVAC Tips & Guides",
-            "description": "HVAC maintenance guides, troubleshooting tips, and industry advice from Air2Cool Heating & Cooling in Morris County, NJ.",
+            "description": "HVAC maintenance guides, troubleshooting tips, and seasonal advice from Air2Cool Heating & Cooling in Morris County, NJ.",
             "url": "https://www.air2cool.com/blog",
             "publisher": {
               "@type": "HVACBusiness",
@@ -181,15 +80,15 @@ export default function BlogPage() {
               "name": "Air2Cool Heating & Cooling",
               "url": "https://www.air2cool.com",
             },
-            "blogPost": POSTS.map((post) => ({
+            "blogPost": rawPosts.map((post) => ({
               "@type": "BlogPosting",
               "headline": post.title,
-              "description": post.excerpt,
+              "description": post.seoDescription,
               "url": `https://www.air2cool.com/blog/${post.slug}`,
-              "datePublished": "2025-10-15",
+              "datePublished": post.publishDate,
               "author": {
                 "@type": "Organization",
-                "name": "Air2Cool Heating & Cooling",
+                "name": post.author,
               },
             })),
           })
@@ -230,7 +129,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <BlogClient posts={POSTS} />
+      <BlogClient posts={posts} />
 
       {/* CTA */}
       <section className="py-10 md:py-12 bg-gradient-to-r from-slate-800 to-blue-900 text-white">

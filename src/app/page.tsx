@@ -354,15 +354,13 @@ export default function HomePage() {
       </div>
 
       {/* NJ BPU Recognition */}
-      <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 rounded-2xl shadow-lg border-2 border-amber-200 sm:col-span-2 lg:col-span-1">
-        <div className="w-20 h-20 md:w-28 md:h-28 shrink-0 mb-2 md:mb-0 relative overflow-hidden rounded-xl">
-          <img
-            src="/headstart_community_program_group_photo_indoor_event.webp"
-            alt="Air2Cool recognized by NJ Board of Public Utilities President Christine Guhl-Sadovy at Head Start Community Program Dover NJ"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="text-center md:text-left">
+      <div className="flex flex-col bg-white rounded-2xl shadow-lg border-2 border-amber-200 overflow-hidden sm:col-span-2 lg:col-span-1">
+        <img
+          src="/headstart_community_program_group_photo_indoor_event.webp"
+          alt="Air2Cool recognized by NJ Board of Public Utilities President Christine Guhl-Sadovy at Head Start Community Program Dover NJ"
+          className="w-full h-40 object-cover"
+        />
+        <div className="px-3 md:px-4 py-3 flex flex-col items-center text-center">
           <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">NJ Board of Public Utilities</div>
           <div className="text-[10px] md:text-sm text-amber-600 font-semibold mb-1">Energy savings equivalent to powering 140 homes/year — Head Start Community Program, Dover NJ</div>
           <a

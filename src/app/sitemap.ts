@@ -1,9 +1,12 @@
 import { MetadataRoute } from 'next'
 import townsData from '@/data/service-areas.json'
+import { getPublishedPosts } from '@/lib/blog'
 
 type Town = { slug: string; countySlug: string }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const revalidate = 60;
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.air2cool.com'
   const currentDate = new Date()
   
@@ -42,19 +45,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/hvac-sizing',
   ]
 
-  // Blog pages
+  // Blog pages — dynamically generated from published MDX posts
+  const publishedPosts = await getPublishedPosts();
   const blogPages = [
     '/blog',
-    '/blog/emergency-ac-repair-rockaway-nj',
-    '/blog/hvac-allergy-season-nj',
-    '/blog/hvac-maintenance-plan-nj',
-    '/blog/ac-not-cooling-nj',
-    '/blog/boiler-repair-morris-county-nj',
-    '/blog/mini-split-installation-nj',
-    '/blog/furnace-replacement-cost-nj',
-    '/blog/ac-repair-morris-county-nj',
-    '/blog/lower-energy-bills-hvac',
-    '/blog/diy-furnace-checkup',
+    ...publishedPosts.map((post) => `/blog/${post.slug}`),
   ]
 
   // County pages - important for local SEO
