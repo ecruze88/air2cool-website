@@ -59,12 +59,14 @@ export default function ContactClientDual() {
     const phone = String(fields.phone || "").trim();
     const email = String(fields.email || "").trim();
     const address = String(fields.address || "").trim();
+    const town = String(fields.town || "").trim();
     const problem = String(fields.problem || "").trim();
 
     if (!name || name.length > 80) return false;
     if (!phone || phone.length > 32) return false;
     if (!email || email.length > 140) return false;
     if (!address || address.length > 200) return false;
+    if (!town || town.length > 100) return false;
     if (!problem || problem.length > 200) return false;
 
     return true;
@@ -75,6 +77,7 @@ export default function ContactClientDual() {
     const email = String(fields.email || "").trim();
     const phone = String(fields.phone || "").trim();
     const address = String(fields.address || "").trim();
+    const town = String(fields.town || "").trim();
     const service = String(fields.service || "").trim();
     const message = String(fields.message || "").trim();
 
@@ -82,6 +85,7 @@ export default function ContactClientDual() {
     if (!email || email.length > 140) return false;
     if (!phone || phone.length > 32) return false;
     if (!address || address.length > 200) return false;
+    if (!town || town.length > 100) return false;
     if (!service || service.length > 100) return false;
     if (!message || message.length > 1000) return false;
 
@@ -220,6 +224,7 @@ export default function ContactClientDual() {
                           email: data.email,
                           phone: data.phone,
                           address: data.address,
+                          town: data.town,
                           problem: data.problem,
                           description: data.description || "",
                         }),
@@ -288,10 +293,25 @@ export default function ContactClientDual() {
                     </label>
                     <input
                       name="address"
-                      placeholder="123 Main St, Dover, NJ 07801"
+                      placeholder="123 Main St"
                       required
                       maxLength={200}
                       className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
+                    />
+                  </div>
+
+                  {/* Town/City */}
+                  <div>
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
+                      Town/City <span className="text-red-600">*</span>
+                    </label>
+                    <input
+                      name="town"
+                      placeholder="Dover"
+                      required
+                      maxLength={100}
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-red-500 focus:bg-white transition-colors"
+                      style={{ minHeight: "44px" }}
                     />
                   </div>
 
@@ -406,6 +426,7 @@ export default function ContactClientDual() {
                           email: data.email,
                           phone: data.phone,
                           address: data.address,
+                          town: data.town,
                           service: data.service,
                           message: data.message,
                           financing: data.financing === "on",
@@ -469,17 +490,32 @@ export default function ContactClientDual() {
                     </div>
                   </div>
 
-                  {/* Address */}
+                  {/* Address + Town */}
                   <div>
                     <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
                       Service Address <span className="text-red-600">*</span>
                     </label>
                     <input
                       name="address"
-                      placeholder="123 Main St, Dover, NJ 07801"
+                      placeholder="123 Main St"
                       required
                       maxLength={200}
                       className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                    />
+                  </div>
+
+                  {/* Town/City */}
+                  <div>
+                    <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
+                      Town/City <span className="text-red-600">*</span>
+                    </label>
+                    <input
+                      name="town"
+                      placeholder="Dover"
+                      required
+                      maxLength={100}
+                      className="w-full rounded-lg md:rounded-xl border-2 border-gray-200 bg-gray-50 px-3 md:px-4 py-2.5 md:py-3 text-sm md:text-base text-gray-900 outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                      style={{ minHeight: "44px" }}
                     />
                   </div>
 

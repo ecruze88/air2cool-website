@@ -3,9 +3,9 @@ import { Snowflake, CheckCircle, Clock, Zap } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AC Repair Morris County NJ | Same-Day Service | Air2Cool",
+  title: "AC Repair NJ | Same-Day Service Morris County & North Jersey | Air2Cool",
   description:
-    "Fast, affordable AC repair in Morris County, NJ. Air2Cool has served North Jersey since 1998. Licensed technicians, 24/7 emergency service. Call (201) 787-5657.",
+    "AC repair across NJ — same-day service in Morris County, Essex, Bergen, Passaic, Sussex, Union and Warren County. Licensed since 1998. Call Air2Cool at (201) 787-5657.",
   keywords: [
     "AC repair NJ",
     "AC repair Morris County NJ",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     canonical: "/services/ac-repair",
   },
   openGraph: {
-    title: "AC Repair Morris County NJ | Same-Day Service | Air2Cool",
+    title: "AC Repair NJ | Same-Day Service Morris County & North Jersey | Air2Cool",
     description:
-      "Fast, affordable AC repair in Morris County, NJ. Licensed technicians, 24/7 emergency service. Call (201) 787-5657.",
+      "AC repair across NJ — same-day service in Morris County, Essex, Bergen, Passaic, Sussex, Union and Warren County. Licensed since 1998. Call Air2Cool at (201) 787-5657.",
     url: "/services/ac-repair",
   },
 };
@@ -191,8 +191,62 @@ export default function ACRepairPage() {
         </div>
       </section>
 
-      {/* Intro Section */}
+      {/* AC Repair Across North Jersey Section */}
       <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
+              AC Repair Across North Jersey
+            </h2>
+            <div className="text-sm md:text-base text-gray-700 space-y-4 leading-relaxed mb-6">
+              <p>
+                Air2Cool provides <strong>AC repair across New Jersey</strong> with a focus on Morris
+                County and North NJ. We serve homeowners and businesses throughout the region — from
+                our Wharton base, we can reach most of our service area the same day you call.
+              </p>
+              <p>
+                Our service area covers all of the following counties:
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+              {[
+                { label: "Morris County", href: "/service-areas/morris-county", towns: "Morristown, Rockaway, Parsippany, Randolph, Denville" },
+                { label: "Essex County", href: "/service-areas/essex-county", towns: "Millburn, West Orange, Livingston, Montclair" },
+                { label: "Union County", href: "/service-areas/union-county", towns: "Scotch Plains, Westfield, Summit, Cranford" },
+                { label: "Bergen County", href: "/service-areas/bergen-county", towns: "Ridgewood, Mahwah, Paramus, Hackensack" },
+                { label: "Passaic County", href: "/service-areas/passaic-county", towns: "Wayne, Clifton, Pompton Lakes, Kinnelon" },
+                { label: "Sussex County", href: "/service-areas/sussex-county", towns: "Newton, Sparta, Vernon, Hamburg" },
+                { label: "Warren County", href: "/service-areas/warren-county", towns: "Hackettstown, Washington, Oxford" },
+              ].map((county) => (
+                <Link
+                  key={county.label}
+                  href={county.href}
+                  className="group border border-gray-200 rounded-xl p-4 hover:border-blue-500 hover:shadow-md transition-all"
+                >
+                  <div className="font-bold text-sm text-blue-700 group-hover:text-blue-800 mb-1">
+                    {county.label} →
+                  </div>
+                  <div className="text-xs text-gray-500">{county.towns}</div>
+                </Link>
+              ))}
+            </div>
+            <p className="text-sm md:text-base text-gray-700">
+              <strong>Same-day AC repair service</strong> is available throughout our service area. Call{" "}
+              <a href="tel:+12017875657" className="text-blue-600 hover:underline font-semibold">
+                (201) 787-5657
+              </a>{" "}
+              or{" "}
+              <Link href="/contact" className="text-blue-600 hover:underline">
+                submit a request online
+              </Link>{" "}
+              and we&apos;ll get a technician out to you as fast as possible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">

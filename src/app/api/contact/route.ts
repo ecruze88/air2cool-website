@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     
-    const { type, name, email, phone, address, service, message, problem, description, financing, company } = body;
+    const { type, name, email, phone, address, town, service, message, problem, description, financing, company } = body;
     
     // Honeypot spam check
     if (company) {
@@ -44,14 +44,14 @@ export async function POST(request: NextRequest) {
 
     // Validate based on form type
     if (type === "emergency") {
-      if (!name || !problem || !address) {
+      if (!name || !problem || !address || !town) {
         return NextResponse.json(
           { error: "Missing required fields" },
           { status: 400 }
         );
       }
     } else if (type === "estimate") {
-      if (!name || !service || !message || !address) {
+      if (!name || !service || !message || !address || !town) {
         return NextResponse.json(
           { error: "Missing required fields" },
           { status: 400 }
@@ -120,7 +120,12 @@ export async function POST(request: NextRequest) {
                   <div class="label">Service Address:</div>
                   <div class="value">${address}</div>
                 </div>
-                
+
+                <div class="field">
+                  <div class="label">Town:</div>
+                  <div class="value">${town}</div>
+                </div>
+
                 <div class="field">
                   <div class="label">Problem Type:</div>
                   <div class="value"><strong>${problem}</strong></div>
@@ -189,7 +194,12 @@ export async function POST(request: NextRequest) {
                   <div class="label">Service Address:</div>
                   <div class="value">${address}</div>
                 </div>
-                
+
+                <div class="field">
+                  <div class="label">Town:</div>
+                  <div class="value">${town}</div>
+                </div>
+
                 <div class="field">
                   <div class="label">Service Requested:</div>
                   <div class="value"><strong>${service}</strong></div>
