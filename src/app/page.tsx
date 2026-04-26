@@ -687,7 +687,7 @@ export default function HomePage() {
         </section>
 
         {/* RECENT PROJECTS - Call to Action */}
-        <section className="mb-16">
+        <section className="mb-4">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Recent Projects */}
             <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-6 md:p-8 text-white shadow-2xl">
@@ -722,6 +722,17 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* See All Projects Button */}
+        <div className="mb-16 text-center">
+          <Link
+            href="/projects"
+            className="inline-block w-full sm:w-auto bg-white text-blue-800 border-2 border-blue-800 px-6 py-3 rounded-full font-semibold text-base hover:bg-blue-50 transition-colors"
+            style={{ minHeight: '44px' }}
+          >
+            See All Our Projects →
+          </Link>
+        </div>
 
         {/* WHY CHOOSE AIR2COOL - With Truck Photo */}
         <section className="mb-16 py-10 md:py-20 bg-gradient-to-b from-white to-gray-50">

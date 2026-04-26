@@ -4,9 +4,9 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "HVAC Contractor Kinnelon NJ | AC Replacement & Repair | Air2Cool",
+  title: "HVAC Service Kinnelon NJ | AC & Heating Repair | Air2Cool",
   description:
-    "Looking for an HVAC contractor in Kinnelon NJ? Air2Cool handles AC replacement, furnace installation, and full HVAC systems. Free estimates. Call (201) 787-5657.",
+    "HVAC repair and installation in Kinnelon NJ. Air2Cool serves Kinnelon with AC repair, furnace service, and full system replacements. Licensed since 1998. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/kinnelon",
   },
@@ -15,6 +15,35 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you service HVAC systems in Kinnelon NJ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Air2Cool regularly services homes throughout Kinnelon including the Smoke Rise area. We handle everything from AC tune-ups to full system replacements.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can you replace a 3-ton AC system in Kinnelon NJ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely — we handle 3-ton, 4-ton, and larger system replacements throughout Kinnelon. We perform a full load calculation before recommending any replacement size.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "How far is Air2Cool from Kinnelon NJ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We're based in Wharton, about 20-25 minutes from Kinnelon. Same-day service is available for most requests.",
+          },
+        },
+      ],
+    },
     {
       "@type": "HVACBusiness",
       "@id": "https://www.air2cool.com/service-areas/kinnelon#business",
@@ -277,26 +306,30 @@ export default function KinnelonPage() {
             </h2>
             <div className="text-sm md:text-base text-gray-700 space-y-4 leading-relaxed">
               <p>
+                Kinnelon is one of Morris County&apos;s larger and more spread-out townships — homes here tend to be larger with more complex HVAC needs, including multi-zone systems and larger tonnage equipment. The <strong>Smoke Rise</strong> section of Kinnelon in particular features high-end homes where we regularly handle 3-ton and 4-ton AC replacements and full multi-zone heating systems. Kinnelon&apos;s wooded, hilly terrain also means outdoor units need careful placement and sometimes longer refrigerant line runs — details that matter for system performance and longevity.
+              </p>
+              <p>
                 Air2Cool Heating &amp; Cooling has been serving Kinnelon residents since 1998. Based in
-                Wharton, we&apos;re right in Morris County — close enough to offer fast response times
-                and familiar with the types of homes and systems common in the area. Whether you need
-                a quick repair or a full system replacement, we&apos;ll be straight with you about what
-                your home actually needs.
+                Wharton, approximately 20–25 minutes away, we offer same-day service for most requests and
+                emergency response around the clock. Whether you need a quick repair or a full system
+                replacement, we perform a <strong>Manual J load calculation</strong> on every job to make
+                sure the system we recommend is properly sized for your specific home — not just a match
+                for whatever was there before.
               </p>
               <p>
                 We also serve nearby{" "}
-                <Link href="/service-areas/lincoln-park" className="text-blue-600 hover:underline">Lincoln Park</Link>,{" "}
                 <Link href="/service-areas/butler" className="text-blue-600 hover:underline">Butler</Link>,{" "}
-                <Link href="/service-areas/montville" className="text-blue-600 hover:underline">Montville</Link>, and{" "}
-                <Link href="/service-areas/boonton" className="text-blue-600 hover:underline">Boonton</Link>.
+                <Link href="/service-areas/montville" className="text-blue-600 hover:underline">Montville</Link>,{" "}
+                <Link href="/service-areas/lincoln-park" className="text-blue-600 hover:underline">Lincoln Park</Link>, and{" "}
+                <Link href="/service-areas/riverdale" className="text-blue-600 hover:underline">Riverdale</Link>.
               </p>
             </div>
             <div className="mt-6 flex flex-wrap gap-2">
               {[
-                { name: "Lincoln Park", slug: "lincoln-park" },
                 { name: "Butler", slug: "butler" },
                 { name: "Montville", slug: "montville" },
-                { name: "Boonton", slug: "boonton" },
+                { name: "Lincoln Park", slug: "lincoln-park" },
+                { name: "Riverdale", slug: "riverdale" },
               ].map(({ name, slug }) => (
                 <Link
                   key={slug}
@@ -340,7 +373,7 @@ export default function KinnelonPage() {
               </Link>
             </div>
             <p className="mt-5 text-blue-200 text-sm">
-              Also serving: Lincoln Park · Butler · Montville · Boonton · all of Morris County
+              Also serving: Butler · Montville · Lincoln Park · Riverdale · all of Morris County
             </p>
             <p className="mt-2 text-blue-300 text-xs">
               <Link href="/service-areas" className="underline hover:text-white">

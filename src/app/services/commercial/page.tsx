@@ -12,7 +12,6 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
-import VideoCard from "@/components/VideoCard";
 
 export const metadata: Metadata = {
   title: "Commercial HVAC & Refrigeration Services in North NJ | Air2Cool",
@@ -384,27 +383,57 @@ export default function CommercialServicesPage() {
 
       {/* See Our Work — Commercial HVAC Videos */}
       <section className="py-10 md:py-16 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 md:px-6">
+        <div className="max-w-4xl mx-auto px-4 md:px-6">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 text-center">
             See Our Work
           </h2>
-          <div className="grid grid-cols-2 gap-4 md:gap-6">
-            <VideoCard
-              src="/commercial_mechanical_blower_running.mp4"
-              caption="Commercial blower system — serviced and running at full capacity"
-            />
-            <VideoCard
-              src="/commercial_triple_Boiler_install.mp4"
-              caption="Triple boiler installation — large-scale commercial heating done right"
-            />
-            <VideoCard
-              src="/commercial_massive_filter_replacement.mp4"
-              caption="Commercial-grade filter replacement — protecting your HVAC investment"
-            />
-            <VideoCard
-              src="/completed_commercial_hvac_installation_final_system_walkthrough.mp4"
-              caption="Completed commercial HVAC system — final walkthrough and commissioning"
-            />
+
+          <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+            Commercial Blower System
+          </h3>
+          <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2rem auto', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
+            <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}>
+              <source src="/commercial_mechanical_blower_running.mp4" type="video/mp4" />
+            </video>
+            <div style={{ padding: '12px 16px', background: '#f8f9fa', fontSize: '14px', color: '#555', textAlign: 'center' }}>
+              Commercial blower system — serviced and running at full capacity
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+            Triple Boiler Installation
+          </h3>
+          <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2rem auto', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
+            <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}>
+              <source src="/commercial_triple_Boiler_install.mp4" type="video/mp4" />
+            </video>
+            <div style={{ padding: '12px 16px', background: '#f8f9fa', fontSize: '14px', color: '#555', textAlign: 'center' }}>
+              Triple boiler installation — large-scale commercial heating done right
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+            Commercial Filter Replacement
+          </h3>
+          <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2rem auto', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
+            <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}>
+              <source src="/commercial_massive_filter_replacement.mp4" type="video/mp4" />
+            </video>
+            <div style={{ padding: '12px 16px', background: '#f8f9fa', fontSize: '14px', color: '#555', textAlign: 'center' }}>
+              Commercial-grade filter replacement — protecting your HVAC investment
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+            Completed HVAC System Walkthrough
+          </h3>
+          <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2rem auto', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
+            <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}>
+              <source src="/completed_commercial_hvac_installation_final_system_walkthrough.mp4" type="video/mp4" />
+            </video>
+            <div style={{ padding: '12px 16px', background: '#f8f9fa', fontSize: '14px', color: '#555', textAlign: 'center' }}>
+              Completed commercial HVAC system — final walkthrough and commissioning
+            </div>
           </div>
         </div>
       </section>

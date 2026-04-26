@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { CheckCircle, Award, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import VideoCard from "@/components/VideoCard";
 
 export const metadata: Metadata = {
   title: "Recent HVAC Projects | Air2Cool Installations in North NJ",
@@ -131,15 +130,30 @@ export default function RecentProjectsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-2xl mx-auto">
-            <VideoCard
-              src="/nti_boiler_installation_in_progress.mp4"
-              caption="NTI boiler installation in progress — Morris County, NJ"
-            />
-            <VideoCard
-              src="/complete_air_handler_attic_install.mp4"
-              caption="Complete air handler attic installation — North NJ"
-            />
+          <div>
+            <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+              NTI Boiler Installation in Progress
+            </h3>
+            <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2rem auto', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
+              <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}>
+                <source src="/nti_boiler_installation_in_progress.mp4" type="video/mp4" />
+              </video>
+              <div style={{ padding: '12px 16px', background: '#f8f9fa', fontSize: '14px', color: '#555', textAlign: 'center' }}>
+                NTI boiler installation in progress — Morris County, NJ
+              </div>
+            </div>
+
+            <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
+              Air Handler Attic Installation
+            </h3>
+            <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2rem auto', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
+              <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}>
+                <source src="/complete_air_handler_attic_install.mp4" type="video/mp4" />
+              </video>
+              <div style={{ padding: '12px 16px', background: '#f8f9fa', fontSize: '14px', color: '#555', textAlign: 'center' }}>
+                Complete air handler attic installation — North NJ
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -284,7 +298,7 @@ export default function RecentProjectsPage() {
                   Commercial - North NJ
                 </p>
                 <p className="text-xs md:text-sm text-gray-700 mb-3 md:mb-4">
-                  Commercial rooftop HVAC with proper mounting and electrical.
+                  Commercial rooftop HVAC-R with proper mounting and electrical.
                 </p>
                 <div className="flex flex-wrap gap-1.5 md:gap-2">
                   <span className="bg-indigo-100 text-indigo-700 text-xs px-2 md:px-3 py-0.5 md:py-1 rounded-full font-semibold">
@@ -315,7 +329,7 @@ export default function RecentProjectsPage() {
                   Commercial - North NJ
                 </p>
                 <p className="text-xs md:text-sm text-gray-700 mb-3 md:mb-4">
-                  Professional commercial HVAC service with proper safety protocols.
+                  Professional commercial HVAC-R service with proper safety protocols.
                 </p>
                 <div className="flex flex-wrap gap-1.5 md:gap-2">
                   <span className="bg-red-100 text-red-700 text-xs px-2 md:px-3 py-0.5 md:py-1 rounded-full font-semibold">

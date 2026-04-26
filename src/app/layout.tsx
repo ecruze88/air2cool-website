@@ -367,6 +367,7 @@ export default function RootLayout({
                   <li><a href="/reviews" className="hover:text-white transition">Reviews</a></li>
                   <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
                   <li><a href="/blog" className="hover:text-white transition">Blog</a></li>
+                  <li><a href="/projects" className="hover:text-white transition">Our Projects</a></li>
                   <li><a href="/contact" className="hover:text-white transition">Contact Us</a></li>
                   <li><a href="/maintenance-contract" className="hover:text-white transition">Maintenance Plans</a></li>
                 </ul>
