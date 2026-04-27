@@ -238,6 +238,11 @@ export default function HomePage() {
               <span className="text-blue-400">We Fix It Fast.</span>
             </h1>
 
+            {/* Location trust signal */}
+            <p className="text-sm md:text-base text-blue-300 mb-3 md:mb-4">
+              Based in Wharton, NJ &middot; Serving Morris County &amp; North NJ Since 1998
+            </p>
+
             {/* Subheadline with urgency */}
             <p className="text-lg sm:text-xl md:text-2xl text-gray-100 font-semibold mb-3 md:mb-4">
               Same-Day Service • No Upsell BS • 26+ Years Trusted
@@ -762,7 +767,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">26+ Years Experience</h3>
-                    <p className="text-gray-600">Family owned and operated since 1998. Nearly three decades of keeping North Jersey comfortable.</p>
+                    <p className="text-gray-600">Family owned and operated since 1998, headquartered in Wharton, NJ. Nearly three decades of keeping Morris County and North Jersey comfortable.</p>
                   </div>
                 </div>
 

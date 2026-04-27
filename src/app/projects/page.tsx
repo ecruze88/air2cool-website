@@ -134,8 +134,8 @@ export default function RecentProjectsPage() {
             <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
               NTI Boiler Installation in Progress
             </h3>
-            <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2rem auto', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
-              <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}>
+            <div style={{ width: '100%', maxWidth: '480px', margin: '0 auto 2rem auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}>
+              <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '360px', objectFit: 'cover' }}>
                 <source src="/nti_boiler_installation_in_progress.mp4" type="video/mp4" />
               </video>
               <div style={{ padding: '12px 16px', background: '#f8f9fa', fontSize: '14px', color: '#555', textAlign: 'center' }}>
@@ -146,8 +146,8 @@ export default function RecentProjectsPage() {
             <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">
               Air Handler Attic Installation
             </h3>
-            <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto 2rem auto', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 24px rgba(0,0,0,0.10)' }}>
-              <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}>
+            <div style={{ width: '100%', maxWidth: '480px', margin: '0 auto 2rem auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}>
+              <video autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '360px', objectFit: 'cover' }}>
                 <source src="/complete_air_handler_attic_install.mp4" type="video/mp4" />
               </video>
               <div style={{ padding: '12px 16px', background: '#f8f9fa', fontSize: '14px', color: '#555', textAlign: 'center' }}>

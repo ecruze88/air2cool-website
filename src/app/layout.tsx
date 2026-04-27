@@ -145,15 +145,23 @@ export default function RootLayout({
               </a>
             </div>
 
-            {/* Row 2 — Menu bar (blue) */}
-            <div className="bg-brand-red flex items-center justify-between px-4 py-1">
+            {/* Row 2 — Menu bar (red) */}
+            <div className="bg-brand-red grid grid-cols-3 items-center px-4 py-1">
               <div className="flex items-center gap-2">
                 <MobileMenu />
                 <span className="text-white font-bold uppercase text-sm tracking-wide">Menu</span>
               </div>
-              <a href="tel:+12017875657" className="text-white font-bold text-sm">
-                (201) 787-5657
-              </a>
+              <span
+                className="text-white text-center hidden min-[360px]:block"
+                style={{ fontSize: "12px" }}
+              >
+                Based in Wharton, NJ
+              </span>
+              <div className="flex justify-end">
+                <a href="tel:+12017875657" className="text-white font-bold text-sm">
+                  (201) 787-5657
+                </a>
+              </div>
             </div>
           </div>
 
@@ -230,12 +238,17 @@ export default function RootLayout({
 
               {/* Right side */}
               <div className="flex items-center gap-3">
-                <a
-                  href="tel:+12017875657"
-                  className="text-sm font-bold text-gray-700 hover:text-brand-blue transition-colors whitespace-nowrap"
-                >
-                  (201) 787-5657
-                </a>
+                <div className="flex flex-col items-end">
+                  <a
+                    href="tel:+12017875657"
+                    className="text-sm font-bold text-gray-700 hover:text-brand-blue transition-colors whitespace-nowrap"
+                  >
+                    (201) 787-5657
+                  </a>
+                  <span className="text-[11px] text-gray-400 whitespace-nowrap" style={{ color: "#888" }}>
+                    Based in Wharton, NJ
+                  </span>
+                </div>
                 <a
                   href="/contact"
                   className="bg-brand-red text-white px-6 py-2.5 rounded-full font-bold

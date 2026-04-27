@@ -72,9 +72,10 @@ export default function FinancingPage() {
             <div className="flex flex-col rounded-2xl border-2 border-green-400 shadow-lg overflow-hidden">
               {/* Card header */}
               <div className="bg-green-600 px-6 py-5 text-white">
-                <span className="inline-block text-xs font-bold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full mb-3">
-                  Gas Customers Only
+                <span className="inline-block text-xs font-bold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full mb-2">
+                  For NJ Natural Gas (NJNG) Customers
                 </span>
+                <p className="text-green-100 text-xs mb-3">Not sure? Check your utility bill — your utility company is listed at the top.</p>
                 <h3 className="text-2xl font-extrabold leading-tight">NJ Natural Gas SaveGreen</h3>
               </div>
 
@@ -116,9 +117,10 @@ export default function FinancingPage() {
             <div className="flex flex-col rounded-2xl border-2 border-blue-400 shadow-lg overflow-hidden">
               {/* Card header */}
               <div className="bg-blue-600 px-6 py-5 text-white">
-                <span className="inline-block text-xs font-bold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full mb-3">
-                  Electric Customers Only
+                <span className="inline-block text-xs font-bold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full mb-2">
+                  For JCP&amp;L Customers
                 </span>
+                <p className="text-blue-100 text-xs mb-3">Not sure? Check your utility bill — your utility company is listed at the top.</p>
                 <h3 className="text-2xl font-extrabold leading-tight">JCP&amp;L Energy Efficiency</h3>
               </div>
 

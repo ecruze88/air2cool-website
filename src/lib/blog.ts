@@ -9,6 +9,11 @@ const BLOG_DIRECTORY = path.join(process.cwd(), "content", "blog");
 
 export type BlogCategory = "Cooling" | "Heating" | "Maintenance" | string;
 
+export type FaqEntry = {
+  question: string;
+  answer: string;
+};
+
 export type BlogFrontmatter = {
   title: string;
   slug: string;
@@ -20,6 +25,7 @@ export type BlogFrontmatter = {
   seoTitle: string;
   seoDescription: string;
   isDraft?: boolean;
+  faq?: FaqEntry[];
 };
 
 export type BlogPost = BlogFrontmatter & {
@@ -60,6 +66,16 @@ function validateFrontmatter(fileName: string, data: Record<string, unknown>): B
   const isDraft = data.isDraft === true;
   const tags = normalizeTags(data.tags);
 
+  const faq: FaqEntry[] = Array.isArray(data.faq)
+    ? data.faq
+        .filter((item): item is { question: unknown; answer: unknown } => item !== null && typeof item === "object")
+        .map((item) => ({
+          question: typeof item.question === "string" ? item.question.trim() : "",
+          answer: typeof item.answer === "string" ? item.answer.trim() : "",
+        }))
+        .filter((item) => item.question && item.answer)
+    : [];
+
   if (!title || !excerpt || !publishDate || !seoTitle || !seoDescription) {
     throw new Error(`Invalid frontmatter in ${fileName}. Required fields are missing.`);
   }
@@ -79,6 +95,7 @@ function validateFrontmatter(fileName: string, data: Record<string, unknown>): B
     seoTitle,
     seoDescription,
     isDraft,
+    faq: faq.length > 0 ? faq : undefined,
   };
 }
 

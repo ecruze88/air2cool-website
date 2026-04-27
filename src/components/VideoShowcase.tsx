@@ -21,11 +21,11 @@ export default function VideoShowcase({
         <div
           style={{
             width: "100%",
-            maxWidth: "600px",
+            maxWidth: "480px",
             margin: "0 auto 2rem auto",
-            borderRadius: "16px",
+            borderRadius: "12px",
             overflow: "hidden",
-            boxShadow: "0 4px 24px rgba(0,0,0,0.10)",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
           }}
         >
           <video
@@ -38,6 +38,7 @@ export default function VideoShowcase({
               width: "100%",
               height: "auto",
               display: "block",
+              maxHeight: "360px",
               objectFit: "cover",
             }}
           >
