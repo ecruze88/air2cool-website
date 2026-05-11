@@ -4,7 +4,7 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "HVAC Service Kinnelon NJ | AC & Heating Repair | Air2Cool",
+  title: "HVAC Contractor Kinnelon NJ | AC & Heating Replacement | Air2Cool",
   description:
     "HVAC repair and installation in Kinnelon NJ. Air2Cool serves Kinnelon with AC repair, furnace service, and full system replacements. Licensed since 1998. Call (201) 787-5657.",
   alternates: {

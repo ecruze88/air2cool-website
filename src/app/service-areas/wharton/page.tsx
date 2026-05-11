@@ -6,7 +6,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "HVAC Company Wharton NJ | Air2Cool — Local Since 1998",
   description:
-    "Air2Cool is based in Wharton NJ — your local HVAC company for AC repair, heating, and installations. Same-day service, licensed master technicians. Call (201) 787-5657.",
+    "Air2Cool is based in Wharton NJ — your hometown HVAC company for AC repair, heating, and installations since 1998. Fastest response times in the area. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/wharton",
   },
@@ -23,7 +23,6 @@ const schema = {
       "telephone": "+1-201-787-5657",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "20 Kitchell Ave",
         "addressLocality": "Wharton",
         "addressRegion": "NJ",
         "postalCode": "07885",
@@ -60,7 +59,7 @@ const schema = {
           "name": "Is Air2Cool based in Wharton NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — our headquarters is at 20 Kitchell Ave in Wharton. We've been serving Wharton and surrounding Morris County communities since 1998.",
+            "text": "Yes — we're based right here in Wharton, NJ and have been serving Wharton and surrounding Morris County communities since 1998.",
           },
         },
         {
@@ -127,7 +126,7 @@ export default function WhartonPage() {
               HVAC Company in Wharton, NJ
             </h1>
             <p className="text-base md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Air2Cool is headquartered right here in Wharton — 20 Kitchell Ave. We&apos;re not a company
+              Air2Cool is headquartered right here in Wharton, NJ. We&apos;re not a company
               that drives in from out of town. Wharton is our home, and your neighbors are our customers.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -168,7 +167,7 @@ export default function WhartonPage() {
         <section className="py-10 md:py-14 bg-white">
           <div className="max-w-4xl mx-auto px-6">
             <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
-              When you call Air2Cool from a Wharton address, you&apos;re calling your neighbor. Our office is at <strong>20 Kitchell Ave</strong> — right here in town. Our technicians live in this community, drive these streets every day, and have been taking care of Wharton homes and businesses since 1998. That means no guessing about your neighborhood, no driving in from two counties away, and no hand-off to a dispatch center that doesn&apos;t know your block.
+              When you call Air2Cool from a Wharton address, you&apos;re calling your neighbor. Our technicians live in this community, drive these streets every day, and have been taking care of Wharton homes and businesses since 1998. That means no guessing about your neighborhood, no driving in from two counties away, and no hand-off to a dispatch center that doesn&apos;t know your block.
             </p>
           </div>
         </section>
@@ -258,7 +257,7 @@ export default function WhartonPage() {
                 {
                   icon: <MapPin className="w-6 h-6 text-blue-600" />,
                   title: "Headquartered in Wharton",
-                  body: "20 Kitchell Ave is our home base. When you call, your technician is already nearby — not driving in from another county.",
+                  body: "Wharton is our home base. When you call, your technician is already nearby — not driving in from another county.",
                 },
                 {
                   icon: <Clock className="w-6 h-6 text-red-600" />,
@@ -310,7 +309,7 @@ export default function WhartonPage() {
               {[
                 {
                   q: "Is Air2Cool based in Wharton NJ?",
-                  a: "Yes — our headquarters is at 20 Kitchell Ave in Wharton. We've been serving Wharton and surrounding Morris County communities since 1998. We're not a company that dispatches from far away — this is our hometown.",
+                  a: "Yes — we're based right here in Wharton, NJ and have been serving the community since 1998. We're not a company that dispatches from far away — this is our hometown.",
                 },
                 {
                   q: "How fast can Air2Cool respond to a call in Wharton NJ?",

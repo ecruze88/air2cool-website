@@ -4,9 +4,9 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "AC Repair Morristown NJ | Same-Day Service | Air2Cool HVAC",
+  title: "AC Repair Morristown NJ | Same-Day HVAC Service | Air2Cool",
   description:
-    "Same-day AC repair in Morristown NJ. Air2Cool has served Morristown since 1998 — licensed master technicians, honest pricing, 24/7 emergency service. Call (201) 787-5657.",
+    "Same-day AC repair and HVAC service in Morristown NJ. Air2Cool has served Morris County's county seat since 1998 — 17 minutes from our Wharton base. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/morristown",
   },

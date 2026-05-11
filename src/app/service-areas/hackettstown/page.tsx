@@ -23,7 +23,6 @@ const schema = {
       "telephone": "+1-201-787-5657",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "20 Kitchell Ave",
         "addressLocality": "Wharton",
         "addressRegion": "NJ",
         "postalCode": "07885",

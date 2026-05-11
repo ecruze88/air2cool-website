@@ -4,9 +4,9 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "HVAC Service Sparta NJ | AC Repair & Heating | Air2Cool",
+  title: "HVAC Service Sparta NJ | Lake Mohawk & Sussex County | Air2Cool",
   description:
-    "AC repair and heating service in Sparta NJ. Air2Cool serves Sussex County including Sparta Township. Licensed technicians, same-day service available. Call (201) 787-5657.",
+    "AC repair and heating service in Sparta NJ including Lake Mohawk. Air2Cool serves Sussex County including Sparta Township. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/sparta",
   },
@@ -23,7 +23,6 @@ const schema = {
       "telephone": "+1-201-787-5657",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "20 Kitchell Ave",
         "addressLocality": "Wharton",
         "addressRegion": "NJ",
         "postalCode": "07885",

@@ -4,9 +4,9 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "HVAC Service Vernon NJ | AC & Heating Repair | Air2Cool",
+  title: "HVAC Service Vernon NJ | Mountain Creek & Sussex County | Air2Cool",
   description:
-    "HVAC repair and installation in Vernon NJ. Air2Cool serves Vernon Township in Sussex County for AC, heating, and mini split systems. Call (201) 787-5657.",
+    "HVAC service in Vernon Township NJ including the Mountain Creek area. Air2Cool serves Sussex County for AC, heating, and mini splits. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/vernon",
   },
@@ -23,7 +23,6 @@ const schema = {
       "telephone": "+1-201-787-5657",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "20 Kitchell Ave",
         "addressLocality": "Wharton",
         "addressRegion": "NJ",
         "postalCode": "07885",
