@@ -133,7 +133,7 @@ export default function FinancingPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700"><strong>$2,500–$35,000</strong> available</span>
+                    <span className="text-sm text-gray-700"><strong>$2,500–$25,000</strong> available</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />

@@ -58,7 +58,7 @@ const BRANDS = [
 const FAQS = [
   {
     q: "How much does mini split installation cost in NJ?",
-    a: "Mini split installation in New Jersey typically costs $2,500–$5,500 for a single-zone system (one indoor unit). Multi-zone systems with 2–4 indoor units run $5,000–$12,000+ installed. The range depends on the brand, BTU capacity, number of zones, and installation complexity. Air2Cool provides free estimates — call (201) 787-5657 or request online.",
+    a: "Installation pricing depends on your home's specific needs — call us for a free estimate at (201) 787-5657.",
   },
   {
     q: "Do mini splits work for heating too?",

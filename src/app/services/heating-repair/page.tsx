@@ -111,7 +111,7 @@ export default function HeatingRepairPage() {
                 "name": "How much does furnace repair cost in New Jersey?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Furnace repair costs in NJ typically range from $150 to $600 for most common repairs. A simple igniter replacement runs $150–$300. A blower motor replacement is typically $300–$600. More complex repairs like a heat exchanger replacement can be $600–$1,500+. We provide a free estimate before any work begins so you know exactly what you're paying."
+                  "text": "Pricing varies depending on the repair needed — we provide upfront pricing before any work begins. Call (201) 787-5657 for a same-day diagnosis."
                 }
               }
             ]

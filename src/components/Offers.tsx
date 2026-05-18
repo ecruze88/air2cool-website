@@ -219,10 +219,14 @@ export default function OffersCarousel({
                       </ul>
                     ) : null}
 
+                    <p className="mt-3 text-center text-slate-400" style={{ fontSize: "11px", lineHeight: "1.4" }}>
+                      Cannot be combined with other offers.
+                    </p>
+
                     {offer.ctaLabel && offer.ctaHref ? (
                       <a
                         href={offer.ctaHref}
-                        className="mt-5 inline-flex w-full h-12 items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-bold text-white hover:opacity-95"
+                        className="mt-3 inline-flex w-full h-12 items-center justify-center rounded-xl bg-red-600 px-4 text-sm font-bold text-white hover:opacity-95"
                       >
                         {offer.ctaLabel}
                       </a>
@@ -274,7 +278,7 @@ export default function OffersCarousel({
         </div>
 
         <p className="mt-6 text-center text-xs text-slate-500">
-          Offers subject to change. Terms may apply.
+          Offers subject to change. One offer per visit. Offers cannot be combined or stacked with any other promotion, discount, or offer. Terms may apply.
         </p>
       </div>
     </section>

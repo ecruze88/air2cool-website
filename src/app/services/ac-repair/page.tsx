@@ -89,7 +89,7 @@ export default function ACRepairPage() {
                 "name": "How much does AC repair cost in New Jersey?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "AC repair in New Jersey typically costs between $150 and $600 depending on the repair. Simple fixes like a capacitor replacement or thermostat swap run $150–$300. Refrigerant recharges are $200–$450 depending on refrigerant type. A compressor replacement is a larger investment, typically $800–$1,800 all-in. Air2Cool provides a free estimate before any work begins so you know exactly what you're paying — no surprises."
+                  "text": "Pricing varies depending on the repair needed — we provide upfront pricing before any work begins. Call (201) 787-5657 for a same-day diagnosis."
                 }
               },
               {
@@ -359,7 +359,7 @@ export default function ACRepairPage() {
               },
               {
                 q: "How much does AC repair cost in New Jersey?",
-                a: "AC repair in New Jersey typically costs between $150 and $600 depending on the repair. Simple fixes like a capacitor replacement or thermostat swap run $150–$300. Refrigerant recharges are $200–$450. A compressor replacement is typically $800–$1,800 all-in. We provide a free estimate before any work begins — no surprises.",
+                a: "Pricing varies depending on the repair needed — we provide upfront pricing before any work begins. Call (201) 787-5657 for a same-day diagnosis.",
               },
               {
                 q: "Do you offer emergency AC repair in Morris County?",
