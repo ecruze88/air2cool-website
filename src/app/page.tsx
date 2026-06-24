@@ -299,6 +299,17 @@ export default function HomePage() {
 
             {/* CTAs - STACKED ON MOBILE */}
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-0">
+              <div className="flex flex-col items-stretch sm:items-start">
+                <a
+                  href="tel:+12017875657"
+                  className="inline-flex items-center justify-center gap-2 bg-[#dc2626] hover:bg-red-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg shadow-2xl transition-all hover:scale-105 min-h-[44px]"
+                >
+                  🚨 Emergency AC Repair
+                </a>
+                <span className="mt-2 text-sm text-red-100 font-semibold text-center sm:text-left">
+                  Answered 24/7 - same-day response
+                </span>
+              </div>
               <a
                 href="/contact"
                 className="group relative inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg shadow-2xl transition-all hover:scale-105"
