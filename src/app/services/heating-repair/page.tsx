@@ -5,9 +5,9 @@ import Image from "next/image";
 import VideoShowcase from "@/components/VideoShowcase";
 
 export const metadata: Metadata = {
-  title: "Heating Repair Morris County NJ | 24/7 Furnace & Boiler | Air2Cool",
+  title: "Furnace Repair NJ | Same-Day Heating Repair | Air2Cool",
   description:
-    "Heating repair in Morris County & North Jersey. Furnace repair, boiler service, heat pump repair. 24/7 emergency heating service. Licensed since 1998. (201) 787-5657.",
+    "Furnace not working in North NJ? Air2Cool provides same-day furnace repair throughout Morris County. Licensed master technicians, 24/7 emergency service. Call (201) 787-5657.",
   keywords: [
     "furnace repair NJ",
     "heating repair NJ",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     canonical: "/services/heating-repair",
   },
   openGraph: {
-    title: "Heating Repair Morris County NJ | 24/7 Furnace & Boiler | Air2Cool",
+    title: "Furnace Repair NJ | Same-Day Heating Repair | Air2Cool",
     description:
-      "Furnace repair, boiler service, heat pump repair. 24/7 emergency heating service. Morris County & North NJ. Licensed since 1998. (201) 787-5657.",
+      "Furnace not working in North NJ? Air2Cool provides same-day furnace repair throughout Morris County. Licensed master technicians, 24/7 emergency service. Call (201) 787-5657.",
     url: "/services/heating-repair",
   },
 };

@@ -65,7 +65,7 @@ export default function GlenGardnerPage() {
         <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
             { value: "5.0 ★", label: "Google Rating" },
-            { value: "250+", label: "5-Star Reviews" },
+            { value: "270+", label: "5-Star Reviews" },
             { value: "Since 1998", label: "Family Owned" },
             { value: "24/7", label: "Emergency Service" },
           ].map((s) => (
@@ -177,7 +177,7 @@ export default function GlenGardnerPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { icon: <Shield className="w-6 h-6 text-blue-600" />, title: "Licensed Master Techs", body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts." },
-              { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "250+ Five-Star Reviews", body: "Real customers across North Jersey. Check our Google reviews before you call." },
+              { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "270+ Five-Star Reviews", body: "Real customers across North Jersey. Check our Google reviews before you call." },
               { icon: <Clock className="w-6 h-6 text-red-600" />, title: "24/7 Emergency Service", body: "We answer at 2 AM because your furnace doesn't care what day it is." },
               { icon: <Wrench className="w-6 h-6 text-green-600" />, title: "Free House Cleaning", body: "Every new system install includes a complimentary professional house cleaning." },
               { icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "0% Financing Up to $25K", body: "Same-day approval on most applications. Don't delay comfort over budget." },

@@ -37,7 +37,7 @@ const schema = {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "250",
+        "reviewCount": "270",
       },
     },
     {
@@ -115,7 +115,7 @@ export default function MorristownPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "250+", label: "5-Star Reviews" },
+              { value: "270+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -235,7 +235,7 @@ export default function MorristownPage() {
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "250+ Five-Star Reviews",
+                  title: "270+ Five-Star Reviews",
                   body: "Real customers across Morris County and North Jersey. Check our Google reviews before you call.",
                 },
                 {

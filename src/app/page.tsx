@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Air2Cool | North NJ HVAC | AC Repair, Heating & Cooling Since 1998",
+  title: "Air2Cool | AC Repair & HVAC Service | Morris County NJ",
   description:
-    "North Jersey's trusted HVAC company since 1998. AC repair, furnace repair, boiler service, mini splits & more. 9 counties. 24/7 emergency service. (201) 787-5657.",
+    "North Jersey's trusted HVAC company since 1998. Same-day AC repair, furnace repair, installations & emergency service. Serving Morris County & 9 counties. Call (201) 787-5657.",
 };
 
 const SERVICES = [
@@ -47,7 +47,7 @@ const SERVICES = [
     gradient: "from-purple-500 to-pink-600"
   },
   {
-    name: "Air Filtration",
+    name: "Air Quality",
     href: "/services/air-quality",
     desc: "Breathe cleaner air with professional filtration systems. Protect your family's health.",
     iconName: "wind",
@@ -195,7 +195,7 @@ export default function HomePage() {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "5.0",
-              "reviewCount": "250"
+              "reviewCount": "270"
             }
           })
         }}
@@ -252,8 +252,8 @@ export default function HomePage() {
               Furnace out in the cold? AC dead in the heat? We're your NJ HVAC experts with honest pricing and clean installs. Family owned since 1998.
             </p>
 
-            {/* Trust Badges - 3-column compact on mobile, row on tablet+ */}
-            <div className="grid grid-cols-3 sm:flex sm:flex-row sm:flex-wrap gap-2 sm:gap-3 md:gap-4 mb-5 md:mb-8">
+            {/* Trust Badges - compact on mobile, row on tablet+ */}
+            <div className="grid grid-cols-2 sm:flex sm:flex-row sm:flex-wrap gap-2 sm:gap-3 md:gap-4 mb-5 md:mb-8">
               {/* Badge 1 — Google Rating */}
               <Link
                 href="/reviews"
@@ -264,7 +264,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">5.0 Google Rating</div>
-                  <div className="hidden sm:block text-xs text-gray-300">250+ Reviews</div>
+                  <div className="hidden sm:block text-xs text-gray-300">270+ Reviews</div>
                 </div>
               </Link>
 
@@ -293,6 +293,20 @@ export default function HomePage() {
                 <div>
                   <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">0% Financing</div>
                   <div className="hidden sm:block text-xs text-gray-300">Up to $25k Available</div>
+                </div>
+              </Link>
+
+              {/* Badge 4 - Spanish-speaking team */}
+              <Link
+                href="/servicio-en-espanol"
+                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-full text-center min-h-[44px] hover:bg-white/20 transition-colors"
+              >
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-600 rounded-full flex items-center justify-center shrink-0 mx-auto sm:mx-0">
+                  <span className="text-xs sm:text-sm font-extrabold text-white">ES</span>
+                </div>
+                <div>
+                  <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">Se Habla Espa&ntilde;ol</div>
+                  <div className="hidden sm:block text-xs text-gray-300">Hablamos tu idioma</div>
                 </div>
               </Link>
             </div>
@@ -787,7 +801,7 @@ export default function HomePage() {
                     <Star className="w-6 h-6 text-white fill-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">250+ 5-Star Reviews</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">270+ 5-Star Reviews</h3>
                     <p className="text-gray-600">Perfect Google rating. Real customers, real results. Our reputation speaks for itself.</p>
                   </div>
                 </div>

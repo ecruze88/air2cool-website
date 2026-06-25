@@ -100,7 +100,7 @@ export default function RootLayout({
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "5.0",
-                "reviewCount": "250"
+                "reviewCount": "270"
               },
               "sameAs": [
                 "https://www.facebook.com/profile.php?id=100063904906666",
@@ -151,12 +151,12 @@ export default function RootLayout({
                 <MobileMenu />
                 <span className="text-white font-bold uppercase text-sm tracking-wide">Menu</span>
               </div>
-              <span
-                className="text-white text-center hidden min-[360px]:block"
-                style={{ fontSize: "12px" }}
+              <a
+                href="/servicio-en-espanol"
+                className="hidden min-[360px]:inline-flex justify-self-center items-center justify-center min-h-[44px] rounded-full bg-white/15 px-2.5 text-[11px] font-bold text-white whitespace-nowrap"
               >
-                Based in Wharton, NJ
-              </span>
+                Se Habla Espa&ntilde;ol
+              </a>
               <div className="flex justify-end">
                 <a href="tel:+12017875657" className="text-white font-bold text-sm">
                   (201) 787-5657
@@ -280,7 +280,7 @@ export default function RootLayout({
                   ))}
                 </div>
                 <span className="font-bold text-lg">5.0</span>
-                <span className="text-xs opacity-80">• 250+ Reviews</span>
+                <span className="text-xs opacity-80">• 270+ Reviews</span>
               </div>
 
               {/* Desktop: Original layout */}
@@ -316,7 +316,7 @@ export default function RootLayout({
                 <div className="w-px h-16 bg-white/30"></div>
 
                 <div className="text-center">
-                  <p className="text-3xl font-extrabold mb-1.5">250+</p>
+                  <p className="text-3xl font-extrabold mb-1.5">270+</p>
                   <p className="text-sm font-semibold">Google Reviews</p>
                   <p className="text-xs opacity-90 mt-1">Real customers, real results</p>
                 </div>
@@ -381,6 +381,7 @@ export default function RootLayout({
                   <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
                   <li><a href="/blog" className="hover:text-white transition">Blog</a></li>
                   <li><a href="/projects" className="hover:text-white transition">Our Projects</a></li>
+                  <li><a href="/servicio-en-espanol" className="hover:text-white transition">Espa&ntilde;ol</a></li>
                   <li><a href="/contact" className="hover:text-white transition">Contact Us</a></li>
                   <li><a href="/maintenance-contract" className="hover:text-white transition">Maintenance Plans</a></li>
                 </ul>
@@ -430,6 +431,9 @@ export default function RootLayout({
                   <h4 className="text-white font-semibold mb-2">Contact</h4>
                   <a href="tel:+12017875657" className="text-sm hover:text-white transition block">
                     (201) 787-5657
+                  </a>
+                  <a href="/servicio-en-espanol" className="text-sm hover:text-white transition block mt-2">
+                    Se Habla Espa&ntilde;ol
                   </a>
                 </div>
               </div>

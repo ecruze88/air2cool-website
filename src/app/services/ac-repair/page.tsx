@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "AC Repair Morris County NJ | Same-Day Service | Call Now",
   description:
-    "AC broke down in Morris County? Air2Cool responds fast - same-day AC repair throughout Morris County and North NJ. Licensed since 1998, honest pricing. Call (201) 787-5657.",
+    "AC broke down in Morris County? Air2Cool responds fast — same-day AC repair throughout Morris County and North NJ. Licensed since 1998, honest pricing. Call (201) 787-5657.",
   keywords: [
     "AC repair Morris County NJ",
     "same day AC repair NJ",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AC Repair Morris County NJ | Same-Day Service | Call Now",
     description:
-      "AC broke down in Morris County? Air2Cool responds fast - same-day AC repair throughout Morris County and North NJ. Licensed since 1998, honest pricing. Call (201) 787-5657.",
+      "AC broke down in Morris County? Air2Cool responds fast — same-day AC repair throughout Morris County and North NJ. Licensed since 1998, honest pricing. Call (201) 787-5657.",
     url: "/services/ac-repair",
   },
 };

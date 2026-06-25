@@ -29,7 +29,7 @@ export default function EssexCountyPage() {
           <p className="text-blue-100 text-base md:text-xl mb-8 max-w-2xl mx-auto">
             From Newark to Montclair, Livingston to the Caldwells — Air2Cool provides fast,
             professional HVAC service across Essex County. PSE&G service area. Licensed master
-            techs, 250+ five-star reviews.
+            techs, 270+ five-star reviews.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:+12017875657" className="bg-red-600 hover:bg-red-700 text-white px-7 py-3.5 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2">

@@ -684,7 +684,7 @@ export async function generateMetadata({
   const nearby = town.nearbyTowns.slice(0, 2).join(" and ");
   return {
     title: `${town.name} HVAC Repair & Installation | Air2Cool Heating & Cooling`,
-    description: `Air2Cool provides AC repair, furnace installation, heating service & 24/7 emergency HVAC in ${town.name}, NJ — near ${nearby}. Family-owned since 1998. 250+ 5-star Google reviews. Call (201) 787-5657.`,
+    description: `Air2Cool provides AC repair, furnace installation, heating service & 24/7 emergency HVAC in ${town.name}, NJ — near ${nearby}. Family-owned since 1998. 270+ 5-star Google reviews. Call (201) 787-5657.`,
     alternates: {
       canonical: `https://www.air2cool.com/service-areas/${town.slug}`,
     },
@@ -726,7 +726,7 @@ export default async function TownPage({
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "250",
+        "reviewCount": "270",
       },
     },
     {
@@ -810,7 +810,7 @@ export default async function TownPage({
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "250+", label: "5-Star Reviews" },
+              { value: "270+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -918,7 +918,7 @@ export default async function TownPage({
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "250+ Five-Star Reviews",
+                  title: "270+ Five-Star Reviews",
                   body: "Real customers across North Jersey. Check our Google reviews before you call.",
                 },
                 {

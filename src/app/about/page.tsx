@@ -6,14 +6,14 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About Air2Cool | Family-Owned HVAC Since 1998 | Wharton NJ",
   description:
-    "Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed master technicians, 250+ five-star reviews. Based in Wharton, NJ.",
+    "Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed master technicians, 270+ five-star reviews. Based in Wharton, NJ.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About Air2Cool | Family-Owned HVAC Since 1998 | Wharton NJ",
     description:
-      "Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed master technicians, 250+ five-star reviews. Based in Wharton, NJ.",
+      "Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed master technicians, 270+ five-star reviews. Based in Wharton, NJ.",
     url: "/about",
   },
 };
@@ -69,7 +69,7 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-1.5 md:gap-2 bg-white/10 backdrop-blur px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-base">
                 <Star className="w-4 h-4 md:w-5 md:h-5 fill-white" />
-                <span className="font-semibold">250+ Reviews</span>
+                <span className="font-semibold">270+ Reviews</span>
               </div>
               <div className="flex items-center gap-1.5 md:gap-2 bg-white/10 backdrop-blur px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-base">
                 <Users className="w-4 h-4 md:w-5 md:h-5" />
@@ -112,7 +112,7 @@ export default function AboutPage() {
                   We proudly serve Morris, Essex, Passaic, Bergen, Sussex, Warren, Hunterdon, Somerset, and Union County — offering fast response times, upfront pricing, and reliable workmanship.
                 </p>
                 <p>
-                  With 250+ 5-star Google reviews and thousands of satisfied customers, 
+                  With 270+ 5-star Google reviews and thousands of satisfied customers, 
                   we're proud to be one of North Jersey's most trusted HVAC companies.
                 </p>
               </div>
@@ -350,7 +350,7 @@ export default function AboutPage() {
               <div className="flex items-start gap-2 md:gap-3">
                 <Star className="w-5 h-5 md:w-6 md:h-6 text-yellow-500 shrink-0 mt-0.5 md:mt-1 fill-yellow-500" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-0.5 md:mb-1 text-sm md:text-base">250+ Perfect Reviews</h4>
+                  <h4 className="font-bold text-gray-900 mb-0.5 md:mb-1 text-sm md:text-base">270+ Perfect Reviews</h4>
                   <p className="text-xs md:text-sm text-gray-600">Real customers, real results</p>
                 </div>
               </div>

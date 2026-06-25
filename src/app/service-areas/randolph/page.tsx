@@ -4,9 +4,9 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "HVAC Service Randolph NJ | AC Repair & Installation | Air2Cool",
+  title: "AC Installation Randolph NJ | Free Estimates | Air2Cool",
   description:
-    "AC repair and HVAC installation in Randolph NJ. Air2Cool serves all of Randolph Township from our nearby Wharton base — same-day service available. Call (201) 787-5657.",
+    "Looking for AC installation in Randolph NJ? Air2Cool is just 15 minutes away in Wharton. Free estimates, licensed since 1998, 0% financing available. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/randolph",
   },
@@ -37,7 +37,7 @@ const schema = {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "250",
+        "reviewCount": "270",
       },
     },
     {
@@ -144,7 +144,7 @@ export default function RandolphPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "250+", label: "5-Star Reviews" },
+              { value: "270+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -246,7 +246,7 @@ export default function RandolphPage() {
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "250+ Five-Star Reviews",
+                  title: "270+ Five-Star Reviews",
                   body: "Real customers across Morris County and North Jersey. Check our Google reviews before you call.",
                 },
                 {

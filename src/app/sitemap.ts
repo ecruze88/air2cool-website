@@ -45,6 +45,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/tools/hvac-sizing',
   ]
 
+  const spanishPages = [
+    '/servicio-en-espanol',
+  ]
+
   // Blog pages — dynamically generated from published MDX posts
   const publishedPosts = await getPublishedPosts();
   const blogPages = [
@@ -102,6 +106,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Tool pages
     ...toolPages.map((page) => ({
+      url: `${baseUrl}${page}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+
+    // Spanish-language page
+    ...spanishPages.map((page) => ({
       url: `${baseUrl}${page}`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,

@@ -175,7 +175,7 @@ export default function MobileMenu() {
               ))}
             </div>
             <span className="font-bold text-lg">5.0</span>
-            <span className="text-xs opacity-80">• 250+ Reviews</span>
+            <span className="text-xs opacity-80">• 270+ Reviews</span>
           </div>
         </div>
 
@@ -277,6 +277,16 @@ export default function MobileMenu() {
             className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
           >
             Preventative Maintenance
+          </a>
+          <a
+            href="/servicio-en-espanol"
+            onClick={closeMenu}
+            className="flex items-center justify-between px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            <span>Espa&ntilde;ol</span>
+            <span className="text-xs font-bold bg-red-100 text-red-700 px-2.5 py-1 rounded-full">
+              Se Habla
+            </span>
           </a>
           <a 
             href="/financing" 

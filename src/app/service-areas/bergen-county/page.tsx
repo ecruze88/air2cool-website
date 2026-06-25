@@ -27,7 +27,7 @@ export default function BergenCountyPage() {
             HVAC Service Across Bergen County
           </h1>
           <p className="text-blue-100 text-base md:text-xl mb-8 max-w-2xl mx-auto">
-            Hackensack, Paramus, Ridgewood, Fort Lee, Mahwah, Tenafly and all 70 Bergen County municipalities — Air2Cool has served the county since 1998. PSE&G service area. 250+ five-star reviews.
+            Hackensack, Paramus, Ridgewood, Fort Lee, Mahwah, Tenafly and all 70 Bergen County municipalities — Air2Cool has served the county since 1998. PSE&G service area. 270+ five-star reviews.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:+12017875657" className="bg-red-600 hover:bg-red-700 text-white px-7 py-3.5 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2">
