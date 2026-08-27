@@ -379,7 +379,7 @@ export default function HumidifierPage() {
             Professional Installation Included
           </h2>
           <p className="text-base md:text-xl text-gray-600 mb-8 md:mb-12">
-            Our licensed Master HVAC Technicians will install your Aprilaire 865 
+            Our HVAC team can install your Aprilaire 865
             properly and safely. We handle everything.
           </p>
 

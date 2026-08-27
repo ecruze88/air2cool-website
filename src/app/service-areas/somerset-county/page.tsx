@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MapPin, Phone, CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import townsData from "@/data/service-areas.json";
+import { RESPONSE_TIME_NOTE } from "@/config/company";
 
 type Town = { name: string; slug: string; countySlug: string };
 const countyTowns = (townsData as { towns: Town[] }).towns.filter(
@@ -84,7 +85,7 @@ export default function SomersetCountyPage() {
           </h2>
           <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
             <p>Somerset County blends established borough communities like Somerville and Bound Brook with affluent townships like Bedminster and Bernardsville and growing suburban areas like Bridgewater and Hillsborough. Air2Cool has served this range since 1998, handling everything from aging boilers in older homes to modern multi-zone systems in newer construction.</p>
-            <p>Both JCP&L and PSE&G territories are covered — our techs know the infrastructure differences across Somerset County and come prepared. Same-day service available for most urgent calls, with same-day financing approval on qualifying system replacements.</p>
+            <p>Both JCP&amp;L and PSE&amp;G territories are covered — our team knows the infrastructure differences across Somerset County and comes prepared. Same-day appointments may be available for urgent calls. Financing is subject to application, lender approval, and processing time.</p>
             <p>We offer 0% financing up to $25,000, free house cleaning with new system installs, and discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
           </div>
         </div>
@@ -93,7 +94,7 @@ export default function SomersetCountyPage() {
       <section className="py-12 bg-gradient-to-r from-blue-700 to-blue-600 text-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-4xl font-extrabold mb-4">Ready to Book in Somerset County?</h2>
-          <p className="text-blue-100 mb-8">Call or submit a request — we respond fast, 24/7.</p>
+          <p className="text-blue-100 mb-8">{RESPONSE_TIME_NOTE}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:+12017875657" className="bg-white text-blue-700 px-7 py-3.5 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2">
               <Phone className="w-5 h-5" /> (201) 787-5657

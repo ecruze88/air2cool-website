@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Zap, CheckCircle, Home, Gift } from "lucide-react";
 import Link from "next/link";
+import { COMPANY, PROMOTIONS } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "HVAC Installation North NJ — New System Replacement | Air2Cool | (201) 787-5657",
   description:
-    "Expert HVAC installation North NJ. Full system replacements, energy-efficient equipment, free house cleaning with every install. 0% financing available. Morris County & North NJ. Call (201) 787-5657.",
+    "HVAC installation in Morris County and North NJ. Qualifying new systems include complimentary house cleaning; 0% APR financing up to $25,000 is available for qualifying customers, subject to applicable terms. Call (201) 787-5657.",
   keywords: [
     "HVAC installation North NJ",
     "HVAC installation Morris County NJ",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HVAC Installation North NJ — New System Replacement | Air2Cool",
     description:
-      "Full HVAC system replacements. Free house cleaning. 0% financing up to $25k. Energy-efficient systems. Morris County & North NJ. Call (201) 787-5657.",
+      "Full HVAC system replacements in Morris County and North NJ. Complimentary house cleaning and 0% APR financing up to $25,000 are available for qualifying installations and customers, subject to applicable terms.",
     url: "/services/hvac-installation",
   },
 };
@@ -39,7 +40,7 @@ export default function HVACInstallationPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "HVAC System Installation",
-            "description": "Complete HVAC system installation in Morris County & North NJ. Full heating and cooling replacements for residential and commercial properties. Includes free house cleaning with every install.",
+            "description": `Complete HVAC system installation in Morris County & North NJ. Full heating and cooling replacements for residential and commercial properties. ${PROMOTIONS.houseCleaning} ${PROMOTIONS.financing}`,
             "provider": {
               "@type": "HVACBusiness",
               "@id": "https://www.air2cool.com/#organization",
@@ -55,7 +56,7 @@ export default function HVACInstallationPage() {
             "serviceType": "HVAC Installation",
             "offers": {
               "@type": "Offer",
-              "description": "Free estimate. 0% APR financing up to $25,000. Free house cleaning included.",
+              "description": `${PROMOTIONS.houseCleaning} ${PROMOTIONS.financing}`,
               "availability": "https://schema.org/InStock"
             }
           })
@@ -85,7 +86,7 @@ export default function HVACInstallationPage() {
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              Ready to replace your aging HVAC system with something more efficient and reliable? Air2Cool installs complete heating and cooling systems across North NJ, with free estimates, 0% financing, and even a free house cleaning with every installation.
+              Ready to replace your aging HVAC system with something more efficient and reliable? Air2Cool installs complete heating and cooling systems across North NJ. {PROMOTIONS.houseCleaning} {PROMOTIONS.financing}
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
@@ -118,8 +119,8 @@ export default function HVACInstallationPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-center sm:text-left">
             <Gift className="w-8 h-8 md:w-10 md:h-10 shrink-0" />
             <div className="text-center">
-              <p className="text-base md:text-2xl font-bold">Get Free House Cleaning With New HVAC System!</p>
-              <p className="text-purple-100 text-xs md:text-base">When you have us install a new HVAC system in your home, you'll also get your home professionally cleaned. We think you'll love the value!</p>
+              <p className="text-base md:text-2xl font-bold">Free House Cleaning With Qualifying New HVAC Systems</p>
+              <p className="text-purple-100 text-xs md:text-base">{PROMOTIONS.houseCleaning}</p>
             </div>
           </div>
         </div>
@@ -135,20 +136,20 @@ export default function HVACInstallationPage() {
             <div className="prose prose-gray max-w-none text-gray-700 leading-relaxed space-y-4">
               <p>
                 If your heating or cooling system is over 15 years old, constantly breaking down, or simply unable to keep up with North Jersey's extreme summers and winters, it may be time for a new HVAC installation. Air2Cool Heating &amp; Cooling has been replacing and installing HVAC systems across{" "}
-                <Link href="/service-areas/morris-county" className="text-purple-600 hover:underline">Morris County</Link> and North NJ for over 26 years, earning a reputation for clean, professional work and honest pricing.
+                <Link href="/service-areas/morris-county" className="text-purple-600 hover:underline">Morris County</Link> and North NJ since {COMPANY.foundedYear}, earning a reputation for clean, professional work and honest pricing.
               </p>
               <p>
-                We handle everything from initial system design to final testing — no subcontractors, no shortcuts. Our Licensed Master HVAC Technicians will perform a proper load calculation to ensure your new system is correctly sized for your home or business. An oversized or undersized system is one of the most common and costly installation mistakes, and it's one we never make. We serve homeowners in{" "}
+                Our installation process covers system design, load calculations, installation, and final testing. Load calculations help select equipment suited to the home or business and reduce the risk of oversizing or undersizing. We serve homeowners in{" "}
                 <Link href="/service-areas/morristown" className="text-purple-600 hover:underline">Morristown</Link>,{" "}
                 <Link href="/service-areas/parsippany-troy-hills" className="text-purple-600 hover:underline">Parsippany</Link>,{" "}
                 <Link href="/service-areas/randolph" className="text-purple-600 hover:underline">Randolph</Link>,{" "}
                 <Link href="/service-areas/denville" className="text-purple-600 hover:underline">Denville</Link>, and communities throughout North Jersey.
               </p>
               <p>
-                Today's high-efficiency HVAC systems can dramatically reduce your energy bills while delivering better comfort and indoor air quality. Whether you're replacing a single unit, upgrading to a ductless mini-split system, or installing a complete new central system, we carry top brands and will recommend the right equipment for your budget and home. Flexible 0% APR financing up to $25,000 is available to make your upgrade affordable.
+                Today&apos;s high-efficiency HVAC systems can improve comfort and indoor air quality when properly selected for the home. Whether you&apos;re replacing a single unit, upgrading to a ductless mini-split system, or installing a complete new central system, we carry top brands and will recommend equipment for your budget and home. {PROMOTIONS.financing}
               </p>
               <p>
-                Every installation includes our signature free house cleaning — our way of saying thank you for trusting us with your home. If you have an existing system that needs repair rather than replacement, visit our{" "}
+                {PROMOTIONS.houseCleaning} If you have an existing system that needs repair rather than replacement, visit our{" "}
                 <Link href="/services/ac-repair" className="text-purple-600 hover:underline">AC repair</Link> or{" "}
                 <Link href="/services/heating-repair" className="text-purple-600 hover:underline">heating repair</Link> pages to learn more.
               </p>
@@ -186,7 +187,7 @@ export default function HVACInstallationPage() {
                   Free House Cleaning With New Comfort System
                 </h3>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  When you have us install a new HVAC system in your home, you'll also get your home professionally cleaned. We think you'll love the value! To learn more about this special offer and for a free estimate, please contact us today.
+                  {PROMOTIONS.houseCleaning} Contact us for a free estimate and offer details.
                 </p>
               </div>
             </div>
@@ -281,7 +282,7 @@ export default function HVACInstallationPage() {
               },
               {
                 q: "Is financing available for HVAC installation in NJ?",
-                a: "Yes. We offer 0% APR financing up to $25,000, making it easy to invest in a new, energy-efficient system without a large upfront cost. Ask us about current financing options when you request your free estimate.",
+                a: `Yes. ${PROMOTIONS.financing} Ask about the applicable program terms when you request your free estimate.`,
               },
               {
                 q: "Do I need to replace both my heating and cooling systems at the same time?",
@@ -289,7 +290,7 @@ export default function HVACInstallationPage() {
               },
               {
                 q: "What happens after Air2Cool installs my new HVAC system?",
-                a: "After installation, our technicians test the entire system to confirm everything is working properly. We walk you through the operation of your new equipment, including thermostat programming if applicable. You also get our free house cleaning as a bonus. We're available for any follow-up questions and offer preventative maintenance plans to keep your new system running at peak performance for years to come.",
+                a: `After installation, our team tests the system and walks you through the operation of the new equipment, including thermostat programming if applicable. ${PROMOTIONS.houseCleaning} We are also available for follow-up questions and offer preventative maintenance plans.`,
               },
             ].map((item, idx) => (
               <div key={idx} className="bg-gray-50 rounded-2xl p-6 border border-gray-200 shadow-sm">
@@ -314,9 +315,9 @@ export default function HVACInstallationPage() {
             </a>{" "}
             or get a free estimate at{" "}
             <Link href="/contact" className="font-bold underline hover:no-underline">
-              /contact
+              contact us online
             </Link>
-            . Free house cleaning included with every installation!
+            . Ask about current offers on qualifying installations.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center">
             <Link
@@ -348,7 +349,7 @@ export default function HVACInstallationPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-lg md:text-2xl font-bold mb-2">0% Financing Available</p>
           <p className="text-sm md:text-base text-gray-300">
-            Finance up to $25,000 at 0% APR. Make your new HVAC system affordable with flexible financing options. Ask us for details!
+            {PROMOTIONS.financing}
           </p>
         </div>
       </section>

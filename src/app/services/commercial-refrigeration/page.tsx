@@ -152,7 +152,7 @@ export default function CommercialRefrigerationPage() {
                 When your walk-in cooler fails or a rooftop HVAC unit goes down, every hour of downtime costs your business money. Air2Cool Heating &amp; Cooling provides fast, professional commercial refrigeration repair across Morris County and all of North NJ, with 24/7 emergency service for critical situations. We&apos;ve been the go-to commercial HVAC and refrigeration contractor for restaurants, retail stores, office buildings, and warehouses throughout the region since 1998.
               </p>
               <p>
-                Our licensed commercial technicians are trained on all types of commercial refrigeration equipment: walk-in coolers and freezers, reach-in refrigerators and display cases, ice machines, and refrigerated prep tables. We also service and install rooftop package units (RTUs), split systems, and multi-zone HVAC systems for commercial properties. Unlike many residential HVAC companies that dabble in commercial work, Air2Cool is a true commercial contractor — we understand the codes, the equipment, and the urgency your business demands.
+                Air2Cool&apos;s commercial team works under the company&apos;s NJ Master HVACR license on equipment including walk-in coolers and freezers, reach-in refrigerators and display cases, ice machines, and refrigerated prep tables. We also service and install rooftop package units (RTUs), split systems, and multi-zone HVAC systems for commercial properties.
               </p>
               <p>
                 Restaurant owners in Morris County know us well. A failed walk-in cooler on a Saturday night is an emergency that can&apos;t wait until Monday. That&apos;s why our emergency line is staffed 24 hours a day, 7 days a week. We prioritize commercial refrigeration calls because we understand what&apos;s at stake — your inventory, your health code compliance, and your reputation. Most commercial refrigeration repairs are completed in a single visit; when parts need to be ordered, we communicate clearly and move fast.
@@ -392,7 +392,7 @@ export default function CommercialRefrigerationPage() {
             {[
               {
                 q: "Do you offer emergency commercial refrigeration repair in NJ?",
-                a: "Yes. We provide 24/7 emergency commercial refrigeration repair throughout Morris County and North NJ. If your walk-in cooler, freezer, or ice machine fails at any hour, call (201) 787-5657 and we'll dispatch a technician as quickly as possible. We understand that refrigeration downtime means spoiled inventory and lost revenue — we treat every call with urgency.",
+                a: "Yes. We provide 24/7 emergency commercial refrigeration repair throughout Morris County and North NJ. If your walk-in cooler, freezer, or ice machine fails at any hour, call (201) 787-5657. Dispatch timing depends on technician availability, traffic, weather, and call volume, and commercial refrigeration calls are treated with urgency.",
               },
               {
                 q: "What types of commercial refrigeration equipment do you service?",
@@ -472,7 +472,7 @@ export default function CommercialRefrigerationPage() {
             Call Air2Cool at{" "}
             <a href="tel:+12017875657" className="text-blue-600 font-bold hover:underline">(201) 787-5657</a>{" "}
             or request a free quote at{" "}
-            <Link href="/contact" className="text-blue-600 font-bold hover:underline">/contact</Link>.
+            <Link href="/contact" className="text-blue-600 font-bold hover:underline">contact us online</Link>.
             24/7 emergency commercial refrigeration repair across Morris County &amp; North NJ.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

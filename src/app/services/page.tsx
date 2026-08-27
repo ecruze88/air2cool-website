@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Flame, Snowflake, Wind, Wrench, Zap, Droplets, Waves, Leaf } from "lucide-react";
 import Link from "next/link";
+import { COMPANY } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "HVAC Services in Morris County & North NJ | Air2Cool | (201) 787-5657",
   description:
-    "Complete HVAC services in Morris County & North NJ: heating & cooling repair, furnace & boiler installation, AC & heat pump installation, ductless mini splits, preventative maintenance. 26+ years, 5.0 Google rating. Call (201) 787-5657.",
+    `Complete HVAC services in Morris County & North NJ: heating and cooling repair, installation, ductless mini splits, and preventative maintenance. Serving since ${COMPANY.foundedYear}. Call ${COMPANY.phone.display}.`,
   keywords: [
     "HVAC services Morris County NJ",
     "HVAC contractor North NJ",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HVAC Services in Morris County & North NJ | Air2Cool",
     description:
-      "Expert HVAC repair, installation & maintenance. 26+ years experience, 5.0 Google rating. Morris County & North NJ. Call (201) 787-5657.",
+      `Expert HVAC repair, installation and maintenance. Serving North Jersey since ${COMPANY.foundedYear}. 5.0 Google rating. Call ${COMPANY.phone.display}.`,
     url: "/services",
   },
 };
@@ -32,7 +33,7 @@ const SERVICES = [
   {
     icon: Flame,
     title: "Heating Repair",
-    description: "Fast furnace & boiler repairs. Hydronic, steam, NTI—we fix all types. 24/7 emergency service available.",
+    description: "Furnace and boiler repairs, including hydronic, steam, and NTI equipment. 24/7 emergency line available.",
     href: "/services/heating-repair",
     color: "red",
     category: "repair",
@@ -40,7 +41,7 @@ const SERVICES = [
   {
     icon: Snowflake,
     title: "Cooling Repair",
-    description: "Quick AC repairs and diagnostics. Heat pumps and mini splits too. Same-day service to beat the heat.",
+    description: "Quick AC repairs and diagnostics. Heat pumps and mini splits too. Same-day appointments may be available.",
     href: "/services/ac-repair",
     color: "blue",
     category: "repair",
@@ -402,7 +403,7 @@ export default function ServicesPage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-900 mb-1 text-sm md:text-base">26+ Years</h3>
+              <h3 className="font-bold text-gray-900 mb-1 text-sm md:text-base">Since {COMPANY.foundedYear}</h3>
               <p className="text-gray-600 text-xs md:text-sm">
                 Family owned since 1998
               </p>

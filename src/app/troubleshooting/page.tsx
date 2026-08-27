@@ -235,7 +235,7 @@ export default function TroubleshootingPage() {
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed mb-6 md:mb-8">
-              Quick fixes for furnace, AC, and boiler problems. Try these first - or call for same-day service.
+              Quick fixes for furnace, AC, and boiler problems. Try these first, or call to ask about current appointment availability.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8">
@@ -582,7 +582,7 @@ export default function TroubleshootingPage() {
             Still Having Problems?
           </h2>
           <p className="text-base md:text-xl mb-6">
-            Same-day HVAC repair across North NJ.
+            Same-day HVAC repair appointments may be available across North NJ.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
             <a href="tel:+12017875657" className="bg-white text-red-700 px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg w-full sm:w-auto text-center inline-flex items-center justify-center gap-2">
