@@ -33,7 +33,11 @@ export const COMPANY = {
   },
 } as const;
 
-export const MAINTENANCE_PLAN = {
+export const RESIDENTIAL_MAINTENANCE_PLAN = {
+  seasonalVisitsPerYear: 2,
+  priorityService: true,
+  repairDiscountPercent: 20,
+  partsDiscountPercent: 20,
   benefits: [
     "Two seasonal maintenance visits per covered HVAC system per year",
     "Priority service",
@@ -41,6 +45,18 @@ export const MAINTENANCE_PLAN = {
     "20% off eligible replacement parts",
   ],
 } as const;
+
+export const COMMERCIAL_MAINTENANCE_PLAN = {
+  visitFrequency: "agreement-specific",
+  priorityService: null,
+  repairDiscountPercent: 10,
+  partsDiscountPercent: 10,
+  description:
+    "Commercial maintenance agreements are customized based on the facility, equipment type, system count, and service requirements. Commercial maintenance customers receive 10% off eligible repairs and replacement parts.",
+} as const;
+
+// Backward-compatible residential alias for existing customer-facing components.
+export const MAINTENANCE_PLAN = RESIDENTIAL_MAINTENANCE_PLAN;
 
 export const PROMOTIONS = {
   houseCleaning:

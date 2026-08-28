@@ -125,7 +125,7 @@ export default function ContactClientDual() {
                 ))}
               </div>
               <span className="font-semibold text-gray-900 text-sm md:text-base">5.0</span>
-              <span className="text-xs md:text-sm text-gray-600">· 270+ Reviews</span>
+              <span className="text-xs md:text-sm text-gray-600">· 300+ Reviews</span>
             </div>
             <div className="flex items-center gap-1.5 md:gap-2 text-gray-700 text-xs md:text-base">
               <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600" />

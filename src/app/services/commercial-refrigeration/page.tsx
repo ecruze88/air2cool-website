@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Home, CheckCircle, Wrench, Clock, Phone, Building2 } from "lucide-react";
 import Link from "next/link";
 import VideoShowcase from "@/components/VideoShowcase";
+import { COMMERCIAL_MAINTENANCE_PLAN } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "Commercial HVAC & Refrigeration in Morris County NJ | Air2Cool | (201) 787-5657",
@@ -404,11 +405,11 @@ export default function CommercialRefrigerationPage() {
               },
               {
                 q: "Do you offer commercial HVAC maintenance contracts in NJ?",
-                a: "Yes. We offer preventative maintenance plans for commercial HVAC and refrigeration systems. Regular maintenance significantly reduces emergency breakdowns, extends equipment life, and keeps your systems running at peak efficiency. Ask us about customized maintenance contracts for your business.",
+                a: `${COMMERCIAL_MAINTENANCE_PLAN.description} Maintenance can identify developing issues and help reduce breakdown risk, but visit frequency and procedures depend on the agreement and covered equipment.`,
               },
               {
                 q: "How quickly can Air2Cool respond to a commercial service call in Morris County?",
-                a: "For emergency calls, we aim to respond as fast as possible — often within a few hours during business hours, and we're available 24/7 for after-hours emergencies. For non-emergency service calls and maintenance, we typically schedule within 1–2 business days. We'll always confirm a timeframe when you call.",
+                a: "Air2Cool is available 24/7 for commercial emergencies. Response and scheduling times depend on technician availability, traffic, weather, call volume, equipment needs, and current conditions. We'll confirm the available timeframe when you call.",
               },
             ].map((item, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">

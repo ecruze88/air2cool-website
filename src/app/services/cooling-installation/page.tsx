@@ -106,7 +106,7 @@ export default function CoolingInstallationPage() {
               <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
                 <div className="text-xl mb-1">⭐</div>
                 <div className="text-xs font-semibold">5.0 Rating</div>
-                <div className="text-[10px] text-gray-300">150+ reviews</div>
+                <div className="text-[10px] text-gray-300">300+ reviews</div>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
                 <div className="text-xl mb-1">🛡️</div>

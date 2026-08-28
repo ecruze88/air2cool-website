@@ -39,7 +39,7 @@ const schema = {
           "name": "How far is Air2Cool from Kinnelon NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We're based in Wharton, about 20-25 minutes from Kinnelon. Same-day service is available for most requests.",
+            "text": "We serve Kinnelon from our Wharton base. Same-day appointments may be available, while response timing depends on technician availability, traffic, weather, and call volume.",
           },
         },
       ],
@@ -91,7 +91,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Mini Split", href: "/services/mini-split", desc: "Ductless mini-split installs & service." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 export default function KinnelonPage() {
@@ -144,7 +144,7 @@ export default function KinnelonPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -221,7 +221,7 @@ export default function KinnelonPage() {
               All HVAC Services in Kinnelon
             </h2>
             <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -255,12 +255,12 @@ export default function KinnelonPage() {
               {[
                 {
                   icon: <Shield className="w-6 h-6 text-blue-600" />,
-                  title: "Licensed Master Techs",
-                  body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Reviews",
+                  title: "300+ Five-Star Reviews",
                   body: "Real customers across Morris County and North Jersey. Check our Google reviews before you call.",
                 },
                 {
@@ -275,8 +275,8 @@ export default function KinnelonPage() {
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-                  title: "0% Financing Up to $25K",
-                  body: "Same-day approval on most applications through SaveGreen. Don't delay comfort over budget.",
+                  title: "0% Financing Up to $25,000",
+                  body: "Ask about current SaveGreen program options and 0% APR financing up to $25,000 for qualifying customers, subject to eligibility, approval, program availability, and applicable terms.",
                 },
                 {
                   icon: <MapPin className="w-6 h-6 text-purple-600" />,

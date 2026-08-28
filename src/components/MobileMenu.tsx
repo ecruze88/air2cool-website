@@ -175,7 +175,7 @@ export default function MobileMenu() {
               ))}
             </div>
             <span className="font-bold text-lg">5.0</span>
-            <span className="text-xs opacity-80">• 270+ Reviews</span>
+            <span className="text-xs opacity-80">• 300+ Reviews</span>
           </div>
         </div>
 

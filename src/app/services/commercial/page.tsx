@@ -12,6 +12,7 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
+import { COMMERCIAL_MAINTENANCE_PLAN, COMPANY } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "Commercial HVAC & Refrigeration Services in North NJ | Air2Cool",
@@ -115,11 +116,11 @@ const COUNTIES = [
 ];
 
 const WHY_ITEMS = [
-  "Licensed Master HVACR technicians on every job",
-  "26+ years of commercial HVAC & refrigeration experience",
-  "24/7 emergency commercial service — we answer every call",
+  `Licensed & insured — NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}`,
+  "Commercial HVAC & refrigeration experience since 1998",
+  "24/7 emergency commercial HVAC service",
   "All work fully permitted and code-compliant",
-  "Customized preventative maintenance contracts",
+  COMMERCIAL_MAINTENANCE_PLAN.description,
   "One contractor for HVAC, refrigeration, and lighting",
 ];
 

@@ -421,7 +421,7 @@ export default function ServicesPage() {
               Looking for Commercial Services?
             </h2>
             <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              We handle RTUs, chillers, commercial boilers, LED lighting retrofits, commercial refrigeration, and more. Licensed Master HVACR technicians with 26+ years of commercial experience across North NJ.
+              We handle RTUs, chillers, commercial boilers, LED lighting retrofits, commercial refrigeration, and more. Commercial HVAC and refrigeration experience since {COMPANY.foundedYear}. NJ Master HVACR License #{COMPANY.license.masterHvacrNumber}.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto shrink-0">

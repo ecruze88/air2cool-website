@@ -2,18 +2,19 @@ import type { Metadata } from "next";
 import { Award, Star, CheckCircle, Users, Truck, Shield, Heart, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { COMPANY } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "About Air2Cool | Family-Owned HVAC Since 1998 | Wharton NJ",
   description:
-    "Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed master technicians, 270+ five-star reviews. Based in Wharton, NJ.",
+    `Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed and insured, with ${COMPANY.reviews.claim}. NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}.`,
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About Air2Cool | Family-Owned HVAC Since 1998 | Wharton NJ",
     description:
-      "Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed master technicians, 270+ five-star reviews. Based in Wharton, NJ.",
+      `Air2Cool Heating & Cooling has served North New Jersey since 1998. Family-owned, licensed and insured, with ${COMPANY.reviews.claim}. NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}.`,
     url: "/about",
   },
 };
@@ -38,11 +39,6 @@ export default function AboutPage() {
               "addressRegion": "NJ",
               "postalCode": "07885",
               "addressCountry": "US"
-            },
-            "employee": {
-              "@type": "Person",
-              "name": "Hector",
-              "jobTitle": "Owner & Master HVAC Technician"
             },
             "areaServed": [
               "Morris County NJ","Essex County NJ","Passaic County NJ","Bergen County NJ",
@@ -69,7 +65,7 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-1.5 md:gap-2 bg-white/10 backdrop-blur px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-base">
                 <Star className="w-4 h-4 md:w-5 md:h-5 fill-white" />
-                <span className="font-semibold">270+ Reviews</span>
+                <span className="font-semibold">300+ Reviews</span>
               </div>
               <div className="flex items-center gap-1.5 md:gap-2 bg-white/10 backdrop-blur px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-base">
                 <Users className="w-4 h-4 md:w-5 md:h-5" />
@@ -112,8 +108,7 @@ export default function AboutPage() {
                   We proudly serve Morris, Essex, Passaic, Bergen, Sussex, Warren, Hunterdon, Somerset, and Union County — offering fast response times, upfront pricing, and reliable workmanship.
                 </p>
                 <p>
-                  With 270+ 5-star Google reviews and thousands of satisfied customers, 
-                  we're proud to be one of North Jersey's most trusted HVAC companies.
+                  With {COMPANY.reviews.claim}, we&apos;re proud to serve homeowners and businesses throughout North Jersey.
                 </p>
               </div>
             </div>
@@ -234,7 +229,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1 text-sm md:text-base">Licensed & Certified</h3>
                   <p className="text-gray-600 text-xs md:text-sm">
-                    All technicians hold NJ HVAC licenses and manufacturer certifications.
+                    Air2Cool is licensed and insured under NJ Master HVACR License #{COMPANY.license.masterHvacrNumber}. Our technicians receive ongoing training for the equipment they service.
                   </p>
                 </div>
               </div>
@@ -350,7 +345,7 @@ export default function AboutPage() {
               <div className="flex items-start gap-2 md:gap-3">
                 <Star className="w-5 h-5 md:w-6 md:h-6 text-yellow-500 shrink-0 mt-0.5 md:mt-1 fill-yellow-500" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-0.5 md:mb-1 text-sm md:text-base">270+ Perfect Reviews</h4>
+                  <h4 className="font-bold text-gray-900 mb-0.5 md:mb-1 text-sm md:text-base">300+ Perfect Reviews</h4>
                   <p className="text-xs md:text-sm text-gray-600">Real customers, real results</p>
                 </div>
               </div>
@@ -358,8 +353,8 @@ export default function AboutPage() {
               <div className="flex items-start gap-2 md:gap-3">
                 <Award className="w-5 h-5 md:w-6 md:h-6 text-blue-600 shrink-0 mt-0.5 md:mt-1" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-0.5 md:mb-1 text-sm md:text-base">26+ Years Experience</h4>
-                  <p className="text-xs md:text-sm text-gray-600">Nearly three decades serving NJ</p>
+                  <h4 className="font-bold text-gray-900 mb-0.5 md:mb-1 text-sm md:text-base">Serving Since {COMPANY.foundedYear}</h4>
+                  <p className="text-xs md:text-sm text-gray-600">Decades of experience serving New Jersey</p>
                 </div>
               </div>
 
@@ -398,7 +393,7 @@ export default function AboutPage() {
             Serving All of North Jersey
           </h2>
           <p className="text-base md:text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            Air2Cool serves homeowners and businesses across 9 counties in North and Central New Jersey. From our base in Wharton, we can reach most service areas within 30–45 minutes.
+            Air2Cool serves homeowners and businesses across nine counties in North and Central New Jersey from our base in Wharton. Response times vary based on technician availability, traffic, weather, and call volume.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6 text-sm font-medium text-gray-700">
             {["Morris County","Essex County","Passaic County","Bergen County","Sussex County","Warren County","Hunterdon County","Somerset County","Union County"].map((county) => (

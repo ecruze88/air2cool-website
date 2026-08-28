@@ -2,11 +2,27 @@ import type { Metadata } from "next";
 import { Wrench, CheckCircle, Calendar, DollarSign } from "lucide-react";
 import Link from "next/link";
 import VideoShowcase from "@/components/VideoShowcase";
+import { COMPANY, RESIDENTIAL_MAINTENANCE_PLAN } from "@/config/company";
+
+const SEASONAL_VISIT_TASKS = [
+  "HVAC system operational testing",
+  "AC tune-up and cooling-system checks",
+  "Heating maintenance and heating-system safety checks where applicable",
+  "Electrical-component inspection",
+  "Thermostat checks",
+  "Filter inspection",
+  "Condensate-drain inspection and cleaning where applicable",
+  "Condenser and evaporator coil inspection",
+  "Coil cleaning where appropriate",
+  "Blower inspection",
+  "Temperature and performance checks",
+  "Refrigerant-system performance checks where applicable",
+] as const;
 
 export const metadata: Metadata = {
   title: "HVAC Preventative Maintenance in Morris County NJ | Air2Cool | (201) 787-5657",
   description:
-    "Affordable HVAC preventative maintenance in Morris County & North NJ. Annual tune-ups, coil cleaning, refrigerant checks, 10% parts discount. Extend equipment life, prevent costly breakdowns. 26+ years experience. Call (201) 787-5657.",
+    `Residential HVAC preventative maintenance in Morris County and North NJ with two seasonal visits per covered system, priority service, and 20% off eligible repairs and replacement parts. Call ${COMPANY.phone.display}.`,
   keywords: [
     "HVAC maintenance Morris County NJ",
     "AC tune up North NJ",
@@ -23,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HVAC Preventative Maintenance in Morris County NJ | Air2Cool",
     description:
-      "Annual HVAC tune-ups, coil cleaning, refrigerant checks, 10% parts discount. Prevent breakdowns & extend equipment life. Morris County & North NJ. Call (201) 787-5657.",
+      "Residential HVAC maintenance plans with seasonal AC maintenance and heating maintenance in Morris County and North NJ. Maintenance helps reduce breakdown risk and may extend equipment life.",
     url: "/services/preventative-maintenance",
   },
 };
@@ -38,12 +54,12 @@ export default function PreventativeMaintenancePage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "HVAC Preventative Maintenance",
-            "description": "Annual HVAC maintenance program in Morris County & North NJ. Includes refrigerant check, coil cleaning, electrical inspection, condensate drain cleaning, 10% discount on parts, and more. Extends equipment life and prevents costly breakdowns.",
+            "description": "Residential HVAC preventative maintenance in Morris County and North Jersey. Seasonal visits may include operational testing, electrical and thermostat checks, coil and condensate inspection, and equipment-specific performance checks.",
             "provider": {
               "@type": "HVACBusiness",
               "@id": "https://www.air2cool.com/#organization",
-              "name": "Air2Cool Heating & Cooling",
-              "telephone": "+1-201-787-5657",
+              "name": COMPANY.name,
+              "telephone": COMPANY.phone.e164,
               "url": "https://www.air2cool.com"
             },
             "areaServed": [
@@ -54,7 +70,7 @@ export default function PreventativeMaintenancePage() {
             "serviceType": "HVAC Maintenance",
             "offers": {
               "@type": "Offer",
-              "description": "One visit per year. Includes refrigerant check, coil cleaning, 10% parts discount.",
+              "description": RESIDENTIAL_MAINTENANCE_PLAN.benefits.join("; "),
               "availability": "https://schema.org/InStock"
             }
           })
@@ -84,7 +100,7 @@ export default function PreventativeMaintenancePage() {
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              Preventative maintenance is key to the longevity and reliability of your comfort system. If you're looking for a company that can take care of this important task for you, choose Air2Cool Heating/AC & Refrigeration. With over 20 years of experience, we know how to prevent future problems and keep your equipment running smoothly for years to come!
+              Seasonal HVAC preventative maintenance helps reduce avoidable wear, can identify developing problems, and may extend equipment life. Air2Cool has served North Jersey since {COMPANY.foundedYear} with AC maintenance, AC tune-up, and heating maintenance services for residential systems.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
@@ -111,32 +127,20 @@ export default function PreventativeMaintenancePage() {
         </div>
       </section>
 
-      {/* Program Benefits */}
+      {/* Membership Benefits */}
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4 md:mb-6">
-              Benefit From Our Preventative Maintenance Program
+              Residential Maintenance Plan Membership Benefits
             </h2>
             
             <p className="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
-              When you sign up for our preventative HVAC maintenance program, you'll enjoy the following services and perks:
+              These are the confirmed contractual benefits of Air2Cool&apos;s residential HVAC maintenance plan:
             </p>
 
             <div className="space-y-3 md:space-y-4">
-              {[
-                "One visit per year",
-                "Filter replacement, if provided, will be done for free, or we can install a standard one-inch thick filter for an additional fee",
-                "Refrigerant levels check",
-                "All electrical components checked and loose connections tightened",
-                "Condensate drain lines cleaned to avoid water damage to ceilings",
-                "Discharge temperatures checked",
-                "Visual inspection for mold",
-                "Odor neutralizer applied to drain pan",
-                "Evaporator coil disinfection",
-                "Outdoor unit coil washing",
-                "10% discounts on all parts",
-              ].map((item, idx) => (
+              {RESIDENTIAL_MAINTENANCE_PLAN.benefits.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-2 md:gap-3">
                   <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-orange-600 shrink-0 mt-0.5" />
                   <span className="text-sm md:text-base text-gray-700">{item}</span>
@@ -147,17 +151,25 @@ export default function PreventativeMaintenancePage() {
         </div>
       </section>
 
-      {/* Important Note */}
+      {/* Seasonal Visit Procedures */}
       <section className="py-10 md:py-12 bg-orange-50 border-y border-orange-200">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border-2 border-orange-300">
             <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 flex items-center gap-2">
               <Calendar className="w-5 h-5 md:w-6 md:h-6 text-orange-600" />
-              Important Information
+              What a Seasonal Maintenance Visit May Include
             </h3>
-            <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-              Please note that our agreement is only for preventative maintenance. It does not cover any repairs, service calls, ductwork imperfections, thermostats, or refrigerant leaks. For more information about our pricing, please contact us today.
+            <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-5">
+              Service procedures are separate from membership benefits and depend on the covered equipment, system type, condition, and season. An HVAC tune-up may include:
             </p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {SEASONAL_VISIT_TASKS.map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-orange-600 shrink-0 mt-0.5" />
+                  <span className="text-sm text-gray-700">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -165,7 +177,7 @@ export default function PreventativeMaintenancePage() {
       <VideoShowcase
         title="What Neglect Actually Looks Like"
         src="/neglected_hvac_system_damage_due_to_lack_of_maintenance.mp4"
-        caption="This is what years without maintenance does to an HVAC system — annual tune-ups prevent failures like this and keep your family safe"
+        caption="Seasonal maintenance can identify buildup and wear before they contribute to performance problems or breakdowns"
         sectionClassName="py-10 md:py-16 bg-white"
       />
 
@@ -185,7 +197,7 @@ export default function PreventativeMaintenancePage() {
                 Lower Energy Bills
               </h3>
               <p className="text-sm md:text-base text-gray-700">
-                A well-maintained system runs more efficiently, reducing your monthly utility costs and saving you money.
+                Routine maintenance helps a system operate efficiently and may help reduce unnecessary energy use.
               </p>
             </div>
 
@@ -197,7 +209,7 @@ export default function PreventativeMaintenancePage() {
                 Prevent Costly Repairs
               </h3>
               <p className="text-sm md:text-base text-gray-700">
-                Catch small issues before they become expensive problems. Regular maintenance prevents major breakdowns.
+                Operational checks can identify developing issues early and help prevent some costly breakdowns.
               </p>
             </div>
 
@@ -209,7 +221,7 @@ export default function PreventativeMaintenancePage() {
                 Extend Equipment Life
               </h3>
               <p className="text-sm md:text-base text-gray-700">
-                Proper maintenance can add years to your HVAC system's lifespan, delaying the need for expensive replacement.
+                Consistent maintenance helps reduce avoidable wear and may extend equipment life.
               </p>
             </div>
           </div>
@@ -237,7 +249,7 @@ export default function PreventativeMaintenancePage() {
             Affordably Priced Preventative Maintenance
           </h2>
           <p className="text-base md:text-xl text-orange-100 mb-6 md:mb-8">
-            Protect your investment and keep your system running smoothly. Sign up for our maintenance program today!
+            Prepare your system for the heating and cooling seasons with a residential HVAC maintenance plan. Review the confirmed membership benefits and request the appropriate next steps today.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link

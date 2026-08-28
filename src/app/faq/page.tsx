@@ -73,7 +73,7 @@ const FAQ_CATEGORIES = {
     },
     {
       question: "Do you offer financing?",
-      answer: "Yes! Flexible financing through GreenSky and JCP&L programs. Options: 0% APR for 60 months, 9.99% APR for 120 months, loans $2,500-$55,000. Quick online approval. We accept all major credit cards, checks, and cash. Ask about current promotions: (201) 787-5657.",
+      answer: `${PROMOTIONS.financing} ${NJ_INCENTIVE_NOTE} Program availability and terms can change, so confirm current options before purchase. Call (201) 787-5657.`,
       keywords: "HVAC financing, 0% financing HVAC, payment plans"
     },
     {

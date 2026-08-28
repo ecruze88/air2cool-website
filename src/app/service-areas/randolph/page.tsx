@@ -67,7 +67,7 @@ const schema = {
           "name": "How far is Air2Cool from Randolph NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Randolph is just a few miles from our Wharton base — one of our shortest response times in Morris County. Most addresses get a technician on-site within 15–20 minutes of a call.",
+            "text": "Randolph is a few miles from our Wharton base. Response times vary based on technician availability, traffic, weather, and call volume.",
           },
         },
         {
@@ -91,7 +91,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Mini Split", href: "/services/mini-split", desc: "Ductless mini-split installs & service." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 export default function RandolphPage() {
@@ -144,7 +144,7 @@ export default function RandolphPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -207,7 +207,7 @@ export default function RandolphPage() {
               All HVAC Services in Randolph
             </h2>
             <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -241,12 +241,12 @@ export default function RandolphPage() {
               {[
                 {
                   icon: <Shield className="w-6 h-6 text-blue-600" />,
-                  title: "Licensed Master Techs",
-                  body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Reviews",
+                  title: "300+ Five-Star Reviews",
                   body: "Real customers across Morris County and North Jersey. Check our Google reviews before you call.",
                 },
                 {
@@ -261,8 +261,8 @@ export default function RandolphPage() {
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-                  title: "0% Financing Up to $25K",
-                  body: "Same-day approval on most applications. Don't delay comfort over budget.",
+                  title: "0% Financing Up to $25,000",
+                  body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
                 },
                 {
                   icon: <MapPin className="w-6 h-6 text-purple-600" />,
@@ -308,7 +308,7 @@ export default function RandolphPage() {
               <p>
                 Air2Cool Heating &amp; Cooling has been the trusted HVAC contractor for Randolph Township
                 residents since 1998. Based in Wharton, we serve Center Grove, Ironia, and all Randolph
-                neighborhoods with the same fast response times and licensed master technicians we provide
+                neighborhoods with the same responsive service from trained technicians working through Air2Cool&apos;s licensed HVACR operation
                 across all of Morris County.
               </p>
               <p>
@@ -358,7 +358,7 @@ export default function RandolphPage() {
                 },
                 {
                   q: "How far is Air2Cool from Randolph NJ?",
-                  a: "Randolph is just a few miles from our Wharton base — one of our shortest response times in Morris County. Most addresses get a technician on-site within 15–20 minutes of a call.",
+                  a: "Randolph is a few miles from our Wharton base. Response times vary based on technician availability, traffic, weather, and call volume.",
                 },
                 {
                   q: "What HVAC brands do you install in Randolph?",
@@ -381,7 +381,7 @@ export default function RandolphPage() {
               Need HVAC Help in Randolph?
             </h2>
             <p className="text-blue-100 mb-8 text-base md:text-lg">
-              Call us or fill out the form — same-day service available from our Wharton base, approximately 15 minutes away.
+              Call for 24/7 emergency HVAC service or request service online. Same-day appointments may be available depending on technician availability and current conditions.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
