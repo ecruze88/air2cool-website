@@ -1,74 +1,31 @@
 import type { Metadata } from "next";
 import { MapPin, Phone, Clock, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import townsData from "@/data/service-areas.json";
+import {
+  COMPANY,
+  SERVICE_COUNTIES,
+  SERVICE_COUNTY_LIST,
+} from "@/config/company";
 
 export const metadata: Metadata = {
   title: "Service Areas | Air2Cool Heating & Cooling in North NJ",
   description:
-    "Air2Cool serves Morris, Sussex, Warren, Essex, Passaic, Union, and Bergen County since 1998. Professional HVAC service across North New Jersey.",
+    `Air2Cool serves ${SERVICE_COUNTY_LIST}. Professional HVAC service across North New Jersey since ${COMPANY.foundedYear}.`,
 };
 
-const COUNTIES = [
-  {
-    name: "Morris County",
-    towns: [
-      "Morristown", "Dover", "Randolph", "Jefferson", "Rockaway", "Denville",
-      "Boonton", "Parsippany-Troy Hills", "Hanover", "Madison", "Florham Park",
-      "East Hanover", "Morris Plains", "Wharton", "Mount Olive", "Roxbury",
-      "Chester", "Mendham", "Chatham", "Long Valley", "Butler"
-    ]
-  },
-  {
-    name: "Sussex County",
-    towns: [
-      "Newton", "Sparta", "Hopatcong", "Vernon", "Franklin", "Andover",
-      "Hamburg", "Sussex", "Stanhope", "Ogdensburg", "Branchville"
-    ]
-  },
-  {
-    name: "Warren County",
-    towns: [
-      "Hackettstown", "Washington", "Phillipsburg", "Belvidere", "Oxford",
-      "Blairstown", "Hope", "Lopatcong"
-    ]
-  },
-  {
-    name: "Essex County",
-    towns: [
-      "Newark", "East Orange", "West Orange", "Livingston", "Montclair",
-      "Bloomfield", "Nutley", "Belleville", "Irvington", "Maplewood",
-      "South Orange", "Millburn", "Verona", "Cedar Grove", "Essex Fells"
-    ]
-  },
-  {
-    name: "Passaic County",
-    towns: [
-      "Paterson", "Clifton", "Passaic", "Wayne", "West Milford", "Hawthorne",
-      "Little Falls", "Woodland Park", "Ringwood", "Pompton Lakes", "Totowa",
-      "Haledon", "Prospect Park", "Wanaque"
-    ]
-  },
-  {
-    name: "Union County",
-    towns: [
-      "Elizabeth", "Union", "Summit", "Westfield", "Plainfield", "Linden",
-      "Rahway", "Roselle", "Cranford", "Berkeley Heights", "New Providence",
-      "Springfield", "Hillside", "Kenilworth", "Clark"
-    ]
-  },
-  {
-    name: "Bergen County",
-    towns: [
-      "Hackensack", "Paramus", "Fair Lawn", "Fort Lee", "Englewood",
-      "Ridgewood", "Mahwah", "Ramsey", "Wyckoff", "Glen Rock", "Closter",
-      "River Edge", "Westwood", "Tenafly", "Bergenfield", "Dumont"
-    ]
-  }
-];
+type Town = {
+  name: string;
+  slug: string;
+  countySlug: string;
+};
 
-function toSlug(town: string) {
-  return town.toLowerCase().replace(/\s+/g, "-");
-}
+const towns = (townsData as { towns: Town[] }).towns;
+
+const COUNTIES = SERVICE_COUNTIES.map((county) => ({
+  ...county,
+  towns: towns.filter((town) => town.countySlug === county.slug),
+}));
 
 export default function ServiceAreasPage() {
   return (
@@ -93,11 +50,11 @@ export default function ServiceAreasPage() {
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
-              Serving North New Jersey Since 1998
+              {COMPANY.servingSinceClaim}
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed mb-6 md:mb-8">
-              Professional HVAC service across Morris, Sussex, Warren, Essex, Passaic, Union, and Bergen County.
+              Professional HVAC service across {SERVICE_COUNTY_LIST}.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
@@ -108,10 +65,10 @@ export default function ServiceAreasPage() {
                 Request Service
               </Link>
               <a
-                href="tel:+12017875657"
+                href={COMPANY.phone.href}
                 className="bg-white/10 hover:bg-white/20 backdrop-blur text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all border border-white/20 text-center"
               >
-                Call (201) 787-5657
+                Call {COMPANY.phone.display}
               </a>
             </div>
           </div>
@@ -129,16 +86,16 @@ export default function ServiceAreasPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-3 gap-4 md:gap-8 text-center">
             <div>
-              <div className="text-2xl md:text-4xl font-extrabold text-blue-900 mb-1 md:mb-2">7</div>
+              <div className="text-2xl md:text-4xl font-extrabold text-blue-900 mb-1 md:mb-2">{COUNTIES.length}</div>
               <div className="text-xs md:text-base text-gray-700 font-medium">Counties</div>
             </div>
             <div>
-              <div className="text-2xl md:text-4xl font-extrabold text-blue-900 mb-1 md:mb-2">100+</div>
+              <div className="text-2xl md:text-4xl font-extrabold text-blue-900 mb-1 md:mb-2">{towns.length}</div>
               <div className="text-xs md:text-base text-gray-700 font-medium">Towns</div>
             </div>
             <div>
-              <div className="text-2xl md:text-4xl font-extrabold text-blue-900 mb-1 md:mb-2">26+</div>
-              <div className="text-xs md:text-base text-gray-700 font-medium">Years</div>
+              <div className="text-2xl md:text-4xl font-extrabold text-blue-900 mb-1 md:mb-2">Since {COMPANY.foundedYear}</div>
+              <div className="text-xs md:text-base text-gray-700 font-medium">Family Owned</div>
             </div>
           </div>
         </div>
@@ -152,15 +109,15 @@ export default function ServiceAreasPage() {
               Counties We Serve
             </h2>
             <p className="text-sm md:text-lg text-gray-600">
-              7 counties across North New Jersey
+              {COUNTIES.length} counties across North New Jersey
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {COUNTIES.map((county) => (
               <Link
-                key={county.name}
-                href={`/service-areas/${toSlug(county.name)}`}
+                key={county.slug}
+                href={`/service-areas/${county.slug}`}
                 className="block bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 p-4 md:p-6 hover:border-blue-500 hover:shadow-lg transition-all"
               >
                 <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
@@ -168,16 +125,16 @@ export default function ServiceAreasPage() {
                     <MapPin className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                   </div>
                   <h3 className="text-base md:text-xl font-bold text-blue-700">
-                    {county.name}
+                    {county.fullName}
                   </h3>
                 </div>
 
                 <ul className="space-y-1.5 md:space-y-2">
                   {/* Show fewer towns on mobile */}
                   {county.towns.slice(0, 5).map((town) => (
-                    <li key={town} className="flex items-center gap-2 text-gray-700">
+                    <li key={town.slug} className="flex items-center gap-2 text-gray-700">
                       <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-blue-600 shrink-0" />
-                      <span className="text-xs md:text-sm">{town}</span>
+                      <span className="text-xs md:text-sm">{town.name}</span>
                     </li>
                   ))}
                   {county.towns.length > 5 && (
@@ -205,16 +162,16 @@ export default function ServiceAreasPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
-            {COUNTIES.flatMap(county => county.towns)
-              .sort()
+            {COUNTIES.flatMap((county) => county.towns)
+              .sort((a, b) => a.name.localeCompare(b.name))
               .map((town) => (
                 <Link
-                  key={town}
-                  href={`/service-areas/${toSlug(town)}`}
+                  key={town.slug}
+                  href={`/service-areas/${town.slug}`}
                   className="bg-white rounded-lg px-3 py-2 md:px-4 md:py-3 border border-gray-200 flex items-center gap-1.5 md:gap-2 hover:border-blue-400 transition-colors"
                 >
                   <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-green-600 shrink-0" />
-                  <span className="text-xs md:text-sm text-blue-700 hover:underline">{town}</span>
+                  <span className="text-xs md:text-sm text-blue-700 hover:underline">{town.name}</span>
                 </Link>
               ))}
           </div>
@@ -243,7 +200,7 @@ export default function ServiceAreasPage() {
                 Fast Response
               </h3>
               <p className="text-xs md:text-base text-gray-600">
-                24/7 emergency service. HVAC problems can't wait.
+                Emergency service with response timing based on technician availability, traffic, weather, and call volume.
               </p>
             </div>
 
@@ -255,7 +212,7 @@ export default function ServiceAreasPage() {
                 Local & Family Owned
               </h3>
               <p className="text-xs md:text-base text-gray-600">
-                Based in Wharton, serving neighbors since 1998.
+                Based in Wharton, serving neighbors since {COMPANY.foundedYear}.
               </p>
             </div>
 
@@ -267,7 +224,7 @@ export default function ServiceAreasPage() {
                 Licensed & Insured
               </h3>
               <p className="text-xs md:text-base text-gray-600">
-                Master HVAC technicians, fully licensed.
+                NJ Master HVACR License {COMPANY.license.masterHvacrNumber}.
               </p>
             </div>
           </div>
@@ -281,7 +238,7 @@ export default function ServiceAreasPage() {
             Need Fast, Friendly Service?
           </h2>
           <p className="text-base md:text-xl text-blue-100 mb-2">
-            Serving North Jersey. Quick response. Honest pricing.
+              Based in Wharton and positioned to respond quickly throughout Morris County and North Jersey.
           </p>
           <p className="text-sm md:text-lg text-blue-200 mb-6 md:mb-8">
             Don't see your town? Call us!
@@ -294,11 +251,11 @@ export default function ServiceAreasPage() {
               Request Estimate
             </Link>
             <a
-              href="tel:+12017875657"
+              href={COMPANY.phone.href}
               className="bg-white/10 backdrop-blur text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg border-2 border-white hover:bg-white/20 transition inline-flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               <Phone className="w-4 h-4 md:w-5 md:h-5" />
-              Call (201) 787-5657
+              Call {COMPANY.phone.display}
             </a>
           </div>
         </div>

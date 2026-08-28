@@ -3,6 +3,7 @@ import Offers from "@/components/Offers";
 import SizingTool from "@/components/SizingTool";
 import Link from "next/link";
 import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets, AlertTriangle } from "lucide-react";
+import { COMPANY } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "Air2Cool | AC Repair & HVAC Service | Morris County NJ",
@@ -245,7 +246,7 @@ export default function HomePage() {
 
             {/* Subheadline with urgency */}
             <p className="text-lg sm:text-xl md:text-2xl text-gray-100 font-semibold mb-3 md:mb-4">
-              Same-Day Service • No Upsell BS • 26+ Years Trusted
+              Same-Day Appointments May Be Available • No Upsell BS • Serving Since {COMPANY.foundedYear}
             </p>
             
             <p className="text-base md:text-lg text-gray-300 max-w-2xl leading-relaxed mb-6 md:mb-8">
@@ -264,7 +265,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">5.0 Google Rating</div>
-                  <div className="hidden sm:block text-xs text-gray-300">270+ Reviews</div>
+                  <div className="hidden sm:block text-xs text-gray-300">300+ Reviews</div>
                 </div>
               </Link>
 
@@ -343,7 +344,7 @@ export default function HomePage() {
             {/* Urgency Text - HIDDEN ON MOBILE */}
             <p className="hidden md:flex mt-6 text-sm text-yellow-300 font-semibold items-center gap-2">
               <Zap className="w-4 h-4" />
-              Emergency calls answered in under 5 minutes
+              24/7 emergency HVAC service
             </p>
           </div>
         </div>
@@ -738,7 +739,7 @@ export default function HomePage() {
             {/* About Us */}
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 md:p-8 text-white shadow-2xl">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
-                26+ Years of Excellence
+                Serving North Jersey Since {COMPANY.foundedYear}
               </h2>
               <p className="text-purple-100 mb-6">
                 Family owned since 1998. Learn about our commitment to North Jersey.
@@ -791,7 +792,7 @@ export default function HomePage() {
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">26+ Years Experience</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Serving Since {COMPANY.foundedYear}</h3>
                     <p className="text-gray-600">Family owned and operated since 1998, headquartered in Wharton, NJ. Nearly three decades of keeping Morris County and North Jersey comfortable.</p>
                   </div>
                 </div>
@@ -801,7 +802,7 @@ export default function HomePage() {
                     <Star className="w-6 h-6 text-white fill-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">270+ 5-Star Reviews</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">300+ 5-Star Reviews</h3>
                     <p className="text-gray-600">Perfect Google rating. Real customers, real results. Our reputation speaks for itself.</p>
                   </div>
                 </div>
@@ -811,8 +812,8 @@ export default function HomePage() {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Licensed Master Technicians</h3>
-                    <p className="text-gray-600">All work performed by certified professionals. Fully licensed and insured in NJ.</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Licensed &amp; Insured</h3>
+                    <p className="text-gray-600">NJ Master HVACR License #{COMPANY.license.masterHvacrNumber}. Work is performed through Air2Cool&apos;s licensed HVACR operation by trained technicians.</p>
                   </div>
                 </div>
 

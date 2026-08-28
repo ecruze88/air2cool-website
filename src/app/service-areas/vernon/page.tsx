@@ -91,7 +91,7 @@ const SERVICES = [
   { name: "AC Installation", href: "/services/cooling-installation", desc: "Energy-efficient systems with 0% financing." },
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 const NEARBY = [
@@ -151,7 +151,7 @@ export default function VernonPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -216,7 +216,7 @@ export default function VernonPage() {
               All HVAC Services in Vernon
             </h2>
             <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -260,13 +260,13 @@ export default function VernonPage() {
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Reviews",
+                  title: "300+ Five-Star Reviews",
                   body: "Trusted across Sussex County and North NJ for over 26 years. Real reviews, real customers.",
                 },
                 {
                   icon: <Shield className="w-6 h-6 text-green-600" />,
-                  title: "Licensed Master Technicians",
-                  body: "NJ-licensed master HVAC technicians on every job. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,

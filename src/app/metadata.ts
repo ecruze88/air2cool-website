@@ -142,7 +142,6 @@ export const localBusinessSchema = {
   "email": "air2cool1@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Wharton",
     "addressLocality": "Wharton",
     "addressRegion": "NJ",
     "postalCode": "07885",
@@ -288,10 +287,6 @@ export const localBusinessSchema = {
     "https://www.youtube.com/@air2cool831",
     "https://www.tiktok.com/@air2cool.com0"
   ],
-  "founder": {
-    "@type": "Person",
-    "name": "Hector"
-  },
   "foundingDate": "1998",
   "slogan": "Clean installs, honest pricing, fast service",
   "serviceArea": {
@@ -301,7 +296,6 @@ export const localBusinessSchema = {
       "latitude": "40.8932",
       "longitude": "-74.5815"
     },
-    "geoRadius": "50000" // 50km service radius
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",

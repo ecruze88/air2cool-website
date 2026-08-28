@@ -59,7 +59,7 @@ const schema = {
           "name": "How quickly can Air2Cool respond in Mine Hill NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Mine Hill is literally next door to our Wharton base — most addresses get a technician on-site in under 10 minutes. For emergency calls, we're available 24/7.",
+            "text": "Mine Hill is next to our Wharton base, and 24/7 emergency HVAC service is available. Response times vary based on technician availability, traffic, weather, and call volume.",
           },
         },
         {
@@ -91,7 +91,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Mini Split", href: "/services/mini-split", desc: "Ductless mini-split installs & service." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 export default function MineHillPage() {
@@ -144,7 +144,7 @@ export default function MineHillPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -165,7 +165,7 @@ export default function MineHillPage() {
             <div className="text-base text-gray-700 space-y-4 leading-relaxed">
               <p>
                 Mine Hill is literally next door to Wharton — we can be at most Mine Hill addresses in
-                under 10 minutes. That kind of proximity matters when your AC goes out on a 95-degree
+                nearby in Wharton. That proximity matters when your AC goes out on a 95-degree
                 day or your furnace stops working overnight.
               </p>
               <p>
@@ -205,7 +205,7 @@ export default function MineHillPage() {
               All HVAC Services in Mine Hill
             </h2>
             <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -239,18 +239,18 @@ export default function MineHillPage() {
               {[
                 {
                   icon: <Shield className="w-6 h-6 text-blue-600" />,
-                  title: "Licensed Master Techs",
-                  body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Reviews",
+                  title: "300+ Five-Star Reviews",
                   body: "Real customers across Morris County and North Jersey. Check our Google reviews before you call.",
                 },
                 {
                   icon: <Clock className="w-6 h-6 text-red-600" />,
                   title: "24/7 Emergency Service",
-                  body: "We answer at 2 AM. Under 10 minutes from our Wharton base to most Mine Hill addresses.",
+                  body: "Call any time for 24/7 emergency HVAC service. Response timing depends on technician availability and current conditions.",
                 },
                 {
                   icon: <Wrench className="w-6 h-6 text-green-600" />,
@@ -259,8 +259,8 @@ export default function MineHillPage() {
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-                  title: "0% Financing Up to $25K",
-                  body: "Same-day approval on most applications. Don't delay comfort over budget.",
+                  title: "0% Financing Up to $25,000",
+                  body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
                 },
                 {
                   icon: <MapPin className="w-6 h-6 text-purple-600" />,
@@ -352,7 +352,7 @@ export default function MineHillPage() {
               {[
                 {
                   q: "How quickly can Air2Cool respond in Mine Hill NJ?",
-                  a: "Mine Hill is literally next door to our Wharton base — most addresses get a technician on-site in under 10 minutes. For emergency calls, we're available 24/7.",
+                  a: "Mine Hill is next to our Wharton base, and 24/7 emergency HVAC service is available. Response times vary based on technician availability, traffic, weather, and call volume.",
                 },
                 {
                   q: "Do you handle commercial HVAC in Mine Hill?",
@@ -379,7 +379,7 @@ export default function MineHillPage() {
               Need HVAC Help in Mine Hill?
             </h2>
             <p className="text-blue-100 mb-8 text-base md:text-lg">
-              Call us or fill out the form — we respond fast, day or night. Under 10 minutes from most Mine Hill addresses.
+              Call for 24/7 emergency HVAC service or request service online. Response times vary based on technician availability, traffic, weather, and call volume.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a

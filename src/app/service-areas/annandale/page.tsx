@@ -19,7 +19,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Commercial Refrigeration", href: "/services/commercial-refrigeration", desc: "Coolers & freezers for businesses." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 export default function AnnandaLePage() {
@@ -65,7 +65,7 @@ export default function AnnandaLePage() {
         <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
             { value: "5.0 ★", label: "Google Rating" },
-            { value: "270+", label: "5-Star Reviews" },
+            { value: "300+", label: "5-Star Reviews" },
             { value: "Since 1998", label: "Family Owned" },
             { value: "24/7", label: "Emergency Service" },
           ].map((s) => (
@@ -84,7 +84,7 @@ export default function AnnandaLePage() {
             HVAC Services in Annandale
           </h2>
           <p className="text-center text-gray-500 mb-10 text-sm md:text-base">
-            All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {SERVICES.map((s) => (
@@ -117,7 +117,7 @@ export default function AnnandaLePage() {
               Annandale is a community within Clinton Township in central Hunterdon County, surrounded by the scenic hills and open farmland of western New Jersey. The area sits near landmarks like the Spruce Run Reservoir and Round Valley Reservoir, popular destinations that reflect the natural character of the region. Homes in Annandale range from older farmhouses and historic properties to suburban-style neighborhoods, many of which rely on boilers, oil furnaces, and aging central AC systems that require knowledgeable technicians — not cookie-cutter HVAC solutions.
             </p>
             <p>
-              Air2Cool Heating &amp; Cooling has served Annandale, Clinton Township, and all of Hunterdon County since 1998. Our licensed master technicians are experienced with every type of heating and cooling equipment — hydronic boilers, steam systems, heat pumps, central air, and ductless mini-splits. Whether your furnace stops working on a January night or your AC can't keep up during a July heat wave, we respond fast. Same-day appointments are available throughout Annandale, Clinton, Lebanon, and High Bridge, and our 24/7 emergency line is always staffed.
+              Air2Cool Heating &amp; Cooling has served Annandale, Clinton Township, and Hunterdon County since 1998. Our trained technicians service hydronic boilers, steam systems, heat pumps, central air, and ductless mini-splits through Air2Cool&apos;s licensed HVACR operation. Same-day appointments may be available throughout Annandale, Clinton, Lebanon, and High Bridge, depending on technician availability and current conditions. Call our 24/7 emergency line whenever urgent HVAC help is needed.
             </p>
             <p>
               We also offer complete HVAC system replacements with 0% APR financing up to $25,000 and a free professional house cleaning with every new installation. For more information about service in your area, see our{" "}
@@ -149,7 +149,7 @@ export default function AnnandaLePage() {
               },
               {
                 q: "Can you handle boiler and oil furnace repair in Annandale, NJ?",
-                a: "Absolutely. Many Annandale and Clinton Township homes have older boilers and oil furnaces. Our licensed master technicians are experienced with all types of heating systems — hydronic boilers, steam systems, oil and gas furnaces — and can diagnose and repair them quickly.",
+                a: "Yes. Many Annandale and Clinton Township homes have older boilers and oil furnaces. Air2Cool's trained technicians have experience with hydronic boilers, steam systems, and oil and gas furnaces through our licensed HVACR operation.",
               },
               {
                 q: "Do you install ductless mini-split systems in Annandale?",
@@ -173,11 +173,11 @@ export default function AnnandaLePage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: <Shield className="w-6 h-6 text-blue-600" />, title: "Licensed Master Techs", body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts." },
-              { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "270+ Five-Star Reviews", body: "Real customers across North Jersey. Check our Google reviews before you call." },
+              { icon: <Shield className="w-6 h-6 text-blue-600" />, title: "Licensed & Insured", body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians." },
+              { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "300+ Five-Star Reviews", body: "Real customers across North Jersey. Check our Google reviews before you call." },
               { icon: <Clock className="w-6 h-6 text-red-600" />, title: "24/7 Emergency Service", body: "We answer at 2 AM because your furnace doesn't care what day it is." },
-              { icon: <Wrench className="w-6 h-6 text-green-600" />, title: "Free House Cleaning", body: "Every new system install includes a complimentary professional house cleaning." },
-              { icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "0% Financing Up to $25K", body: "Same-day approval on most applications. Don't delay comfort over budget." },
+              { icon: <Wrench className="w-6 h-6 text-green-600" />, title: "Free House Cleaning", body: "Every qualifying new system installation includes a complimentary professional house cleaning." },
+              { icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "0% Financing Up to $25,000", body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms." },
               { icon: <MapPin className="w-6 h-6 text-purple-600" />, title: "Local Since 1998", body: "Family-owned out of Wharton, NJ. We're your neighbors, not a call center." },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 items-start">

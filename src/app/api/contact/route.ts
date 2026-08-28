@@ -99,7 +99,7 @@ export async function POST(request: NextRequest) {
                 <h1 style="margin: 0; font-size: 24px;">🚨 EMERGENCY SERVICE REQUEST</h1>
               </div>
               <div class="content">
-                <div class="urgent">⚠️ URGENT - RESPONSE NEEDED WITHIN 2 HOURS</div>
+                <div class="urgent">⚠️ URGENT - PROMPT RESPONSE REQUESTED</div>
                 
                 <div class="field">
                   <div class="label">Customer Name:</div>
@@ -144,7 +144,7 @@ export async function POST(request: NextRequest) {
                 </div>
                 
                 <div style="margin-top: 20px; padding: 15px; background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 4px;">
-                  <strong>⏰ Action Required:</strong> Call customer within 2 hours at <a href="tel:${phone}" style="color: #dc2626; font-weight: bold;">${phone || email}</a>
+                  <strong>⏰ Action Required:</strong> Call customer as soon as practical at <a href="tel:${phone}" style="color: #dc2626; font-weight: bold;">${phone || email}</a>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@ export async function POST(request: NextRequest) {
                 </div>
                 
                 <div style="margin-top: 20px; padding: 15px; background: #dbeafe; border-left: 4px solid #2563eb; border-radius: 4px;">
-                  <strong>📅 Next Step:</strong> Contact customer within 24 hours to schedule free in-home estimate.
+                  <strong>📅 Next Step:</strong> Contact customer to schedule a free in-home estimate.
                 </div>
               </div>
             </div>

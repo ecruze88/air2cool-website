@@ -280,7 +280,7 @@ export default function RootLayout({
                   ))}
                 </div>
                 <span className="font-bold text-lg">5.0</span>
-                <span className="text-xs opacity-80">• 270+ Reviews</span>
+                <span className="text-xs opacity-80">• 300+ Reviews</span>
               </div>
 
               {/* Desktop: Original layout */}
@@ -316,7 +316,7 @@ export default function RootLayout({
                 <div className="w-px h-16 bg-white/30"></div>
 
                 <div className="text-center">
-                  <p className="text-3xl font-extrabold mb-1.5">270+</p>
+                  <p className="text-3xl font-extrabold mb-1.5">300+</p>
                   <p className="text-sm font-semibold">Google Reviews</p>
                   <p className="text-xs opacity-90 mt-1">Real customers, real results</p>
                 </div>

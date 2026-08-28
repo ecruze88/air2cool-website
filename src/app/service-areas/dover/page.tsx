@@ -59,7 +59,7 @@ const schema = {
           "name": "Do you offer same-day HVAC service in Dover NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — same-day service is standard for most calls in Dover. We're based in neighboring Wharton, 10–15 minutes away, and we keep common parts stocked on our trucks.",
+            "text": "Same-day appointments may be available in Dover. We're based in neighboring Wharton, and actual response timing depends on technician availability, traffic, weather, and call volume.",
           },
         },
         {
@@ -91,7 +91,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Commercial Refrigeration", href: "/services/commercial-refrigeration", desc: "Coolers & freezers for businesses." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 export default function DoverPage() {
@@ -144,7 +144,7 @@ export default function DoverPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -165,7 +165,7 @@ export default function DoverPage() {
             <div className="text-base text-gray-700 space-y-4 leading-relaxed">
               <p>
                 Dover is one of our closest service areas — we&apos;re literally neighboring towns, and
-                most Dover calls get a technician on-site within 10–15 minutes. Our Wharton base puts us
+                our Wharton base keeps us close to Dover. Actual response timing depends on technician availability and current conditions. Our location puts us
                 right around the corner from Blackwell Street and the downtown area.
               </p>
               <p>
@@ -206,7 +206,7 @@ export default function DoverPage() {
               All HVAC Services in Dover
             </h2>
             <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -240,12 +240,12 @@ export default function DoverPage() {
               {[
                 {
                   icon: <Shield className="w-6 h-6 text-blue-600" />,
-                  title: "Licensed Master Techs",
-                  body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Reviews",
+                  title: "300+ Five-Star Reviews",
                   body: "Real customers across Morris County and North Jersey. Check our Google reviews before you call.",
                 },
                 {
@@ -260,8 +260,8 @@ export default function DoverPage() {
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-                  title: "0% Financing Up to $25K",
-                  body: "Same-day approval on most applications. Don't delay comfort over budget.",
+                  title: "0% Financing Up to $25,000",
+                  body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
                 },
                 {
                   icon: <MapPin className="w-6 h-6 text-purple-600" />,
@@ -354,7 +354,7 @@ export default function DoverPage() {
               {[
                 {
                   q: "Do you offer same-day HVAC service in Dover NJ?",
-                  a: "Yes — same-day service is standard for most calls in Dover. We're based in neighboring Wharton, 10–15 minutes away, and we keep common parts stocked on our trucks.",
+                  a: "Same-day appointments may be available in Dover. We're based in neighboring Wharton, and actual response timing depends on technician availability, traffic, weather, and call volume.",
                 },
                 {
                   q: "What types of heating systems do Dover homes typically have?",
@@ -381,7 +381,7 @@ export default function DoverPage() {
               Need HVAC Help in Dover?
             </h2>
             <p className="text-blue-100 mb-8 text-base md:text-lg">
-              Call us or fill out the form — we respond fast, day or night. 10–15 minutes from most Dover addresses.
+              Call for 24/7 emergency HVAC service or request service online. Response times vary based on technician availability, traffic, weather, and call volume.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a

@@ -27,7 +27,7 @@ export default function BergenCountyPage() {
             HVAC Service Across Bergen County
           </h1>
           <p className="text-blue-100 text-base md:text-xl mb-8 max-w-2xl mx-auto">
-            Hackensack, Paramus, Ridgewood, Fort Lee, Mahwah, Tenafly and all 70 Bergen County municipalities — Air2Cool has served the county since 1998. PSE&G service area. 270+ five-star reviews.
+            Hackensack, Paramus, Ridgewood, Fort Lee, Mahwah, Tenafly and all 70 Bergen County municipalities — Air2Cool has served the county since 1998. PSE&G service area. 300+ five-star reviews.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:+12017875657" className="bg-red-600 hover:bg-red-700 text-white px-7 py-3.5 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2">
@@ -84,7 +84,7 @@ export default function BergenCountyPage() {
           </h2>
           <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
             <p>Bergen County is New Jersey's most populous county, with everything from high-rises in Fort Lee to sprawling estates in Saddle River and family neighborhoods in Fair Lawn and Wyckoff. Air2Cool has navigated this entire range since 1998 — servicing condo units, commercial buildings, and single-family homes with equal expertise.</p>
-            <p>Our Bergen County customers appreciate our fast response — we typically have a tech on-site within hours for urgent calls. We carry parts for most major brands on our service vehicles, meaning the majority of repairs are completed on the first visit. PSE&G rebates available on qualifying equipment.</p>
+            <p>Air2Cool provides 24/7 emergency HVAC service in Bergen County. Response timing depends on technician availability, traffic, weather, and call volume. We carry common parts for many major brands on our service vehicles. PSE&amp;G rebates may be available on qualifying equipment, subject to current program terms.</p>
             <p>We offer 0% financing up to $25,000, free house cleaning with new system installs, and discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
           </div>
         </div>

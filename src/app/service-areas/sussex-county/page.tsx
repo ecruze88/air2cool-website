@@ -28,7 +28,7 @@ export default function SussexCountyPage() {
           </h1>
           <p className="text-blue-100 text-base md:text-xl mb-8 max-w-2xl mx-auto">
             From Newton to Vernon, Sparta to Hopatcong — Air2Cool has served Sussex County since
-            1998. JCP&L service area covered. Licensed master techs, 270+ five-star reviews.
+            1998. JCP&amp;L service area covered. Licensed &amp; insured — NJ Master HVACR License #19HC00847000. 300+ 5-Star Google Reviews.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:+12017875657" className="bg-red-600 hover:bg-red-700 text-white px-7 py-3.5 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2">

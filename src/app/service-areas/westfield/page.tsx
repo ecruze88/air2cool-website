@@ -19,7 +19,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Commercial Refrigeration", href: "/services/commercial-refrigeration", desc: "Coolers & freezers for businesses." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 export default function WestfieldPage() {
@@ -65,7 +65,7 @@ export default function WestfieldPage() {
         <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
             { value: "5.0 ★", label: "Google Rating" },
-            { value: "270+", label: "5-Star Reviews" },
+            { value: "300+", label: "5-Star Reviews" },
             { value: "Since 1998", label: "Family Owned" },
             { value: "24/7", label: "Emergency Service" },
           ].map((s) => (
@@ -84,7 +84,7 @@ export default function WestfieldPage() {
             HVAC Services in Westfield
           </h2>
           <p className="text-center text-gray-500 mb-10 text-sm md:text-base">
-            All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {SERVICES.map((s) => (
@@ -117,10 +117,10 @@ export default function WestfieldPage() {
               Westfield is one of Union County's most desirable communities, known for its vibrant downtown along Elm Street, excellent schools, and beautiful residential neighborhoods filled with Colonial, Tudor, and Victorian-style homes. Many of these properties — particularly those near Mindowaskin Park, in the Garden District, and along the tree-lined streets north of the train station — have older, complex HVAC systems including steam boilers, hydronic baseboard heat, and aging central air equipment that demands experienced, knowledgeable care.
             </p>
             <p>
-              Air2Cool Heating &amp; Cooling has been serving Westfield and all of Union County since 1998. Our licensed master technicians are trained to diagnose and repair every type of heating and cooling system found in Westfield homes — from vintage steam radiator systems to modern high-efficiency heat pumps and ductless mini-splits. Whether it's a boiler making banging noises, an AC that stopped cooling before a heat wave, or a full system replacement, we respond fast with same-day appointments available and 24/7 emergency service.
+              Air2Cool Heating &amp; Cooling has served Westfield and Union County since 1998. Our trained technicians work through Air2Cool&apos;s licensed HVACR operation on systems ranging from vintage steam radiators to modern heat pumps and ductless mini-splits. Same-day appointments may be available depending on technician availability and current conditions, and 24/7 emergency HVAC service is available.
             </p>
             <p>
-              New system installations include 0% APR financing up to $25,000 and a complimentary professional house cleaning. For full coverage details, see our{" "}
+              Qualifying new system installations include a complimentary professional house cleaning, and 0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms. For service details, see our{" "}
               <Link href="/service-areas/union-county" className="text-blue-600 hover:underline font-semibold">Union County HVAC page</Link>.
             </p>
           </div>
@@ -149,7 +149,7 @@ export default function WestfieldPage() {
               },
               {
                 q: "Can Air2Cool replace my central AC system in Westfield?",
-                a: "Absolutely. We install energy-efficient central AC systems, ductless mini-splits, and complete HVAC system replacements throughout Westfield. Free estimates are available, and we offer 0% APR financing up to $25,000. Every installation includes a complimentary professional house cleaning.",
+                a: "Yes. We install energy-efficient central AC systems, ductless mini-splits, and complete HVAC system replacements throughout Westfield. Free estimates are available. 0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms. Every qualifying new system installation includes a complimentary professional house cleaning.",
               },
               {
                 q: "What Union County towns do you serve near Westfield?",
@@ -173,11 +173,11 @@ export default function WestfieldPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: <Shield className="w-6 h-6 text-blue-600" />, title: "Licensed Master Techs", body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts." },
-              { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "270+ Five-Star Reviews", body: "Real customers across North Jersey. Check our Google reviews before you call." },
+              { icon: <Shield className="w-6 h-6 text-blue-600" />, title: "Licensed & Insured", body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians." },
+              { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "300+ Five-Star Reviews", body: "Real customers across North Jersey. Check our Google reviews before you call." },
               { icon: <Clock className="w-6 h-6 text-red-600" />, title: "24/7 Emergency Service", body: "We answer at 2 AM because your furnace doesn't care what day it is." },
-              { icon: <Wrench className="w-6 h-6 text-green-600" />, title: "Free House Cleaning", body: "Every new system install includes a complimentary professional house cleaning." },
-              { icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "0% Financing Up to $25K", body: "Same-day approval on most applications. Don't delay comfort over budget." },
+              { icon: <Wrench className="w-6 h-6 text-green-600" />, title: "Free House Cleaning", body: "Every qualifying new system installation includes a complimentary professional house cleaning." },
+              { icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "0% Financing Up to $25,000", body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms." },
               { icon: <MapPin className="w-6 h-6 text-purple-600" />, title: "Local Since 1998", body: "Family-owned out of Wharton, NJ. We're your neighbors, not a call center." },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 items-start">

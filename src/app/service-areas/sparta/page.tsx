@@ -91,7 +91,7 @@ const SERVICES = [
   { name: "Heating Installation", href: "/services/heating-installation", desc: "New furnace or boiler with warranty." },
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 const NEARBY = [
@@ -127,7 +127,7 @@ export default function SpartaPage() {
             </h1>
             <p className="text-base md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
               Air2Cool serves Sparta Township and the Lake Mohawk community for AC repair, heating service,
-              and ductless mini split installations. Licensed master technicians since 1998.
+              and ductless mini split installations through our licensed HVACR operation. Serving North Jersey since 1998.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
@@ -151,7 +151,7 @@ export default function SpartaPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -183,7 +183,7 @@ export default function SpartaPage() {
                 <strong>Lake Mohawk</strong> properties often need specialized HVAC work. Many of the original lake cottages have tight mechanical spaces, older equipment that hasn&apos;t been touched in years, and the proximity to water creates persistent humidity challenges that affect both air quality and system lifespan. We&apos;re familiar with the layout and constraints these properties present, and we come equipped to work in tight spaces without cutting corners.
               </p>
               <p>
-                Sparta&apos;s elevation and exposure mean heating systems work hard all winter — longer, colder heating seasons than you&apos;d see in towns closer to the coast. <Link href="/services/heating-repair" className="text-blue-600 hover:underline">Furnace and boiler reliability</Link> is critical here, and deferred maintenance catches up with systems quickly once temperatures drop in November. We recommend annual tune-ups for any Sparta home — it&apos;s the most cost-effective way to avoid an emergency call in January.
+                Sparta&apos;s elevation and exposure mean heating systems work hard all winter — longer, colder heating seasons than you&apos;d see in towns closer to the coast. <Link href="/services/heating-repair" className="text-blue-600 hover:underline">Furnace and boiler reliability</Link> is critical here, and deferred maintenance can catch up with systems once temperatures drop. Annual heating maintenance can identify developing issues and help reduce the risk of an emergency call.
               </p>
               <p>
                 <Link href="/services/mini-split" className="text-blue-600 hover:underline">Ductless mini splits</Link> have become increasingly popular in Sparta for lake homes and property additions where running new ductwork isn&apos;t practical. Whether it&apos;s a sunroom addition, a converted cottage, or a home that simply never had central air, mini splits offer an efficient solution that handles both heating and cooling without major renovation work. Modern units are rated for cold-weather operation and hold up well in Sussex County winters.
@@ -216,7 +216,7 @@ export default function SpartaPage() {
               All HVAC Services in Sparta
             </h2>
             <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -260,13 +260,13 @@ export default function SpartaPage() {
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Reviews",
+                  title: "300+ Five-Star Reviews",
                   body: "Trusted by Sussex County homeowners since 1998. Real reviews from real customers — check Google.",
                 },
                 {
                   icon: <Shield className="w-6 h-6 text-green-600" />,
-                  title: "Licensed Master Technicians",
-                  body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,

@@ -79,15 +79,15 @@ export default function MaintenanceContractForm() {
             Thank You!
           </h2>
           <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8">
-            We&apos;ve received your maintenance contract request. Our team will send you a customized contract within 24 hours.
+            Submit your system information and our team will review it and contact you with the appropriate maintenance-plan options and next steps.
           </p>
           <div className="bg-blue-50 rounded-xl p-5 md:p-6 border border-blue-200 mb-6 md:mb-8">
             <p className="text-sm md:text-base text-gray-700 text-left">
               <strong>What&apos;s Next?</strong><br />
               1. We&apos;ll review your equipment information<br />
-              2. Prepare your custom maintenance contract<br />
-              3. Email you the contract for signature<br />
-              4. Schedule your first maintenance visit
+              2. Review the property type, system count, and service requirements<br />
+              3. Contact you with the appropriate plan options and next steps<br />
+              4. Discuss seasonal preparation, operational checks, and early problem detection for the covered equipment
             </p>
           </div>
           <a

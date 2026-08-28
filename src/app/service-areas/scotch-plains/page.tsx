@@ -83,7 +83,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Mini Split", href: "/services/mini-split", desc: "Ductless mini-split installs & service." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 export default function ScotchPlainsPage() {
@@ -112,7 +112,7 @@ export default function ScotchPlainsPage() {
             </h1>
             <p className="text-base md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
               Air2Cool provides AC repair, AC installation, and full HVAC service in Scotch Plains and
-              Fanwood. Family-owned since 1998, licensed master technicians, same-day service available.
+              Fanwood. Family-owned since 1998 and licensed &amp; insured under NJ Master HVACR License #19HC00847000. Same-day appointments may be available depending on technician availability and current conditions.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
@@ -136,7 +136,7 @@ export default function ScotchPlainsPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -164,7 +164,7 @@ export default function ScotchPlainsPage() {
                 Air2Cool serves Scotch Plains for <strong>AC repair</strong>,{" "}
                 <strong>AC installation</strong>, and full <strong>HVAC replacement</strong>. Whether
                 your central air conditioner stopped working, is running but not cooling, or you&apos;re
-                ready to upgrade to a more efficient system, our licensed master technicians can help.
+                ready to upgrade to a more efficient system, Air2Cool&apos;s trained technicians can help through our licensed HVACR operation.
               </p>
               <p>
                 Scotch Plains is a Union County town about 45 minutes from our Wharton base — well within
@@ -208,7 +208,7 @@ export default function ScotchPlainsPage() {
               All HVAC Services in Scotch Plains
             </h2>
             <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -242,12 +242,12 @@ export default function ScotchPlainsPage() {
               {[
                 {
                   icon: <Shield className="w-6 h-6 text-blue-600" />,
-                  title: "Licensed Master Technicians",
-                  body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Google Reviews",
+                  title: "300+ Five-Star Google Reviews",
                   body: "Real customers across North and Central Jersey. Check our Google profile before you call.",
                 },
                 {
@@ -267,8 +267,8 @@ export default function ScotchPlainsPage() {
                 },
                 {
                   icon: <MapPin className="w-6 h-6 text-purple-600" />,
-                  title: "0% Financing Up to $25K",
-                  body: "Through the SaveGreen program. Same-day approval on most applications — make comfort affordable.",
+                  title: "0% Financing Up to $25,000",
+                  body: "Ask about current SaveGreen program options and 0% APR financing up to $25,000 for qualifying customers, subject to eligibility, approval, program availability, and applicable terms.",
                 },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4 items-start">

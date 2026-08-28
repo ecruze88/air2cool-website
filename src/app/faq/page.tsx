@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { ChevronDown, Phone, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { FEDERAL_HVAC_CREDIT_NOTE, NJ_INCENTIVE_NOTE, PROMOTIONS, RESPONSE_TIME_NOTE, SERVICE_COUNTY_LIST } from "@/config/company";
 
 const FAQ_CATEGORIES = {
   "Emergency Services": [
     {
       question: "Do you offer 24/7 emergency HVAC service?",
-      answer: "Yes! Air2Cool provides 24/7 emergency HVAC service across North New Jersey. We understand that heating and cooling emergencies don't wait for business hours. Whether your furnace stops working on Christmas Eve or your AC fails during a summer heatwave, our Licensed Master HVAC Technicians are available day or night. We typically respond within 1-2 hours for emergency calls in Morris, Sussex, Warren, Essex, Passaic, Union, and Bergen County. Call (201) 787-5657 for immediate assistance.",
+      answer: `Air2Cool provides 24/7 emergency HVAC service across ${SERVICE_COUNTY_LIST}. ${RESPONSE_TIME_NOTE} Call (201) 787-5657 for assistance.`,
       keywords: "24/7 emergency HVAC, emergency furnace repair, emergency AC repair North NJ"
     },
     {
@@ -18,7 +19,7 @@ const FAQ_CATEGORIES = {
     },
     {
       question: "How fast can you respond to emergency calls?",
-      answer: "For emergency HVAC calls in North New Jersey, we typically respond within 1-2 hours. Our response time depends on your location and current service demand, but we prioritize emergency situations involving no heat in winter, no AC with vulnerable family members, or safety issues like gas leaks.",
+      answer: `Emergency calls are prioritized based on the situation. ${RESPONSE_TIME_NOTE}`,
       keywords: "fast HVAC response time, emergency HVAC response NJ, quick furnace repair"
     }
   ],
@@ -41,7 +42,7 @@ const FAQ_CATEGORIES = {
     },
     {
       question: "Do you install new HVAC systems?",
-      answer: "Yes! We specialize in complete HVAC installations including furnaces, central AC, heat pumps, ductless mini-splits, boilers, and commercial HVAC. We provide proper sizing (Manual J calculations), professional installation, and FREE house cleaning with every install. Includes complete design, ductwork inspection, thermostat installation, permits, warranties. Financing available. Call (201) 787-5657.",
+      answer: `Yes. We install furnaces, central AC, heat pumps, ductless mini-splits, boilers, and commercial HVAC equipment. Project scope can include Manual J load calculations, ductwork review, thermostat installation, permits, and applicable warranty documentation. ${PROMOTIONS.houseCleaning} ${PROMOTIONS.financing} Call (201) 787-5657.`,
       keywords: "HVAC installation NJ, new furnace, new AC, heat pump installation"
     },
     {
@@ -72,12 +73,12 @@ const FAQ_CATEGORIES = {
     },
     {
       question: "Do you offer financing?",
-      answer: "Yes! Flexible financing through GreenSky and JCP&L programs. Options: 0% APR for 60 months, 9.99% APR for 120 months, loans $2,500-$55,000. Quick online approval. We accept all major credit cards, checks, and cash. Ask about current promotions: (201) 787-5657.",
+      answer: `${PROMOTIONS.financing} ${NJ_INCENTIVE_NOTE} Program availability and terms can change, so confirm current options before purchase. Call (201) 787-5657.`,
       keywords: "HVAC financing, 0% financing HVAC, payment plans"
     },
     {
       question: "Are there warranties on your work?",
-      answer: "Yes! All installations include manufacturer warranty (5-10 years on parts), workmanship warranty on labor, and extended warranty options. Repairs include warranty on parts and labor. We register all warranties for you and provide complete warranty documentation.",
+      answer: "Warranty coverage varies by equipment, manufacturer, repair, and project scope. We provide the applicable warranty information with your estimate or installation documents; confirm registration requirements, labor coverage, exclusions, and available extensions before approving work.",
       keywords: "HVAC warranty, furnace warranty, AC warranty, installation warranty"
     }
   ],
@@ -85,7 +86,7 @@ const FAQ_CATEGORIES = {
   "Equipment & Technology": [
     {
       question: "What is a heat pump?",
-      answer: "Heat pumps provide both heating and cooling. They move heat rather than generate it, making them 2-3x more energy efficient. Benefits: lower energy bills (up to 50% savings), year-round comfort, environmentally friendly, eligible for rebates/tax credits. Modern heat pumps work well even in cold NJ winters. Ideal for homes without gas lines. Call (201) 787-5657.",
+      answer: `Heat pumps provide both heating and cooling by moving heat rather than generating it directly. Potential benefits include year-round comfort and efficient operation when the equipment is properly selected for the home. ${NJ_INCENTIVE_NOTE} ${FEDERAL_HVAC_CREDIT_NOTE} Call (201) 787-5657 to discuss system options.`,
       keywords: "heat pump NJ, heat pump vs furnace, energy efficient heating"
     },
     {
@@ -126,8 +127,8 @@ const FAQ_CATEGORIES = {
     },
     {
       question: "Are there HVAC rebates available?",
-      answer: "Yes! NJ Clean Energy rebates (up to $3,500), Utility rebates (JCP&L, PSE&G), Federal tax credits (up to $2,000 for heat pumps, 30% geothermal), Manufacturer rebates. Requirements: minimum efficiency ratings (SEER 16+, AFUE 95%+), professional installation. We handle all paperwork. Total savings can reach $4,000-6,000. Call (201) 787-5657.",
-      keywords: "HVAC rebates NJ, energy rebates, tax credits HVAC"
+      answer: `${NJ_INCENTIVE_NOTE} Program availability, rebate amounts, financing terms, equipment requirements, and customer eligibility can change and should be confirmed before purchase. ${FEDERAL_HVAC_CREDIT_NOTE} Call (201) 787-5657 to discuss current options.`,
+      keywords: "HVAC rebates NJ, energy incentives, utility HVAC programs"
     }
   ]
 };

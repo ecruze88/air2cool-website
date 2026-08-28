@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import { RESIDENTIAL_MAINTENANCE_PLAN } from "@/config/company";
 
 type Offer = {
   title: string;
@@ -61,7 +62,7 @@ export default function OffersCarousel({
         expiresText: "Limited time offer",
         imageSrc: "/images/offers/offer-4.jpg",
         imageAlt: "HVAC equipment service",
-        details: ["Includes seasonal maintenance", "Priority scheduling","20% off all parts",""],
+        details: [...RESIDENTIAL_MAINTENANCE_PLAN.benefits],
         ctaLabel: "Request Service",
         ctaHref: "/contact",
       },

@@ -57,26 +57,26 @@ const repairs = [
 
 const serviceAreas = [
   { href: "/service-areas/wharton", town: "Wharton", time: "Home base" },
-  { href: "/service-areas/dover", town: "Dover", time: "Under 15 min from Wharton" },
-  { href: "/service-areas/rockaway", town: "Rockaway", time: "Under 15 min from Wharton" },
-  { href: "/service-areas/mine-hill", town: "Mine Hill", time: "Under 15 min from Wharton" },
-  { href: "/service-areas/mine-hill", town: "Victory Gardens", time: "Under 15 min from Wharton" },
-  { href: "/service-areas/randolph", town: "Randolph", time: "15-25 min from Wharton" },
-  { href: "/service-areas/denville", town: "Denville", time: "15-25 min from Wharton" },
-  { href: "/service-areas/roxbury", town: "Roxbury", time: "15-25 min from Wharton" },
-  { href: "/service-areas/morristown", town: "Morristown", time: "15-25 min from Wharton" },
-  { href: "/service-areas/mount-olive", town: "Mount Olive", time: "15-25 min from Wharton" },
-  { href: "/service-areas/parsippany-troy-hills", town: "Parsippany", time: "25-35 min from Wharton" },
-  { href: "/service-areas/morristown", town: "Madison", time: "25-35 min from Wharton" },
-  { href: "/service-areas/kinnelon", town: "Kinnelon", time: "25-35 min from Wharton" },
-  { href: "/service-areas/hackettstown", town: "Hackettstown", time: "25-35 min from Wharton" },
-  { href: "/service-areas/sussex-county", town: "Hopatcong", time: "25-35 min from Wharton" },
+  { href: "/service-areas/dover", town: "Dover", time: "Serving from Wharton" },
+  { href: "/service-areas/rockaway", town: "Rockaway", time: "Serving from Wharton" },
+  { href: "/service-areas/mine-hill", town: "Mine Hill", time: "Serving from Wharton" },
+  { href: "/service-areas/mine-hill", town: "Victory Gardens", time: "Serving from Wharton" },
+  { href: "/service-areas/randolph", town: "Randolph", time: "Serving Morris County" },
+  { href: "/service-areas/denville", town: "Denville", time: "Serving Morris County" },
+  { href: "/service-areas/roxbury", town: "Roxbury", time: "Serving Morris County" },
+  { href: "/service-areas/morristown", town: "Morristown", time: "Serving Morris County" },
+  { href: "/service-areas/mount-olive", town: "Mount Olive", time: "Serving Morris County" },
+  { href: "/service-areas/parsippany-troy-hills", town: "Parsippany", time: "Serving Morris County" },
+  { href: "/service-areas/morristown", town: "Madison", time: "Serving Morris County" },
+  { href: "/service-areas/kinnelon", town: "Kinnelon", time: "Serving Morris County" },
+  { href: "/service-areas/hackettstown", town: "Hackettstown", time: "Serving Warren County" },
+  { href: "/service-areas/sussex-county", town: "Hopatcong", time: "Serving Sussex County" },
 ];
 
 const faqs = [
   {
     q: "How quickly can Air2Cool respond to an AC repair call in Morris County NJ?",
-    a: "Air2Cool offers same-day AC repair throughout Morris County and North NJ. Because we are based in Wharton, most Morris County emergency calls can get a technician on-site within a few hours, and urgent calls are prioritized.",
+    a: "Same-day AC repair appointments may be available throughout Morris County and North Jersey. Actual response timing depends on technician availability, traffic, weather, and call volume. Urgent calls are prioritized when possible.",
   },
   {
     q: "Do you offer emergency AC repair in NJ?",
@@ -165,7 +165,7 @@ export default function ACRepairPage() {
               Same-Day AC Repair in North NJ - We Fix It Fast
             </h1>
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              AC stopped working? Don&apos;t wait. Air2Cool offers same-day AC repair throughout Morris County and North NJ - most calls get a technician on-site within a few hours. We&apos;ve been fixing air conditioners in North Jersey since 1998 and we answer emergency calls 24/7. Call (201) 787-5657 now.
+              AC stopped working? Air2Cool provides 24/7 emergency AC service throughout Morris County and North Jersey. Same-day appointments may be available, while response timing depends on technician availability, traffic, weather, and call volume. Serving North Jersey since 1998. Call (201) 787-5657.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <a

@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { CheckCircle, Award, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { COMPANY } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "Recent HVAC Projects | Air2Cool Installations in North NJ",
   description:
-    "See our recent HVAC installations across North New Jersey. Boilers, furnaces, AC systems, and commercial HVAC. Professional installation with 26+ years experience. Licensed & insured.",
+    `See recent Air2Cool HVAC installations across North New Jersey, including boilers, furnaces, AC systems, and commercial HVAC. Serving customers since ${COMPANY.foundedYear}. Licensed and insured under NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}.`,
 };
 
 const GALLERY_PHOTOS = [

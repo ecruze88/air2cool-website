@@ -30,19 +30,19 @@ const NOINDEX_SLUGS = new Set([
 // ─── County-level fallback copy (interpolated with town name) ─────────────────
 const COUNTY_CONTENT: Record<string, (name: string) => string> = {
   "Morris County": (name) =>
-    `Air2Cool is based right in Wharton, Morris County — which means faster response times, lower travel costs, and technicians who know ${name} and the surrounding area. Most Morris County addresses get a technician on-site within 10–25 minutes of a call.`,
+    `Air2Cool is based in Wharton, Morris County, and serves ${name} and the surrounding area. Response times vary based on technician availability, traffic, weather, and call volume.`,
   "Sussex County": (name) =>
     `Sussex County's mountain communities face harsher winters than much of NJ, and we know it. ${name} residents can count on our technicians for cold-climate heating systems, high-efficiency furnaces, and boiler work suited to the colder temperatures and older housing stock common across Sussex County.`,
   "Warren County": (name) =>
     `Western NJ gets cold — and Air2Cool has been handling Warren County heating calls since 1998. Whether it's a furnace replacement in ${name} or an emergency heat call in the middle of winter, we deliver reliable HVAC service to western NJ with 24/7 availability.`,
   "Essex County": (name) =>
-    `Air2Cool extends its North Jersey coverage into Essex County including ${name} for both residential and commercial HVAC needs. Our team handles AC repair, heating service, and system installations — with 24/7 emergency availability and licensed master technicians on every job.`,
+    `Air2Cool extends its North Jersey coverage into Essex County including ${name} for residential and commercial HVAC needs. Our trained technicians handle AC repair, heating service, and system installations through Air2Cool's licensed HVACR operation, with 24/7 emergency availability.`,
   "Bergen County": (name) =>
     `Bergen County homeowners and businesses trust Air2Cool for AC installation, repair, and heating service across North Jersey. We cover ${name} and the surrounding Bergen County area for full system replacements, emergency repairs, and annual maintenance.`,
   "Union County": (name) =>
-    `Air2Cool serves Union County including ${name} for HVAC repair and installation. Whether you need an AC system replaced or an emergency furnace repair, our licensed master technicians are available 24/7 throughout Union County.`,
+    `Air2Cool serves Union County including ${name} for HVAC repair and installation. Whether you need an AC system replaced or an emergency furnace repair, our 24/7 emergency HVAC service is available throughout Union County.`,
   "Passaic County": (name) =>
-    `Passaic County falls squarely in our North Jersey service area. From ${name} to West Milford, our licensed master technicians handle AC repairs, furnace installations, and emergency HVAC service for homeowners and businesses throughout the county.`,
+    `Passaic County falls squarely in our North Jersey service area. From ${name} to West Milford, Air2Cool's trained technicians handle AC repairs, furnace installations, and emergency HVAC service through our licensed HVACR operation.`,
   "Hunterdon County": (name) =>
     `Air2Cool serves Hunterdon County including ${name} for both residential and commercial HVAC needs. Older rural homes and newer developments alike benefit from our honest assessments, licensed technicians, and 0% financing on system replacements.`,
   "Somerset County": (name) =>
@@ -204,7 +204,7 @@ const TOWN_UNIQUE_CONTENT: Record<string, string> = {
   denville:
     "Denville's lakefront communities — Indian Lake, Openaki, and others — can present unique HVAC challenges: seasonal homes converting to year-round use often need full system evaluations, and the humidity near the water means air quality and dehumidification are frequent topics. We've done dozens of mini split installs and full HVAC overhauls in the lake communities and know what works.",
   randolph:
-    "Randolph's newer residential developments tend to have modern high-efficiency systems, but we also service plenty of older homes in the Ironia and Center Grove areas with original equipment that's overdue for an upgrade. We're just a few miles away in Wharton, so response times to Randolph are among our fastest in Morris County.",
+    "Randolph's newer residential developments tend to have modern high-efficiency systems, but we also service plenty of older homes in the Ironia and Center Grove areas with original equipment that's overdue for an upgrade. We're based nearby in Wharton and regularly serve Randolph and surrounding Morris County communities.",
 
   // New entries for towns without static pages
   "victory-gardens":
@@ -218,11 +218,11 @@ const TOWN_UNIQUE_CONTENT: Record<string, string> = {
   jefferson:
     "Jefferson is one of Morris County's larger townships, spanning communities like Oak Ridge, Weldon, and portions of the Lake Hopatcong shoreline. The range of housing here is significant — lakefront properties, rural homes on larger lots, and suburban neighborhoods all within the same general area. Oil heat is still common in the more rural sections of the township, and we handle conversions to high-efficiency gas as well as full heat pump installs for homeowners looking to electrify. For the lake communities, we know the specific challenges of high-humidity environments and seasonal-to-year-round conversions.",
   stanhope:
-    "Stanhope is a small Sussex County borough tucked between the Musconetcong River and Lake Musconetcong. The older homes here — many dating to the early to mid 20th century — often have original boiler systems or older gas furnaces that are well past their efficient years. We do a lot of honest system assessments in places like Stanhope: sometimes a well-maintained older boiler has life left, sometimes it's more cost-effective to replace. We'll tell you which is which and give you the numbers without pressure. Emergency HVAC calls from Stanhope typically get a technician on-site in under 30 minutes from our Wharton base.",
+    "Stanhope is a small Sussex County borough tucked between the Musconetcong River and Lake Musconetcong. The older homes here — many dating to the early to mid 20th century — often have original boiler systems or older gas furnaces that are well past their efficient years. We provide straightforward system assessments and explain whether repair or replacement makes more sense. We serve Stanhope from our Wharton base, with response timing based on technician availability and current conditions.",
   allamuchy:
     "Allamuchy Township covers a large rural area in Warren County, including Allamuchy Village and the Panther Valley planned community. The township's elevation and exposure mean winter heating loads can be substantial, and propane is common where natural gas hasn't reached the more rural sections. We handle propane-fueled systems as well as conversions, and for homes in Panther Valley, we know the layout and typical system configurations well. Whether it's an emergency heating call in January or a spring AC tune-up, we cover all of Allamuchy Township from our base in Wharton.",
   mendham:
-    "Mendham Borough and Township together form one of Morris County's most established communities, with large custom homes on significant lots alongside older village-style homes near downtown. The housing stock here includes high-end construction with zoned HVAC systems and multi-zone mini splits, as well as older estate-style homes with more complex original systems — including oil boilers and steam heat that require real expertise to service properly. Our licensed master technicians are comfortable working on high-end equipment and will give you honest assessments, not sales pressure.",
+    "Mendham Borough and Township together form one of Morris County's most established communities, with large custom homes on significant lots alongside older village-style homes near downtown. The housing stock here includes high-end construction with zoned HVAC systems and multi-zone mini splits, as well as older estate-style homes with more complex original systems — including oil boilers and steam heat that require real expertise to service properly. Air2Cool's trained technicians work on this equipment through our licensed HVACR operation and provide straightforward assessments.",
   chester:
     "Chester has a charming historic downtown alongside a broader township with large residential lots and older farmhouses converted to single-family homes. The varied housing stock — from 19th-century structures to newer custom builds on Chester Township's rural roads — means we work on everything from high-efficiency heat pumps to cast iron boilers that have been running for 40 years. We assess every system honestly and give you the repair-vs-replace math directly. Chester is about 35 minutes from our Wharton location, and we service the area regularly throughout the year.",
   "long-valley":
@@ -240,23 +240,23 @@ const TOWN_UNIQUE_CONTENT: Record<string, string> = {
   "florham-park":
     "Florham Park has a well-established residential community with a range of home styles, from mid-century colonials to larger newer builds. Many of the older homes have systems that have been well maintained but are ready for a modern upgrade — particularly on the cooling side, where an aging R-22 refrigerant system can be replaced with a new high-efficiency unit that delivers better comfort at lower operating costs. We give Florham Park homeowners the same honest, licensed service we give everywhere: no scare tactics, just clear information and fair pricing.",
   "morris-plains":
-    "Morris Plains is a small but well-established Morris County borough with older residential streets and commercial development along the Route 10 corridor. The borough's proximity to Morristown means we're often in the area, and turnaround times for service calls here are quick — typically under 30 minutes from our Wharton base. Older homes in the residential areas frequently have aging forced-air systems, and we handle everything from diagnostic calls to full system replacements with the same licensed, no-pressure approach we apply everywhere in the county.",
+    "Morris Plains is a small but well-established Morris County borough with older residential streets and commercial development along the Route 10 corridor. The borough's proximity to Morristown means we're often in the area, though response timing depends on technician availability and current conditions. Older homes in the residential areas frequently have aging forced-air systems, and we handle everything from diagnostic calls to full system replacements through our licensed HVACR operation.",
   "lincoln-park":
     "Lincoln Park is a Morris County borough situated along the Pompton River, with a compact residential core and commercial areas along Route 202. The area's older housing stock includes many homes with systems dating to the 1980s or earlier that are prime candidates for efficiency upgrades. The borough's location near the Pompton River means some homes deal with humidity-related HVAC issues more than similar homes further inland — we account for that in system sizing and in our maintenance recommendations. Mini splits with built-in dehumidification have been a popular upgrade in the area.",
   riverdale:
-    "Riverdale is a small Passaic County borough bordered by Pompton Lakes and Wanaque, with predominantly residential character and a commercial strip along Hamburg Turnpike. The homes here are a mix of mid-century construction and some newer builds, with systems of varying ages and conditions. We're comfortable working on any age of equipment — from a 1970s forced-air system due for a modern upgrade to a recently installed unit that needs a first-season tune-up. For Riverdale residents, response times from our Wharton location are typically 30–45 minutes.",
+    "Riverdale is a small Passaic County borough bordered by Pompton Lakes and Wanaque, with predominantly residential character and a commercial strip along Hamburg Turnpike. The homes here are a mix of mid-century construction and some newer builds, with systems of varying ages and conditions. We service equipment across a wide range of ages, from older forced-air systems to recently installed units that need a first-season tune-up. Response timing from our Wharton base depends on technician availability and current conditions.",
   wayne:
     "Wayne Township is one of Passaic County's largest and most densely populated communities, with housing stock ranging from postwar Cape Cods to large newer colonials. The area's high density means heat islands can push cooling loads higher than you'd expect, and older slab-on-grade homes often struggle with ductwork that wasn't designed for modern AC. We do a significant number of duct assessments and ductless mini split installs in Wayne for exactly this reason. For both residential and commercial clients, Wayne generates consistent year-round work for our team — we know the area well.",
   chatham:
     "Chatham Borough and Chatham Township together form one of Morris County's most sought-after communities. The housing here ranges from 1920s-era homes near the train station to larger mid-century and newer construction in the township. Older homes in downtown Chatham often have limited attic and basement space, making ductless mini splits a popular solution for adding cooling to areas that can't accommodate traditional ductwork. For newer and larger homes, zoned systems are common, and we service multi-zone setups with the same expertise we bring to any system type. We're about 35 minutes from Chatham and service the area regularly.",
   harding:
-    "Harding Township is one of Morris County's most rural and sparsely populated communities — a township of large estates, horse properties, and historic homes in the New Vernon area. The HVAC work here reflects that character: high-end systems on properties with significant square footage, multiple zones, and sometimes geothermal or radiant systems that require specialized knowledge. Our licensed master technicians are comfortable with complex multi-zone setups and bring the attention to detail that large custom-system work requires. We serve Harding Township regularly and are about 40 minutes from New Vernon.",
+    "Harding Township is one of Morris County's most rural and sparsely populated communities — a township of large estates, horse properties, and historic homes in the New Vernon area. The HVAC work here reflects that character: high-end systems on properties with significant square footage, multiple zones, and sometimes geothermal or radiant systems that require specialized knowledge. Air2Cool's trained technicians service complex multi-zone setups through our licensed HVACR operation. We serve Harding Township regularly from our Wharton base.",
   hackensack:
-    "Hackensack is Bergen County's county seat and a dense urban environment with a mix of multi-family residential buildings, commercial corridors, and older single-family neighborhoods. The city's concentration of multi-family buildings means we handle a lot of building-wide system assessments and unit-by-unit replacements for property managers and building owners. For residential customers, the older housing stock in Hackensack's neighborhoods often has aging forced-air systems or original boilers that are well past their service life. We handle both commercial and residential work in Hackensack and can typically dispatch within 40–55 minutes of a call.",
+    "Hackensack is Bergen County's county seat and a dense urban environment with a mix of multi-family residential buildings, commercial corridors, and older single-family neighborhoods. The city's concentration of multi-family buildings means we handle building-wide system assessments and unit-by-unit replacements for property managers and building owners. We handle both commercial and residential work in Hackensack, with response timing based on technician availability and current conditions.",
   mahwah:
-    "Mahwah Township sits at Bergen County's northwestern edge, bordering New York State along the Ramapo Mountains. The elevation here is higher than most of Bergen County, and winter temperatures reflect it — heating loads run higher and systems work harder from November through March. Many of Mahwah's newer residential developments have modern systems, but the older sections of town still have equipment installed in the 1980s and 90s that's overdue for an efficiency upgrade. We serve Mahwah regularly and typically reach the township within 45–55 minutes of a call from our Wharton location.",
+    "Mahwah Township sits at Bergen County's northwestern edge, bordering New York State along the Ramapo Mountains. The elevation here is higher than most of Bergen County, and winter temperatures reflect it — heating loads run higher and systems work harder from November through March. We serve Mahwah from our Wharton location, with response timing based on technician availability and current conditions.",
   livingston:
-    "Livingston is one of Essex County's most established suburbs, with predominantly larger single-family homes that often feature zoned HVAC systems, high-end brand equipment, and complex multi-story configurations. We see calls in Livingston from homeowners who've had a big-company experience they weren't happy with — impersonal service, high pressure on replacement, or a diagnosis that didn't hold up. We bring a different approach: licensed master technicians, honest assessments, and no pressure. We've built a strong referral base in Essex County and service Livingston consistently throughout the year.",
+    "Livingston is one of Essex County's most established suburbs, with predominantly larger single-family homes that often feature zoned HVAC systems, high-end brand equipment, and complex multi-story configurations. We bring a local approach with trained technicians working through Air2Cool's licensed HVACR operation and straightforward assessments. We've built a strong referral base in Essex County and service Livingston throughout the year.",
 };
 
 // ─── Town-specific FAQ content ─────────────────────────────────────────────────
@@ -265,7 +265,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
   "victory-gardens": [
     {
       q: "How quickly can Air2Cool reach Victory Gardens NJ?",
-      a: "Victory Gardens is just minutes from our Wharton base — we're one of the closest HVAC contractors to this borough. Emergency calls typically get a technician on-site in under 15 minutes.",
+      a: "Victory Gardens is close to our Wharton base, and 24/7 emergency HVAC service is available. Response times vary based on technician availability, traffic, weather, and call volume.",
     },
     {
       q: "Do you service oil heating systems in Victory Gardens?",
@@ -273,7 +273,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
     },
     {
       q: "What HVAC services does Air2Cool offer in Victory Gardens NJ?",
-      a: "We offer the full range: AC repair and installation, furnace and boiler service, ductless mini splits, air quality systems, and 24/7 emergency HVAC. All work is performed by licensed master technicians.",
+      a: "We offer AC repair and installation, furnace and boiler service, ductless mini splits, air quality systems, and 24/7 emergency HVAC. Air2Cool is licensed and insured under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
     },
   ],
   netcong: [
@@ -287,7 +287,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
     },
     {
       q: "How far is Air2Cool from Netcong NJ?",
-      a: "We're based in Wharton — Netcong is approximately 10–15 minutes away. Most service calls get a technician on-site within 30 minutes of initial contact.",
+      a: "We serve Netcong from our Wharton base. Response times vary based on technician availability, traffic, weather, and call volume.",
     },
   ],
   "mount-arlington": [
@@ -391,7 +391,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
   mendham: [
     {
       q: "Do you service high-end HVAC systems in Mendham NJ?",
-      a: "Yes. Many Mendham homes have multi-zone systems, high-end equipment brands, and complex configurations. Our licensed master technicians handle these systems with the attention to detail they require.",
+      a: "Yes. Many Mendham homes have multi-zone systems, high-end equipment brands, and complex configurations. Air2Cool's trained technicians service these systems through our licensed HVACR operation.",
     },
     {
       q: "How far is Air2Cool from Mendham NJ?",
@@ -461,7 +461,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
   montville: [
     {
       q: "Do you offer same-day HVAC service in Montville NJ?",
-      a: "Yes — same-day service is our standard for urgent calls. Montville is about 30 minutes from Wharton, and we're available 24/7 for emergency heating and cooling situations.",
+      a: "Same-day appointments may be available for urgent calls in Montville, and 24/7 emergency heating and cooling service is available. Response timing depends on technician availability and current conditions.",
     },
     {
       q: "Can Air2Cool replace an aging furnace in Montville Township?",
@@ -497,7 +497,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
     },
     {
       q: "Do you offer 0% financing for HVAC in East Hanover NJ?",
-      a: "Yes — we offer 0% financing up to $25,000 on qualified system installations. Same-day approval is available on most applications, so you don't have to wait to get your system replaced.",
+      a: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
     },
   ],
   "florham-park": [
@@ -517,7 +517,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
   "morris-plains": [
     {
       q: "How quickly can Air2Cool respond in Morris Plains NJ?",
-      a: "Morris Plains is about 20–25 minutes from our Wharton base, and we're in the area regularly due to nearby Morristown. Most emergency calls get a technician on-site within 30–40 minutes.",
+      a: "We serve Morris Plains from our Wharton base and are regularly in the area near Morristown. Response times vary based on technician availability, traffic, weather, and call volume.",
     },
     {
       q: "Do you service commercial HVAC on Route 10 in Morris Plains?",
@@ -525,13 +525,13 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
     },
     {
       q: "What HVAC services are available in Morris Plains NJ?",
-      a: "We offer the full range: AC repair and installation, heating service and replacement, commercial HVAC, ductless mini splits, air quality systems, and 24/7 emergency service — all by licensed master technicians.",
+      a: "We offer AC repair and installation, heating service and replacement, commercial HVAC, ductless mini splits, air quality systems, and 24/7 emergency service through Air2Cool's licensed HVACR operation.",
     },
   ],
   "lincoln-park": [
     {
       q: "Do you service Lincoln Park NJ for HVAC?",
-      a: "Yes — we cover Lincoln Park Borough for AC repair, heating service, mini split installations, and emergency HVAC. All work is performed by licensed master technicians.",
+      a: "Yes — we cover Lincoln Park Borough for AC repair, heating service, mini split installations, and emergency HVAC through Air2Cool's licensed HVACR operation.",
     },
     {
       q: "Can Air2Cool handle humidity-related HVAC issues in Lincoln Park?",
@@ -587,7 +587,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
   harding: [
     {
       q: "Do you service estate HVAC systems in Harding Township NJ?",
-      a: "Yes. Harding Township has large estates with complex multi-zone systems, high-end equipment, and sometimes radiant or geothermal installations. Our licensed master technicians are experienced with these setups.",
+      a: "Yes. Harding Township has large estates with complex multi-zone systems, high-end equipment, and sometimes radiant or geothermal installations. Air2Cool's trained technicians service these setups through our licensed HVACR operation.",
     },
     {
       q: "Can Air2Cool work on geothermal or radiant systems in Harding NJ?",
@@ -651,7 +651,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Commercial Refrigeration", href: "/services/commercial-refrigeration", desc: "Coolers & freezers for businesses." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 export async function generateStaticParams() {
@@ -684,7 +684,7 @@ export async function generateMetadata({
   const nearby = town.nearbyTowns.slice(0, 2).join(" and ");
   return {
     title: `${town.name} HVAC Repair & Installation | Air2Cool Heating & Cooling`,
-    description: `Air2Cool provides AC repair, furnace installation, heating service & 24/7 emergency HVAC in ${town.name}, NJ — near ${nearby}. Family-owned since 1998. 270+ 5-star Google reviews. Call (201) 787-5657.`,
+    description: `Air2Cool provides AC repair, furnace installation, heating service & 24/7 emergency HVAC in ${town.name}, NJ — near ${nearby}. Family-owned since 1998. 300+ 5-star Google reviews. Call (201) 787-5657.`,
     alternates: {
       canonical: `https://www.air2cool.com/service-areas/${town.slug}`,
     },
@@ -810,7 +810,7 @@ export default async function TownPage({
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -829,7 +829,7 @@ export default async function TownPage({
               HVAC Services in {town.name}
             </h2>
             <p className="text-center text-gray-500 mb-10 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+              Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -913,12 +913,12 @@ export default async function TownPage({
               {[
                 {
                   icon: <Shield className="w-6 h-6 text-blue-600" />,
-                  title: "Licensed Master Techs",
-                  body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Reviews",
+                  title: "300+ Five-Star Reviews",
                   body: "Real customers across North Jersey. Check our Google reviews before you call.",
                 },
                 {
@@ -929,12 +929,12 @@ export default async function TownPage({
                 {
                   icon: <Wrench className="w-6 h-6 text-green-600" />,
                   title: "Free House Cleaning",
-                  body: "Every new system install includes a complimentary professional house cleaning.",
+                  body: "Every qualifying new system installation includes a complimentary professional house cleaning.",
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-                  title: "0% Financing Up to $25K",
-                  body: "Same-day approval on most applications. Don't delay comfort over budget.",
+                  title: "0% Financing Up to $25,000",
+                  body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
                 },
                 {
                   icon: <MapPin className="w-6 h-6 text-purple-600" />,

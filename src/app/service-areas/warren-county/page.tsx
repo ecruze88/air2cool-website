@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MapPin, Phone, CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import townsData from "@/data/service-areas.json";
+import { RESPONSE_TIME_NOTE } from "@/config/company";
 
 type Town = { name: string; slug: string; countySlug: string };
 const countyTowns = (townsData as { towns: Town[] }).towns.filter(
@@ -91,8 +92,8 @@ export default function WarrenCountyPage() {
             </p>
             <p>
               The county&apos;s older housing stock often means aging boilers and furnaces that need
-              experienced techs. Our licensed master technicians handle all systems — from cast iron
-              boilers in Phillipsburg to modern heat pumps in newer Hackettstown developments.
+              experienced service. Air2Cool&apos;s team works under the company&apos;s NJ Master HVACR
+              license on equipment ranging from cast-iron boilers in Phillipsburg to modern heat pumps in newer Hackettstown developments.
             </p>
             <p>
               We offer 0% financing up to $25,000, free house cleaning with new system installs, and
@@ -105,7 +106,7 @@ export default function WarrenCountyPage() {
       <section className="py-12 bg-gradient-to-r from-blue-700 to-blue-600 text-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-4xl font-extrabold mb-4">Ready to Book in Warren County?</h2>
-          <p className="text-blue-100 mb-8">Call or submit a request — we respond fast, 24/7.</p>
+          <p className="text-blue-100 mb-8">{RESPONSE_TIME_NOTE}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:+12017875657" className="bg-white text-blue-700 px-7 py-3.5 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2">
               <Phone className="w-5 h-5" /> (201) 787-5657

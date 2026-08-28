@@ -19,7 +19,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Commercial Refrigeration", href: "/services/commercial-refrigeration", desc: "Coolers & freezers for businesses." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 export default function BoundBrookPage() {
@@ -65,7 +65,7 @@ export default function BoundBrookPage() {
         <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
             { value: "5.0 ★", label: "Google Rating" },
-            { value: "270+", label: "5-Star Reviews" },
+            { value: "300+", label: "5-Star Reviews" },
             { value: "Since 1998", label: "Family Owned" },
             { value: "24/7", label: "Emergency Service" },
           ].map((s) => (
@@ -84,7 +84,7 @@ export default function BoundBrookPage() {
             HVAC Services in Bound Brook
           </h2>
           <p className="text-center text-gray-500 mb-10 text-sm md:text-base">
-            All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {SERVICES.map((s) => (
@@ -117,7 +117,7 @@ export default function BoundBrookPage() {
               Bound Brook is a historic borough in Somerset County along the Raritan River, bordered by Raritan, South Bound Brook, Manville, and Bridgewater. The town features a vibrant downtown corridor and a mix of older Victorian-era homes, mid-century residences, and commercial properties — many of which have aging HVAC systems that benefit from the kind of expert care that only an experienced, local contractor can provide. Air2Cool Heating &amp; Cooling has been serving Bound Brook and all of Somerset County since 1998.
             </p>
             <p>
-              Our licensed master technicians understand the HVAC challenges specific to older Bound Brook homes — from cast-iron radiators and outdated ductwork to aging boilers that need careful diagnosis rather than a hasty replacement recommendation. Whether you need a quick AC repair before a summer heat wave hits or a full heating system overhaul before winter, we arrive equipped and ready to solve the problem in one visit whenever possible. Same-day service is available throughout Bound Brook, Raritan, South Bound Brook, Manville, and Bridgewater.
+              Air2Cool&apos;s trained technicians understand the HVAC challenges specific to older Bound Brook homes — from cast-iron radiators and outdated ductwork to aging boilers that need careful diagnosis rather than a hasty replacement recommendation. Whether you need AC repair before a summer heat wave or a heating-system overhaul before winter, we arrive prepared to diagnose the problem. Same-day appointments may be available throughout Bound Brook, Raritan, South Bound Brook, Manville, and Bridgewater, depending on technician availability and current conditions.
             </p>
             <p>
               We also offer 0% APR financing for new system installations and a free house cleaning with every complete HVAC replacement. For more info, visit our{" "}
@@ -173,11 +173,11 @@ export default function BoundBrookPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: <Shield className="w-6 h-6 text-blue-600" />, title: "Licensed Master Techs", body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts." },
-              { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "270+ Five-Star Reviews", body: "Real customers across North Jersey. Check our Google reviews before you call." },
+              { icon: <Shield className="w-6 h-6 text-blue-600" />, title: "Licensed & Insured", body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians." },
+              { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "300+ Five-Star Reviews", body: "Real customers across North Jersey. Check our Google reviews before you call." },
               { icon: <Clock className="w-6 h-6 text-red-600" />, title: "24/7 Emergency Service", body: "We answer at 2 AM because your furnace doesn't care what day it is." },
-              { icon: <Wrench className="w-6 h-6 text-green-600" />, title: "Free House Cleaning", body: "Every new system install includes a complimentary professional house cleaning." },
-              { icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "0% Financing Up to $25K", body: "Same-day approval on most applications. Don't delay comfort over budget." },
+              { icon: <Wrench className="w-6 h-6 text-green-600" />, title: "Free House Cleaning", body: "Every qualifying new system installation includes a complimentary professional house cleaning." },
+              { icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "0% Financing Up to $25,000", body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms." },
               { icon: <MapPin className="w-6 h-6 text-purple-600" />, title: "Local Since 1998", body: "Family-owned out of Wharton, NJ. We're your neighbors, not a call center." },
             ].map((item) => (
               <div key={item.title} className="flex gap-4 items-start">

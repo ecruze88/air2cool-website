@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Snowflake, CheckCircle, ArrowRight, Zap, Wind } from "lucide-react";
 import Link from "next/link";
+import { FEDERAL_HVAC_CREDIT_NOTE, NJ_INCENTIVE_NOTE } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "Mini Split Installation & Repair NJ | Ductless AC | Air2Cool",
@@ -190,7 +191,7 @@ export default function MiniSplitPage() {
             Air2Cool has installed mini splits throughout <strong>Mendham, Rockaway, Randolph, Morris County, Sussex County</strong>, and surrounding North Jersey communities. Whether you need a single-zone system for one room or a multi-zone setup for the whole house, our licensed technicians will size and install it correctly.
           </p>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            Mini splits are inverter-driven heat pumps — they modulate output rather than cycling on and off, which makes them significantly more efficient than traditional systems. Many qualify for NJ utility rebates and federal tax credits.
+            Mini splits are inverter-driven heat pumps that modulate output rather than cycling on and off. Qualifying systems may be eligible for current New Jersey utility or manufacturer incentives. {NJ_INCENTIVE_NOTE} {FEDERAL_HVAC_CREDIT_NOTE}
           </p>
         </div>
       </section>
@@ -228,7 +229,7 @@ export default function MiniSplitPage() {
               "Built-in dehumidification",
               "No ducts = no dust recirculation",
               "Quick installation — usually 1 day",
-              "Available for rebates & tax credits",
+              "Potential NJ utility and manufacturer incentives",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-gray-700">
                 <CheckCircle className="w-4 h-4 text-cyan-600 shrink-0" />

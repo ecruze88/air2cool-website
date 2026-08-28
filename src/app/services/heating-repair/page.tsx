@@ -3,11 +3,12 @@ import { Flame, CheckCircle, Clock, Shield } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import VideoShowcase from "@/components/VideoShowcase";
+import { COMPANY } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "Furnace Repair NJ | Same-Day Heating Repair | Air2Cool",
   description:
-    "Furnace not working in North NJ? Air2Cool provides same-day furnace repair throughout Morris County. Licensed master technicians, 24/7 emergency service. Call (201) 787-5657.",
+    `Furnace not working in North NJ? Air2Cool provides 24/7 emergency heating service throughout Morris County, with same-day appointments subject to availability. NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}. Call ${COMPANY.phone.display}.`,
   keywords: [
     "furnace repair NJ",
     "heating repair NJ",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Furnace Repair NJ | Same-Day Heating Repair | Air2Cool",
     description:
-      "Furnace not working in North NJ? Air2Cool provides same-day furnace repair throughout Morris County. Licensed master technicians, 24/7 emergency service. Call (201) 787-5657.",
+      `Furnace not working in North NJ? Air2Cool provides 24/7 emergency heating service throughout Morris County, with same-day appointments subject to availability. NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}. Call ${COMPANY.phone.display}.`,
     url: "/services/heating-repair",
   },
 };
@@ -201,7 +202,7 @@ export default function HeatingRepairPage() {
                 <Link href="/service-areas/denville" className="text-red-600 hover:underline">Denville</Link> call first.
               </p>
               <p>
-                Our Licensed Master HVAC Technicians are trained to diagnose and repair all types of heating systems: gas furnaces, oil furnaces, hydronic boilers, steam boilers, NTI boilers, and heat pumps. We work on all major brands and can typically complete most repairs in a single visit. Same-day appointments are available for urgent situations, and our 24/7 emergency line means you're never left in the cold.
+                Air2Cool&apos;s trained technicians diagnose and repair many types of heating systems, including gas and oil furnaces, hydronic and steam boilers, NTI boilers, and heat pumps. We service many major brands through our licensed HVACR operation. Same-day appointments may be available for urgent situations depending on technician availability and current conditions, and our emergency line is available 24/7.
               </p>
               <p>
                 One thing that sets Air2Cool apart is our boiler expertise. Many HVAC companies don't fully understand the complexity of hydronic and steam systems — we do. As NTI-certified technicians and boiler specialists, we diagnose issues faster and fix them right the first time. Whether it's a failed circulator pump, zone valve problem, or a no-heat situation, we have the parts and know-how on hand.
@@ -267,7 +268,7 @@ export default function HeatingRepairPage() {
                 Boiler Specialists You Can Trust
               </h2>
               <p className="text-base md:text-xl text-gray-700 max-w-3xl mx-auto">
-                Not all HVAC companies understand boilers. We do. With 26+ years specializing in all boiler systems, we're your North Jersey boiler experts.
+                With decades of experience servicing boiler and hydronic heating systems, Air2Cool provides knowledgeable boiler diagnostics and repair throughout North Jersey.
               </p>
             </div>
 
@@ -343,7 +344,7 @@ export default function HeatingRepairPage() {
             Quality Service You Can Trust
           </h2>
           <p className="text-sm md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
-            We service all major heating brands and provide honest, reliable service backed by our 26+ years of experience. When you choose Air2Cool, you're getting expert technicians who truly care about keeping your family warm.
+            We service many major heating brands and provide straightforward recommendations backed by experience serving North Jersey since {COMPANY.foundedYear}. Air2Cool&apos;s trained technicians focus on restoring safe, dependable heat for your home.
           </p>
           <div className="inline-block bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200">
             <p className="text-sm md:text-base text-gray-600 italic">

@@ -6,7 +6,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "HVAC Company Wharton NJ | Air2Cool — Local Since 1998",
   description:
-    "Air2Cool is based in Wharton NJ — your hometown HVAC company for AC repair, heating, and installations since 1998. Fastest response times in the area. Call (201) 787-5657.",
+    "Air2Cool is based in Wharton NJ — your local HVAC company for AC repair, heating, installations, and 24/7 emergency service since 1998. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/wharton",
   },
@@ -67,7 +67,7 @@ const schema = {
           "name": "How fast can Air2Cool respond to a call in Wharton NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "As our home base, Wharton gets our fastest response times — most calls get a technician on-site within the hour.",
+            "text": "Air2Cool is based in Wharton and offers 24/7 emergency HVAC service. Response times vary based on technician availability, traffic, weather, and call volume.",
           },
         },
         {
@@ -91,7 +91,7 @@ const SERVICES = [
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
   { name: "Mini Split", href: "/services/mini-split", desc: "Ductless mini-split installs & service." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 const NEARBY = [
@@ -151,7 +151,7 @@ export default function WhartonPage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -183,7 +183,7 @@ export default function WhartonPage() {
                 Air2Cool has served Wharton homeowners since 1998 and we know the housing stock well — from the older colonials and ranches near the downtown to newer builds off Route 15. We&apos;ve replaced furnaces, repaired boilers, installed central AC systems, and handled emergency service calls in virtually every neighborhood in town. When your heating goes out in January, you want someone who can be at your door fast. That&apos;s us.
               </p>
               <p>
-                Wharton sits at the heart of Morris County, bordered by <Link href="/service-areas/dover" className="text-blue-600 hover:underline">Dover</Link> and <Link href="/service-areas/rockaway" className="text-blue-600 hover:underline">Rockaway</Link>. That central location is exactly why we put our headquarters here — it puts us within reach of every Morris County community we serve. But for Wharton residents specifically, it means you get our fastest response times. Most calls within town get a technician on-site within the hour.
+                Wharton sits at the heart of Morris County, bordered by <Link href="/service-areas/dover" className="text-blue-600 hover:underline">Dover</Link> and <Link href="/service-areas/rockaway" className="text-blue-600 hover:underline">Rockaway</Link>. Air2Cool&apos;s Wharton base keeps us close to the Morris County communities we serve. Response times vary based on technician availability, traffic, weather, and call volume.
               </p>
               <p>
                 We offer the full range of <Link href="/services/ac-repair" className="text-blue-600 hover:underline">AC repair</Link> and <Link href="/services/heating-repair" className="text-blue-600 hover:underline">heating repair</Link> services in Wharton, including 24/7 emergency calls. If your furnace fails on a Friday night in February, call us — we answer. If your AC dies the week of a heat wave, same deal. There&apos;s no premium surcharge for evenings or weekends for Wharton residents, because our team is already here.
@@ -222,7 +222,7 @@ export default function WhartonPage() {
               All HVAC Services in Wharton
             </h2>
             <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -261,28 +261,28 @@ export default function WhartonPage() {
                 },
                 {
                   icon: <Clock className="w-6 h-6 text-red-600" />,
-                  title: "Fastest Response Times",
-                  body: "Most Wharton calls get a technician on-site within the hour. No other HVAC company can match our response time in town.",
+                  title: "Local Wharton Base",
+                  body: "Air2Cool is based in Wharton and offers 24/7 emergency HVAC service. Response timing depends on technician availability and current conditions.",
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Reviews",
+                  title: "300+ Five-Star Reviews",
                   body: "Real customers across Morris County. Check our Google reviews — you&apos;ll see Wharton neighbors recommending us.",
                 },
                 {
                   icon: <Shield className="w-6 h-6 text-green-600" />,
-                  title: "Licensed Master Technicians",
-                  body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-                  title: "0% Financing Up to $25K",
-                  body: "Don&apos;t put off a needed replacement because of upfront cost. Same-day approval available.",
+                  title: "0% Financing Up to $25,000",
+                  body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
                 },
                 {
                   icon: <Shield className="w-6 h-6 text-purple-600" />,
                   title: "Community Sponsor",
-                  body: "We sponsor the Wharton Little League because this town has supported us for 26+ years. We give back.",
+                  body: "We sponsor the Wharton Little League because this town has supported us since 1998. We give back.",
                 },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4 items-start">
@@ -313,7 +313,7 @@ export default function WhartonPage() {
                 },
                 {
                   q: "How fast can Air2Cool respond to a call in Wharton NJ?",
-                  a: "As our home base, Wharton gets our fastest response times — most calls get a technician on-site within the hour. For 24/7 emergencies, we prioritize Wharton calls because our team is already here.",
+                  a: "Air2Cool is based in Wharton and offers 24/7 emergency HVAC service. Response times vary based on technician availability, traffic, weather, and call volume.",
                 },
                 {
                   q: "Does Air2Cool offer emergency HVAC service in Wharton NJ?",

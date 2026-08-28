@@ -6,7 +6,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "HVAC Service Denville NJ | AC Repair & Mini Splits | Air2Cool",
   description:
-    "AC repair, furnace service, and HVAC installation in Denville NJ. Air2Cool has served Denville since 1998. Same-day service available. Call (201) 787-5657.",
+    "AC repair, furnace service, HVAC installation, and 24/7 emergency HVAC in Denville NJ. Air2Cool has served Denville since 1998. Same-day appointments may be available. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/denville",
   },
@@ -75,7 +75,7 @@ const schema = {
           "name": "How quickly can Air2Cool respond to a call in Denville NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We're based in nearby Wharton — most Denville calls get a technician on-site within 20 minutes. 24/7 emergency service is available.",
+            "text": "We're based in nearby Wharton and provide 24/7 emergency HVAC service in Denville. Response times vary based on technician availability, traffic, weather, and call volume.",
           },
         },
       ],
@@ -91,7 +91,7 @@ const SERVICES = [
   { name: "Heating Installation", href: "/services/heating-installation", desc: "New furnace or heat pump with warranty." },
   { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
   { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Annual tune-ups before breakdowns happen." },
+  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
 ];
 
 const NEARBY = [
@@ -151,7 +151,7 @@ export default function DenvillePage() {
           <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
               { value: "5.0 ★", label: "Google Rating" },
-              { value: "270+", label: "5-Star Reviews" },
+              { value: "300+", label: "5-Star Reviews" },
               { value: "Since 1998", label: "Family Owned" },
               { value: "24/7", label: "Emergency Service" },
             ].map((s) => (
@@ -216,7 +216,7 @@ export default function DenvillePage() {
               All HVAC Services in Denville
             </h2>
             <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-              All major brands serviced. Licensed master technicians, fully insured.
+            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {SERVICES.map((s) => (
@@ -260,18 +260,18 @@ export default function DenvillePage() {
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "270+ Five-Star Reviews",
+                  title: "300+ Five-Star Reviews",
                   body: "Denville neighbors have been leaving us 5-star reviews for over 26 years. Check Google before you call.",
                 },
                 {
                   icon: <Shield className="w-6 h-6 text-green-600" />,
-                  title: "Licensed Master Technicians",
-                  body: "Every job done by NJ-licensed master HVAC technicians. No subcontractors, no shortcuts.",
+                  title: "Licensed & Insured",
+                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-                  title: "0% Financing Up to $25K",
-                  body: "Full system replacements don't have to break the bank. Same-day financing approval available.",
+                  title: "0% Financing Up to $25,000",
+                  body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
                 },
                 {
                   icon: <MapPin className="w-6 h-6 text-purple-600" />,
@@ -311,7 +311,7 @@ export default function DenvillePage() {
                 },
                 {
                   q: "How quickly can Air2Cool respond to a call in Denville NJ?",
-                  a: "We're based in nearby Wharton — most Denville calls get a technician on-site within 20 minutes. 24/7 emergency service is available for heating and AC emergencies.",
+                  a: "We're based in nearby Wharton and provide 24/7 emergency service for heating and AC emergencies in Denville. Response times vary based on technician availability, traffic, weather, and call volume.",
                 },
               ].map((item) => (
                 <div key={item.q} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
@@ -359,7 +359,7 @@ export default function DenvillePage() {
               Need HVAC Service in Denville?
             </h2>
             <p className="text-blue-100 mb-8 text-base md:text-lg">
-              Call us or request a free estimate — same-day service available.
+              Call for 24/7 emergency HVAC service or request service online. Same-day appointments may be available depending on technician availability and current conditions.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
