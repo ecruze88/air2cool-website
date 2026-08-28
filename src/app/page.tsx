@@ -4,6 +4,7 @@ import SizingTool from "@/components/SizingTool";
 import Link from "next/link";
 import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets, AlertTriangle } from "lucide-react";
 import { COMPANY } from "@/config/company";
+import { getBrandBySlug } from "@/data/brands";
 
 export const metadata: Metadata = {
   title: "Air2Cool | AC Repair & HVAC Service | Morris County NJ",
@@ -140,12 +141,24 @@ const ICON_MAP = {
   droplets: Droplets,
 };
 
-const TRUST = [
-  "All makes & models",
-  "Transparent pricing",
-  "Emergency service",
-  "Over 20 years of service",
-];
+const HOME_BRAND_GROUPS = [
+  {
+    title: "Heating & Cooling",
+    slugs: ["carrier", "trane", "american-standard", "luxaire", "bosch", "lennox", "rheem", "goodman"],
+  },
+  {
+    title: "Heat Pumps & Ductless",
+    slugs: ["mitsubishi-electric", "daikin", "fujitsu", "bosch"],
+  },
+  {
+    title: "Boilers & Hydronics",
+    slugs: ["nti", "lochinvar", "weil-mclain"],
+  },
+  {
+    title: "Commercial Refrigeration",
+    slugs: ["true-refrigeration", "heatcraft", "hussmann", "manitowoc"],
+  },
+] as const;
 
 export default function HomePage() {
   return (
@@ -202,8 +215,8 @@ export default function HomePage() {
         }}
       />
 
-      {/* HERO (full bleed) - MOBILE OPTIMIZED */}
-      <section className="relative overflow-hidden min-h-[85vh]">
+      {/* HERO */}
+      <section className="relative overflow-hidden min-h-[70vh] md:min-h-[72vh] flex items-center">
         {/* Background video */}
         <video
           autoPlay
@@ -220,132 +233,55 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
 
         {/* HERO CONTENT */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pt-12 md:pt-32 pb-12 md:pb-24">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20">
           <div className="max-w-4xl">
-            {/* Urgency Banner */}
-          {/* Emergency Call Button */}
-            <a
-              href="tel:+12017875657"
-              className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white px-6 md:px-8 py-3.5 md:py-4 rounded-full font-bold text-sm md:text-base mb-6 md:mb-8 shadow-2xl transition-all hover:scale-105"
-            >
-              <span className="w-2.5 h-2.5 bg-white rounded-full animate-ping"></span>
-              <Phone className="w-5 h-5 md:w-6 md:h-6" />
-              24/7 EMERGENCY SERVICE - TAP TO CALL
-            </a>
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-4 md:mb-6">
-              HVAC Problems?
-              <br />
-              <span className="text-blue-400">We Fix It Fast.</span>
+            <p className="text-sm md:text-base text-blue-200 font-semibold tracking-wide mb-4">
+              Based in Wharton, NJ &bull; Serving Morris County &amp; North Jersey Since 1998
+            </p>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] mb-5 md:mb-6">
+              Heating, Cooling &amp; Refrigeration Done Right.
             </h1>
 
-            {/* Location trust signal */}
-            <p className="text-sm md:text-base text-blue-300 mb-3 md:mb-4">
-              Based in Wharton, NJ &middot; Serving Morris County &amp; North NJ Since 1998
+            <p className="text-lg md:text-2xl text-gray-100 max-w-3xl leading-relaxed mb-7 md:mb-8">
+              Residential and commercial HVAC service, installation, boilers, refrigeration, and 24/7 emergency service throughout North Jersey.
             </p>
 
-            {/* Subheadline with urgency */}
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-100 font-semibold mb-3 md:mb-4">
-              Same-Day Appointments May Be Available • No Upsell BS • Serving Since {COMPANY.foundedYear}
-            </p>
-            
-            <p className="text-base md:text-lg text-gray-300 max-w-2xl leading-relaxed mb-6 md:mb-8">
-              Furnace out in the cold? AC dead in the heat? We're your NJ HVAC experts with honest pricing and clean installs. Family owned since 1998.
-            </p>
-
-            {/* Trust Badges - compact on mobile, row on tablet+ */}
-            <div className="grid grid-cols-2 sm:flex sm:flex-row sm:flex-wrap gap-2 sm:gap-3 md:gap-4 mb-5 md:mb-8">
-              {/* Badge 1 — Google Rating */}
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Link
-                href="/reviews"
-                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-full text-center min-h-[44px] hover:bg-white/20 transition-colors"
-              >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-500 rounded-full flex items-center justify-center shrink-0 mx-auto sm:mx-0">
-                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-white fill-white" />
-                </div>
-                <div>
-                  <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">5.0 Google Rating</div>
-                  <div className="hidden sm:block text-xs text-gray-300">300+ Reviews</div>
-                </div>
-              </Link>
-
-              {/* Badge 2 — Licensed & Insured */}
-              <Link
-                href="/about"
-                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-full text-center min-h-[44px] hover:bg-white/20 transition-colors"
-              >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-500 rounded-full flex items-center justify-center shrink-0 mx-auto sm:mx-0">
-                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                </div>
-                <div>
-                  <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">Licensed &amp; Insured</div>
-                  <div className="hidden sm:block text-xs text-gray-300">Master HVAC Techs</div>
-                </div>
-              </Link>
-
-              {/* Badge 3 — 0% Financing */}
-              <Link
-                href="/financing"
-                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-full text-center min-h-[44px] hover:bg-white/20 transition-colors"
-              >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-500 rounded-full flex items-center justify-center shrink-0 mx-auto sm:mx-0">
-                  <DollarSign className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                </div>
-                <div>
-                  <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">0% Financing</div>
-                  <div className="hidden sm:block text-xs text-gray-300">Up to $25k Available</div>
-                </div>
-              </Link>
-
-              {/* Badge 4 - Spanish-speaking team */}
-              <Link
-                href="/servicio-en-espanol"
-                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/10 backdrop-blur border border-white/20 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-full text-center min-h-[44px] hover:bg-white/20 transition-colors"
-              >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-600 rounded-full flex items-center justify-center shrink-0 mx-auto sm:mx-0">
-                  <span className="text-xs sm:text-sm font-extrabold text-white">ES</span>
-                </div>
-                <div>
-                  <div className="font-bold text-[11px] sm:text-sm md:text-base leading-tight">Se Habla Espa&ntilde;ol</div>
-                  <div className="hidden sm:block text-xs text-gray-300">Hablamos tu idioma</div>
-                </div>
-              </Link>
-            </div>
-
-            {/* CTAs - STACKED ON MOBILE */}
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-0">
-              <div className="flex flex-col items-stretch sm:items-start">
-                <a
-                  href="tel:+12017875657"
-                  className="inline-flex items-center justify-center gap-2 bg-[#dc2626] hover:bg-red-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg shadow-2xl transition-all hover:scale-105 min-h-[44px]"
-                >
-                  🚨 Emergency AC Repair
-                </a>
-                <span className="mt-2 text-sm text-red-100 font-semibold text-center sm:text-left">
-                  Answered 24/7 - same-day response
-                </span>
-              </div>
-              <a
                 href="/contact"
-                className="group relative inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg shadow-2xl transition-all hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 md:px-10 py-4 rounded-full font-bold text-base md:text-lg shadow-xl transition-colors min-h-[52px]"
               >
-                <span>Get Free Estimate</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </a>
+                Get Free Estimate <span aria-hidden="true">→</span>
+              </Link>
               <a
-                href="tel:+12017875657"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg transition-all hover:bg-white/20"
+                href={COMPANY.phone.href}
+                className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 hover:bg-blue-50 px-8 md:px-10 py-4 rounded-full font-bold text-base md:text-lg shadow-xl transition-colors min-h-[52px]"
               >
                 <Phone className="w-5 h-5" />
-                Call Now
+                Call {COMPANY.phone.display}
               </a>
             </div>
 
-            {/* Urgency Text - HIDDEN ON MOBILE */}
-            <p className="hidden md:flex mt-6 text-sm text-yellow-300 font-semibold items-center gap-2">
-              <Zap className="w-4 h-4" />
-              24/7 emergency HVAC service
-            </p>
+            <a
+              href={COMPANY.phone.href}
+              className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-blue-100 hover:text-white underline underline-offset-4"
+            >
+              <span className="w-2 h-2 bg-red-500 rounded-full" aria-hidden="true" />
+              24/7 Emergency HVAC Service
+            </a>
+
+            <div className="mt-7 md:mt-9 border-y border-white/20 py-4">
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs sm:text-sm font-semibold text-white">
+                <Link href="/reviews" className="hover:text-blue-200">{COMPANY.reviews.claim}</Link>
+                <Link href="/about" className="hover:text-blue-200">Licensed &amp; Insured &middot; NJ Master HVACR #{COMPANY.license.masterHvacrNumber}</Link>
+                <Link href="/financing" className="hover:text-blue-200">0% Financing Up to $25K*</Link>
+                <Link href="/servicio-en-espanol" className="hover:text-blue-200">Se Habla Espa&ntilde;ol</Link>
+              </div>
+              <p className="text-[11px] sm:text-xs text-gray-300 mt-2">
+                *For qualifying customers, subject to eligibility, approval, and applicable program terms.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -564,6 +500,54 @@ export default function HomePage() {
               );
             })}
           </div>
+        </section>
+
+        {/* BRANDS WE WORK WITH */}
+        <section className="mb-10 md:mb-16 rounded-3xl border border-slate-200 bg-slate-50 px-5 py-8 md:px-10 md:py-12">
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-3">
+              HVAC &amp; Refrigeration Brands We Work With
+            </h2>
+            <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
+              Air2Cool services and installs equipment from many of the leading HVAC manufacturers found throughout North Jersey. We work with residential, commercial, boiler, ductless, and refrigeration equipment from most major manufacturers. Service and installation availability varies by brand, equipment type, and application.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+            {HOME_BRAND_GROUPS.map((group) => (
+              <div key={group.title} className="bg-white border border-slate-200 rounded-2xl p-5 md:p-6">
+                <h3 className="text-lg font-bold text-slate-900 mb-4">{group.title}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.slugs.map((slug) => {
+                    const brand = getBrandBySlug(slug);
+                    if (!brand?.publicVisible) return null;
+                    const href = brand.indexed ? `/brands/${brand.slug}` : "/brands";
+                    return (
+                      <Link
+                        key={brand.slug}
+                        href={href}
+                        className="inline-flex items-center min-h-[40px] rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                      >
+                        {brand.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8">
+            <Link href="/brands" className="inline-flex justify-center w-full sm:w-auto rounded-full bg-blue-700 hover:bg-blue-800 px-6 py-3 text-white font-bold transition-colors">
+              View All Brands &amp; Equipment
+            </Link>
+            <Link href="/equipment-we-service" className="inline-flex justify-center w-full sm:w-auto rounded-full border border-blue-700 bg-white hover:bg-blue-50 px-6 py-3 text-blue-700 font-bold transition-colors">
+              Browse Equipment We Service
+            </Link>
+          </div>
+          <p className="text-center text-xs text-gray-500 mt-5">
+            Brand references describe equipment experience and do not imply manufacturer authorization, endorsement, or affiliation.
+          </p>
         </section>
 
         {/* ========================================
