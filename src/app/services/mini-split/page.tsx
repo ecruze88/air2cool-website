@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Snowflake, CheckCircle, ArrowRight, Zap, Wind } from "lucide-react";
 import Link from "next/link";
+import EquipmentArchitectureLinks from "@/components/EquipmentArchitectureLinks";
 import { FEDERAL_HVAC_CREDIT_NOTE, NJ_INCENTIVE_NOTE } from "@/config/company";
 
 export const metadata: Metadata = {
@@ -367,6 +368,16 @@ export default function MiniSplitPage() {
           </p>
         </div>
       </section>
+
+      <EquipmentArchitectureLinks
+        title="Ductless Mini-Split Brands We Service"
+        description="Air2Cool services ductless equipment from Mitsubishi Electric, Daikin, Fujitsu, and other manufacturers, subject to model and parts availability."
+        links={[
+          { label: "Mitsubishi Electric mini-splits", href: "/brands/mitsubishi-electric" },
+          { label: "All residential HVAC brands", href: "/brands#residential-light-commercial" },
+          { label: "Equipment we service", href: "/equipment-we-service#residential-hvac" },
+        ]}
+      />
 
       {/* Related */}
       <section className="py-10 bg-white border-t border-gray-100">

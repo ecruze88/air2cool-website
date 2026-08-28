@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import townsData from '@/data/service-areas.json'
 import { getPublishedPosts } from '@/lib/blog'
+import { INDEXED_BRANDS } from '@/data/brands'
 
 type Town = { slug: string; countySlug: string }
 
@@ -47,6 +48,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const spanishPages = [
     '/servicio-en-espanol',
+  ]
+
+  const equipmentArchitecturePages = [
+    '/brands',
+    '/equipment-we-service',
+    ...INDEXED_BRANDS.map((brand) => `/brands/${brand.slug}`),
   ]
 
   // Blog pages — dynamically generated from published MDX posts
@@ -116,6 +123,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...spanishPages.map((page) => ({
       url: `${baseUrl}${page}`,
       lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+
+    // Brand and equipment architecture. Omit lastModified rather than using build time.
+    ...equipmentArchitecturePages.map((page) => ({
+      url: `${baseUrl}${page}`,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CheckCircle, Clock, Phone, Snowflake, Zap } from "lucide-react";
 import Link from "next/link";
+import EquipmentArchitectureLinks from "@/components/EquipmentArchitectureLinks";
 
 export const metadata: Metadata = {
   title: "AC Repair Morris County NJ | Same-Day Service | Call Now",
@@ -291,6 +292,19 @@ export default function ACRepairPage() {
           </div>
         </div>
       </section>
+
+      <EquipmentArchitectureLinks
+        title="Air Conditioning Brands We Service"
+        description="Air2Cool diagnoses central AC, heat pump, air handler, coil, control, and matched-system problems across many major makes and models."
+        links={[
+          { label: "Carrier AC service", href: "/brands/carrier" },
+          { label: "Trane AC service", href: "/brands/trane" },
+          { label: "American Standard AC service", href: "/brands/american-standard" },
+          { label: "Luxaire AC service", href: "/brands/luxaire" },
+          { label: "Bosch heat pump service", href: "/brands/bosch" },
+          { label: "All HVAC brands", href: "/brands" },
+        ]}
+      />
 
       <section className="py-12 md:py-16 bg-gradient-to-r from-blue-700 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center text-white">

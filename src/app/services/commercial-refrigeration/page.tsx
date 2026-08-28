@@ -3,6 +3,7 @@ import { Home, CheckCircle, Wrench, Clock, Phone, Building2 } from "lucide-react
 import Link from "next/link";
 import VideoShowcase from "@/components/VideoShowcase";
 import { COMMERCIAL_MAINTENANCE_PLAN } from "@/config/company";
+import EquipmentArchitectureLinks from "@/components/EquipmentArchitectureLinks";
 
 export const metadata: Metadata = {
   title: "Commercial HVAC & Refrigeration in Morris County NJ | Air2Cool | (201) 787-5657",
@@ -462,6 +463,16 @@ export default function CommercialRefrigerationPage() {
           </div>
         </div>
       </section>
+
+      <EquipmentArchitectureLinks
+        title="Commercial Refrigeration Brands & Equipment"
+        description="Air2Cool services True Refrigeration and other applicable commercial refrigeration equipment, including R-290 systems, walk-ins, reach-ins, prep tables, display cases, ice machines, condensing units, evaporators, and controls."
+        links={[
+          { label: "Commercial refrigeration brands", href: "/brands#commercial-refrigeration" },
+          { label: "Refrigeration equipment", href: "/equipment-we-service#commercial-refrigeration" },
+          { label: "Commercial & industrial experience", href: "/brands#commercial-industrial" },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-12 md:py-20 bg-white">

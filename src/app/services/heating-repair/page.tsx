@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Flame, CheckCircle, Clock, Shield } from "lucide-react";
 import Link from "next/link";
+import EquipmentArchitectureLinks from "@/components/EquipmentArchitectureLinks";
 import Image from "next/image";
 import VideoShowcase from "@/components/VideoShowcase";
 import { COMPANY } from "@/config/company";
@@ -434,6 +435,19 @@ export default function HeatingRepairPage() {
           </div>
         </div>
       </section>
+
+      <EquipmentArchitectureLinks
+        title="Heating & Boiler Brands We Service"
+        description="We service furnaces, heat pumps, hydronic boilers, steam boilers, combination boilers, and related controls from many major manufacturers."
+        links={[
+          { label: "Carrier heating service", href: "/brands/carrier" },
+          { label: "Trane heating service", href: "/brands/trane" },
+          { label: "American Standard heating service", href: "/brands/american-standard" },
+          { label: "Luxaire furnace service", href: "/brands/luxaire" },
+          { label: "Bosch heat pump service", href: "/brands/bosch" },
+          { label: "Boiler & hydronic brands", href: "/brands#boilers-hydronics" },
+        ]}
+      />
 
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-red-700 to-orange-600">
