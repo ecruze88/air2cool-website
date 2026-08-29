@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Air2Cool ofrece reparaci\u00f3n de aire acondicionado, calefacci\u00f3n e instalaci\u00f3n en el norte de NJ. Hablamos espa\u00f1ol. Servicio el mismo d\u00eda. Llame al (201) 787-5657.",
   alternates: {
     canonical: "/servicio-en-espanol",
+    languages: { es: "/servicio-en-espanol" },
   },
   openGraph: {
     title: "Servicio de Calefacci\u00f3n y Aire Acondicionado en NJ | Air2Cool",
@@ -28,10 +29,10 @@ const services = [
 ];
 
 const reasons = [
-  "M\u00e1s de 26 a\u00f1os sirviendo a Nueva Jersey",
-  "M\u00e1s de 270 rese\u00f1as de 5 estrellas en Google",
-  "T\u00e9cnicos con licencia y asegurados",
-  "Hablamos espa\u00f1ol - comunicaci\u00f3n clara y sin barreras",
+  "Sirviendo al norte de Nueva Jersey desde 1998",
+  "M\u00e1s de 300 rese\u00f1as de 5 estrellas en Google",
+  "NJ Master HVACR License #19HC00847000",
+  "Servicio disponible en espa\u00f1ol",
   "Financiamiento 0% APR disponible hasta $25,000",
   "Servicio el mismo d\u00eda y emergencias 24/7",
 ];
@@ -45,7 +46,7 @@ const faqSchema = {
       name: "\u00bfAir2Cool habla espa\u00f1ol?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "S\u00ed. Todo nuestro equipo habla espa\u00f1ol para explicar el problema, las opciones de reparaci\u00f3n o instalaci\u00f3n, y el precio con claridad.",
+        text: "S\u00ed. Air2Cool ofrece asistencia en espa\u00f1ol para hablar sobre problemas de HVAC, opciones de servicio y pr\u00f3ximos pasos.",
       },
     },
     {
@@ -69,7 +70,7 @@ const faqSchema = {
 
 export default function ServicioEnEspanolPage() {
   return (
-    <main className="bg-white">
+      <main lang="es" className="bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -86,8 +87,8 @@ export default function ServicioEnEspanolPage() {
             </h1>
             <p className="text-base md:text-xl leading-relaxed text-blue-50 max-w-3xl">
               Air2Cool es una empresa familiar de calefacci&oacute;n y aire acondicionado que sirve al
-              condado de Morris y el norte de Nueva Jersey desde 1998. Todo nuestro equipo habla
-              espa&ntilde;ol. Ofrecemos reparaci&oacute;n de aire acondicionado, reparaci&oacute;n de
+              condado de Morris y el norte de Nueva Jersey desde 1998. Ofrecemos asistencia en
+              espa&ntilde;ol, reparaci&oacute;n de aire acondicionado, reparaci&oacute;n de
               calefacci&oacute;n, instalaci&oacute;n de sistemas nuevos, y servicio de emergencia las 24 horas.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -178,7 +179,7 @@ export default function ServicioEnEspanolPage() {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="rounded-lg border border-gray-200 p-5">
               <h3 className="text-lg font-bold text-gray-900 mb-2">&iquest;Air2Cool habla espa&ntilde;ol?</h3>
-              <p className="text-base text-gray-700">S&iacute;. Todo nuestro equipo habla espa&ntilde;ol.</p>
+              <p className="text-base text-gray-700">S&iacute;. Air2Cool ofrece asistencia en espa&ntilde;ol.</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <h3 className="text-lg font-bold text-gray-900 mb-2">&iquest;Ofrecen servicio el mismo d&iacute;a?</h3>

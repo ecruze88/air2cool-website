@@ -16,54 +16,10 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
-      "@id": "https://www.air2cool.com/service-areas/scotch-plains#business",
-      "name": "Air2Cool Heating & Cooling",
-      "url": "https://www.air2cool.com",
-      "telephone": "+1-201-787-5657",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Wharton",
-        "addressRegion": "NJ",
-        "postalCode": "07885",
-        "addressCountry": "US",
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Scotch Plains",
-          "addressRegion": "NJ",
-          "addressCountry": "US",
-        },
-        {
-          "@type": "City",
-          "name": "Fanwood",
-          "addressRegion": "NJ",
-          "addressCountry": "US",
-        },
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "270",
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "HVAC Services",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Repair Scotch Plains NJ" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air Conditioning Repair Scotch Plains NJ" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air Conditioning Installation Scotch Plains NJ" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC Replacement Scotch Plains NJ" } },
-        ],
-      },
-    },
-    {
       "@type": "Service",
       "name": "AC Repair & Installation in Scotch Plains, NJ",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Air2Cool Heating & Cooling",
+        "@id": "https://www.air2cool.com/#organization",
       },
       "areaServed": [
         { "@type": "City", "name": "Scotch Plains", "addressRegion": "NJ" },
@@ -253,7 +209,7 @@ export default function ScotchPlainsPage() {
                 {
                   icon: <Wrench className="w-6 h-6 text-green-600" />,
                   title: "Family Owned Since 1998",
-                  body: "Over 26 years serving New Jersey homeowners. You're getting a local team, not a national franchise.",
+                  body: "Serving New Jersey homeowners since 1998 as a local company, not a national franchise.",
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,

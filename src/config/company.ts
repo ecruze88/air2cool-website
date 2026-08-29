@@ -15,6 +15,12 @@ export const COMPANY = {
   legalName: "Air2Cool Heating/AC & Refrigeration",
   foundedYear: 1998,
   servingSinceClaim: "Serving North Jersey Since 1998",
+  location: {
+    locality: "Wharton",
+    region: "NJ",
+    postalCode: "07885",
+    country: "US",
+  },
   phone: {
     display: "(201) 787-5657",
     href: "tel:+12017875657",
@@ -52,7 +58,7 @@ export const COMMERCIAL_MAINTENANCE_PLAN = {
   repairDiscountPercent: 10,
   partsDiscountPercent: 10,
   description:
-    "Commercial maintenance agreements are customized based on the facility, equipment type, system count, and service requirements. Commercial maintenance customers receive 10% off eligible repairs and replacement parts.",
+    "Commercial maintenance agreements are customized based on the facility, equipment type, system count, and service requirements. Commercial maintenance customers receive 10% off eligible repairs and 10% off eligible replacement parts.",
 } as const;
 
 // Backward-compatible residential alias for existing customer-facing components.

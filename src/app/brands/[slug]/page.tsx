@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const brand = getBrandBySlug(slug);
   if (!brand?.indexed) return {};
   return {
-    title: brand.seoTitle,
+    title: `${brand.seoTitle} | Air2Cool`,
     description: brand.seoDescription,
     alternates: { canonical: `/brands/${brand.slug}` },
     openGraph: { title: brand.seoTitle, description: brand.seoDescription, url: `/brands/${brand.slug}` },

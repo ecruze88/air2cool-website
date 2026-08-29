@@ -16,36 +16,10 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "HVACBusiness",
-      "@id": "https://www.air2cool.com/service-areas/vernon#business",
-      "name": "Air2Cool Heating & Cooling",
-      "url": "https://www.air2cool.com",
-      "telephone": "+1-201-787-5657",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Wharton",
-        "addressRegion": "NJ",
-        "postalCode": "07885",
-        "addressCountry": "US",
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Vernon",
-        "addressRegion": "NJ",
-        "addressCountry": "US",
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "270",
-      },
-    },
-    {
       "@type": "Service",
       "name": "HVAC Services in Vernon, NJ",
       "provider": {
-        "@type": "HVACBusiness",
-        "name": "Air2Cool Heating & Cooling",
+        "@id": "https://www.air2cool.com/#organization",
       },
       "areaServed": { "@type": "City", "name": "Vernon", "addressRegion": "NJ" },
       "serviceType": "Heating Repair, Mini Split Installation, HVAC Service",
@@ -261,7 +235,7 @@ export default function VernonPage() {
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
                   title: "300+ Five-Star Reviews",
-                  body: "Trusted across Sussex County and North NJ for over 26 years. Real reviews, real customers.",
+                  body: "Serving Sussex County and North Jersey since 1998. Real reviews, real customers.",
                 },
                 {
                   icon: <Shield className="w-6 h-6 text-green-600" />,

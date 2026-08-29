@@ -4,6 +4,7 @@ import { Phone, CheckCircle, Star, Clock, Shield, Wrench, MapPin } from "lucide-
 import Link from "next/link";
 import Script from "next/script";
 import townsData from "@/data/service-areas.json";
+import { NOINDEX_TOWN_SLUGS } from "@/data/noindex-towns";
 
 type Town = {
   name: string;
@@ -16,16 +17,6 @@ type Town = {
 };
 
 const towns = (townsData as { towns: Town[] }).towns;
-
-// ─── Noindex slugs (distant / low-value pages) ────────────────────────────────
-const NOINDEX_SLUGS = new Set([
-  "irvington", "east-orange", "newark", "belleville",
-  "elizabeth", "linden", "rahway", "roselle", "roselle-park", "hillside",
-  "fort-lee", "teaneck", "englewood", "bergenfield",
-  "bloomfield", "glen-ridge", "maplewood", "south-orange", "orange",
-  "prospect-park", "haledon", "passaic", "paterson",
-  "phillipsburg", "lopatcong", "stockton", "lambertville", "frenchtown", "milford",
-]);
 
 // ─── County-level fallback copy (interpolated with town name) ─────────────────
 const COUNTY_CONTENT: Record<string, (name: string) => string> = {
@@ -198,9 +189,9 @@ const TOWN_UNIQUE_CONTENT: Record<string, string> = {
   madison:
     "Madison's older housing stock — particularly around the Hartley Dodge Memorial area and the Kings Road neighborhoods — includes a lot of homes still running on aging oil-to-gas conversion setups and original boiler systems. We're comfortable working on all of it, and we'll give you a straight answer on whether your existing system has life left or whether a new high-efficiency install makes more sense financially.",
   "rockaway-township":
-    "Rockaway Borough and Rockaway Township sit right in our backyard — we're based in Wharton and have been serving the Rockaway area for over 26 years. We know the neighborhoods, the housing stock, and the kind of system problems that come up in homes near the Rockaway River corridor. When you call us for emergency service, you're getting a neighbor, not a dispatch center 50 miles away.",
+    "Rockaway Borough and Rockaway Township sit near our Wharton base. Air2Cool has served North Jersey since 1998 and handles heating, cooling, and emergency HVAC calls throughout the Rockaway area.",
   rockaway:
-    "Rockaway Borough and Rockaway Township sit right in our backyard — we're based in Wharton and have been serving the Rockaway area for over 26 years. We know the neighborhoods, the housing stock, and the kind of system problems that come up in homes near the Rockaway River corridor. When you call us for emergency service, you're getting a neighbor, not a dispatch center 50 miles away.",
+    "Rockaway Borough and Rockaway Township sit near our Wharton base. Air2Cool has served North Jersey since 1998 and handles heating, cooling, and emergency HVAC calls throughout the Rockaway area.",
   denville:
     "Denville's lakefront communities — Indian Lake, Openaki, and others — can present unique HVAC challenges: seasonal homes converting to year-round use often need full system evaluations, and the humidity near the water means air quality and dehumidification are frequent topics. We've done dozens of mini split installs and full HVAC overhauls in the lake communities and know what works.",
   randolph:
@@ -214,7 +205,7 @@ const TOWN_UNIQUE_CONTENT: Record<string, string> = {
   "mount-arlington":
     "Mount Arlington sits on Lake Hopatcong's south shore, and like many lake communities, the HVAC challenges here are unique. Homes near the water deal with higher humidity levels, which stresses cooling systems and can lead to mold growth in ductwork if airflow isn't properly managed. Many lake houses in Mount Arlington were originally seasonal builds that have since been converted to year-round use — these often need full system evaluations and sometimes supplemental mini splits to reach areas that weren't designed for year-round climate control. We've worked on dozens of lake homes in this area and know what to look for.",
   hopatcong:
-    "Hopatcong is New Jersey's largest lake community, and the HVAC demands here are as varied as the homes. From older lakefront camps converted to year-round residences to newer construction up on the hillside, we service all of it. Lake homes near the water often run into high-humidity issues that push AC systems harder than expected, and the area's elevation means heating loads are higher than flatter towns at similar distances from our Wharton location. We've installed mini splits, replaced aging boilers, and serviced central systems throughout Hopatcong for over 25 years.",
+    "Hopatcong is New Jersey's largest lake community, with housing that ranges from older lakefront properties to newer hillside construction. Air2Cool serves Hopatcong with mini-split, boiler, central HVAC, and humidity-control options from its Wharton base.",
   jefferson:
     "Jefferson is one of Morris County's larger townships, spanning communities like Oak Ridge, Weldon, and portions of the Lake Hopatcong shoreline. The range of housing here is significant — lakefront properties, rural homes on larger lots, and suburban neighborhoods all within the same general area. Oil heat is still common in the more rural sections of the township, and we handle conversions to high-efficiency gas as well as full heat pump installs for homeowners looking to electrify. For the lake communities, we know the specific challenges of high-humidity environments and seasonal-to-year-round conversions.",
   stanhope:
@@ -667,7 +658,7 @@ export async function generateMetadata({
   const town = towns.find((t) => t.slug === slug);
   if (!town) return {};
 
-  const noindex = NOINDEX_SLUGS.has(town.slug);
+  const noindex = NOINDEX_TOWN_SLUGS.has(town.slug);
   const townMeta = TOWN_META[town.slug];
 
   if (townMeta) {
@@ -677,18 +668,18 @@ export async function generateMetadata({
       alternates: {
         canonical: `https://www.air2cool.com/service-areas/${town.slug}`,
       },
-      ...(noindex && { robots: "noindex, nofollow" }),
+      ...(noindex && { robots: "noindex, follow" }),
     };
   }
 
   const nearby = town.nearbyTowns.slice(0, 2).join(" and ");
   return {
-    title: `${town.name} HVAC Repair & Installation | Air2Cool Heating & Cooling`,
+    title: `HVAC Service in ${town.name}, NJ | Air2Cool`,
     description: `Air2Cool provides AC repair, furnace installation, heating service & 24/7 emergency HVAC in ${town.name}, NJ — near ${nearby}. Family-owned since 1998. 300+ 5-star Google reviews. Call (201) 787-5657.`,
     alternates: {
       canonical: `https://www.air2cool.com/service-areas/${town.slug}`,
     },
-    ...(noindex && { robots: "noindex, nofollow" }),
+    ...(noindex && { robots: "noindex, follow" }),
   };
 }
 
@@ -705,36 +696,10 @@ export default async function TownPage({
 
   const schemaGraph: object[] = [
     {
-      "@type": "HVACBusiness",
-      "@id": `https://www.air2cool.com/service-areas/${town.slug}#business`,
-      "name": "Air2Cool Heating & Cooling",
-      "url": "https://www.air2cool.com",
-      "telephone": "+1-201-787-5657",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Wharton",
-        "addressRegion": "NJ",
-        "postalCode": "07885",
-        "addressCountry": "US",
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": town.name,
-        "addressRegion": "NJ",
-        "addressCountry": "US",
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "270",
-      },
-    },
-    {
       "@type": "Service",
       "name": `HVAC Service in ${town.name}, NJ`,
       "provider": {
-        "@type": "HVACBusiness",
-        "name": "Air2Cool Heating & Cooling",
+        "@id": "https://www.air2cool.com/#organization",
       },
       "areaServed": { "@type": "City", "name": town.name, "addressRegion": "NJ" },
       "serviceType": "HVAC Repair, Installation, and Maintenance",

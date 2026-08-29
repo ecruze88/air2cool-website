@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "HVAC Troubleshooting Guide | Furnace, AC & Boiler Problems | Air2Cool NJ",
   description:
     "Troubleshoot common HVAC problems: furnace not starting, AC not cooling, boiler issues, thermostat problems. DIY fixes & when to call Air2Cool. Serving North NJ. 24/7 emergency service (201) 787-5657.",
+  alternates: { canonical: "/troubleshooting" },
 };
 
 const HEATING_ISSUES = [

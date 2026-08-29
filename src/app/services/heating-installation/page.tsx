@@ -7,7 +7,7 @@ import VideoShowcase from "@/components/VideoShowcase";
 export const metadata: Metadata = {
   title: "Furnace & Boiler Installation in Morris County NJ | Air2Cool | (201) 787-5657",
   description:
-    "Professional furnace and boiler installation in Morris County & North NJ. Lochinvar, NTI & Weil-McLain boilers. Hydronic & steam systems. Free house cleaning. 0% financing up to $25k. Licensed Master HVAC Technicians. Call (201) 787-5657.",
+    "Professional furnace and boiler installation in Morris County and North NJ. Hydronic and steam systems. NJ Master HVACR License #19HC00847000. Call (201) 787-5657.",
   keywords: [
     "furnace installation Morris County NJ",
     "boiler installation North NJ",

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Reviews | Air2Cool Heating & Cooling",
   description:
     "See what customers say about Air2Cool Heating & Cooling across North New Jersey. Read real 5-star reviews from homeowners in Morris County and beyond.",
+  alternates: { canonical: "/reviews" },
 };
 
 export default function ReviewsPage() {
@@ -87,8 +88,8 @@ export default function ReviewsPage() {
         <div className="mt-10 md:mt-16 text-center">
           <div className="inline-flex flex-wrap items-center justify-center gap-4 md:gap-8 px-5 md:px-8 py-4 md:py-6 bg-gray-50 rounded-2xl border border-gray-200">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-extrabold text-gray-900">26+</div>
-              <div className="text-xs md:text-sm text-gray-600">Years Experience</div>
+              <div className="text-2xl md:text-3xl font-extrabold text-gray-900">Since 1998</div>
+              <div className="text-xs md:text-sm text-gray-600">Serving North Jersey</div>
             </div>
             <div className="h-8 md:h-12 w-px bg-gray-300"></div>
             <div className="text-center">

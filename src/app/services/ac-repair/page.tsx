@@ -4,7 +4,7 @@ import Link from "next/link";
 import EquipmentArchitectureLinks from "@/components/EquipmentArchitectureLinks";
 
 export const metadata: Metadata = {
-  title: "AC Repair Morris County NJ | Same-Day Service | Call Now",
+  title: "AC Repair Morris County NJ | Same-Day Service | Air2Cool",
   description:
     "AC broke down in Morris County? Air2Cool responds fast — same-day AC repair throughout Morris County and North NJ. Licensed since 1998, honest pricing. Call (201) 787-5657.",
   keywords: [

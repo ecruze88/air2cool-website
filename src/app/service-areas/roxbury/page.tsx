@@ -16,36 +16,10 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "HVACBusiness",
-      "@id": "https://www.air2cool.com/service-areas/roxbury#business",
-      "name": "Air2Cool Heating & Cooling",
-      "url": "https://www.air2cool.com",
-      "telephone": "+1-201-787-5657",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Wharton",
-        "addressRegion": "NJ",
-        "postalCode": "07885",
-        "addressCountry": "US",
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Roxbury Township",
-        "addressRegion": "NJ",
-        "addressCountry": "US",
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "270",
-      },
-    },
-    {
       "@type": "Service",
       "name": "HVAC Service in Roxbury Township, NJ",
       "provider": {
-        "@type": "HVACBusiness",
-        "name": "Air2Cool Heating & Cooling",
+        "@id": "https://www.air2cool.com/#organization",
       },
       "areaServed": { "@type": "City", "name": "Roxbury", "addressRegion": "NJ" },
       "serviceType": "HVAC Repair, Installation, and Maintenance",

@@ -45,36 +45,10 @@ const schema = {
       ],
     },
     {
-      "@type": "HVACBusiness",
-      "@id": "https://www.air2cool.com/service-areas/kinnelon#business",
-      "name": "Air2Cool Heating & Cooling",
-      "url": "https://www.air2cool.com",
-      "telephone": "+1-201-787-5657",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Wharton",
-        "addressRegion": "NJ",
-        "postalCode": "07885",
-        "addressCountry": "US",
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Kinnelon",
-        "addressRegion": "NJ",
-        "addressCountry": "US",
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "270",
-      },
-    },
-    {
       "@type": "Service",
       "name": "HVAC Contractor Services in Kinnelon, NJ",
       "provider": {
-        "@type": "HVACBusiness",
-        "name": "Air2Cool Heating & Cooling",
+        "@id": "https://www.air2cool.com/#organization",
       },
       "areaServed": { "@type": "City", "name": "Kinnelon", "addressRegion": "NJ" },
       "serviceType": "AC Replacement, HVAC Installation, AC Repair",

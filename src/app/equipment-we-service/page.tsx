@@ -5,7 +5,7 @@ import { getBrandBySlug } from "@/data/brands";
 import { PUBLIC_REFRIGERANTS } from "@/data/refrigerants";
 
 export const metadata: Metadata = {
-  title: "HVAC & Refrigeration Equipment We Service",
+  title: "HVAC & Refrigeration Equipment We Service | Air2Cool",
   description: "Residential HVAC, commercial HVAC, boiler, refrigeration, indoor air quality, and specialty equipment serviced by Air2Cool in North Jersey.",
   alternates: { canonical: "/equipment-we-service" },
   openGraph: { title: "HVAC & Refrigeration Equipment We Service | Air2Cool", description: "Explore Air2Cool's residential, commercial, refrigeration, and indoor air quality equipment capabilities.", url: "/equipment-we-service" },

@@ -22,31 +22,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HVACBusiness",
-            "name": "Air2Cool Heating & Cooling",
-            "url": "https://www.air2cool.com",
-            "telephone": "+12017875657",
-            "foundingDate": "1998",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "20 Kitchell Ave",
-              "addressLocality": "Wharton",
-              "addressRegion": "NJ",
-              "postalCode": "07885",
-              "addressCountry": "US"
-            },
-            "areaServed": [
-              "Morris County NJ","Essex County NJ","Passaic County NJ","Bergen County NJ",
-              "Sussex County NJ","Warren County NJ","Hunterdon County NJ","Somerset County NJ","Union County NJ"
-            ]
-          })
-        }}
-      />
       {/* Hero - MOBILE OPTIMIZED */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-800 text-white py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -55,7 +30,7 @@ export default function AboutPage() {
               Your Trusted HVAC Partner Since 1998
             </h1>
             <p className="text-base md:text-xl text-gray-200 mb-6 md:mb-8">
-              For over 26 years, Air2Cool has been North New Jersey's go-to HVAC company. 
+              Air2Cool has served North New Jersey since 1998.
               Family-owned, locally operated, and committed to honest service.
             </p>
             <div className="flex flex-wrap gap-2 md:gap-4">
@@ -140,7 +115,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Expert Technicians</h3>
               <p className="text-xs md:text-base text-gray-600">
-                Licensed Master HVAC Technicians with decades of experience.
+                Licensed and insured under NJ Master HVACR License #{COMPANY.license.masterHvacrNumber}.
               </p>
             </div>
 
@@ -208,7 +183,7 @@ export default function AboutPage() {
             Our Team
           </h2>
           <p className="text-center text-xs md:text-base text-gray-600 mb-6 md:mb-10 max-w-2xl mx-auto">
-            Every team member is background-checked, drug-tested, and committed to exceptional service.
+            Our team is committed to professional, respectful service in every home and business.
           </p>
 
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -247,9 +222,9 @@ export default function AboutPage() {
               <div className="flex items-start gap-3 md:gap-4">
                 <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 shrink-0 mt-0.5 md:mt-1" />
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1 text-sm md:text-base">Background Checked</h3>
+                  <h3 className="font-bold text-gray-900 mb-1 text-sm md:text-base">Professional Standards</h3>
                   <p className="text-gray-600 text-xs md:text-sm">
-                    Every team member passes thorough background and drug screening.
+                    Clear communication, careful work, and respect for the customer&apos;s property.
                   </p>
                 </div>
               </div>

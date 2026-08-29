@@ -16,36 +16,10 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "HVACBusiness",
-      "@id": "https://www.air2cool.com/service-areas/hackettstown#business",
-      "name": "Air2Cool Heating & Cooling",
-      "url": "https://www.air2cool.com",
-      "telephone": "+1-201-787-5657",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Wharton",
-        "addressRegion": "NJ",
-        "postalCode": "07885",
-        "addressCountry": "US",
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Hackettstown",
-        "addressRegion": "NJ",
-        "addressCountry": "US",
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "270",
-      },
-    },
-    {
       "@type": "Service",
       "name": "HVAC Services in Hackettstown, NJ",
       "provider": {
-        "@type": "HVACBusiness",
-        "name": "Air2Cool Heating & Cooling",
+        "@id": "https://www.air2cool.com/#organization",
       },
       "areaServed": { "@type": "City", "name": "Hackettstown", "addressRegion": "NJ" },
       "serviceType": "Heating Repair, AC Repair, Furnace Installation",
@@ -167,7 +141,7 @@ export default function HackettstownPage() {
         <section className="py-10 md:py-14 bg-white">
           <div className="max-w-4xl mx-auto px-6">
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Hackettstown is one of Warren County&apos;s main towns and a regular part of our service route heading west from Wharton. We&apos;re approximately <strong>25–30 minutes away</strong>, and we serve Hackettstown for everything from routine AC tune-ups to emergency furnace repairs in the dead of winter. As a family-owned company with over 26 years of experience, we bring the same licensed, licensed craftsmanship to every Warren County home we serve.
+              Hackettstown is one of Warren County&apos;s main towns and a regular part of our service area west of Wharton. We serve Hackettstown for everything from routine AC tune-ups to emergency furnace repairs in winter. Air2Cool has served North Jersey since 1998 through its licensed HVACR operation.
             </p>
           </div>
         </section>

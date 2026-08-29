@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Recent HVAC Projects | Air2Cool Installations in North NJ",
   description:
     `See recent Air2Cool HVAC installations across North New Jersey, including boilers, furnaces, AC systems, and commercial HVAC. Serving customers since ${COMPANY.foundedYear}. Licensed and insured under NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}.`,
+  alternates: { canonical: "/projects" },
 };
 
 const GALLERY_PHOTOS = [

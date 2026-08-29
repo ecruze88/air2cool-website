@@ -244,7 +244,7 @@ export default function CoolingInstallationPage() {
                 <Award className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">2. Expert Installation</h3>
-              <p className="text-xs md:text-sm text-gray-600">Licensed Master HVAC Technicians install to manufacturer specs.</p>
+              <p className="text-xs md:text-sm text-gray-600">Installation is performed through Air2Cool&apos;s licensed HVACR operation.</p>
             </div>
 
             <div className="bg-white rounded-xl p-5 shadow-lg border-2 border-gray-200">

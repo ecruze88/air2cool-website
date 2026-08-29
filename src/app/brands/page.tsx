@@ -4,7 +4,7 @@ import { ArrowRight, Building2, Snowflake, Wind, Wrench } from "lucide-react";
 import { PUBLIC_BRANDS, type BrandCategory } from "@/data/brands";
 
 export const metadata: Metadata = {
-  title: "HVAC & Refrigeration Brands We Service",
+  title: "HVAC & Refrigeration Brands We Service | Air2Cool",
   description:
     "Explore HVAC, boiler, commercial refrigeration, and indoor air quality brands serviced by Air2Cool across Morris County and North Jersey.",
   alternates: { canonical: "/brands" },

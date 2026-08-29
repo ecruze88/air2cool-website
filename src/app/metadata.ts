@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Air2Cool | North NJ HVAC Company | Heating & Cooling Near Me",
-    template: "%s | Air2Cool Heating & Cooling",
-  },
+  title: "Air2Cool | North NJ HVAC Company | Heating & Cooling Near Me",
   
   description:
     "Air2Cool — trusted North NJ HVAC company since 1998. Furnace repair, AC installation & 24/7 service near you. 5.0-star Google rated. Call (201) 787-5657.",
@@ -61,14 +58,6 @@ export const metadata: Metadata = {
       "Family-owned North NJ HVAC company since 1998. Furnace repair, AC installation & 24/7 emergency service near you. 5.0-star Google rated. Call (201) 787-5657.",
     url: "https://www.air2cool.com",
     siteName: "Air2Cool Heating & Cooling",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Air2Cool Heating & Cooling - HVAC Services in Morris County & North NJ",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -78,7 +67,6 @@ export const metadata: Metadata = {
     title: "Air2Cool | North NJ HVAC Company | Near Me",
     description:
       "Family-owned North NJ HVAC company since 1998. Furnace repair, AC installation & 24/7 emergency service near you. 5.0-star Google rated. Call (201) 787-5657.",
-    images: ["/og-image.jpg"],
     creator: "@air2cool",
   },
 
@@ -108,11 +96,7 @@ export const metadata: Metadata = {
   
   // Icons/Favicon configuration
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-    ],
+    icon: [{ url: "/icon.png", type: "image/png" }],
     apple: [
       { url: "/apple-touch-icon.png" },
     ],
@@ -123,248 +107,5 @@ export const metadata: Metadata = {
   other: {
     'geo.region': 'US-NJ',
     'geo.placename': 'Wharton, New Jersey',
-    'geo.position': '40.8932;-74.5815', // Wharton, NJ coordinates
   },
-};
-
-// LocalBusiness Schema for SEO
-export const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "HVACBusiness",
-  "@id": "https://www.air2cool.com/#organization",
-  "name": "Air2Cool Heating & Cooling",
-  "legalName": "Air2Cool Heating/AC & Refrigeration",
-  "url": "https://www.air2cool.com",
-  "logo": "https://www.air2cool.com/Air2Cool-HeatingAC-&-Refrigeration-Logo-237w.webp",
-  "image": "https://www.air2cool.com/og-image.jpg",
-  "description": "Family-owned HVAC contractor serving North New Jersey since 1998. Specializing in furnace repair, AC installation, heat pumps, and 24/7 emergency service.",
-  "telephone": "+1-201-787-5657",
-  "email": "air2cool1@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Wharton",
-    "addressRegion": "NJ",
-    "postalCode": "07885",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "40.8932",
-    "longitude": "-74.5815"
-  },
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Morristown",
-      "containedIn": {
-        "@type": "State",
-        "name": "New Jersey"
-      }
-    },
-    {
-      "@type": "City",
-      "name": "Dover",
-      "containedIn": {
-        "@type": "State",
-        "name": "New Jersey"
-      }
-    },
-    {
-      "@type": "City",
-      "name": "Randolph",
-      "containedIn": {
-        "@type": "State",
-        "name": "New Jersey"
-      }
-    },
-    {
-      "@type": "City",
-      "name": "Wharton",
-      "containedIn": {
-        "@type": "State",
-        "name": "New Jersey"
-      }
-    },
-    {
-      "@type": "City",
-      "name": "Rockaway",
-      "containedIn": {
-        "@type": "State",
-        "name": "New Jersey"
-      }
-    },
-    {
-      "@type": "City",
-      "name": "Denville",
-      "containedIn": {
-        "@type": "State",
-        "name": "New Jersey"
-      }
-    },
-    {
-      "@type": "City",
-      "name": "Parsippany",
-      "containedIn": {
-        "@type": "State",
-        "name": "New Jersey"
-      }
-    },
-    {
-      "@type": "City",
-      "name": "Madison",
-      "containedIn": {
-        "@type": "State",
-        "name": "New Jersey"
-      }
-    },
-    // Counties
-    {
-      "@type": "AdministrativeArea",
-      "name": "Morris County"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Sussex County"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Warren County"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Essex County"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Passaic County"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Union County"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Bergen County"
-    }
-  ],
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "07:00",
-      "closes": "21:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59",
-      "description": "24/7 Emergency Service"
-    }
-  ],
-  "priceRange": "$$",
-  "paymentAccepted": ["Cash", "Check", "Credit Card", "Financing"],
-  "currenciesAccepted": "USD",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "270",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=100063904906666",
-    "https://www.instagram.com/air2cool7/",
-    "https://www.youtube.com/@air2cool831",
-    "https://www.tiktok.com/@air2cool.com0"
-  ],
-  "foundingDate": "1998",
-  "slogan": "Clean installs, honest pricing, fast service",
-  "serviceArea": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": "40.8932",
-      "longitude": "-74.5815"
-    },
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "HVAC Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Furnace Repair",
-          "description": "Emergency and scheduled furnace repair services"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "AC Repair",
-          "description": "Air conditioning repair and maintenance"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "HVAC Installation",
-          "description": "New HVAC system installation with professional sizing"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Heat Pump Installation",
-          "description": "Energy-efficient heat pump systems"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Mini Split Installation",
-          "description": "Ductless mini-split system installation"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Air Filtration",
-          "description": "Indoor air quality and filtration systems"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Preventative Maintenance",
-          "description": "Regular HVAC maintenance programs"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Commercial Refrigeration",
-          "description": "Commercial HVAC and refrigeration services"
-        }
-      }
-    ]
-  }
 };

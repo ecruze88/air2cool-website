@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Service Areas | Air2Cool Heating & Cooling in North NJ",
   description:
     `Air2Cool serves ${SERVICE_COUNTY_LIST}. Professional HVAC service across North New Jersey since ${COMPANY.foundedYear}.`,
+  alternates: { canonical: "/service-areas" },
 };
 
 type Town = {

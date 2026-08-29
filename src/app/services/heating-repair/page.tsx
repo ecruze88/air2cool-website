@@ -89,7 +89,7 @@ export default function HeatingRepairPage() {
                 "name": "Do you repair all furnace brands?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Air2Cool services all major furnace brands including Carrier, Trane, Lennox, Rheem, York, Goodman, Bryant, Weil-McLain, Burnham, Buderus, and more. Our Licensed Master HVAC Technicians are trained on both gas and oil furnaces, as well as all types of boiler systems."
+                  "text": "Yes. Air2Cool services many major furnace and boiler brands, including Carrier, Trane, Lennox, Rheem, York, Goodman, Bryant, Weil-McLain, Burnham, and Buderus, through its licensed HVACR operation."
                 }
               },
               {
@@ -144,7 +144,7 @@ export default function HeatingRepairPage() {
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              Furnace repair, boiler service, heat pump repair — Air2Cool has handled all of it in Morris County and North Jersey since 1998. Our Licensed Master HVAC Technicians are available 24/7 for emergency heating service so you&apos;re never left in the cold.
+              Furnace repair, boiler service, and heat pump repair — Air2Cool has served Morris County and North Jersey since 1998. Our 24/7 emergency heating line is available when your system stops working.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
@@ -196,7 +196,7 @@ export default function HeatingRepairPage() {
               </p>
               <p>
                 When New Jersey temperatures drop below freezing, a broken furnace or boiler isn't just uncomfortable — it's a health and safety emergency. Air2Cool Heating &amp; Cooling has been keeping homes and businesses warm across{" "}
-                <Link href="/service-areas/morris-county" className="text-red-600 hover:underline">Morris County</Link> and North NJ for over 26 years. We're the local heating repair specialists that homeowners in{" "}
+                <Link href="/service-areas/morris-county" className="text-red-600 hover:underline">Morris County</Link> and North NJ since 1998. We serve homeowners in{" "}
                 <Link href="/service-areas/morristown" className="text-red-600 hover:underline">Morristown</Link>,{" "}
                 <Link href="/service-areas/parsippany-troy-hills" className="text-red-600 hover:underline">Parsippany</Link>,{" "}
                 <Link href="/service-areas/randolph" className="text-red-600 hover:underline">Randolph</Link>, and{" "}
@@ -253,7 +253,7 @@ export default function HeatingRepairPage() {
                 Heating Repair You Can Trust
               </h3>
               <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                When you hire us to repair your heating system, you can expect high-quality service backed by integrity and honesty. It's something our family-owned and operated company has been providing for over 26 years now. We'll respect your property and work diligently to make sure you're satisfied.
+                Air2Cool has served North Jersey since 1998 with straightforward diagnostics and repair recommendations. We&apos;ll respect your property and explain the work before proceeding.
               </p>
             </div>
           </div>

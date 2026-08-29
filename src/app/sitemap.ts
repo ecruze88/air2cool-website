@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import townsData from '@/data/service-areas.json'
 import { getPublishedPosts } from '@/lib/blog'
 import { INDEXED_BRANDS } from '@/data/brands'
+import { NOINDEX_TOWN_SLUGS } from '@/data/noindex-towns'
 
 type Town = { slug: string; countySlug: string }
 
@@ -9,7 +10,6 @@ export const revalidate = 60;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.air2cool.com'
-  const currentDate = new Date()
   
   // Main pages
   const mainPages = [
@@ -76,13 +76,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/service-areas/somerset-county',
   ]
 
-  const towns = (townsData as { towns: Town[] }).towns
+  const towns = (townsData as { towns: Town[] }).towns.filter(
+    (town) => !NOINDEX_TOWN_SLUGS.has(town.slug)
+  )
 
   return [
     // Homepage - highest priority
     {
       url: baseUrl,
-      lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 1,
     },
@@ -90,7 +91,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Main pages - high priority
     ...mainPages.slice(1).map((page) => ({
       url: `${baseUrl}${page}`,
-      lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     })),
@@ -98,7 +98,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Service pages - high priority for SEO
     ...servicePages.map((page) => ({
       url: `${baseUrl}${page}`,
-      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
@@ -106,7 +105,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // County pages - important for local SEO
     ...countyPages.map((page) => ({
       url: `${baseUrl}${page}`,
-      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
@@ -114,7 +112,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Tool pages
     ...toolPages.map((page) => ({
       url: `${baseUrl}${page}`,
-      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
@@ -122,7 +119,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Spanish-language page
     ...spanishPages.map((page) => ({
       url: `${baseUrl}${page}`,
-      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
@@ -137,7 +133,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Blog pages
     ...blogPages.map((page) => ({
       url: `${baseUrl}${page}`,
-      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
@@ -145,7 +140,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Town pages
     ...towns.map((town) => ({
       url: `${baseUrl}/service-areas/${town.slug}`,
-      lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),

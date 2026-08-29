@@ -1,5 +1,5 @@
 import "./globals.css";
-export { metadata, localBusinessSchema } from "./metadata";
+export { metadata } from "./metadata";
 import { Facebook, Instagram, Youtube, Star } from "lucide-react";
 import Script from "next/script";
 import MobileMenu from "@/components/MobileMenu";
@@ -8,8 +8,7 @@ import { Analytics } from "@vercel/analytics/next";
 import StickyCallButton from "@/components/StickyCallButton";
 import Image from "next/image";
 import ScrollToTop from "@/components/ScrollToTop";
-
-const businessName = process.env.BUSINESS_NAME || "Air2Cool Heating & Cooling";
+import { COMPANY } from "@/config/company";
 
 export default function RootLayout({
   children,
@@ -51,57 +50,31 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HVACBusiness",
               "@id": "https://www.air2cool.com/#organization",
-              "name": "Air2Cool Heating & Cooling",
-              "legalName": "Air2Cool Heating/AC & Refrigeration",
+              "name": COMPANY.name,
+              "legalName": COMPANY.legalName,
               "url": "https://www.air2cool.com",
               "logo": "https://www.air2cool.com/Air2Cool-HeatingAC-&-Refrigeration-Logo-237w.webp",
-              "image": "https://www.air2cool.com/og-image.jpg",
               "description": "Family-owned HVAC contractor serving North New Jersey since 1998. Specializing in furnace repair, AC installation, heat pumps, and 24/7 emergency service.",
-              "telephone": "+1-201-787-5657",
+              "telephone": COMPANY.phone.e164,
               "email": "air2cool1@gmail.com",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Wharton",
-                "addressRegion": "NJ",
-                "postalCode": "07885",
-                "addressCountry": "US"
+                "addressLocality": COMPANY.location.locality,
+                "addressRegion": COMPANY.location.region,
+                "postalCode": COMPANY.location.postalCode,
+                "addressCountry": COMPANY.location.country
               },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "40.8932",
-                "longitude": "-74.5815"
+              "areaServed": COMPANY.serviceCounties.map((county) => ({
+                "@type": "AdministrativeArea",
+                "name": county.fullName,
+              })),
+              "foundingDate": String(COMPANY.foundedYear),
+              "identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "NJ Master HVACR License",
+                "value": COMPANY.license.masterHvacrNumber,
               },
-              "areaServed": [
-                { "@type": "AdministrativeArea", "name": "Morris County" },
-                { "@type": "AdministrativeArea", "name": "Sussex County" },
-                { "@type": "AdministrativeArea", "name": "Warren County" },
-                { "@type": "AdministrativeArea", "name": "Essex County" },
-                { "@type": "AdministrativeArea", "name": "Passaic County" },
-                { "@type": "AdministrativeArea", "name": "Union County" },
-                { "@type": "AdministrativeArea", "name": "Bergen County" },
-                { "@type": "AdministrativeArea", "name": "Hunterdon County" },
-                { "@type": "AdministrativeArea", "name": "Somerset County" }
-              ],
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "07:00",
-                  "closes": "21:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Saturday", "Sunday"],
-                  "opens": "00:00",
-                  "closes": "23:59"
-                }
-              ],
               "priceRange": "$$",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "270"
-              },
               "sameAs": [
                 "https://www.facebook.com/profile.php?id=100063904906666",
                 "https://www.instagram.com/air2cool7/",

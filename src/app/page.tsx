@@ -144,10 +144,10 @@ const ICON_MAP = {
 const HOME_BRAND_GROUPS = [
   {
     title: "Heating & Cooling",
-    slugs: ["carrier", "trane", "american-standard", "luxaire", "bosch", "lennox", "rheem", "goodman"],
+    slugs: ["carrier", "trane", "american-standard", "luxaire", "lennox", "rheem", "goodman"],
   },
   {
-    title: "Heat Pumps & Ductless",
+    title: "Ductless & Heat Pumps",
     slugs: ["mitsubishi-electric", "daikin", "fujitsu", "bosch"],
   },
   {
@@ -163,58 +163,6 @@ const HOME_BRAND_GROUPS = [
 export default function HomePage() {
   return (
     <main className="bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HVACBusiness",
-            "name": "Air2Cool Heating & Cooling",
-            "url": "https://www.air2cool.com",
-            "telephone": "+12017875657",
-            "email": "air2cool1@gmail.com",
-            "foundingDate": "1998",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "20 Kitchell Ave",
-              "addressLocality": "Wharton",
-              "addressRegion": "NJ",
-              "postalCode": "07885",
-              "addressCountry": "US"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 40.8987,
-              "longitude": -74.5765
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-                "opens": "08:00",
-                "closes": "18:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Saturday"],
-                "opens": "08:00",
-                "closes": "14:00"
-              }
-            ],
-            "areaServed": [
-              "Morris County NJ","Essex County NJ","Passaic County NJ","Bergen County NJ",
-              "Sussex County NJ","Warren County NJ","Hunterdon County NJ","Somerset County NJ","Union County NJ"
-            ],
-            "priceRange": "$$",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": "270"
-            }
-          })
-        }}
-      />
-
       {/* HERO */}
       <section className="relative overflow-hidden min-h-[70vh] md:min-h-[72vh] flex items-center">
         {/* Background video */}
@@ -271,17 +219,9 @@ export default function HomePage() {
               24/7 Emergency HVAC Service
             </a>
 
-            <div className="mt-7 md:mt-9 border-y border-white/20 py-4">
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs sm:text-sm font-semibold text-white">
-                <Link href="/reviews" className="hover:text-blue-200">{COMPANY.reviews.claim}</Link>
-                <Link href="/about" className="hover:text-blue-200">Licensed &amp; Insured &middot; NJ Master HVACR #{COMPANY.license.masterHvacrNumber}</Link>
-                <Link href="/financing" className="hover:text-blue-200">0% Financing Up to $25K*</Link>
-                <Link href="/servicio-en-espanol" className="hover:text-blue-200">Se Habla Espa&ntilde;ol</Link>
-              </div>
-              <p className="text-[11px] sm:text-xs text-gray-300 mt-2">
-                *For qualifying customers, subject to eligibility, approval, and applicable program terms.
-              </p>
-            </div>
+            <p className="mt-7 md:mt-8 text-sm md:text-base text-gray-200 font-medium tracking-wide">
+              300+ 5-Star Reviews <span className="mx-2 text-gray-400">&middot;</span> Licensed &amp; Insured <span className="mx-2 text-gray-400">&middot;</span> Serving NJ Since {COMPANY.foundedYear}
+            </p>
           </div>
         </div>
       </section>
@@ -440,7 +380,7 @@ export default function HomePage() {
             imageAlt: "Air2Cool providing professional HVAC service to residential homes in North New Jersey",
             details: [
               "For replacements",
-              "Instant approval available",
+              "Subject to eligibility, approval, and program terms",
               "*With approved credit via NJNG SaveGreen",
             ],
             ctaLabel: "Learn More",
@@ -503,51 +443,47 @@ export default function HomePage() {
         </section>
 
         {/* BRANDS WE WORK WITH */}
-        <section className="mb-10 md:mb-16 rounded-3xl border border-slate-200 bg-slate-50 px-5 py-8 md:px-10 md:py-12">
-          <div className="text-center max-w-3xl mx-auto mb-8">
+        <section className="mb-10 md:mb-16 border-y border-slate-200 py-10 md:py-14">
+          <div className="max-w-3xl mb-9 md:mb-12">
             <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-3">
-              HVAC &amp; Refrigeration Brands We Work With
+              Brands We Work With
             </h2>
-            <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
-              Air2Cool services and installs equipment from many of the leading HVAC manufacturers found throughout North Jersey. We work with residential, commercial, boiler, ductless, and refrigeration equipment from most major manufacturers. Service and installation availability varies by brand, equipment type, and application.
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              Service and installation experience across leading residential, commercial, boiler and refrigeration manufacturers.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 md:gap-x-10 gap-y-9">
             {HOME_BRAND_GROUPS.map((group) => (
-              <div key={group.title} className="bg-white border border-slate-200 rounded-2xl p-5 md:p-6">
-                <h3 className="text-lg font-bold text-slate-900 mb-4">{group.title}</h3>
-                <div className="flex flex-wrap gap-2">
+              <div key={group.title}>
+                <h3 className="text-sm font-bold uppercase tracking-[0.12em] text-slate-500 mb-4">{group.title}</h3>
+                <ul className="border-t border-slate-300">
                   {group.slugs.map((slug) => {
                     const brand = getBrandBySlug(slug);
                     if (!brand?.publicVisible) return null;
                     const href = brand.indexed ? `/brands/${brand.slug}` : "/brands";
                     return (
-                      <Link
-                        key={brand.slug}
-                        href={href}
-                        className="inline-flex items-center min-h-[40px] rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700 transition-colors"
-                      >
-                        {brand.name}
-                      </Link>
+                      <li key={brand.slug} className="border-b border-slate-200">
+                        <Link href={href} className="group flex items-center justify-between gap-2 py-2.5 text-sm md:text-base font-semibold text-slate-800 hover:text-blue-700 transition-colors">
+                          <span>{brand.name}</span>
+                          {brand.indexed && <span aria-hidden="true" className="text-slate-300 group-hover:text-blue-600 transition-colors">↗</span>}
+                        </Link>
+                      </li>
                     );
                   })}
-                </div>
+                </ul>
               </div>
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8">
-            <Link href="/brands" className="inline-flex justify-center w-full sm:w-auto rounded-full bg-blue-700 hover:bg-blue-800 px-6 py-3 text-white font-bold transition-colors">
-              View All Brands &amp; Equipment
+          <div className="flex flex-wrap items-center gap-x-7 gap-y-3 mt-9 md:mt-11">
+            <Link href="/brands" className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 px-5 py-3 text-white font-bold transition-colors">
+              Explore All Brands <span aria-hidden="true">→</span>
             </Link>
-            <Link href="/equipment-we-service" className="inline-flex justify-center w-full sm:w-auto rounded-full border border-blue-700 bg-white hover:bg-blue-50 px-6 py-3 text-blue-700 font-bold transition-colors">
-              Browse Equipment We Service
+            <Link href="/equipment-we-service" className="text-blue-700 hover:text-blue-900 font-semibold underline underline-offset-4 decoration-blue-200 hover:decoration-blue-700 transition-colors">
+              Equipment We Service
             </Link>
           </div>
-          <p className="text-center text-xs text-gray-500 mt-5">
-            Brand references describe equipment experience and do not imply manufacturer authorization, endorsement, or affiliation.
-          </p>
         </section>
 
         {/* ========================================

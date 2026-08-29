@@ -16,54 +16,10 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
-      "@id": "https://www.air2cool.com/service-areas/millburn#business",
-      "name": "Air2Cool Heating & Cooling",
-      "url": "https://www.air2cool.com",
-      "telephone": "+1-201-787-5657",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Wharton",
-        "addressRegion": "NJ",
-        "postalCode": "07885",
-        "addressCountry": "US",
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Millburn",
-          "addressRegion": "NJ",
-          "addressCountry": "US",
-        },
-        {
-          "@type": "Place",
-          "name": "Short Hills",
-          "addressRegion": "NJ",
-          "addressCountry": "US",
-        },
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "270",
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "HVAC Services",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Repair Millburn NJ" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Replacement Millburn NJ" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Air Conditioning Repair Millburn NJ" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC Installation Millburn NJ" } },
-        ],
-      },
-    },
-    {
       "@type": "Service",
       "name": "AC Repair & Replacement in Millburn and Short Hills, NJ",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Air2Cool Heating & Cooling",
+        "@id": "https://www.air2cool.com/#organization",
       },
       "areaServed": [
         { "@type": "City", "name": "Millburn", "addressRegion": "NJ" },
@@ -253,7 +209,7 @@ export default function MillburnPage() {
                 {
                   icon: <Wrench className="w-6 h-6 text-green-600" />,
                   title: "Family Owned Since 1998",
-                  body: "We've been servicing Millburn homes for over 26 years. You're getting a neighbor, not a national chain.",
+                  body: "Air2Cool has served North Jersey since 1998 from its Wharton base.",
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,

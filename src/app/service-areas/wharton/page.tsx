@@ -16,36 +16,10 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "HVACBusiness",
-      "@id": "https://www.air2cool.com/service-areas/wharton#business",
-      "name": "Air2Cool Heating & Cooling",
-      "url": "https://www.air2cool.com",
-      "telephone": "+1-201-787-5657",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Wharton",
-        "addressRegion": "NJ",
-        "postalCode": "07885",
-        "addressCountry": "US",
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Wharton",
-        "addressRegion": "NJ",
-        "addressCountry": "US",
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "270",
-      },
-    },
-    {
       "@type": "Service",
       "name": "HVAC Services in Wharton, NJ",
       "provider": {
-        "@type": "HVACBusiness",
-        "name": "Air2Cool Heating & Cooling",
+        "@id": "https://www.air2cool.com/#organization",
       },
       "areaServed": { "@type": "City", "name": "Wharton", "addressRegion": "NJ" },
       "serviceType": "AC Repair, Heating Repair, HVAC Installation",
@@ -189,7 +163,7 @@ export default function WhartonPage() {
                 We offer the full range of <Link href="/services/ac-repair" className="text-blue-600 hover:underline">AC repair</Link> and <Link href="/services/heating-repair" className="text-blue-600 hover:underline">heating repair</Link> services in Wharton, including 24/7 emergency calls. If your furnace fails on a Friday night in February, call us — we answer. If your AC dies the week of a heat wave, same deal. There&apos;s no premium surcharge for evenings or weekends for Wharton residents, because our team is already here.
               </p>
               <p>
-                We&apos;re also proud to give back to the town that&apos;s supported us for over 26 years. Air2Cool sponsors the <strong>Wharton Little League</strong>, and we&apos;re committed to being a resource for this community — not just a vendor. When you call Air2Cool, you&apos;re supporting a locally owned business that puts Wharton first.
+                We&apos;re also proud to give back to our home community. Air2Cool sponsors the <strong>Wharton Little League</strong>, and we&apos;re committed to being a resource for Wharton — not just a vendor. When you call Air2Cool, you&apos;re supporting a locally owned business that puts Wharton first.
               </p>
             </div>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
