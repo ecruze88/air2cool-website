@@ -7,6 +7,7 @@ import ServicesDropdown from "@/components/ServicesDropdown";
 import { Analytics } from "@vercel/analytics/next";
 import StickyCallButton from "@/components/StickyCallButton";
 import Image from "next/image";
+import Link from "next/link";
 import ScrollToTop from "@/components/ScrollToTop";
 import { COMPANY } from "@/config/company";
 
@@ -86,27 +87,13 @@ export default function RootLayout({
         />
       </head>
       <body className="text-gray-900 min-h-screen" suppressHydrationWarning>
-        {/* FLOATING LOGO (desktop only - hidden on mobile) */}
-        <a
-          href="/"
-          aria-label="Go to homepage"
-          className="hidden xl:block fixed left-6 top-35 z-[99999999]"
-        >
-          <img
-            src="/air2cool-logo-transparent.png"
-            alt="Air2Cool Heating & Cooling"
-            className="w-63 h-auto 2xl:w-108"
-          />
-        </a>
-        
-
         <header className="sticky top-0 z-[9999] bg-white relative overflow-visible" style={{ '--header-height': '57px' } as React.CSSProperties}>
 
           {/* MOBILE: Two-row layout */}
           <div className="xl:hidden">
             {/* Row 1 — Logo (white, centered) */}
             <div className="bg-white flex justify-center items-center py-1 border-b border-gray-100">
-              <a href="/">
+              <Link href="/">
                 <Image
                   src="/air2cool-logo-600x200 (1).png"
                   alt="Air2Cool"
@@ -115,7 +102,7 @@ export default function RootLayout({
                   priority
                   style={{ objectFit: "contain" }}
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Row 2 — Menu bar (red) */}
@@ -141,8 +128,20 @@ export default function RootLayout({
           {/* DESKTOP: Single-row nav */}
           <div className="hidden xl:block bg-white/98 backdrop-blur border-b border-gray-200 shadow-sm overflow-visible">
             <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-              {/* Spacer for floating logo */}
-              <div className="w-60" />
+              <Link
+                href="/"
+                aria-label="Go to homepage"
+                className="flex shrink-0 items-center"
+              >
+                <Image
+                  src="/air2cool-logo-transparent.png"
+                  alt="Air2Cool Heating & Cooling"
+                  width={192}
+                  height={64}
+                  className="h-auto max-h-12 w-48 object-contain"
+                  priority
+                />
+              </Link>
 
               {/* Desktop Navigation */}
               <nav className="flex items-center gap-1">
@@ -157,13 +156,13 @@ export default function RootLayout({
                   Troubleshooting
                 </a>
 
-                <a
+                <Link
                   href="/service-areas"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
                              hover:bg-gray-100 hover:text-brand-blue transition-colors"
                 >
                   Areas
-                </a>
+                </Link>
 
                 <a
                   href="/about"
@@ -189,13 +188,13 @@ export default function RootLayout({
                   FAQ
                 </a>
 
-                <a
+                <Link
                   href="/blog"
                   className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700
                              hover:bg-gray-100 hover:text-brand-blue transition-colors"
                 >
                   Blog
-                </a>
+                </Link>
 
                 <a
                   href="/financing"
@@ -348,11 +347,11 @@ export default function RootLayout({
                   <li><a href="/services" className="hover:text-white transition">Services</a></li>
                   <li><a href="/troubleshooting" className="hover:text-white transition">Troubleshooting Guide</a></li>
                   <li><a href="/financing" className="hover:text-white transition">Financing Options</a></li>
-                  <li><a href="/service-areas" className="hover:text-white transition">Service Areas</a></li>
+                  <li><Link href="/service-areas" className="hover:text-white transition">Service Areas</Link></li>
                   <li><a href="/about" className="hover:text-white transition">About Us</a></li>
                   <li><a href="/reviews" className="hover:text-white transition">Reviews</a></li>
                   <li><a href="/faq" className="hover:text-white transition">FAQ</a></li>
-                  <li><a href="/blog" className="hover:text-white transition">Blog</a></li>
+                  <li><Link href="/blog" className="hover:text-white transition">Blog</Link></li>
                   <li><a href="/projects" className="hover:text-white transition">Our Projects</a></li>
                   <li><a href="/servicio-en-espanol" className="hover:text-white transition">Espa&ntilde;ol</a></li>
                   <li><a href="/contact" className="hover:text-white transition">Contact Us</a></li>
