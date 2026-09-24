@@ -87,18 +87,6 @@ export default function RootLayout({
         />
       </head>
       <body className="text-gray-900 min-h-screen" suppressHydrationWarning>
-        <a
-          href="/"
-          aria-label="Go to homepage"
-          className="hidden xl:block fixed left-6 top-35 z-9999"
-        >
-          <img
-            src="/air2cool-hollow-background.png"
-            alt="Air2Cool Heating & Cooling"
-            className="w-52.5 h-auto 2xl:w-90"
-          />
-        </a>
-
         <header className="sticky top-0 z-[9999] bg-white relative overflow-visible" style={{ '--header-height': '57px' } as React.CSSProperties}>
 
           {/* MOBILE: Two-row layout */}
@@ -308,6 +296,17 @@ export default function RootLayout({
             </div>
           </div>
         </section>
+        <a
+          href="/"
+          aria-label="Go to homepage"
+          className="hidden xl:block absolute left-6 bottom-0 translate-y-1/2 z-[2]"
+        >
+          <img
+            src="/air2cool-logo-transparent.png"
+            alt="Air2Cool Heating & Cooling"
+            className="w-63 h-auto 2xl:w-108"
+          />
+        </a>
         </header>
 
 
