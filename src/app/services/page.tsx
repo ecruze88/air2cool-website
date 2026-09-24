@@ -105,6 +105,8 @@ const SERVICES = [
   },
 ];
 
+const ORDERED_SERVICES = SERVICES;
+
 const COLOR_CLASSES = {
   red: "from-red-500 to-red-600 hover:from-red-600 hover:to-red-700",
   blue: "from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700",
@@ -170,12 +172,12 @@ export default function ServicesPage() {
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
-              Heating & Cooling Services in{" "}
+              Complete HVAC Services in{" "}
               <span className="text-blue-400">North New Jersey</span>
             </h1>
 
             <p className="text-base md:text-xl text-gray-300 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              From repairs to complete system replacements, Air2Cool delivers professional HVAC service with honest pricing and expert installation.
+              Heating, cooling, indoor air quality, and maintenance services for homes and businesses throughout Morris County and North Jersey.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
@@ -226,7 +228,7 @@ export default function ServicesPage() {
               Repair Services
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-              {SERVICES.filter(s => s.category === 'repair').map((service) => {
+              {ORDERED_SERVICES.filter(s => s.category === 'repair').map((service) => {
                 const Icon = service.icon;
                 return (
                   <Link
@@ -271,7 +273,7 @@ export default function ServicesPage() {
               Installation Services
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-              {SERVICES.filter(s => s.category === 'installation').map((service) => {
+              {ORDERED_SERVICES.filter(s => s.category === 'installation').map((service) => {
                 const Icon = service.icon;
                 return (
                   <Link

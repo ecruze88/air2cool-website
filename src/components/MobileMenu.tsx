@@ -33,6 +33,22 @@ const COMMERCIAL_LINKS = [
   { label: "Commercial Refrigeration", href: "/services/commercial-refrigeration" },
 ];
 
+const NAVIGATION_SECTIONS = {
+  heating: { heading: "Heating", links: HEATING_LINKS },
+  cooling: { heading: "Cooling", links: COOLING_LINKS },
+  airQuality: { heading: "Air Quality", links: AIR_QUALITY_LINKS },
+  maintenance: { heading: "Maintenance", links: MAINTENANCE_LINKS },
+  commercial: { heading: "Commercial", links: COMMERCIAL_LINKS },
+} as const;
+
+const ORDERED_NAVIGATION_SECTIONS = [
+  NAVIGATION_SECTIONS.heating,
+  NAVIGATION_SECTIONS.cooling,
+  NAVIGATION_SECTIONS.maintenance,
+  NAVIGATION_SECTIONS.airQuality,
+  NAVIGATION_SECTIONS.commercial,
+];
+
 export default function MobileMenu() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -230,13 +246,7 @@ export default function MobileMenu() {
 
             {servicesOpen && (
               <div className="pb-2">
-                {[
-                  { heading: "Cooling",     links: COOLING_LINKS },
-                  { heading: "Heating",     links: HEATING_LINKS },
-                  { heading: "Air Quality", links: AIR_QUALITY_LINKS },
-                  { heading: "Maintenance", links: MAINTENANCE_LINKS },
-                  { heading: "Commercial",  links: COMMERCIAL_LINKS },
-                ].map(({ heading, links }, i) => (
+                {ORDERED_NAVIGATION_SECTIONS.map(({ heading, links }, i) => (
                   <div key={heading}>
                     {i > 0 && <div className="mx-4 border-t border-gray-100" />}
                     <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-5 pt-3 pb-1">

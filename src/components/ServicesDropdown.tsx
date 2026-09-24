@@ -32,6 +32,21 @@ const COMMERCIAL = [
   { label: "Commercial Refrigeration", href: "/services/commercial-refrigeration" },
 ];
 
+const NAVIGATION_SECTIONS = {
+  heating: { heading: "Heating", links: HEATING },
+  cooling: { heading: "Cooling", links: COOLING },
+  airQuality: { heading: "Indoor Air Quality", links: AIR_QUALITY },
+  maintenance: { heading: "Maintenance", links: MAINTENANCE },
+  commercial: { heading: "Commercial", links: COMMERCIAL },
+} as const;
+
+const RESIDENTIAL_SECTIONS = [
+  NAVIGATION_SECTIONS.heating,
+  NAVIGATION_SECTIONS.cooling,
+  NAVIGATION_SECTIONS.maintenance,
+  NAVIGATION_SECTIONS.airQuality,
+];
+
 export default function ServicesDropdown() {
   const [open, setOpen] = useState(false);
   const [pos, setPos] = useState({ top: 0, left: 0 });
@@ -107,44 +122,18 @@ export default function ServicesDropdown() {
               Residential
             </p>
 
-            <p className="text-[9px] font-bold text-gray-300 uppercase tracking-widest px-5 pt-1 pb-0.5">
-              Cooling
-            </p>
-            {COOLING.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setOpen(false)}
-                className="block px-6 py-1.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-700 transition-colors">
-                {item.label}
-              </a>
-            ))}
-
-            <p className="text-[9px] font-bold text-gray-300 uppercase tracking-widest px-5 pt-2 pb-0.5">
-              Heating
-            </p>
-            {HEATING.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setOpen(false)}
-                className="block px-6 py-1.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-700 transition-colors">
-                {item.label}
-              </a>
-            ))}
-
-            <p className="text-[9px] font-bold text-gray-300 uppercase tracking-widest px-5 pt-2 pb-0.5">
-              Indoor Air Quality
-            </p>
-            {AIR_QUALITY.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setOpen(false)}
-                className="block px-6 py-1.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-700 transition-colors">
-                {item.label}
-              </a>
-            ))}
-
-            <p className="text-[9px] font-bold text-gray-300 uppercase tracking-widest px-5 pt-2 pb-0.5">
-              Maintenance
-            </p>
-            {MAINTENANCE.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setOpen(false)}
-                className="block px-6 py-1.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-700 transition-colors">
-                {item.label}
-              </a>
+            {RESIDENTIAL_SECTIONS.map((section, index) => (
+              <div key={section.heading}>
+                <p className={`text-[9px] font-bold text-gray-300 uppercase tracking-widest px-5 pb-0.5 ${index === 0 ? "pt-1" : "pt-2"}`}>
+                  {section.heading}
+                </p>
+                {section.links.map((item) => (
+                  <a key={item.href} href={item.href} onClick={() => setOpen(false)}
+                    className="block px-6 py-1.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-700 transition-colors">
+                    {item.label}
+                  </a>
+                ))}
+              </div>
             ))}
 
             {/* COMMERCIAL */}

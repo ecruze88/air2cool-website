@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Flame, CheckCircle, Shield, Award, DollarSign, Wrench, Clock } from "lucide-react";
+import { Flame, CheckCircle, Shield, Award, DollarSign, Wrench } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import VideoShowcase from "@/components/VideoShowcase";
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Furnace & Boiler Installation in Morris County NJ | Air2Cool",
     description:
-      "Lochinvar, NTI & Weil-McLain boilers. High-efficiency gas furnaces. Free house cleaning. 0% financing. Morris County & North NJ. Call (201) 787-5657.",
+      "Lochinvar, NTI, and Weil-McLain boiler installations plus high-efficiency gas furnaces in Morris County and North Jersey. Call (201) 787-5657.",
     url: "/services/heating-installation",
   },
 };
@@ -40,7 +40,7 @@ export default function HeatingInstallationPage() {
             "@type": "Service",
             "name": "Furnace & Boiler Installation",
             "alternateName": "Heating System Installation",
-            "description": "Professional installation of high-efficiency furnaces and boilers in Morris County & North NJ. Specializing in Lochinvar, NTI Trinity, and Weil-McLain systems. Includes free house cleaning and 0% financing.",
+            "description": "Professional installation of high-efficiency furnaces and boilers in Morris County and North Jersey, including Lochinvar, NTI, and Weil-McLain systems.",
             "provider": {
               "@type": "HVACBusiness",
               "@id": "https://www.air2cool.com/#organization",
@@ -56,7 +56,7 @@ export default function HeatingInstallationPage() {
             "serviceType": "HVAC Installation",
             "offers": {
               "@type": "Offer",
-              "description": "Free in-home estimate. 0% APR financing up to $25,000. Free house cleaning included.",
+              "description": "0% financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms. Complimentary professional house cleaning with qualifying new system installation.",
               "availability": "https://schema.org/InStock"
             }
           })
@@ -87,8 +87,7 @@ export default function HeatingInstallationPage() {
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed mb-6 md:mb-8">
-              Professional installation of high-efficiency furnaces and boilers. Hydronic, steam, and NTI systems. 
-              Every installation includes free house cleaning and expert sizing.
+              Professional installation of high-efficiency furnaces and boilers, including hydronic, steam, and NTI systems. Complimentary professional house cleaning is included with qualifying new system installation.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 md:mb-8">
@@ -109,11 +108,11 @@ export default function HeatingInstallationPage() {
             <div className="flex flex-wrap gap-3">
               <div className="bg-white/10 backdrop-blur px-3 md:px-4 py-2 rounded-full text-xs md:text-sm border border-white/20">
                 <CheckCircle className="inline w-3 h-3 md:w-4 md:h-4 mr-1" />
-                Free House Cleaning
+                Qualifying Installation House Cleaning
               </div>
               <div className="bg-white/10 backdrop-blur px-3 md:px-4 py-2 rounded-full text-xs md:text-sm border border-white/20">
                 <CheckCircle className="inline w-3 h-3 md:w-4 md:h-4 mr-1" />
-                0% Financing Available
+                0% Financing Up to $25,000 for Qualifying Customers
               </div>
               <div className="bg-white/10 backdrop-blur px-3 md:px-4 py-2 rounded-full text-xs md:text-sm border border-white/20">
                 <CheckCircle className="inline w-3 h-3 md:w-4 md:h-4 mr-1" />
@@ -139,7 +138,7 @@ export default function HeatingInstallationPage() {
             </h2>
             <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
               We specialize in high-end Lochinvar, NTI, and Weil-McLain boiler systems. 
-              Every installation is professionally sized, installed, and tested.
+              Each project is sized, installed, and tested according to the approved equipment and project scope.
             </p>
           </div>
 
@@ -170,8 +169,7 @@ export default function HeatingInstallationPage() {
               </div>
               <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Expert Sizing</h3>
               <p className="text-sm md:text-base text-gray-600">
-                Manual J load calculations ensure your new system is perfectly sized for your home. 
-                Not too big, not too small - just right for maximum efficiency.
+                We evaluate the home, existing system, and project requirements to select appropriately sized heating equipment.
               </p>
             </div>
 
@@ -181,8 +179,7 @@ export default function HeatingInstallationPage() {
               </div>
               <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Clean Installation</h3>
               <p className="text-sm md:text-base text-gray-600">
-                Professional piping, wiring, and setup. We protect your home during install and 
-                include FREE house cleaning when we're done.
+                Professional piping, wiring, and setup according to the approved scope. We protect the jobsite and clean up when work is complete. Qualifying new system installations include a complimentary professional house cleaning.
               </p>
             </div>
 
@@ -192,8 +189,7 @@ export default function HeatingInstallationPage() {
               </div>
               <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Complete Testing</h3>
               <p className="text-sm md:text-base text-gray-600">
-                Full system testing, combustion analysis, and customer training. We don't leave 
-                until you're 100% comfortable with your new system.
+                Startup and operational testing appropriate to the installed equipment, followed by a customer system walkthrough.
               </p>
             </div>
           </div>
@@ -231,7 +227,7 @@ export default function HeatingInstallationPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 shrink-0 mt-0.5" />
-                  <span><strong>10-12 year warranties</strong> available</span>
+                  <span><strong>Manufacturer warranty terms</strong> provided with the proposal</span>
                 </li>
               </ul>
             </div>
@@ -247,7 +243,7 @@ export default function HeatingInstallationPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 shrink-0 mt-0.5" />
-                  <span><strong>NTI Trinity</strong> - High-efficiency wall-hung</span>
+                  <span><strong>NTI</strong> - High-efficiency boiler options</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 shrink-0 mt-0.5" />
@@ -272,10 +268,10 @@ export default function HeatingInstallationPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
-              Every Installation Includes
+              The Air2Cool Installation Standard
             </h2>
             <p className="text-base md:text-xl text-gray-600">
-              We don't cut corners. Here's what comes standard with every heating installation:
+              Work is tailored to the selected equipment, approved proposal, site conditions, and applicable requirements.
             </p>
           </div>
 
@@ -284,64 +280,64 @@ export default function HeatingInstallationPage() {
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Manual J Load Calculation</h4>
-                  <p className="text-xs md:text-sm text-gray-600">Proper sizing based on your home's needs</p>
+                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Appropriate Equipment Sizing</h4>
+                  <p className="text-xs md:text-sm text-gray-600">Sizing based on the home, existing system, and project requirements</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">All Permits & Inspections</h4>
-                  <p className="text-xs md:text-sm text-gray-600">We handle everything with your town</p>
+                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Permit &amp; Inspection Coordination</h4>
+                  <p className="text-xs md:text-sm text-gray-600">Coordination with the local authority where applicable</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Professional Gas Piping</h4>
-                  <p className="text-xs md:text-sm text-gray-600">Code-compliant and pressure tested</p>
+                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Approved Project Scope</h4>
+                  <p className="text-xs md:text-sm text-gray-600">Piping, wiring, and related work according to the proposal</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Proper Venting</h4>
-                  <p className="text-xs md:text-sm text-gray-600">PVC or stainless steel as required</p>
+                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Equipment-Appropriate Venting</h4>
+                  <p className="text-xs md:text-sm text-gray-600">Venting provisions suited to the selected equipment and scope</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Condensate Management</h4>
-                  <p className="text-xs md:text-sm text-gray-600">Proper drainage and pump if needed</p>
+                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Condensate Provisions</h4>
+                  <p className="text-xs md:text-sm text-gray-600">Drainage provisions where required by the equipment</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Thermostat Upgrade</h4>
-                  <p className="text-xs md:text-sm text-gray-600">Programmable or smart thermostat</p>
+                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Controls According to Scope</h4>
+                  <p className="text-xs md:text-sm text-gray-600">Thermostat and control work included in the approved proposal</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Complete Testing</h4>
-                  <p className="text-xs md:text-sm text-gray-600">Combustion analysis and safety checks</p>
+                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Startup &amp; Operational Testing</h4>
+                  <p className="text-xs md:text-sm text-gray-600">Testing appropriate to the installed equipment</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">FREE House Cleaning</h4>
-                  <p className="text-xs md:text-sm text-gray-600">We clean up after ourselves - guaranteed!</p>
+                  <h4 className="text-sm md:text-base font-bold text-gray-900 mb-1">Jobsite Protection &amp; Walkthrough</h4>
+                  <p className="text-xs md:text-sm text-gray-600">Jobsite cleanup and a customer system walkthrough</p>
                 </div>
               </div>
             </div>
@@ -351,10 +347,9 @@ export default function HeatingInstallationPage() {
             <div className="flex items-start gap-3 md:gap-4">
               <Award className="w-8 h-8 md:w-10 md:h-10 text-green-600 shrink-0" />
               <div>
-                <h4 className="text-sm md:text-base font-bold text-gray-900 mb-2">Factory Warranties Included</h4>
+                <h4 className="text-sm md:text-base font-bold text-gray-900 mb-2">Manufacturer Warranty Information</h4>
                 <p className="text-xs md:text-sm text-gray-700">
-                  All equipment comes with manufacturer warranties (typically 10-12 years on parts). 
-                  We also offer extended labor warranties for extra peace of mind.
+                  Manufacturer warranty terms vary by equipment, model, registration, and application. Exact warranty information and any available labor coverage are provided with the proposal.
                 </p>
               </div>
             </div>
@@ -370,7 +365,7 @@ export default function HeatingInstallationPage() {
             0% Financing Available
           </h2>
           <p className="text-base md:text-xl mb-3 md:mb-4">
-            Up to $25,000 with $0 down and 0% APR financing.
+            0% financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.
           </p>
           <p className="text-sm md:text-lg text-green-100 mb-6 md:mb-8">
             Plus: Check for available rebates from NJNG SaveGreen and state energy programs.
@@ -435,8 +430,11 @@ export default function HeatingInstallationPage() {
             Ready for a New Heating System?
           </h2>
           <p className="text-base md:text-xl text-gray-600 mb-6 md:mb-8">
-            Get a free in-home estimate. We'll assess your needs, explain your options, 
+            Get a free in-home estimate. We&apos;ll assess your needs, explain your options,
             and provide upfront pricing - no pressure, no gimmicks.
+          </p>
+          <p className="text-sm md:text-base text-gray-600 mb-6 md:mb-8">
+            After installation, protect the system with <Link href="/services/boiler-maintenance" className="text-red-700 font-semibold underline">boiler maintenance</Link> or a <Link href="/services/preventative-maintenance" className="text-red-700 font-semibold underline">preventative maintenance plan</Link> appropriate to the equipment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
