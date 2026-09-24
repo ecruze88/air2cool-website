@@ -56,6 +56,9 @@ const DUCTLESS_LINKS = [
 
 const BOILER_LINKS = [
   { label: "Boiler and heating repair", href: "/services/heating-repair" },
+  { label: "Boiler maintenance", href: "/services/boiler-maintenance" },
+  { label: "Heating circulation pumps", href: "/services/heating-pump-services" },
+  { label: "Commercial boiler service", href: "/services/commercial-boiler-services" },
   { label: "Heating installation", href: "/services/heating-installation" },
   { label: "Preventative maintenance", href: "/services/preventative-maintenance" },
 ] as const;
@@ -408,6 +411,7 @@ export const BRANDS: readonly BrandProfile[] = [
     ["NTI", "nti"],
     ["Lochinvar", "lochinvar"],
     ["Weil-McLain", "weil-mclain"],
+    ["Navien", "navien"],
   ].map(([name, slug]) => ({
     name,
     slug,
@@ -425,8 +429,35 @@ export const BRANDS: readonly BrandProfile[] = [
     relatedProjects: name === "NTI" || name === "Lochinvar" ? [{ label: `${name} boiler projects`, href: "/projects" }] : [],
     relatedRefrigerants: [],
     publicVisible: true,
-    indexed: false,
-    summary: `Air2Cool services ${name} boiler and hydronic heating equipment in North Jersey.`,
+    indexed: true,
+    summary: `Air2Cool provides equipment-specific maintenance and service for applicable ${name} boiler and hydronic heating equipment in North Jersey. Model and application determine the service scope.`,
+    seoTitle: `${name} Boiler Maintenance & Service North Jersey`,
+    seoDescription: `${name} boiler maintenance and equipment-specific service in Morris County and North Jersey. Request a proposal from Air2Cool.`,
+    headline: `${name} Boiler Maintenance & Service`,
+    serviceOverview: [
+      `Air2Cool services applicable ${name} hydronic and boiler equipment for North Jersey homes and commercial properties.`,
+      "The model number, system configuration, operating condition and manufacturer requirements determine the inspection, cleaning and testing scope.",
+      "Scheduled maintenance is separate from diagnosis and corrective repair of an existing fault.",
+    ],
+    maintenanceGuidance: [
+      "Provide the equipment model and a nameplate photograph when available.",
+      "Confirm whether the boiler also supplies domestic hot water and note the last known service date.",
+      "The proposal identifies included work, materials and the planned service schedule.",
+    ],
+    commonProblems: [
+      { title: "Boiler does not heat as expected", description: "Controls, ignition, combustion, circulation, venting and system demand can produce similar symptoms and require equipment-specific diagnosis." },
+      { title: "Uneven heat or circulation noise", description: "Circulators, valves, controls, air in the system and distribution conditions should be evaluated before a pump or component is condemned." },
+    ],
+    replacementGuidance: [
+      "Corrective repair may be appropriate when the fault is identified, supported parts are available and the remaining equipment is serviceable.",
+      "Replacement planning depends on equipment condition, configuration, repair history, application and compatible options.",
+    ],
+    capabilityNote: `Air2Cool independently services applicable ${name} equipment; manufacturer authorization and coverage of every model are not claimed.`,
+    faqs: [
+      { question: `Does Air2Cool maintain ${name} boilers?`, answer: `Air2Cool provides equipment-specific maintenance for applicable ${name} boiler and hydronic equipment in North Jersey. The model, application and condition determine the scope.` },
+      { question: "What information helps prepare a boiler-maintenance proposal?", answer: "Provide the manufacturer, model, equipment count, domestic-hot-water use, current operating condition and last service date when known." },
+      { question: `Is Air2Cool an authorized ${name} dealer?`, answer: `No manufacturer-authorization claim is made. Air2Cool services applicable ${name} equipment as an independent HVAC contractor.` },
+    ],
   })),
   ...[
     ["True Refrigeration", "true-refrigeration"],

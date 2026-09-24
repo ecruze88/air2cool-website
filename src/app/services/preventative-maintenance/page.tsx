@@ -181,6 +181,16 @@ export default function PreventativeMaintenancePage() {
         sectionClassName="py-10 md:py-16 bg-white"
       />
 
+      <section className="py-12 md:py-16 bg-slate-900 text-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl md:text-4xl font-extrabold mb-4">Heating and Boiler Maintenance</h2>
+          <p className="text-slate-200 text-base md:text-lg max-w-3xl mb-7">Boilers and hydronic systems need equipment-specific planning. Air2Cool provides high-efficiency boiler maintenance and heating circulation pump service, with scope based on the manufacturer, model, system type and application.</p>
+          <div className="flex flex-wrap gap-4"><Link href="/services/boiler-maintenance" className="bg-orange-600 px-5 py-3 rounded-lg font-bold">Boiler Maintenance</Link><Link href="/services/heating-pump-services" className="border border-white px-5 py-3 rounded-lg font-bold">Heating Pump Service</Link></div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-white"><div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10"><div><h2 className="text-2xl font-bold mb-3">Residential HVAC plan</h2><p className="text-gray-700">The residential plan retains two seasonal visits per covered HVAC system, priority service, and 20% off eligible repairs and replacement parts.</p></div><div><h2 className="text-2xl font-bold mb-3">Commercial agreements</h2><p className="text-gray-700">Commercial visit frequency and equipment coverage are defined by the agreement. Commercial customers receive 10% off eligible repairs and 10% off eligible replacement parts.</p><Link href="/services/commercial-boiler-services" className="inline-block mt-4 text-blue-700 font-bold underline">Commercial boiler maintenance</Link></div></div></section>
+
       {/* Why Maintenance Matters */}
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -233,7 +243,7 @@ export default function PreventativeMaintenancePage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="inline-block bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-orange-200">
             <p className="text-sm md:text-lg text-gray-700 italic mb-3 md:mb-4">
-              "Hector and his crew are absolutely professional! We are ready for winter! Honest and fair business... totally recommend!"
+              &quot;Hector and his crew are absolutely professional! We are ready for winter! Honest and fair business... totally recommend!&quot;
             </p>
             <p className="text-sm md:text-base font-semibold text-gray-900">
               - Sandra Clark, Google Review

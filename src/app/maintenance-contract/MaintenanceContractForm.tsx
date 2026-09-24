@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Wrench, CheckCircle, Home, Building2 } from "lucide-react";
+import Link from "next/link";
 
 export default function MaintenanceContractForm() {
   const [formData, setFormData] = useState({
@@ -15,7 +16,12 @@ export default function MaintenanceContractForm() {
     state: "NJ",
     zipCode: "",
     propertyType: "residential",
+    serviceType: "heating-maintenance",
     numberOfSystems: "1",
+    equipmentManufacturerModel: "",
+    boilerSuppliesHotWater: "unknown",
+    lastServiceDate: "",
+    currentlyOperating: "unknown",
     hasFurnace: false,
     hasCondenser: false,
     hasRefrigerationUnit: false,
@@ -90,12 +96,12 @@ export default function MaintenanceContractForm() {
               4. Discuss seasonal preparation, operational checks, and early problem detection for the covered equipment
             </p>
           </div>
-          <a
+          <Link
             href="/"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 rounded-full font-semibold transition text-sm md:text-base"
           >
             Return to Homepage
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -137,43 +143,43 @@ export default function MaintenanceContractForm() {
         <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
-            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required
+            <input aria-label="First name" type="text" name="firstName" value={formData.firstName} onChange={handleChange} required
               className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" />
           </div>
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
-            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required
+            <input aria-label="Last name" type="text" name="lastName" value={formData.lastName} onChange={handleChange} required
               className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" />
           </div>
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} required
+            <input aria-label="Email address" type="email" name="email" value={formData.email} onChange={handleChange} required
               className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" />
           </div>
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
-            <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="(201) 787-5657"
+            <input aria-label="Phone number" type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="(201) 787-5657"
               className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" />
           </div>
           <div className="md:col-span-2">
             <label className="block text-sm font-semibold text-gray-700 mb-2">Street Address *</label>
-            <input type="text" name="address" value={formData.address} onChange={handleChange} required
+            <input aria-label="Street address" type="text" name="address" value={formData.address} onChange={handleChange} required
               className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" />
           </div>
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">City *</label>
-            <input type="text" name="city" value={formData.city} onChange={handleChange} required
+            <input aria-label="City" type="text" name="city" value={formData.city} onChange={handleChange} required
               className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" />
           </div>
           <div className="grid grid-cols-2 gap-3 md:gap-4">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">State *</label>
-              <input type="text" name="state" value={formData.state} onChange={handleChange} required
+              <input aria-label="State" type="text" name="state" value={formData.state} onChange={handleChange} required
                 className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" />
             </div>
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">Zip Code *</label>
-              <input type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required
+              <input aria-label="Zip code" type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required
                 className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" />
             </div>
           </div>
@@ -203,12 +209,18 @@ export default function MaintenanceContractForm() {
         </div>
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-2">Number of HVAC Systems *</label>
-          <select name="numberOfSystems" value={formData.numberOfSystems} onChange={handleChange} required
+          <select aria-label="Number of HVAC systems" name="numberOfSystems" value={formData.numberOfSystems} onChange={handleChange} required
             className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none">
             <option value="1">1 System</option>
             <option value="2">2 Systems</option>
             <option value="3">3 Systems</option>
             <option value="4+">4+ Systems</option>
+          </select>
+        </div>
+        <div className="mt-4 md:mt-6">
+          <label className="block text-sm font-semibold text-gray-700 mb-2">Service Requested *</label>
+          <select aria-label="Service requested" name="serviceType" value={formData.serviceType} onChange={handleChange} required className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none">
+            <option value="heating-maintenance">Heating maintenance</option><option value="boiler-maintenance">High-efficiency boiler maintenance</option><option value="commercial-boiler">Commercial boiler service</option><option value="heating-pump">Boiler / heating pump service</option><option value="mechanical-service">HVAC mechanical service</option><option value="compressor-overhaul">Compressor overhaul inquiry</option><option value="heat-recovery">Heat recovery installation</option><option value="cooling-maintenance">Cooling maintenance</option>
           </select>
         </div>
       </div>
@@ -236,9 +248,16 @@ export default function MaintenanceContractForm() {
       {/* Additional Information */}
       <div className="bg-white rounded-xl md:rounded-2xl border-2 border-gray-200 p-5 md:p-8">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">Additional Information</h2>
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+          <div><label className="block text-sm font-semibold text-gray-700 mb-2">Manufacturer / Model (Optional)</label><input aria-label="Equipment manufacturer and model" name="equipmentManufacturerModel" value={formData.equipmentManufacturerModel} onChange={handleChange} placeholder="From the equipment nameplate" className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" /></div>
+          <div><label className="block text-sm font-semibold text-gray-700 mb-2">Last Service Date (Optional)</label><input aria-label="Last service date" name="lastServiceDate" value={formData.lastServiceDate} onChange={handleChange} placeholder="Approximate date is fine" className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none" /></div>
+          <div><label className="block text-sm font-semibold text-gray-700 mb-2">Does the boiler supply hot water?</label><select aria-label="Boiler supplies domestic hot water" name="boilerSuppliesHotWater" value={formData.boilerSuppliesHotWater} onChange={handleChange} className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300"><option value="unknown">Not sure / not applicable</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+          <div><label className="block text-sm font-semibold text-gray-700 mb-2">Is the equipment operating?</label><select aria-label="Equipment operating condition" name="currentlyOperating" value={formData.currentlyOperating} onChange={handleChange} className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300"><option value="unknown">Not sure</option><option value="yes">Yes</option><option value="no">No</option><option value="partially">Partially / intermittently</option></select></div>
+        </div>
+        <p className="text-sm text-gray-600 mb-5">A nameplate photo is helpful and can be provided during follow-up.</p>
         <div className="mb-4 md:mb-6">
           <label className="block text-sm font-semibold text-gray-700 mb-2">Preferred Contact Method</label>
-          <select name="preferredContactMethod" value={formData.preferredContactMethod} onChange={handleChange}
+          <select aria-label="Preferred contact method" name="preferredContactMethod" value={formData.preferredContactMethod} onChange={handleChange}
             className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none">
             <option value="phone">Phone</option>
             <option value="email">Email</option>
@@ -247,7 +266,7 @@ export default function MaintenanceContractForm() {
         </div>
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-2">Additional Notes (Optional)</label>
-          <textarea name="additionalNotes" value={formData.additionalNotes} onChange={handleChange} rows={4}
+          <textarea aria-label="Additional notes" name="additionalNotes" value={formData.additionalNotes} onChange={handleChange} rows={4}
             placeholder="Any specific concerns or information we should know?"
             className="w-full px-4 py-3 text-base rounded-lg border-2 border-gray-300 focus:border-orange-500 focus:outline-none resize-none" />
         </div>
@@ -259,7 +278,7 @@ export default function MaintenanceContractForm() {
           className="bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-8 md:px-12 py-4 rounded-full font-bold text-lg shadow-lg transition-all disabled:cursor-not-allowed w-full sm:w-auto min-h-[52px]">
           {isSubmitting ? "Submitting..." : "Request Maintenance Contract"}
         </button>
-        <p className="mt-3 text-sm text-gray-600">We&apos;ll email you a custom contract within 24 hours</p>
+        <p className="mt-3 text-sm text-gray-600">Air2Cool will review the equipment information and follow up about scope and scheduling.</p>
       </div>
     </form>
   );

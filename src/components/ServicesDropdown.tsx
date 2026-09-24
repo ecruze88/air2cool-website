@@ -13,6 +13,8 @@ const COOLING = [
 const HEATING = [
   { label: "Heating Repair",       href: "/services/heating-repair" },
   { label: "Heating Installation", href: "/services/heating-installation" },
+  { label: "Boiler Maintenance", href: "/services/boiler-maintenance" },
+  { label: "Heating Pump Service", href: "/services/heating-pump-services" },
 ];
 
 const AIR_QUALITY = [
@@ -26,6 +28,7 @@ const MAINTENANCE = [
 
 const COMMERCIAL = [
   { label: "All Commercial Services",  href: "/services/commercial" },
+  { label: "Commercial Boiler Service", href: "/services/commercial-boiler-services" },
   { label: "Commercial Refrigeration", href: "/services/commercial-refrigeration" },
 ];
 
@@ -75,6 +78,18 @@ export default function ServicesDropdown() {
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [open]);
 
   const panel = open
@@ -157,6 +172,23 @@ export default function ServicesDropdown() {
         className="px-4 py-2 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-100 hover:text-brand-blue transition-colors flex items-center gap-1"
         onMouseEnter={() => { cancelClose(); updatePos(); setOpen(true); }}
         onMouseLeave={scheduleClose}
+        onFocus={() => { cancelClose(); updatePos(); setOpen(true); }}
+        onClick={(event) => {
+          event.preventDefault();
+          cancelClose();
+          updatePos();
+          setOpen((current) => !current);
+        }}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowDown") {
+            event.preventDefault();
+            cancelClose();
+            updatePos();
+            setOpen(true);
+          }
+        }}
+        aria-haspopup="menu"
+        aria-expanded={open}
       >
         Services
         <ChevronDown className={`w-3 h-3 opacity-60 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />

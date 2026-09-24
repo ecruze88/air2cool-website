@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from "next/server";
+import { buildMaintenanceEmail } from "@/lib/maintenance-email";
 
 const RESEND_KEY = process.env.RESEND_API_KEY || 'REMOVED';
 const EMAIL_TO = process.env.EMAIL_TO || 'air2cool1@gmail.com';
@@ -21,8 +22,17 @@ export async function POST(request: NextRequest) {
       state, 
       zipCode,
       propertyType,
+      serviceType,
       numberOfSystems,
       hasFurnace,
+      hasCondenser,
+      hasRefrigerationUnit,
+      hasRooftopUnit,
+      hasHighEfficiencyBoiler,
+      hasTanklessWaterHeater,
+      hasHydronicConventionalBoiler,
+      hasSteamBoiler,
+      hasHydronicAirHandler,
       furnaceBrand,
       furnaceAge,
       hasAC,
@@ -32,6 +42,10 @@ export async function POST(request: NextRequest) {
       heatPumpBrand,
       heatPumpAge,
       hasMiniSplit,
+      equipmentManufacturerModel,
+      boilerSuppliesHotWater,
+      lastServiceDate,
+      currentlyOperating,
       miniSplitBrand,
       miniSplitAge,
       preferredContactMethod,
@@ -60,6 +74,14 @@ export async function POST(request: NextRequest) {
     if (hasFurnace) {
       equipment.push(`Furnace: ${furnaceBrand || 'Unknown brand'}, ${furnaceAge || 'Unknown age'}`);
     }
+    if (hasCondenser) equipment.push('Condenser');
+    if (hasRefrigerationUnit) equipment.push('Refrigeration unit');
+    if (hasRooftopUnit) equipment.push('Rooftop unit');
+    if (hasHighEfficiencyBoiler) equipment.push('High-efficiency boiler');
+    if (hasTanklessWaterHeater) equipment.push('Tankless water heater');
+    if (hasHydronicConventionalBoiler) equipment.push('Hydronic conventional boiler');
+    if (hasSteamBoiler) equipment.push('Steam boiler');
+    if (hasHydronicAirHandler) equipment.push('Hydronic air handler');
     if (hasAC) {
       equipment.push(`Air Conditioner: ${acBrand || 'Unknown brand'}, ${acAge || 'Unknown age'}`);
     }
@@ -70,12 +92,15 @@ export async function POST(request: NextRequest) {
       equipment.push(`Mini Split: ${miniSplitBrand || 'Unknown brand'}, ${miniSplitAge || 'Unknown age'}`);
     }
     
-    const equipmentList = equipment.length > 0 
-      ? equipment.map(e => `<li>${e}</li>`).join('')
-      : '<li>No equipment specified</li>';
+    const notification = buildMaintenanceEmail({
+      firstName, lastName, email, phone, address, city, state, zipCode,
+      propertyType, serviceType, numberOfSystems, preferredContactMethod,
+      equipment, equipmentManufacturerModel, boilerSuppliesHotWater,
+      lastServiceDate, currentlyOperating, additionalNotes,
+    });
     
     try {
-      const emailHtml = `
+      /* Legacy inline template retained in history; formatter now provides escaped content.
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #ea580c;">🔧 New Maintenance Contract Request</h2>
           
@@ -86,6 +111,7 @@ export async function POST(request: NextRequest) {
             <p><strong>Phone:</strong> ${phone}</p>
             <p><strong>Address:</strong> ${address}, ${city}, ${state} ${zipCode}</p>
             <p><strong>Property Type:</strong> ${propertyType === 'residential' ? 'Residential' : 'Commercial'}</p>
+            <p><strong>Service Requested:</strong> ${serviceType || 'Not specified'}</p>
             <p><strong>Number of Systems:</strong> ${numberOfSystems}</p>
             <p><strong>Preferred Contact:</strong> ${preferredContactMethod}</p>
           </div>
@@ -95,6 +121,10 @@ export async function POST(request: NextRequest) {
             <ul style="margin: 10px 0; padding-left: 20px;">
               ${equipmentList}
             </ul>
+            <p><strong>Manufacturer / Model:</strong> ${equipmentManufacturerModel || 'Not provided'}</p>
+            <p><strong>Boiler supplies domestic hot water:</strong> ${boilerSuppliesHotWater || 'Unknown'}</p>
+            <p><strong>Last service date:</strong> ${lastServiceDate || 'Unknown'}</p>
+            <p><strong>Currently operating:</strong> ${currentlyOperating || 'Unknown'}</p>
           </div>
           
           ${additionalNotes ? `
@@ -117,14 +147,14 @@ export async function POST(request: NextRequest) {
             Submitted from Air2Cool Maintenance Contract page
           </p>
         </div>
-      `;
+      */
 
       await resend.emails.send({
         from: EMAIL_FROM,
         to: EMAIL_TO,
         replyTo: email || undefined,
-        subject: `🔧 New Maintenance Contract: ${firstName} ${lastName} - ${propertyType}`,
-        html: emailHtml
+        subject: notification.subject,
+        html: notification.html
       });
       
       console.log("Maintenance contract email sent successfully!");
@@ -141,8 +171,13 @@ export async function POST(request: NextRequest) {
       phone,
       address: `${address}, ${city}, ${state} ${zipCode}`,
       propertyType,
+      serviceType,
       numberOfSystems,
       equipment: equipment.length > 0 ? equipment : ['None specified'],
+      equipmentManufacturerModel,
+      boilerSuppliesHotWater,
+      lastServiceDate,
+      currentlyOperating,
       preferredContactMethod,
       additionalNotes
     });

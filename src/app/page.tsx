@@ -442,6 +442,15 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="mb-10 md:mb-16 border-y border-slate-200 py-10 md:py-14">
+          <div className="max-w-4xl">
+            <p className="text-sm font-bold uppercase tracking-widest text-orange-700 mb-3">Planned heating care</p>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4">Preventative Heating, Boiler & Pump Maintenance</h2>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Keep heating maintenance planned and visible. Air2Cool provides boiler maintenance, heating circulation pump service, and commercial HVAC mechanical support throughout North Jersey. Service scope is tailored to the equipment and application.</p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3"><Link href="/services/boiler-maintenance" className="text-blue-700 font-bold underline">Boiler maintenance</Link><Link href="/services/heating-pump-services" className="text-blue-700 font-bold underline">Heating pump service</Link><Link href="/services/commercial-boiler-services" className="text-blue-700 font-bold underline">Commercial boiler service</Link></div>
+          </div>
+        </section>
+
         {/* BRANDS WE WORK WITH */}
         <section className="mb-10 md:mb-16 border-y border-slate-200 py-10 md:py-14">
           <div className="max-w-3xl mb-9 md:mb-12">
@@ -771,12 +780,12 @@ export default function HomePage() {
                 </p>
 
                 <div className="mt-6">
-                  <a
+                  <Link
                     href="/service-areas"
                     className="inline-flex items-center text-brand-blue font-semibold hover:underline"
                   >
                     View all towns we serve →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

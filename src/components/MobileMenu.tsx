@@ -1,7 +1,8 @@
 "use client";
 
 import { Menu, X, Phone, Star, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const COOLING_LINKS = [
   { label: "AC Repair",       href: "/services/ac-repair" },
@@ -12,6 +13,8 @@ const COOLING_LINKS = [
 const HEATING_LINKS = [
   { label: "Heating Repair",       href: "/services/heating-repair" },
   { label: "Heating Installation", href: "/services/heating-installation" },
+  { label: "Boiler Maintenance", href: "/services/boiler-maintenance" },
+  { label: "Heating Pump Service", href: "/services/heating-pump-services" },
 ];
 
 const AIR_QUALITY_LINKS = [
@@ -26,11 +29,14 @@ const MAINTENANCE_LINKS = [
 
 const COMMERCIAL_LINKS = [
   { label: "All Commercial Services",  href: "/services/commercial" },
+  { label: "Commercial Boiler Service", href: "/services/commercial-boiler-services" },
   { label: "Commercial Refrigeration", href: "/services/commercial-refrigeration" },
 ];
 
 export default function MobileMenu() {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   const openMenu = () => {
     const menu = document.getElementById('mobile-menu-overlay');
     if (menu) {
@@ -40,6 +46,7 @@ export default function MobileMenu() {
       document.body.style.width = '100%';
       document.body.style.height = '100vh';
     }
+    window.setTimeout(() => closeButtonRef.current?.focus(), 0);
 
     // Hide floating logo
     const floatingLogo = document.querySelector('a[aria-label="Go to homepage"]');
@@ -115,15 +122,35 @@ export default function MobileMenu() {
         (el as HTMLElement).style.removeProperty('pointer-events');
       });
     });
+    setServicesOpen(false);
+    menuButtonRef.current?.focus();
   };
+
+  useEffect(() => {
+    const handleViewportChange = () => {
+      if (window.innerWidth >= 1024) closeMenu();
+    };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMenu();
+    };
+    window.addEventListener("resize", handleViewportChange);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("resize", handleViewportChange);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <>
       {/* Hamburger Button */}
       <button
+        ref={menuButtonRef}
         onClick={openMenu}
         className="p-2 hover:bg-white/20 rounded-lg"
         type="button"
+        aria-label="Open navigation menu"
+        aria-controls="mobile-menu-overlay"
       >
         <Menu className="w-7 h-7 text-white" />
       </button>
@@ -152,9 +179,11 @@ export default function MobileMenu() {
         >
           <span className="text-lg font-bold text-gray-900">Menu</span>
           <button
+            ref={closeButtonRef}
             onClick={closeMenu}
             className="p-2 hover:bg-gray-100 rounded-lg"
             type="button"
+            aria-label="Close navigation menu"
           >
             <X className="w-7 h-7 text-gray-900" />
           </button>
@@ -236,13 +265,13 @@ export default function MobileMenu() {
           >
             Troubleshooting
           </a>
-          <a 
+          <Link
             href="/service-areas" 
             onClick={closeMenu} 
             className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
           >
             Service Areas
-          </a>
+          </Link>
           <a 
             href="/reviews" 
             onClick={closeMenu} 
@@ -264,13 +293,13 @@ export default function MobileMenu() {
           >
             FAQ
           </a>
-          <a
+          <Link
             href="/blog"
             onClick={closeMenu}
             className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
           >
             Blog
-          </a>
+          </Link>
           <a
             href="/maintenance-contract"
             onClick={closeMenu} 

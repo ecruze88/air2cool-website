@@ -13,6 +13,13 @@ const EMERGENCY_SERVICES = [
 ] as const;
 
 const ESTIMATE_SERVICES = [
+  "Heating Maintenance",
+  "High-Efficiency Boiler Maintenance",
+  "Commercial Boiler Service",
+  "Boiler / Heating Pump Service",
+  "HVAC Mechanical Service",
+  "Compressor Overhaul Inquiry",
+  "Heat Recovery Installation",
   "New Furnace Installation",
   "New Boiler Installation (Hydronic/Steam/NTI)",
   "New AC Installation",
@@ -29,7 +36,6 @@ export default function ContactClientDual() {
   const [emergencyError, setEmergencyError] = useState("");
   const [estimateError, setEstimateError] = useState("");
 
-  const phoneNumber = "+1-201-787-5657";
   const telHref = "tel:+12017875657";
 
   useEffect(() => {
@@ -113,7 +119,7 @@ export default function ContactClientDual() {
             Schedule HVAC Service in North NJ
           </h1>
           <p className="text-base md:text-xl text-gray-600 mb-4 md:mb-6">
-            Emergency AC repair, furnace repair, or planning a new installation? We're here 24/7.
+            Emergency AC repair, furnace repair, or planning a new installation? We&apos;re here 24/7.
           </p>
 
           {/* Social Proof - MOBILE OPTIMIZED */}
@@ -188,7 +194,7 @@ export default function ContactClientDual() {
                     Emergency Request Sent!
                   </h3>
                   <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                    We'll call you within 2 hours.
+                    We&apos;ll call you within 2 hours.
                   </p>
                   <a
                     href={telHref}
@@ -318,7 +324,7 @@ export default function ContactClientDual() {
                   {/* Problem Type */}
                   <div>
                     <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
-                      What's the problem? <span className="text-red-600">*</span>
+                      What&apos;s the problem? <span className="text-red-600">*</span>
                     </label>
                     <select
                       name="problem"
@@ -363,7 +369,7 @@ export default function ContactClientDual() {
 
                   <p className="text-xs text-center text-gray-500 flex items-center justify-center gap-1">
                     <Clock className="w-3 h-3" />
-                    We'll call within 2 hours
+                    We&apos;ll call within 2 hours
                   </p>
                 </form>
               )}
@@ -394,7 +400,7 @@ export default function ContactClientDual() {
                     Estimate Request Received!
                   </h3>
                   <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                    We'll contact you within 24 hours to schedule your free estimate.
+                    We&apos;ll contact you within 24 hours to schedule your free estimate.
                   </p>
                   <p className="text-xs md:text-sm text-gray-500">
                     Check your email for confirmation.

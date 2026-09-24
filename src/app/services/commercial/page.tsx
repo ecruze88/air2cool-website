@@ -10,14 +10,15 @@ import {
   Refrigerator,
   CheckCircle,
   Phone,
+  Wrench,
 } from "lucide-react";
 import Link from "next/link";
 import { COMMERCIAL_MAINTENANCE_PLAN, COMPANY } from "@/config/company";
 
 export const metadata: Metadata = {
-  title: "Commercial HVAC & Refrigeration Services in North NJ | Air2Cool",
+  title: "Commercial HVAC & Mechanical Services in North NJ | Air2Cool",
   description:
-    "Commercial HVAC, refrigeration, LED lighting, RTUs, chillers, boilers and more in North NJ. Licensed commercial contractors. Call (201) 787-5657.",
+    "Commercial HVAC and mechanical maintenance, boiler service, heating pumps, appropriate compressor overhauls, heat recovery installation and refrigeration in North Jersey.",
   keywords: [
     "commercial HVAC North NJ",
     "commercial refrigeration NJ",
@@ -79,8 +80,28 @@ const SERVICES = [
     icon: Waves,
     title: "Commercial Boilers",
     description:
-      "Hydronic and steam boiler systems for commercial properties, multi-family buildings, and industrial facilities. Installation, repair, and annual maintenance.",
+      "Planned boiler maintenance and equipment-specific service for commercial properties and multi-family buildings.",
     color: "orange",
+    href: "/services/commercial-boiler-services",
+  },
+  {
+    icon: Waves,
+    title: "Heating Circulation Pumps",
+    description: "Inspection and diagnosis of hydronic heating pumps, with repair or replacement options based on the equipment and condition.",
+    color: "blue",
+    href: "/services/heating-pump-services",
+  },
+  {
+    icon: Wrench,
+    title: "Compressor Service & Overhauls",
+    description: "Compressor service and overhauls where appropriate for the equipment, compressor type, condition and service requirements.",
+    color: "purple",
+  },
+  {
+    icon: Wind,
+    title: "Heat Recovery Unit Installation",
+    description: "Heat recovery unit installation, with equipment and installation scope determined by the building and application.",
+    color: "teal",
   },
   {
     icon: Wind,
@@ -174,7 +195,7 @@ export default function CommercialServicesPage() {
           <div className="max-w-4xl">
             <div className="inline-block mb-4">
               <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                COMMERCIAL SERVICES
+                COMMERCIAL HVAC & MECHANICAL SERVICES
               </span>
             </div>
 
@@ -443,17 +464,17 @@ export default function CommercialServicesPage() {
       <section className="py-10 md:py-12 bg-gradient-to-r from-blue-700 to-slate-700">
         <div className="max-w-4xl mx-auto px-6 text-center text-white">
           <h2 className="text-2xl md:text-3xl font-extrabold mb-3 md:mb-4">
-            Get a Commercial Service Quote
+            Request a Commercial Maintenance Proposal
           </h2>
           <p className="text-base md:text-xl text-blue-100 mb-5 md:mb-8 max-w-xl mx-auto">
             Call <strong>(201) 787-5657</strong> or request online. We&apos;ll respond within one business day for non-emergency inquiries.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/maintenance-contract"
               className="bg-white text-blue-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-gray-50 transition w-full sm:w-auto text-center"
             >
-              Request Quote Online
+              Request Maintenance Proposal
             </Link>
             <a
               href="tel:+12017875657"
