@@ -7,9 +7,9 @@ import VideoShowcase from "@/components/VideoShowcase";
 import { COMPANY } from "@/config/company";
 
 export const metadata: Metadata = {
-  title: "Furnace Repair NJ | Same-Day Heating Repair | Air2Cool",
+  title: "Heating Repair Morris County NJ | Furnace & Boiler Service | Air2Cool",
   description:
-    `Furnace not working in North NJ? Air2Cool provides 24/7 emergency heating service throughout Morris County, with same-day appointments subject to availability. NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}. Call ${COMPANY.phone.display}.`,
+    `Furnace, boiler, and heat-pump repair in Morris County and North Jersey. Air2Cool provides a 24/7 emergency heating line. NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}. Call ${COMPANY.phone.display}.`,
   keywords: [
     "furnace repair NJ",
     "heating repair NJ",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     canonical: "/services/heating-repair",
   },
   openGraph: {
-    title: "Furnace Repair NJ | Same-Day Heating Repair | Air2Cool",
+    title: "Heating Repair Morris County NJ | Furnace & Boiler Service | Air2Cool",
     description:
-      `Furnace not working in North NJ? Air2Cool provides 24/7 emergency heating service throughout Morris County, with same-day appointments subject to availability. NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}. Call ${COMPANY.phone.display}.`,
+      `Furnace, boiler, and heat-pump repair in Morris County and North Jersey. Air2Cool provides a 24/7 emergency heating line. NJ Master HVACR License #${COMPANY.license.masterHvacrNumber}. Call ${COMPANY.phone.display}.`,
     url: "/services/heating-repair",
   },
 };
@@ -113,7 +113,7 @@ export default function HeatingRepairPage() {
                 "name": "How much does furnace repair cost in New Jersey?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Pricing varies depending on the repair needed — we provide upfront pricing before any work begins. Call (201) 787-5657 for a same-day diagnosis."
+                  "text": "Pricing varies depending on the diagnosis and repair needed. Air2Cool explains pricing before authorized repair work begins. Call (201) 787-5657 to schedule heating service."
                 }
               }
             ]
@@ -152,7 +152,7 @@ export default function HeatingRepairPage() {
                 href="/contact"
                 className="bg-white text-red-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-all shadow-lg hover:bg-gray-50 text-center"
               >
-                Get Free Estimate
+                Schedule Heating Service
               </Link>
               <a
                 href="tel:+12017875657"
@@ -177,7 +177,7 @@ export default function HeatingRepairPage() {
           <div className="flex items-center justify-center gap-3 text-red-900">
             <Clock className="w-5 h-5 md:w-6 md:h-6 shrink-0" />
             <p className="text-sm md:text-lg font-semibold">
-              A heating emergency can happen any time — even at midnight in the dead of winter. That's why our reliable team is available 24 hours a day. We'll be there whenever you need us!
+              A heating emergency can happen any time — even at midnight in the dead of winter. That&apos;s why our reliable team is available 24 hours a day. We&apos;ll be there whenever you need us!
             </p>
           </div>
         </div>
@@ -188,29 +188,29 @@ export default function HeatingRepairPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
-              Morris County's Furnace &amp; Boiler Repair Specialists
+              Morris County&apos;s Furnace &amp; Boiler Repair Specialists
             </h2>
             <div className="prose prose-gray max-w-none text-gray-700 leading-relaxed space-y-4">
               <p>
-                Air2Cool specializes in <strong>furnace repair</strong>, <strong>boiler repair</strong>, and <strong>heat pump repair</strong> across Morris County and all of North Jersey. Our <strong>24/7 emergency heating service</strong> means you're covered day or night — we serve <strong>Morristown, Randolph, Rockaway, Dover, Wharton, Denville, Parsippany</strong>, and surrounding communities.
+                Air2Cool specializes in <strong>furnace repair</strong>, <strong>boiler repair</strong>, and <strong>heat pump repair</strong> across Morris County and all of North Jersey. Our <strong>24/7 emergency heating service</strong> means you&apos;re covered day or night — we serve <strong>Morristown, Randolph, Rockaway, Dover, Wharton, Denville, Parsippany</strong>, and surrounding communities.
               </p>
               <p>
-                When New Jersey temperatures drop below freezing, a broken furnace or boiler isn't just uncomfortable — it's a health and safety emergency. Air2Cool Heating &amp; Cooling has been keeping homes and businesses warm across{" "}
+                When New Jersey temperatures drop below freezing, a broken furnace or boiler isn&apos;t just uncomfortable — it&apos;s a health and safety emergency. Air2Cool Heating &amp; Cooling has been keeping homes and businesses warm across{" "}
                 <Link href="/service-areas/morris-county" className="text-red-600 hover:underline">Morris County</Link> and North NJ since 1998. We serve homeowners in{" "}
                 <Link href="/service-areas/morristown" className="text-red-600 hover:underline">Morristown</Link>,{" "}
                 <Link href="/service-areas/parsippany-troy-hills" className="text-red-600 hover:underline">Parsippany</Link>,{" "}
                 <Link href="/service-areas/randolph" className="text-red-600 hover:underline">Randolph</Link>, and{" "}
-                <Link href="/service-areas/denville" className="text-red-600 hover:underline">Denville</Link> call first.
+                <Link href="/service-areas/denville" className="text-red-600 hover:underline">Denville</Link> and surrounding communities.
               </p>
               <p>
-                Air2Cool&apos;s trained technicians diagnose and repair many types of heating systems, including gas and oil furnaces, hydronic and steam boilers, NTI boilers, and heat pumps. We service many major brands through our licensed HVACR operation. Same-day appointments may be available for urgent situations depending on technician availability and current conditions, and our emergency line is available 24/7.
+                Air2Cool&apos;s trained technicians diagnose and repair many types of heating systems, including gas and oil furnaces, hydronic and steam boilers, NTI boilers, and heat pumps. We service many major brands through our licensed HVACR operation, and our emergency line is available 24/7.
               </p>
               <p>
-                One thing that sets Air2Cool apart is our boiler expertise. Many HVAC companies don't fully understand the complexity of hydronic and steam systems — we do. As NTI-certified technicians and boiler specialists, we diagnose issues faster and fix them right the first time. Whether it's a failed circulator pump, zone valve problem, or a no-heat situation, we have the parts and know-how on hand.
+                Air2Cool has hands-on experience with hydronic and steam systems, including NTI equipment. We diagnose circulator-pump failures, zone-valve problems, and no-heat conditions, then explain the recommended repair and any parts that must be sourced. Learn more about ongoing <Link href="/services/boiler-maintenance" className="text-red-600 hover:underline">boiler maintenance</Link> and dedicated <Link href="/services/heating-pump-services" className="text-red-600 hover:underline">heating circulation-pump service</Link>.
               </p>
               <p>
-                As a family-owned, locally-operated company, we treat every repair like it's our own home. We'll give you an honest diagnosis, transparent pricing, and no-pressure recommendations. If you need a full heating system replacement, visit our{" "}
-                <Link href="/services/hvac-installation" className="text-red-600 hover:underline">HVAC installation page</Link>. For cooling needs, check our{" "}
+                As a family-owned, locally-operated company, we treat every repair like it&apos;s our own home. We&apos;ll give you an honest diagnosis, transparent pricing, and no-pressure recommendations. If you need a full heating system replacement, visit our{" "}
+                <Link href="/services/heating-installation" className="text-red-600 hover:underline">heating installation page</Link>. For cooling needs, check our{" "}
                 <Link href="/services/ac-repair" className="text-red-600 hover:underline">AC repair service</Link>.
               </p>
             </div>
@@ -231,13 +231,12 @@ export default function HeatingRepairPage() {
                 "Furnace repairs & service",
                 "Hydronic boiler service",
                 "Steam boiler repairs",
-                "NTI boiler specialists",
-                "All major boiler brands",
+                "Experience with NTI boilers",
+                "Many major boiler brands",
                 "Heat pumps",
                 "Ductless mini systems",
                 "Residential & commercial",
                 "Thermostat service",
-                "Weather sealing",
                 "Whole-house humidifiers",
                 "Wi-Fi/smart thermostats",
               ].map((item, idx) => (
@@ -289,9 +288,9 @@ export default function HeatingRepairPage() {
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-5 md:p-6 border-2 border-green-200">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">NTI & All Brands</h3>
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">NTI &amp; Boiler Experience</h3>
                 <p className="text-xs md:text-sm text-gray-700">
-                  NTI certified technicians plus expertise in Weil-McLain, Burnham, Buderus, Peerless, and all major boiler manufacturers.
+                  Experience servicing NTI equipment and boiler systems from manufacturers including Weil-McLain, Burnham, Buderus, and Peerless.
                 </p>
               </div>
             </div>
@@ -349,7 +348,7 @@ export default function HeatingRepairPage() {
           </p>
           <div className="inline-block bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200">
             <p className="text-sm md:text-base text-gray-600 italic">
-              "With cold weather approaching, I discovered that my heater was not working properly in a house that I had recently purchased. Hector sent his team over the same day that I contacted him. They found numerous problems and professionally repaired all of them. Very fast service with fair prices and honest work. I highly recommend Air2Cool to all my friends and family!"
+              &quot;With cold weather approaching, I discovered that my heater was not working properly in a house that I had recently purchased. Hector sent his team over the same day that I contacted him. They found numerous problems and professionally repaired all of them. Very fast service with fair prices and honest work. I highly recommend Air2Cool to all my friends and family!&quot;
             </p>
             <p className="mt-3 md:mt-4 text-sm md:text-base font-semibold text-gray-900">
               - Richard Farrell, Google Review
@@ -376,15 +375,15 @@ export default function HeatingRepairPage() {
               },
               {
                 q: "Can you repair my boiler, or do you only work on furnaces?",
-                a: "We specialize in both. Air2Cool is one of the few North NJ HVAC companies with deep expertise in all types of boiler systems — hydronic boilers, steam boilers, and NTI boilers. We're NTI-certified technicians and regularly service brands like Weil-McLain, Burnham, and Buderus.",
+                a: "We work on furnaces as well as hydronic, steam, and NTI boiler systems. Air2Cool has experience servicing boiler equipment from manufacturers including Weil-McLain, Burnham, and Buderus.",
               },
               {
                 q: "How long does a typical heating repair take?",
-                a: "Most heating repairs can be completed in a single visit, typically 1–3 hours. More complex repairs involving parts that need to be ordered may require a follow-up appointment, but we keep common parts on our trucks to minimize delays. We'll always give you a time estimate upfront.",
+                a: "Repair time depends on the diagnosis, equipment condition, access, and parts availability. Some repairs can be completed during the initial visit, while others require sourced parts and a follow-up appointment. We explain the expected next steps after diagnosis.",
               },
               {
                 q: "When should I replace my furnace instead of repairing it?",
-                a: "If your furnace is over 15–20 years old, requires frequent repairs, or the cost of repair exceeds 50% of a new system's price, replacement is usually the smarter investment. A new high-efficiency furnace can significantly reduce your energy bills. Our technicians will give you an honest assessment — no upselling. See our HVAC installation page for more details.",
+                a: "Age, condition, repair history, safety, comfort, efficiency, and the cost and availability of parts all affect the decision. Air2Cool can explain the repair and replacement options for your specific system without relying on a single percentage rule.",
               },
             ].map((item, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
@@ -399,7 +398,7 @@ export default function HeatingRepairPage() {
       <VideoShowcase
         title="NTI Boiler Installation — Morris County"
         src="/nti_boiler_installation_in_progress.mp4"
-        caption="High-efficiency NTI boiler installed and running — same craftsmanship on every repair call"
+        caption="High-efficiency NTI boiler installed and commissioned by Air2Cool in Morris County, NJ"
         sectionClassName="py-10 md:py-16 bg-gradient-to-b from-gray-50 to-white"
       />
 
@@ -460,18 +459,18 @@ export default function HeatingRepairPage() {
             <a href="tel:+12017875657" className="font-bold underline hover:no-underline">
               (201) 787-5657
             </a>{" "}
-            or get a free estimate at{" "}
+            or request heating service at{" "}
             <Link href="/contact" className="font-bold underline hover:no-underline">
               /contact
             </Link>
-            . Don't wait in the cold — our team is standing by.
+            . For ongoing care, review our <Link href="/services/preventative-maintenance" className="font-bold underline hover:no-underline">preventative maintenance</Link> options. Businesses with boiler equipment can also visit our <Link href="/services/commercial-boiler-services" className="font-bold underline hover:no-underline">commercial boiler services</Link> page.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link
               href="/contact"
               className="bg-white text-red-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-gray-50 transition"
             >
-              Schedule Service
+              Schedule Heating Service
             </Link>
             <a
               href="tel:+12017875657"

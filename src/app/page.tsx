@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets, AlertTriangle } from "lucide-react";
 import { COMPANY } from "@/config/company";
 import { getBrandBySlug } from "@/data/brands";
+import { ACTIVE_SEASONAL_CONTENT, orderBySeasonalPriority } from "@/config/seasonal-focus";
 
 export const metadata: Metadata = {
   title: "Air2Cool | AC Repair & HVAC Service | Morris County NJ",
@@ -77,6 +78,8 @@ const SERVICES = [
     gradient: "from-cyan-500 to-blue-600"
   },
 ];
+
+const ORDERED_SERVICES = orderBySeasonalPriority(SERVICES);
 
 // Troubleshooting quick fixes for homepage
 const TROUBLESHOOTING_PREVIEW = [
@@ -188,19 +191,19 @@ export default function HomePage() {
             </p>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] mb-5 md:mb-6">
-              Heating, Cooling &amp; Refrigeration Done Right.
+              {ACTIVE_SEASONAL_CONTENT.heroHeading}
             </h1>
 
             <p className="text-lg md:text-2xl text-gray-100 max-w-3xl leading-relaxed mb-7 md:mb-8">
-              Residential and commercial HVAC service, installation, boilers, refrigeration, and 24/7 emergency service throughout North Jersey.
+              {ACTIVE_SEASONAL_CONTENT.heroDescription}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Link
-                href="/contact"
+                href={ACTIVE_SEASONAL_CONTENT.primaryCta.href}
                 className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 md:px-10 py-4 rounded-full font-bold text-base md:text-lg shadow-xl transition-colors min-h-[52px]"
               >
-                Get Free Estimate <span aria-hidden="true">→</span>
+                {ACTIVE_SEASONAL_CONTENT.primaryCta.label} <span aria-hidden="true">→</span>
               </Link>
               <a
                 href={COMPANY.phone.href}
@@ -395,17 +398,17 @@ export default function HomePage() {
         <section className="mb-10">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
-              Complete HVAC Services
+              {ACTIVE_SEASONAL_CONTENT.servicesHeading}
             </h2>
             <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
-              From repairs to installations to air quality - we handle everything for your home comfort.
+              {ACTIVE_SEASONAL_CONTENT.servicesDescription}
             </p>
           </div>
         </section>
 
         {/* SERVICE CARDS - All 9 services */}
         <section className="mb-16">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">{SERVICES.map((s) => {
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">{ORDERED_SERVICES.map((s) => {
               const Icon = ICON_MAP[s.iconName as keyof typeof ICON_MAP];
               return (
                 <a
@@ -444,10 +447,10 @@ export default function HomePage() {
 
         <section className="mb-10 md:mb-16 border-y border-slate-200 py-10 md:py-14">
           <div className="max-w-4xl">
-            <p className="text-sm font-bold uppercase tracking-widest text-orange-700 mb-3">Planned heating care</p>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4">Preventative Heating, Boiler & Pump Maintenance</h2>
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">Keep heating maintenance planned and visible. Air2Cool provides boiler maintenance, heating circulation pump service, and commercial HVAC mechanical support throughout North Jersey. Service scope is tailored to the equipment and application.</p>
-            <div className="flex flex-wrap gap-x-6 gap-y-3"><Link href="/services/boiler-maintenance" className="text-blue-700 font-bold underline">Boiler maintenance</Link><Link href="/services/heating-pump-services" className="text-blue-700 font-bold underline">Heating pump service</Link><Link href="/services/commercial-boiler-services" className="text-blue-700 font-bold underline">Commercial boiler service</Link></div>
+            <p className="text-sm font-bold uppercase tracking-widest text-orange-700 mb-3">{ACTIVE_SEASONAL_CONTENT.calloutEyebrow}</p>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4">{ACTIVE_SEASONAL_CONTENT.calloutHeading}</h2>
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">{ACTIVE_SEASONAL_CONTENT.calloutDescription}</p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3">{ACTIVE_SEASONAL_CONTENT.calloutLinks.map((link) => <Link key={link.href} href={link.href} className="text-blue-700 font-bold underline">{link.label}</Link>)}</div>
           </div>
         </section>
 
