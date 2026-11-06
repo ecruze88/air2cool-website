@@ -187,28 +187,39 @@ export default function HomePage() {
         {/* HERO CONTENT */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-20">
           <div className="max-w-4xl">
-            <p className="text-xs sm:text-sm md:text-base text-blue-200 font-semibold tracking-wide mb-3 md:mb-4">
+            <p className="text-xs text-blue-200 font-semibold mb-4 md:hidden">
+              Based in Wharton, NJ &middot; Serving North Jersey Since 1998
+            </p>
+            <p className="hidden md:block md:text-base text-blue-200 font-semibold tracking-wide mb-4">
               Based in Wharton, NJ &bull; Serving Morris County &amp; North Jersey Since 1998
             </p>
 
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] mb-4 md:mb-6">
+            <h1 className="text-4xl font-extrabold text-white leading-[1.08] mb-5 md:hidden">
+              Heating &amp; HVAC Service in North Jersey
+            </h1>
+            <h1 className="hidden md:block md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] md:mb-6">
               {ACTIVE_SEASONAL_CONTENT.heroHeading}
             </h1>
 
-            <p className="text-base sm:text-lg md:text-2xl text-gray-100 max-w-3xl leading-relaxed mb-5 md:mb-8">
+            <p className="text-base text-gray-100 max-w-md leading-relaxed mb-6 md:hidden">
+              Heating, boiler, cooling and commercial HVAC service from Air2Cool.
+            </p>
+            <p className="hidden md:block md:text-2xl text-gray-100 max-w-3xl leading-relaxed md:mb-8">
               {ACTIVE_SEASONAL_CONTENT.heroDescription}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+            <div className="flex flex-col items-start md:flex-row gap-3 md:gap-4">
               <Link
                 href={ACTIVE_SEASONAL_CONTENT.primaryCta.href}
                 className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-xl transition-colors min-h-[48px] md:min-h-[52px]"
               >
-                {ACTIVE_SEASONAL_CONTENT.primaryCta.label} <span aria-hidden="true">→</span>
+                <span className="md:hidden">Request Heating Service</span>
+                <span className="hidden md:inline">{ACTIVE_SEASONAL_CONTENT.primaryCta.label}</span>
+                <span aria-hidden="true">→</span>
               </Link>
               <a
                 href={COMPANY.phone.href}
-                className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 hover:bg-blue-50 px-6 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-xl transition-colors min-h-[48px] md:min-h-[52px]"
+                className="hidden md:inline-flex items-center justify-center gap-2 bg-white text-blue-900 hover:bg-blue-50 px-10 py-4 rounded-full font-bold text-lg shadow-xl transition-colors min-h-[52px]"
               >
                 <Phone className="w-5 h-5" />
                 Call {COMPANY.phone.display}
@@ -217,77 +228,28 @@ export default function HomePage() {
 
             <a
               href={COMPANY.phone.href}
-              className="inline-flex items-center gap-2 mt-3 md:mt-4 text-sm font-semibold text-blue-100 hover:text-white underline underline-offset-4"
+              className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-blue-100 hover:text-white underline underline-offset-4 md:hidden"
+            >
+              Call {COMPANY.phone.display} <span aria-hidden="true">&middot;</span> 24/7 Emergency Service
+            </a>
+
+            <a
+              href={COMPANY.phone.href}
+              className="hidden md:inline-flex items-center gap-2 mt-4 text-sm font-semibold text-blue-100 hover:text-white underline underline-offset-4"
             >
               <span className="w-2 h-2 bg-red-500 rounded-full" aria-hidden="true" />
               24/7 Emergency HVAC Service
             </a>
 
-            <p className="mt-5 md:mt-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm md:text-base text-gray-200 font-medium tracking-wide">
+            <p className="mt-6 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11px] sm:text-xs text-gray-200 font-medium md:hidden">
+              <span>300+ 5-Star Reviews</span><span className="text-gray-400" aria-hidden="true">&middot;</span><span>Licensed &amp; Insured</span><span className="text-gray-400" aria-hidden="true">&middot;</span><Link href="/servicio-en-espanol" className="font-bold text-white underline decoration-white/70 underline-offset-4 hover:text-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Espa&ntilde;ol</Link>
+            </p>
+            <p className="hidden md:flex mt-8 flex-wrap items-center gap-x-2 gap-y-1 text-base text-gray-200 font-medium tracking-wide">
               <span>300+ 5-Star Reviews</span><span className="text-gray-400" aria-hidden="true">&middot;</span><span>Licensed &amp; Insured</span><span className="text-gray-400" aria-hidden="true">&middot;</span><span>Serving NJ Since {COMPANY.foundedYear}</span><span className="text-gray-400" aria-hidden="true">&middot;</span><Link href="/servicio-en-espanol" className="font-bold text-white underline decoration-white/70 underline-offset-4 hover:text-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Espa&ntilde;ol</Link>
             </p>
           </div>
         </div>
       </section>
-
-{/* COMMUNITY & AWARDS */}
-
-
-
-{/* COMMUNITY AWARDS - Compact Version */}
-<section className="py-12 bg-gradient-to-r from-green-50 to-blue-50">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-5xl mx-auto">
-      {/* Nextdoor Badge */}
-      <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 rounded-2xl shadow-lg border-2 border-green-200">
-        <img
-          src="/neighborhood-fave-2025.webp"
-          alt="Nextdoor Neighborhood Fave 2025 badge"
-          className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
-        />
-        <div className="text-center md:text-left">
-          <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">Nextdoor Neighborhood Fave</div>
-          <div className="text-[10px] md:text-sm text-green-600 font-semibold">2025 Winner</div>
-        </div>
-      </div>
-
-      {/* Little League Badge */}
-      <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 rounded-2xl shadow-lg border-2 border-blue-200">
-        <img
-          src="/wharton-little-league.png"
-          alt="Wharton Little League logo"
-          className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
-        />
-        <div className="text-center md:text-left">
-          <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">Wharton Little League</div>
-          <div className="text-[10px] md:text-sm text-blue-600 font-semibold">Proud Sponsor</div>
-        </div>
-      </div>
-
-      {/* NJ BPU Recognition */}
-      <div className="flex flex-col bg-white rounded-2xl shadow-lg border-2 border-amber-200 overflow-hidden sm:col-span-2 lg:col-span-1">
-        <img
-          src="/headstart_community_program_group_photo_indoor_event.webp"
-          alt="Air2Cool recognized by NJ Board of Public Utilities President Christine Guhl-Sadovy at Head Start Community Program Dover NJ"
-          className="w-full h-40 object-cover"
-        />
-        <div className="px-3 md:px-4 py-3 flex flex-col items-center text-center">
-          <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">NJ Board of Public Utilities</div>
-          <div className="text-[10px] md:text-sm text-amber-600 font-semibold mb-1">Energy savings equivalent to powering 140 homes/year — Head Start Community Program, Dover NJ</div>
-          <a
-            href="https://www.facebook.com/share/1ANnxnnjN4/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[10px] md:text-sm text-blue-600 font-semibold hover:underline min-h-[44px] inline-flex items-center"
-          >
-            See the recognition →
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
       {/* OFFERS */}
       <Offers
@@ -442,6 +404,55 @@ export default function HomePage() {
                 </a>
               );
             })}
+          </div>
+        </section>
+
+        {/* Community awards follow the primary services instead of the hero. */}
+        <section className="mb-12 bg-gradient-to-r from-green-50 to-blue-50 px-4 py-8 md:px-6 md:py-12">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-5xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 text-center md:text-left rounded-2xl shadow-lg border-2 border-green-200">
+              <img
+                src="/neighborhood-fave-2025.webp"
+                alt="Nextdoor Neighborhood Fave 2025 badge"
+                className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
+              />
+              <div>
+                <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">Nextdoor Neighborhood Fave</div>
+                <div className="text-[10px] md:text-sm text-green-600 font-semibold">2025 Winner</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 text-center md:text-left rounded-2xl shadow-lg border-2 border-blue-200">
+              <img
+                src="/wharton-little-league.png"
+                alt="Wharton Little League logo"
+                className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
+              />
+              <div>
+                <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">Wharton Little League</div>
+                <div className="text-[10px] md:text-sm text-blue-600 font-semibold">Proud Sponsor</div>
+              </div>
+            </div>
+
+            <div className="col-span-2 lg:col-span-1 flex flex-col overflow-hidden bg-white rounded-2xl shadow-lg border-2 border-amber-200">
+              <img
+                src="/headstart_community_program_group_photo_indoor_event.webp"
+                alt="Air2Cool recognized by NJ Board of Public Utilities President Christine Guhl-Sadovy at Head Start Community Program Dover NJ"
+                className="w-full h-40 object-cover"
+              />
+              <div className="px-3 md:px-4 py-3 flex flex-col items-center text-center">
+                <div className="text-xs md:text-lg font-extrabold text-gray-900 leading-tight">NJ Board of Public Utilities</div>
+                <div className="text-[10px] md:text-sm text-amber-600 font-semibold mb-1">Energy savings equivalent to powering 140 homes/year &mdash; Head Start Community Program, Dover NJ</div>
+                <a
+                  href="https://www.facebook.com/share/1ANnxnnjN4/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[44px] items-center text-[10px] md:text-sm text-blue-600 font-semibold hover:underline"
+                >
+                  See the recognition <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
