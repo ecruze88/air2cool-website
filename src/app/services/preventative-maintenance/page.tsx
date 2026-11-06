@@ -20,7 +20,7 @@ const SEASONAL_VISIT_TASKS = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: "HVAC Preventative Maintenance in Morris County NJ | Air2Cool | (201) 787-5657",
+  title: "HVAC Preventative Maintenance Morris County NJ | Air2Cool",
   description:
     `Residential HVAC preventative maintenance in Morris County and North NJ with two seasonal visits per covered system, priority service, and 20% off eligible repairs and replacement parts. Call ${COMPANY.phone.display}.`,
   keywords: [
@@ -53,7 +53,7 @@ export default function PreventativeMaintenancePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "HVAC Preventative Maintenance",
+            "name": "Residential HVAC Preventative Maintenance",
             "description": "Residential HVAC preventative maintenance in Morris County and North Jersey. Seasonal visits may include operational testing, electrical and thermostat checks, coil and condensate inspection, and equipment-specific performance checks.",
             "provider": {
               "@type": "HVACBusiness",
@@ -67,7 +67,7 @@ export default function PreventativeMaintenancePage() {
               { "@type": "AdministrativeArea", "name": "North New Jersey" }
             ],
             "url": "https://www.air2cool.com/services/preventative-maintenance",
-            "serviceType": "HVAC Maintenance",
+            "serviceType": "Residential HVAC Maintenance",
             "offers": {
               "@type": "Offer",
               "description": RESIDENTIAL_MAINTENANCE_PLAN.benefits.join("; "),
@@ -92,11 +92,11 @@ export default function PreventativeMaintenancePage() {
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold tracking-wide mb-4">
               <Wrench className="w-4 h-4" />
-              PREVENTATIVE MAINTENANCE
+              RESIDENTIAL PREVENTATIVE MAINTENANCE
             </div>
 
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
-              Keep Your Comfort System Running Smoothly
+              Residential HVAC Preventative Maintenance
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
@@ -105,10 +105,10 @@ export default function PreventativeMaintenancePage() {
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <Link
-                href="/maintenance-contract"
+                href="/residential-maintenance-request"
                 className="bg-white text-orange-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-all shadow-lg hover:bg-gray-50 text-center"
               >
-                Sign Up Today
+                Enroll in Residential Maintenance
               </Link>
               <a
                 href="tel:+12017875657"
@@ -189,7 +189,9 @@ export default function PreventativeMaintenancePage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-white"><div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10"><div><h2 className="text-2xl font-bold mb-3">Residential HVAC plan</h2><p className="text-gray-700">The residential plan retains two seasonal visits per covered HVAC system, priority service, and 20% off eligible repairs and replacement parts.</p></div><div><h2 className="text-2xl font-bold mb-3">Commercial agreements</h2><p className="text-gray-700">Commercial visit frequency and equipment coverage are defined by the agreement. Commercial customers receive 10% off eligible repairs and 10% off eligible replacement parts.</p><Link href="/services/commercial-boiler-services" className="inline-block mt-4 text-blue-700 font-bold underline">Commercial boiler maintenance</Link></div></div></section>
+      <section className="py-12 md:py-16 bg-white"><div className="max-w-5xl mx-auto px-6"><h2 className="text-2xl md:text-3xl font-bold mb-3">Residential HVAC Plan</h2><p className="text-gray-700 max-w-3xl">The residential plan includes two seasonal maintenance visits per covered HVAC system each year, priority service, 20% off eligible repairs and 20% off eligible replacement parts.</p></div></section>
+
+      <section className="py-12 md:py-16 bg-orange-50 border-y border-orange-200"><div className="max-w-5xl mx-auto px-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6"><div className="max-w-3xl"><h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3">Ready to Request Residential Maintenance?</h2><p className="text-gray-700">Use the dedicated request page to tell Air2Cool about your home and covered HVAC equipment. Unknown model numbers and service history are not required.</p></div><div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0"><Link href="/residential-maintenance-request" className="bg-orange-700 px-6 py-3.5 text-center font-bold text-white hover:bg-orange-800">Enroll in Residential Maintenance</Link><a href={COMPANY.phone.href} className="border border-orange-700 px-6 py-3.5 text-center font-bold text-orange-800 hover:bg-orange-100">Call {COMPANY.phone.display}</a></div></div></section>
 
       {/* Why Maintenance Matters */}
       <section className="py-12 md:py-20 bg-white">
@@ -263,10 +265,10 @@ export default function PreventativeMaintenancePage() {
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link
-              href="/maintenance-contract"
+              href="/residential-maintenance-request"
               className="bg-white text-orange-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-gray-50 transition"
             >
-              Contact Us Today
+              Enroll in Residential Maintenance
             </Link>
             <a
               href="tel:+12017875657"

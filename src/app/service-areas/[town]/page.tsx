@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Phone, CheckCircle, Star, Clock, Shield, Wrench, MapPin } from "lucide-react";
+import { Phone, CheckCircle, Star, Clock, Shield, MapPin } from "lucide-react";
 import Link from "next/link";
 import Script from "next/script";
 import townsData from "@/data/service-areas.json";
@@ -292,7 +292,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
     },
     {
       q: "How quickly can Air2Cool reach Mount Arlington NJ?",
-      a: "Mount Arlington is about 15–20 minutes from our Wharton base. Emergency service is available 24/7 and most calls get a response within that window.",
+      a: "Mount Arlington is within Air2Cool's North Jersey service area. Our emergency line is available 24/7; arrival timing depends on technician availability, call volume, traffic, and current conditions.",
     },
   ],
   hopatcong: [
@@ -330,7 +330,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
     },
     {
       q: "How far is Air2Cool from Stanhope NJ?",
-      a: "Stanhope is about 15–20 minutes from our Wharton base. Emergency calls typically get a technician on-site in 25–35 minutes.",
+      a: "Stanhope is within Air2Cool's North Jersey service area. Our emergency line is available 24/7; arrival timing depends on technician availability, call volume, traffic, and current conditions.",
     },
     {
       q: "Do you offer emergency HVAC service in Stanhope NJ?",
@@ -358,7 +358,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
     },
     {
       q: "How quickly can Air2Cool respond in Parsippany NJ?",
-      a: "Parsippany is about 20–30 minutes from our Wharton base. For emergency calls, we're available 24/7 and prioritize same-day dispatch.",
+      a: "Parsippany is within Air2Cool's Morris County service area. Our emergency line is available 24/7, and scheduling depends on technician availability and current conditions.",
     },
     {
       q: "What HVAC services do you offer in Parsippany-Troy Hills?",
@@ -470,7 +470,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
     },
     {
       q: "How far is Air2Cool from Whippany NJ?",
-      a: "Whippany is approximately 20–25 minutes from our Wharton base. Most service calls in Hanover Township can be dispatched same-day.",
+      a: "Whippany is within Air2Cool's Morris County service area. Same-day appointments may be available depending on technician availability and current conditions.",
     },
     {
       q: "Can Air2Cool handle an emergency HVAC call in Hanover Township?",
@@ -540,7 +540,7 @@ const TOWN_FAQ_CONTENT: Record<string, FAQ[]> = {
     },
     {
       q: "How quickly can Air2Cool respond in Riverdale NJ?",
-      a: "Riverdale is approximately 30–45 minutes from our Wharton base. For emergencies, we're available 24/7 and prioritize same-day response.",
+      a: "Riverdale is within Air2Cool's Morris County service area. Our emergency line is available 24/7, and scheduling depends on technician availability and current conditions.",
     },
     {
       q: "What HVAC services do you offer in Riverdale NJ?",
@@ -890,11 +890,6 @@ export default async function TownPage({
                   icon: <Clock className="w-6 h-6 text-red-600" />,
                   title: "24/7 Emergency Service",
                   body: "We answer at 2 AM because your furnace doesn't care what day it is.",
-                },
-                {
-                  icon: <Wrench className="w-6 h-6 text-green-600" />,
-                  title: "Free House Cleaning",
-                  body: "Every qualifying new system installation includes a complimentary professional house cleaning.",
                 },
                 {
                   icon: <CheckCircle className="w-6 h-6 text-blue-600" />,

@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X, Phone, Star, ChevronDown } from "lucide-react";
+import { Menu, X, Star, ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
@@ -23,12 +23,12 @@ const AIR_QUALITY_LINKS = [
 ];
 
 const MAINTENANCE_LINKS = [
-  { label: "Preventative Maintenance", href: "/services/preventative-maintenance" },
-  { label: "Complete HVAC Systems",    href: "/services/hvac-installation" },
+  { label: "Residential Maintenance", href: "/services/preventative-maintenance" },
 ];
 
 const COMMERCIAL_LINKS = [
   { label: "All Commercial Services",  href: "/services/commercial" },
+  { label: "Commercial Maintenance", href: "/services/commercial-maintenance" },
   { label: "Commercial Boiler Service", href: "/services/commercial-boiler-services" },
   { label: "Commercial Refrigeration", href: "/services/commercial-refrigeration" },
 ];
@@ -51,6 +51,7 @@ const ORDERED_NAVIGATION_SECTIONS = [
 
 export default function MobileMenu() {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [financingOpen, setFinancingOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const openMenu = () => {
@@ -139,12 +140,13 @@ export default function MobileMenu() {
       });
     });
     setServicesOpen(false);
+    setFinancingOpen(false);
     menuButtonRef.current?.focus();
   };
 
   useEffect(() => {
     const handleViewportChange = () => {
-      if (window.innerWidth >= 1024) closeMenu();
+      if (window.innerWidth >= 1280) closeMenu();
     };
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") closeMenu();
@@ -163,12 +165,12 @@ export default function MobileMenu() {
       <button
         ref={menuButtonRef}
         onClick={openMenu}
-        className="p-2 hover:bg-white/20 rounded-lg"
+        className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg text-gray-900 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
         type="button"
         aria-label="Open navigation menu"
         aria-controls="mobile-menu-overlay"
       >
-        <Menu className="w-7 h-7 text-white" />
+        <Menu className="w-7 h-7" />
       </button>
 
       {/* Mobile Menu - FULL SCREEN */}
@@ -187,7 +189,7 @@ export default function MobileMenu() {
           zIndex: 2147483647,
           backgroundColor: 'white'
         }}
-        className="lg:hidden"
+        className="xl:hidden"
       >
         {/* Header */}
         <div 
@@ -229,6 +231,14 @@ export default function MobileMenu() {
           className="flex-1 overflow-y-auto px-4 py-6 bg-white"
           style={{ backgroundColor: 'white' }}
         >
+          <a
+            href="/servicio-en-espanol"
+            onClick={closeMenu}
+            className="flex min-h-[52px] items-center px-4 py-3 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            Espa&ntilde;ol
+          </a>
+
           {/* Services accordion */}
           <div className="mb-2">
             <button
@@ -268,19 +278,19 @@ export default function MobileMenu() {
             )}
           </div>
 
-          <a
-            href="/troubleshooting" 
-            onClick={closeMenu} 
-            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
-          >
-            Troubleshooting
-          </a>
           <Link
             href="/service-areas" 
             onClick={closeMenu} 
             className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
           >
             Service Areas
+          </Link>
+          <Link
+            href="/projects"
+            onClick={closeMenu}
+            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
+          >
+            Projects
           </Link>
           <a 
             href="/reviews" 
@@ -296,13 +306,6 @@ export default function MobileMenu() {
           >
             About
           </a>
-          <a
-            href="/faq"
-            onClick={closeMenu}
-            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
-          >
-            FAQ
-          </a>
           <Link
             href="/blog"
             onClick={closeMenu}
@@ -310,33 +313,13 @@ export default function MobileMenu() {
           >
             Blog
           </Link>
-          <a
-            href="/maintenance-contract"
-            onClick={closeMenu} 
-            className="block px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
-          >
-            Preventative Maintenance
-          </a>
-          <a
-            href="/servicio-en-espanol"
-            onClick={closeMenu}
-            className="flex items-center justify-between px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
-          >
-            <span>Espa&ntilde;ol</span>
-            <span className="text-xs font-bold bg-red-100 text-red-700 px-2.5 py-1 rounded-full">
-              Se Habla
-            </span>
-          </a>
-          <a 
-            href="/financing" 
-            onClick={closeMenu} 
-            className="flex items-center justify-between px-4 py-4 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100 rounded-xl mb-2"
-          >
-            <span>Financing</span>
-            <span className="text-xs font-bold bg-green-100 text-green-700 px-2.5 py-1 rounded-full">
-              0% APR
-            </span>
-          </a>
+          <div className="mb-2">
+            <button type="button" aria-expanded={financingOpen} onClick={() => setFinancingOpen((value) => !value)} className="flex w-full min-h-[52px] items-center justify-between rounded-xl px-4 py-3 text-lg font-semibold text-gray-900 hover:bg-gray-50 active:bg-gray-100">
+              <span className="flex items-center gap-2">Financing <span className="text-xs font-bold bg-green-100 text-green-700 px-2.5 py-1 rounded-full">0% APR</span></span>
+              <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${financingOpen ? "rotate-180" : ""}`} />
+            </button>
+            {financingOpen && <div className="pb-2 pl-4"><a href="/financing" onClick={closeMenu} className="flex min-h-[44px] items-center rounded-lg px-4 text-base font-medium text-gray-800 hover:bg-gray-50">Residential Financing</a><a href="/commercial-incentives" onClick={closeMenu} className="flex min-h-[44px] items-center rounded-lg px-4 text-base font-medium text-gray-800 hover:bg-gray-50">Commercial Incentives</a></div>}
+          </div>
           <a 
             href="/contact" 
             onClick={closeMenu} 
@@ -345,26 +328,7 @@ export default function MobileMenu() {
             Contact
           </a>
 
-          {/* Extra padding at bottom so last item isn't hidden behind call button */}
-          <div className="h-32"></div>
-        </div>
-
-        {/* Call Button - Pinned to bottom */}
-        <div 
-          className="shrink-0 bg-white border-t border-gray-200 p-6"
-          style={{ backgroundColor: 'white' }}
-        >
-          <a
-            href="tel:+12017875657"
-            onClick={closeMenu}
-            className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 active:bg-red-800 text-white px-6 py-4 rounded-2xl font-bold text-lg shadow-xl"
-          >
-            <Phone className="w-5 h-5" />
-            (201) 787-5657
-          </a>
-          <p className="text-center text-sm text-gray-600 mt-3">
-            24/7 Emergency Service
-          </p>
+          <div className="h-6"></div>
         </div>
       </div>
     </>

@@ -8,9 +8,10 @@ import { getBrandBySlug } from "@/data/brands";
 import { ACTIVE_SEASONAL_CONTENT, orderBySeasonalPriority } from "@/config/seasonal-focus";
 
 export const metadata: Metadata = {
-  title: "Air2Cool | AC Repair & HVAC Service | Morris County NJ",
+  title: "HVAC Contractor Morris County NJ | Air2Cool Heating & Cooling",
   description:
-    "North Jersey's trusted HVAC company since 1998. Same-day AC repair, furnace repair, installations & emergency service. Serving Morris County & 9 counties. Call (201) 787-5657.",
+    "Air2Cool is a heating, cooling and refrigeration contractor based in Wharton and serving Morris County and North Jersey since 1998. Call (201) 787-5657.",
+  alternates: { canonical: "/" },
 };
 
 const SERVICES = [
@@ -24,21 +25,21 @@ const SERVICES = [
   {
     name: "Heating Installation",
     href: "/services/heating-installation",
-    desc: "New furnaces & boilers professionally installed. Free house cleaning included with every install.",
+    desc: "New furnaces and boilers professionally installed, with project-specific sizing, scope and startup testing.",
     iconName: "flame",
     gradient: "from-red-600 to-orange-700"
   },
   {
     name: "Cooling Repair",
     href: "/services/ac-repair",
-    desc: "Quick AC diagnostics and reliable repairs. Same-day service to beat the heat.",
+    desc: "AC diagnostics and repair, with same-day appointments available depending on technician availability and current conditions.",
     iconName: "snowflake",
     gradient: "from-blue-500 to-cyan-600"
   },
   {
     name: "Cooling Installation",
     href: "/services/cooling-installation",
-    desc: "New AC, heat pumps & mini splits. Expert sizing and installation. Free house cleaning!",
+    desc: "New AC, heat pumps and mini splits with appropriate sizing and installation based on the approved project scope.",
     iconName: "snowflake",
     gradient: "from-cyan-500 to-blue-600"
   },
@@ -167,7 +168,7 @@ export default function HomePage() {
   return (
     <main className="bg-white">
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-[70vh] md:min-h-[72vh] flex items-center">
+      <section className="relative overflow-hidden md:min-h-[72vh] flex items-center">
         {/* Background video */}
         <video
           autoPlay
@@ -184,30 +185,30 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
 
         {/* HERO CONTENT */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-20">
           <div className="max-w-4xl">
-            <p className="text-sm md:text-base text-blue-200 font-semibold tracking-wide mb-4">
+            <p className="text-xs sm:text-sm md:text-base text-blue-200 font-semibold tracking-wide mb-3 md:mb-4">
               Based in Wharton, NJ &bull; Serving Morris County &amp; North Jersey Since 1998
             </p>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] mb-5 md:mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] mb-4 md:mb-6">
               {ACTIVE_SEASONAL_CONTENT.heroHeading}
             </h1>
 
-            <p className="text-lg md:text-2xl text-gray-100 max-w-3xl leading-relaxed mb-7 md:mb-8">
+            <p className="text-base sm:text-lg md:text-2xl text-gray-100 max-w-3xl leading-relaxed mb-5 md:mb-8">
               {ACTIVE_SEASONAL_CONTENT.heroDescription}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Link
                 href={ACTIVE_SEASONAL_CONTENT.primaryCta.href}
-                className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 md:px-10 py-4 rounded-full font-bold text-base md:text-lg shadow-xl transition-colors min-h-[52px]"
+                className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-xl transition-colors min-h-[48px] md:min-h-[52px]"
               >
                 {ACTIVE_SEASONAL_CONTENT.primaryCta.label} <span aria-hidden="true">→</span>
               </Link>
               <a
                 href={COMPANY.phone.href}
-                className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 hover:bg-blue-50 px-8 md:px-10 py-4 rounded-full font-bold text-base md:text-lg shadow-xl transition-colors min-h-[52px]"
+                className="inline-flex items-center justify-center gap-2 bg-white text-blue-900 hover:bg-blue-50 px-6 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-xl transition-colors min-h-[48px] md:min-h-[52px]"
               >
                 <Phone className="w-5 h-5" />
                 Call {COMPANY.phone.display}
@@ -216,14 +217,14 @@ export default function HomePage() {
 
             <a
               href={COMPANY.phone.href}
-              className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-blue-100 hover:text-white underline underline-offset-4"
+              className="inline-flex items-center gap-2 mt-3 md:mt-4 text-sm font-semibold text-blue-100 hover:text-white underline underline-offset-4"
             >
               <span className="w-2 h-2 bg-red-500 rounded-full" aria-hidden="true" />
               24/7 Emergency HVAC Service
             </a>
 
-            <p className="mt-7 md:mt-8 text-sm md:text-base text-gray-200 font-medium tracking-wide">
-              300+ 5-Star Reviews <span className="mx-2 text-gray-400">&middot;</span> Licensed &amp; Insured <span className="mx-2 text-gray-400">&middot;</span> Serving NJ Since {COMPANY.foundedYear}
+            <p className="mt-5 md:mt-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm md:text-base text-gray-200 font-medium tracking-wide">
+              <span>300+ 5-Star Reviews</span><span className="text-gray-400" aria-hidden="true">&middot;</span><span>Licensed &amp; Insured</span><span className="text-gray-400" aria-hidden="true">&middot;</span><span>Serving NJ Since {COMPANY.foundedYear}</span><span className="text-gray-400" aria-hidden="true">&middot;</span><Link href="/servicio-en-espanol" className="font-bold text-white underline decoration-white/70 underline-offset-4 hover:text-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Espa&ntilde;ol</Link>
             </p>
           </div>
         </div>
@@ -327,8 +328,7 @@ export default function HomePage() {
             details: [
               "Save $500 on qualifying furnace installations",
               "High-efficiency furnaces save on gas bills",
-              "FREE house cleaning included",
-              "0% financing available",
+              "0% financing up to $25,000 for qualifying customers, subject to approval and program terms",
               "Up to 10-year warranties",
             ],
             ctaLabel: "Get Free Estimate",
@@ -630,7 +630,7 @@ export default function HomePage() {
               Need More Help?
             </h3>
             <p className="text-red-100 mb-6 max-w-2xl mx-auto text-sm md:text-base">
-              Our complete troubleshooting guide covers furnace, AC, boiler, and thermostat problems with step-by-step fixes. Or call us for same-day professional service.
+              Our troubleshooting guide covers furnace, AC, boiler, and thermostat problems with practical first checks. Call Air2Cool when professional diagnosis is needed.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Link

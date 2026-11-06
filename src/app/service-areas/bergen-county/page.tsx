@@ -85,7 +85,7 @@ export default function BergenCountyPage() {
           <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
             <p>Bergen County is New Jersey's most populous county, with everything from high-rises in Fort Lee to sprawling estates in Saddle River and family neighborhoods in Fair Lawn and Wyckoff. Air2Cool has navigated this entire range since 1998 — servicing condo units, commercial buildings, and single-family homes with equal expertise.</p>
             <p>Air2Cool provides 24/7 emergency HVAC service in Bergen County. Response timing depends on technician availability, traffic, weather, and call volume. We carry common parts for many major brands on our service vehicles. PSE&amp;G rebates may be available on qualifying equipment, subject to current program terms.</p>
-            <p>We offer 0% financing up to $25,000, free house cleaning with new system installs, and discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
+            <p>We offer 0% financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms, plus discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
           </div>
         </div>
       </section>

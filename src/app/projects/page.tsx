@@ -492,7 +492,7 @@ export default function RecentProjectsPage() {
               <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-green-600 mx-auto mb-2 md:mb-3" />
               <h3 className="font-bold text-gray-900 mb-1 md:mb-2 text-sm md:text-base">Clean Work</h3>
               <p className="text-xs md:text-sm text-gray-600">
-                FREE house cleaning
+                Jobsite protection and cleanup
               </p>
             </div>
             <div className="bg-purple-50 rounded-lg md:rounded-xl p-4 md:p-6 border-2 border-purple-200">

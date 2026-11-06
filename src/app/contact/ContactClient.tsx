@@ -35,7 +35,6 @@ export default function ContactClientDual() {
   const [estimateSent, setEstimateSent] = useState(false);
   const [emergencyError, setEmergencyError] = useState("");
   const [estimateError, setEstimateError] = useState("");
-
   const telHref = "tel:+12017875657";
 
   useEffect(() => {
@@ -154,7 +153,7 @@ export default function ContactClientDual() {
                   <h2 className="text-xl md:text-2xl font-extrabold text-gray-900">
                     Emergency Service
                   </h2>
-                  <p className="text-xs md:text-sm text-gray-600">Response within 2 hours</p>
+                  <p className="text-xs md:text-sm text-gray-600">24/7 emergency request line</p>
                 </div>
               </div>
 
@@ -194,7 +193,7 @@ export default function ContactClientDual() {
                     Emergency Request Sent!
                   </h3>
                   <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                    We&apos;ll call you within 2 hours.
+                    Air2Cool will follow up as soon as practical.
                   </p>
                   <a
                     href={telHref}
@@ -225,6 +224,7 @@ export default function ContactClientDual() {
                         method: "POST",
                         body: JSON.stringify({
                           type: "emergency",
+                          language: new URLSearchParams(window.location.search).get("language") === "es" ? "es" : "en",
                           recaptchaToken,
                           name: data.name,
                           email: data.email,
@@ -369,7 +369,7 @@ export default function ContactClientDual() {
 
                   <p className="text-xs text-center text-gray-500 flex items-center justify-center gap-1">
                     <Clock className="w-3 h-3" />
-                    We&apos;ll call within 2 hours
+                    We&apos;ll follow up as soon as practical
                   </p>
                 </form>
               )}
@@ -387,7 +387,7 @@ export default function ContactClientDual() {
                   <h2 className="text-xl md:text-2xl font-extrabold text-gray-900">
                     Free Estimate
                   </h2>
-                  <p className="text-xs md:text-sm text-gray-600">Response within 24 hours</p>
+                  <p className="text-xs md:text-sm text-gray-600">Request service or an installation estimate</p>
                 </div>
               </div>
 
@@ -400,7 +400,7 @@ export default function ContactClientDual() {
                     Estimate Request Received!
                   </h3>
                   <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-                    We&apos;ll contact you within 24 hours to schedule your free estimate.
+                    Air2Cool will follow up to discuss your request and scheduling.
                   </p>
                   <p className="text-xs md:text-sm text-gray-500">
                     Check your email for confirmation.
@@ -427,6 +427,7 @@ export default function ContactClientDual() {
                         method: "POST",
                         body: JSON.stringify({
                           type: "estimate",
+                          language: new URLSearchParams(window.location.search).get("language") === "es" ? "es" : "en",
                           recaptchaToken,
                           name: data.name,
                           email: data.email,
@@ -587,7 +588,7 @@ export default function ContactClientDual() {
 
                   <p className="text-xs text-center text-gray-500 flex items-center justify-center gap-1">
                     <Mail className="w-3 h-3" />
-                    Response within 24 hours
+                    Air2Cool will follow up to discuss scheduling
                   </p>
                 </form>
               )}

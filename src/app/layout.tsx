@@ -1,9 +1,10 @@
 import "./globals.css";
 export { metadata } from "./metadata";
-import { Facebook, Instagram, Youtube, Star } from "lucide-react";
+import { Facebook, Instagram, Youtube, Phone, Star } from "lucide-react";
 import Script from "next/script";
 import MobileMenu from "@/components/MobileMenu";
 import ServicesDropdown from "@/components/ServicesDropdown";
+import FinancingDropdown from "@/components/FinancingDropdown";
 import { Analytics } from "@vercel/analytics/next";
 import StickyCallButton from "@/components/StickyCallButton";
 import Image from "next/image";
@@ -89,40 +90,23 @@ export default function RootLayout({
       <body className="text-gray-900 min-h-screen" suppressHydrationWarning>
         <header className="sticky top-0 z-[9999] bg-white relative overflow-visible" style={{ '--header-height': '57px' } as React.CSSProperties}>
 
-          {/* MOBILE: Two-row layout */}
-          <div className="xl:hidden">
-            {/* Row 1 — Logo (white, centered) */}
-            <div className="bg-white flex justify-center items-center py-1 border-b border-gray-100">
-              <Link href="/">
-                <Image
-                  src="/air2cool-logo-600x200 (1).png"
-                  alt="Air2Cool"
-                  width={300}
-                  height={100}
-                  priority
-                  style={{ objectFit: "contain" }}
-                />
-              </Link>
-            </div>
-
-            {/* Row 2 — Menu bar (red) */}
-            <div className="bg-brand-red grid grid-cols-3 items-center px-4 py-1">
-              <div className="flex items-center gap-2">
-                <MobileMenu />
-                <span className="text-white font-bold uppercase text-sm tracking-wide">Menu</span>
-              </div>
-              <a
-                href="/servicio-en-espanol"
-                className="hidden min-[360px]:inline-flex justify-self-center items-center justify-center min-h-[44px] rounded-full bg-white/15 px-2.5 text-[11px] font-bold text-white whitespace-nowrap"
-              >
-                Se Habla Espa&ntilde;ol
-              </a>
-              <div className="flex justify-end">
-                <a href="tel:+12017875657" className="text-white font-bold text-sm">
-                  (201) 787-5657
-                </a>
-              </div>
-            </div>
+          {/* MOBILE: compact single-row header */}
+          <div className="xl:hidden grid min-h-[64px] grid-cols-[48px_1fr_72px] items-center border-b border-gray-200 bg-white px-3 shadow-sm">
+            <MobileMenu />
+            <Link href="/" aria-label="Air2Cool homepage" className="justify-self-center">
+              <Image
+                src="/air2cool-logo-600x200 (1).png"
+                alt="Air2Cool"
+                width={168}
+                height={56}
+                priority
+                className="h-auto w-[150px] sm:w-[168px]"
+              />
+            </Link>
+            <a href="tel:+12017875657" className="inline-flex min-h-[44px] items-center justify-end gap-1.5 text-sm font-bold text-red-700" aria-label="Call Air2Cool at 201-787-5657">
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              Call
+            </a>
           </div>
 
           {/* DESKTOP: Single-row nav */}
@@ -183,16 +167,15 @@ export default function RootLayout({
                   Blog
                 </Link>
 
-                <a
-                  href="/financing"
-                  className="px-4 py-2 rounded-lg text-sm font-semibold text-green-700 bg-green-50
-                             hover:bg-green-100 transition-colors relative"
+                <Link
+                  href="/servicio-en-espanol"
+                  className="px-3 py-2 rounded-lg text-sm font-semibold text-gray-600
+                             hover:bg-gray-100 hover:text-brand-blue transition-colors"
                 >
-                  Financing
-                  <span className="absolute -top-1 -right-1 bg-green-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
-                    0% APR
-                  </span>
-                </a>
+                  Espa&ntilde;ol
+                </Link>
+
+                <FinancingDropdown />
               </nav>
 
               {/* Right side */}
@@ -220,7 +203,7 @@ export default function RootLayout({
           </div>
 
                  {/* STICKY GOOGLE REVIEWS BANNER */}
-        <section id="sticky-reviews-banner" className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-3 md:py-4 shadow-lg" style={{ position: 'relative', zIndex: 1, isolation: 'auto' }}>
+        <section id="sticky-reviews-banner" className="relative bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 py-2 md:py-4 shadow-lg" style={{ position: 'relative', zIndex: 1, isolation: 'auto' }}>
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex items-center justify-center gap-3 md:gap-6 text-white text-center">
               {/* Mobile: Compact single row */}
@@ -299,7 +282,7 @@ export default function RootLayout({
         <a
           href="/"
           aria-label="Go to homepage"
-          className="hidden xl:block absolute left-6 bottom-0 translate-y-1/2 z-[2]"
+          className="hidden xl:block absolute left-6 bottom-0 translate-y-[45%] z-[2]"
         >
           <img
             src="/air2cool-logo-transparent.png"
@@ -353,7 +336,7 @@ export default function RootLayout({
                   <li><a href="/projects" className="hover:text-white transition">Our Projects</a></li>
                   <li><a href="/servicio-en-espanol" className="hover:text-white transition">Espa&ntilde;ol</a></li>
                   <li><a href="/contact" className="hover:text-white transition">Contact Us</a></li>
-                  <li><a href="/maintenance-contract" className="hover:text-white transition">Maintenance Plans</a></li>
+                  <li><a href="/services/preventative-maintenance" className="hover:text-white transition">Maintenance Plans</a></li>
                 </ul>
               </div>
 

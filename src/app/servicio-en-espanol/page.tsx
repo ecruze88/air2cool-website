@@ -5,15 +5,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Servicio de Calefacci\u00f3n y Aire Acondicionado en NJ | Air2Cool",
   description:
-    "Air2Cool ofrece reparaci\u00f3n de aire acondicionado, calefacci\u00f3n e instalaci\u00f3n en el norte de NJ. Hablamos espa\u00f1ol. Servicio el mismo d\u00eda. Llame al (201) 787-5657.",
+    "Air2Cool ofrece reparaci\u00f3n, instalaci\u00f3n y mantenimiento de calefacci\u00f3n y aire acondicionado en el norte de NJ. Se habla espa\u00f1ol. Llame al (201) 787-5657.",
   alternates: {
     canonical: "/servicio-en-espanol",
-    languages: { es: "/servicio-en-espanol" },
   },
   openGraph: {
     title: "Servicio de Calefacci\u00f3n y Aire Acondicionado en NJ | Air2Cool",
     description:
-      "Air2Cool ofrece reparaci\u00f3n de aire acondicionado, calefacci\u00f3n e instalaci\u00f3n en el norte de NJ. Hablamos espa\u00f1ol. Servicio el mismo d\u00eda. Llame al (201) 787-5657.",
+      "Air2Cool ofrece reparaci\u00f3n, instalaci\u00f3n y mantenimiento de calefacci\u00f3n y aire acondicionado en el norte de NJ. Se habla espa\u00f1ol.",
     url: "/servicio-en-espanol",
   },
 };
@@ -33,8 +32,8 @@ const reasons = [
   "M\u00e1s de 300 rese\u00f1as de 5 estrellas en Google",
   "NJ Master HVACR License #19HC00847000",
   "Servicio disponible en espa\u00f1ol",
-  "Financiamiento 0% APR disponible hasta $25,000",
-  "Servicio el mismo d\u00eda y emergencias 24/7",
+  "Financiamiento al 0% hasta $25,000 para clientes que califican, sujeto a elegibilidad, aprobaci\u00f3n y t\u00e9rminos del programa",
+  "L\u00ednea de emergencia HVAC disponible las 24 horas",
 ];
 
 const faqSchema = {
@@ -54,7 +53,7 @@ const faqSchema = {
       name: "\u00bfOfrecen servicio el mismo d\u00eda?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "S\u00ed. Air2Cool ofrece servicio el mismo d\u00eda para muchas reparaciones de aire acondicionado, calefacci\u00f3n y emergencias HVAC en el norte de Nueva Jersey.",
+        text: "Las citas para el mismo d\u00eda pueden estar disponibles seg\u00fan la disponibilidad de t\u00e9cnicos, el volumen de llamadas, el tr\u00e1fico, el clima y las condiciones del servicio.",
       },
     },
     {
@@ -70,11 +69,23 @@ const faqSchema = {
 
 export default function ServicioEnEspanolPage() {
   return (
-      <main lang="es" className="bg-white">
+      <div lang="es" className="bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
+      <nav aria-label="Navegación en español" className="border-b border-gray-200 bg-white">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3 text-sm font-semibold text-gray-700 sm:px-6">
+          <a href="#servicios" className="hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">Servicios</a>
+          <a href="#financiamiento" className="hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">Financiamiento</a>
+          <Link href="/services/preventative-maintenance" className="hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">Mantenimiento</Link>
+          <Link href="/service-areas" className="hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">&Aacute;reas de Servicio</Link>
+          <Link href="/projects" className="hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">Proyectos</Link>
+          <Link href="/about" className="hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">Sobre Nosotros</Link>
+          <Link href="/" className="ml-auto text-blue-700 underline underline-offset-4 hover:text-blue-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700">Ingl&eacute;s</Link>
+        </div>
+      </nav>
 
       <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-red-700 text-white">
         <div className="max-w-7xl mx-auto px-6 py-14 md:py-20">
@@ -100,17 +111,17 @@ export default function ServicioEnEspanolPage() {
                 Llame al (201) 787-5657
               </a>
               <Link
-                href="/contact"
+                href="/contact?language=es"
                 className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-white px-6 py-3 text-base font-bold text-blue-900 shadow-lg hover:bg-blue-50"
               >
-                Solicite un estimado gratis
+                Solicite servicio en espa&ntilde;ol
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-12 md:py-16">
+      <section id="servicios" className="scroll-mt-32 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Nuestros Servicios</h2>
@@ -140,7 +151,7 @@ export default function ServicioEnEspanolPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-12 md:py-16">
+      <section id="financiamiento" className="scroll-mt-32 bg-gray-50 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8">
           <div className="rounded-lg bg-white p-6 shadow-sm border border-gray-200">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
@@ -164,8 +175,8 @@ export default function ServicioEnEspanolPage() {
             </h2>
             <p className="text-base leading-relaxed text-gray-700">
               Air2Cool ayuda a clientes de NJ Natural Gas SaveGreen y JCP&amp;L con opciones de
-              financiamiento 0% APR para proyectos calificados, disponible hasta $25,000 con
-              aprobaci&oacute;n de cr&eacute;dito.
+              financiamiento al 0% hasta $25,000 para clientes que califican, sujeto a
+              elegibilidad, aprobaci&oacute;n y los t&eacute;rminos aplicables del programa.
             </p>
           </div>
         </div>
@@ -183,7 +194,7 @@ export default function ServicioEnEspanolPage() {
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <h3 className="text-lg font-bold text-gray-900 mb-2">&iquest;Ofrecen servicio el mismo d&iacute;a?</h3>
-              <p className="text-base text-gray-700">S&iacute;. Atendemos muchas reparaciones el mismo d&iacute;a.</p>
+              <p className="text-base text-gray-700">Las citas para el mismo d&iacute;a pueden estar disponibles seg&uacute;n la disponibilidad de t&eacute;cnicos y las condiciones actuales.</p>
             </div>
             <div className="rounded-lg border border-gray-200 p-5">
               <h3 className="text-lg font-bold text-gray-900 mb-2">&iquest;Qu&eacute; &aacute;reas sirven?</h3>
@@ -198,7 +209,7 @@ export default function ServicioEnEspanolPage() {
           <Clock className="mx-auto mb-4 h-10 w-10" />
           <h2 className="text-2xl md:text-4xl font-extrabold mb-4">&iquest;Necesita servicio de HVAC?</h2>
           <p className="text-base md:text-xl text-blue-50 mb-6">
-            Llame a Air2Cool al (201) 787-5657 o solicite un estimado gratis. Hablamos espa&ntilde;ol.
+            Llame a Air2Cool al (201) 787-5657 o solicite servicio. Se habla espa&ntilde;ol.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <a
@@ -209,14 +220,14 @@ export default function ServicioEnEspanolPage() {
               (201) 787-5657
             </a>
             <Link
-              href="/contact"
+              href="/contact?language=es"
               className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/50 px-6 py-3 text-base font-bold text-white hover:bg-white/10"
             >
-              Contacto
+              Solicitar servicio en espa&ntilde;ol
             </Link>
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -11,7 +11,8 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     
-    const { type, name, email, phone, address, town, service, message, problem, description, financing, company } = body;
+    const { type, name, email, phone, address, town, service, message, problem, description, financing, company, language } = body;
+    const isSpanishRequest = language === "es";
     
     // Honeypot spam check
     if (company) {
@@ -77,7 +78,7 @@ export async function POST(request: NextRequest) {
       
       if (type === "emergency") {
         // Emergency email format
-        subject = `🚨 EMERGENCY: ${problem} - ${name}`;
+        subject = `${isSpanishRequest ? "[SPANISH REQUEST] " : ""}🚨 EMERGENCY: ${problem} - ${name}`;
         emailHtml = `
           <!DOCTYPE html>
           <html>
@@ -104,6 +105,10 @@ export async function POST(request: NextRequest) {
                 <div class="field">
                   <div class="label">Customer Name:</div>
                   <div class="value">${name}</div>
+                </div>
+                <div class="field">
+                  <div class="label">Preferred Language:</div>
+                  <div class="value">${isSpanishRequest ? "Spanish" : "English"}</div>
                 </div>
                 
                 <div class="field">
@@ -153,7 +158,7 @@ export async function POST(request: NextRequest) {
         `;
       } else {
         // Estimate email format
-        subject = `💰 New Estimate: ${service} - ${name}`;
+        subject = `${isSpanishRequest ? "[SPANISH REQUEST] " : ""}💰 New Estimate: ${service} - ${name}`;
         emailHtml = `
           <!DOCTYPE html>
           <html>
@@ -178,6 +183,10 @@ export async function POST(request: NextRequest) {
                 <div class="field">
                   <div class="label">Customer Name:</div>
                   <div class="value">${name}</div>
+                </div>
+                <div class="field">
+                  <div class="label">Preferred Language:</div>
+                  <div class="value">${isSpanishRequest ? "Spanish" : "English"}</div>
                 </div>
                 
                 <div class="field">

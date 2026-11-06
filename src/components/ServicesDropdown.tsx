@@ -23,7 +23,8 @@ const AIR_QUALITY = [
 ];
 
 const MAINTENANCE = [
-  { label: "Maintenance", href: "/services/preventative-maintenance" },
+  { label: "Residential Maintenance", href: "/services/preventative-maintenance" },
+  { label: "Commercial Maintenance", href: "/services/commercial-maintenance" },
 ];
 
 const COMMERCIAL = [

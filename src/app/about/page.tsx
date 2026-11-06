@@ -270,7 +270,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-base md:text-xl font-bold text-gray-900 mb-1 md:mb-2">Clean Installation</h3>
                   <p className="text-xs md:text-base text-gray-600">
-                    Professional work. We protect your home and include FREE house cleaning.
+                    Professional work with careful jobsite protection and cleanup.
                   </p>
                 </div>
               </div>

@@ -21,6 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/faq',
     '/contact',
     '/financing',
+    '/commercial-incentives',
     '/maintenance-contract',
     '/troubleshooting',
     '/projects',
@@ -40,6 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/services/heating-pump-services',
     '/services/commercial-boiler-services',
     '/services/commercial',
+    '/services/commercial-maintenance',
     '/services/commercial-refrigeration',
     '/services/humidifier',
   ]

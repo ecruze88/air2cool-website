@@ -86,7 +86,7 @@ export default function HunterdonCountyPage() {
           <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
             <p>Hunterdon County is characterized by picturesque small towns, working farms, and historic homes that often require specialized HVAC knowledge. Older oil and propane systems are common here, and Air2Cool&apos;s team services and upgrades this equipment under the company&apos;s NJ Master HVACR license — whether the project involves a high-efficiency heat-pump conversion or an emergency furnace repair.</p>
             <p>JCP&amp;L customers in Hunterdon County benefit from our familiarity with the area&apos;s infrastructure and seasonal demands. We service major makes and models throughout the county.</p>
-            <p>{PROMOTIONS.financing} {PROMOTIONS.houseCleaning} We also offer discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
+            <p>{PROMOTIONS.financing} We also offer discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
           </div>
         </div>
       </section>

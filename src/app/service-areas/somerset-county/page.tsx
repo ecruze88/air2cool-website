@@ -86,7 +86,7 @@ export default function SomersetCountyPage() {
           <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
             <p>Somerset County blends established borough communities like Somerville and Bound Brook with affluent townships like Bedminster and Bernardsville and growing suburban areas like Bridgewater and Hillsborough. Air2Cool has served this range since 1998, handling everything from aging boilers in older homes to modern multi-zone systems in newer construction.</p>
             <p>Both JCP&amp;L and PSE&amp;G territories are covered — our team knows the infrastructure differences across Somerset County and comes prepared. Same-day appointments may be available for urgent calls. Financing is subject to application, lender approval, and processing time.</p>
-            <p>We offer 0% financing up to $25,000, free house cleaning with new system installs, and discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
+            <p>We offer 0% financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms, plus discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
           </div>
         </div>
       </section>

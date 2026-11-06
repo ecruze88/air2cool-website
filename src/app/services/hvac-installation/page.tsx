@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Zap, CheckCircle, Home, Gift } from "lucide-react";
+import { Zap, CheckCircle, Home } from "lucide-react";
 import Link from "next/link";
 import { COMPANY, PROMOTIONS } from "@/config/company";
 
 export const metadata: Metadata = {
   title: "HVAC Installation North NJ — New System Replacement | Air2Cool | (201) 787-5657",
   description:
-    "HVAC installation in Morris County and North NJ. Qualifying new systems include complimentary house cleaning; 0% APR financing up to $25,000 is available for qualifying customers, subject to applicable terms. Call (201) 787-5657.",
+    "HVAC installation in Morris County and North NJ. 0% APR financing up to $25,000 is available for qualifying customers, subject to applicable terms. Call (201) 787-5657.",
   keywords: [
     "HVAC installation North NJ",
     "HVAC installation Morris County NJ",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HVAC Installation North NJ — New System Replacement | Air2Cool",
     description:
-      "Full HVAC system replacements in Morris County and North NJ. Complimentary house cleaning and 0% APR financing up to $25,000 are available for qualifying installations and customers, subject to applicable terms.",
+      "Full HVAC system replacements in Morris County and North NJ. 0% APR financing up to $25,000 is available for qualifying customers, subject to applicable terms.",
     url: "/services/hvac-installation",
   },
 };
@@ -40,7 +40,7 @@ export default function HVACInstallationPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "HVAC System Installation",
-            "description": `Complete HVAC system installation in Morris County & North NJ. Full heating and cooling replacements for residential and commercial properties. ${PROMOTIONS.houseCleaning} ${PROMOTIONS.financing}`,
+            "description": `Complete HVAC system installation in Morris County & North NJ. Full heating and cooling replacements for residential and commercial properties. ${PROMOTIONS.financing}`,
             "provider": {
               "@type": "HVACBusiness",
               "@id": "https://www.air2cool.com/#organization",
@@ -56,7 +56,7 @@ export default function HVACInstallationPage() {
             "serviceType": "HVAC Installation",
             "offers": {
               "@type": "Offer",
-              "description": `${PROMOTIONS.houseCleaning} ${PROMOTIONS.financing}`,
+              "description": PROMOTIONS.financing,
               "availability": "https://schema.org/InStock"
             }
           })
@@ -86,7 +86,7 @@ export default function HVACInstallationPage() {
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              Ready to replace your aging HVAC system with something more efficient and reliable? Air2Cool installs complete heating and cooling systems across North NJ. {PROMOTIONS.houseCleaning} {PROMOTIONS.financing}
+              Ready to replace your aging HVAC system with something more efficient and reliable? Air2Cool installs complete heating and cooling systems across North NJ. {PROMOTIONS.financing}
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
@@ -113,19 +113,6 @@ export default function HVACInstallationPage() {
         </div>
       </section>
 
-      {/* Special Offer Banner */}
-      <section className="py-4 md:py-8 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-center sm:text-left">
-            <Gift className="w-8 h-8 md:w-10 md:h-10 shrink-0" />
-            <div className="text-center">
-              <p className="text-base md:text-2xl font-bold">Free House Cleaning With Qualifying New HVAC Systems</p>
-              <p className="text-purple-100 text-xs md:text-base">{PROMOTIONS.houseCleaning}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Intro Section */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -149,7 +136,7 @@ export default function HVACInstallationPage() {
                 Today&apos;s high-efficiency HVAC systems can improve comfort and indoor air quality when properly selected for the home. Whether you&apos;re replacing a single unit, upgrading to a ductless mini-split system, or installing a complete new central system, we carry top brands and will recommend equipment for your budget and home. {PROMOTIONS.financing}
               </p>
               <p>
-                {PROMOTIONS.houseCleaning} If you have an existing system that needs repair rather than replacement, visit our{" "}
+                If you have an existing system that needs repair rather than replacement, visit our{" "}
                 <Link href="/services/ac-repair" className="text-purple-600 hover:underline">AC repair</Link> or{" "}
                 <Link href="/services/heating-repair" className="text-purple-600 hover:underline">heating repair</Link> pages to learn more.
               </p>
@@ -181,15 +168,6 @@ export default function HVACInstallationPage() {
                 ))}
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-5 md:p-8 border-2 border-purple-200">
-                <Home className="w-8 h-8 md:w-12 md:h-12 text-purple-600 mb-3 md:mb-4" />
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">
-                  Free House Cleaning With New Comfort System
-                </h3>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  {PROMOTIONS.houseCleaning} Contact us for a free estimate and offer details.
-                </p>
-              </div>
             </div>
 
             <div className="relative">
@@ -290,7 +268,7 @@ export default function HVACInstallationPage() {
               },
               {
                 q: "What happens after Air2Cool installs my new HVAC system?",
-                a: `After installation, our team tests the system and walks you through the operation of the new equipment, including thermostat programming if applicable. ${PROMOTIONS.houseCleaning} We are also available for follow-up questions and offer preventative maintenance plans.`,
+                a: "After installation, our team tests the system and walks you through the operation of the new equipment, including thermostat programming if applicable. We are also available for follow-up questions and offer preventative maintenance plans.",
               },
             ].map((item, idx) => (
               <div key={idx} className="bg-gray-50 rounded-2xl p-6 border border-gray-200 shadow-sm">

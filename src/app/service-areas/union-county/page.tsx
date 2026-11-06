@@ -85,7 +85,7 @@ export default function UnionCountyPage() {
           <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
             <p>Union County is one of New Jersey's most diverse counties — from the industrial areas of Elizabeth and Linden to the upscale neighborhoods of Summit and Westfield, and the quiet residential streets of Berkeley Heights and New Providence. Air2Cool has been serving this full range since 1998 with the same licensed, insured team.</p>
             <p>Air2Cool serves PSE&amp;G customers throughout Union County for emergency furnace repair and new AC installation. Same-day service appointments may be available depending on technician availability and current conditions. 0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.</p>
-            <p>We offer 0% financing up to $25,000, free house cleaning with new system installs, and discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
+            <p>We offer 0% financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms, plus discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.</p>
           </div>
         </div>
       </section>

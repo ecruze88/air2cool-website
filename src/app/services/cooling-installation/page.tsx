@@ -4,9 +4,9 @@ import Link from "next/link";
 import VideoShowcase from "@/components/VideoShowcase";
 
 export const metadata: Metadata = {
-  title: "AC & Cooling System Installation in North Jersey | Air2Cool | (201) 787-5657",
+  title: "AC Installation & Replacement North Jersey | Air2Cool",
   description:
-    "Professional AC installation in North Jersey. Central air, heat pumps & mini splits for Morris County, Essex County & beyond. Free estimates, 0% financing, 10-year warranties. Licensed since 1998. Call (201) 787-5657.",
+    "AC installation and replacement in North Jersey, including central air, heat pumps and mini splits. Project-specific sizing, scope, warranty details and financing options.",
   keywords: [
     "AC installation Morris County NJ",
     "central air conditioning installation NJ",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AC & Cooling System Installation in North Jersey | Air2Cool",
     description:
-      "Central AC, heat pumps & ductless mini splits. 0% financing. Free house cleaning every install. Morris County & North NJ. Call (201) 787-5657.",
+      "Central AC, heat pumps and ductless mini splits with project-specific sizing and installation scope for Morris County and North Jersey.",
     url: "/services/cooling-installation",
   },
 };
@@ -39,7 +39,7 @@ export default function CoolingInstallationPage() {
             "@type": "Service",
             "name": "Cooling System Installation",
             "alternateName": "AC Installation",
-            "description": "Professional installation of central air conditioners, heat pumps, and ductless mini-split systems in Morris County & North New Jersey. Includes free house cleaning and 0% financing options.",
+            "description": "Professional installation of central air conditioners, heat pumps, and ductless mini-split systems in Morris County and North Jersey, with project-specific sizing and scope.",
             "provider": {
               "@type": "HVACBusiness",
               "@id": "https://www.air2cool.com/#organization",
@@ -55,7 +55,7 @@ export default function CoolingInstallationPage() {
             "serviceType": "HVAC Installation",
             "offers": {
               "@type": "Offer",
-              "description": "Free estimate. 0% APR financing up to $25,000. Free house cleaning included.",
+              "description": "0% financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
               "availability": "https://schema.org/InStock"
             }
           })
@@ -79,7 +79,7 @@ export default function CoolingInstallationPage() {
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
-              Air2Cool has been installing cooling systems across Morris County, Essex County, and North Jersey since 1998. Whether you need central AC in Rockaway, a heat pump in Randolph, or a ductless mini split in Short Hills or Millburn — we size it right and back it with a 10-year warranty.
+              Air2Cool has been installing cooling systems across Morris County, Essex County, and North Jersey since 1998. Whether the project involves central AC, a heat pump or a ductless mini split, equipment selection and installation are based on the property, system design and approved scope.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 md:mb-8">
@@ -96,12 +96,7 @@ export default function CoolingInstallationPage() {
               <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
                 <div className="text-xl mb-1">💰</div>
                 <div className="text-xs font-semibold">0% Financing</div>
-                <div className="text-[10px] text-gray-300">Up to $25k</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
-                <div className="text-xl mb-1">🏠</div>
-                <div className="text-xs font-semibold">Free Cleaning</div>
-                <div className="text-[10px] text-gray-300">Every install</div>
+                <div className="text-[10px] text-gray-300">Qualification required</div>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
                 <div className="text-xl mb-1">⭐</div>
@@ -110,8 +105,8 @@ export default function CoolingInstallationPage() {
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-3 border border-white/20">
                 <div className="text-xl mb-1">🛡️</div>
-                <div className="text-xs font-semibold">10-Year</div>
-                <div className="text-[10px] text-gray-300">Warranties</div>
+                <div className="text-xs font-semibold">Warranty Details</div>
+                <div className="text-[10px] text-gray-300">Vary by equipment</div>
               </div>
             </div>
           </div>
@@ -226,7 +221,7 @@ export default function CoolingInstallationPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-6 md:mb-8">
             <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
-              Professional Installation Process
+              The Air2Cool Installation Standard
             </h2>
           </div>
 
@@ -235,24 +230,24 @@ export default function CoolingInstallationPage() {
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-3">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">1. Proper Sizing</h3>
-              <p className="text-xs md:text-sm text-gray-600">Manual J load calculations ensure perfect sizing for maximum efficiency.</p>
+              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">1. Appropriate Sizing</h3>
+              <p className="text-xs md:text-sm text-gray-600">Equipment selection is based on the property, system design and approved scope, with load calculation where applicable.</p>
             </div>
 
             <div className="bg-white rounded-xl p-5 shadow-lg border-2 border-gray-200">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-3">
                 <Award className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">2. Expert Installation</h3>
-              <p className="text-xs md:text-sm text-gray-600">Installation is performed through Air2Cool&apos;s licensed HVACR operation.</p>
+              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">2. Approved Project Scope</h3>
+              <p className="text-xs md:text-sm text-gray-600">Equipment, electrical, controls, drainage, refrigerant piping, permits and accessories are completed as defined in the proposal and where applicable.</p>
             </div>
 
             <div className="bg-white rounded-xl p-5 shadow-lg border-2 border-gray-200">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-3">
                 <Clock className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">3. Testing & Cleanup</h3>
-              <p className="text-xs md:text-sm text-gray-600">Complete system testing, then we clean your entire house—free!</p>
+              <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">3. Startup, Testing &amp; Walkthrough</h3>
+              <p className="text-xs md:text-sm text-gray-600">Air2Cool performs equipment-appropriate startup and operational testing, jobsite cleanup and a customer system walkthrough.</p>
             </div>
           </div>
         </div>
@@ -273,7 +268,7 @@ export default function CoolingInstallationPage() {
             0% Financing Available
           </h2>
           <p className="text-sm md:text-base text-green-100 mb-6">
-            $0 down and 0% APR financing up to $25,000. Don't let upfront costs stop you from staying cool.
+            0% financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/financing" className="bg-white text-green-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg hover:bg-gray-50 transition-all w-full sm:w-auto text-center">
@@ -317,7 +312,7 @@ export default function CoolingInstallationPage() {
             Ready for a New Cooling System?
           </h2>
           <p className="text-sm md:text-base text-gray-600 mb-6">
-            Get your free, no-pressure estimate. We'll assess your home and recommend the perfect cooling solution.
+            Request an installation proposal based on your home, existing equipment, comfort goals and approved project scope. Manufacturer warranty terms vary by equipment, model, application and registration requirements; exact warranty information is provided with the proposal.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="tel:+12017875657" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg shadow-lg transition-all w-full sm:w-auto">

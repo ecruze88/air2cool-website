@@ -96,8 +96,9 @@ export default function WarrenCountyPage() {
               license on equipment ranging from cast-iron boilers in Phillipsburg to modern heat pumps in newer Hackettstown developments.
             </p>
             <p>
-              We offer 0% financing up to $25,000, free house cleaning with new system installs, and
-              discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.
+              We offer 0% financing up to $25,000 for qualifying customers, subject to eligibility,
+              approval, and applicable program terms, plus discounts for first responders, veterans,
+              and seniors. Call (201) 787-5657 any time.
             </p>
           </div>
         </div>

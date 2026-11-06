@@ -65,8 +65,6 @@ export const COMMERCIAL_MAINTENANCE_PLAN = {
 export const MAINTENANCE_PLAN = RESIDENTIAL_MAINTENANCE_PLAN;
 
 export const PROMOTIONS = {
-  houseCleaning:
-    "Every qualifying new system installation includes a complimentary professional house cleaning.",
   financing:
     "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
 } as const;

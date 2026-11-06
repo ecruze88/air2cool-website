@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, CheckCircle, Star, Clock, Shield, Wrench, MapPin } from "lucide-react";
+import { Phone, CheckCircle, Star, Clock, Shield, MapPin } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -179,7 +179,6 @@ export default function GlenGardnerPage() {
               { icon: <Shield className="w-6 h-6 text-blue-600" />, title: "Licensed & Insured", body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians." },
               { icon: <Star className="w-6 h-6 text-yellow-500" />, title: "300+ Five-Star Reviews", body: "Real customers across North Jersey. Check our Google reviews before you call." },
               { icon: <Clock className="w-6 h-6 text-red-600" />, title: "24/7 Emergency Service", body: "We answer at 2 AM because your furnace doesn't care what day it is." },
-              { icon: <Wrench className="w-6 h-6 text-green-600" />, title: "Free House Cleaning", body: "Every qualifying new system installation includes a complimentary professional house cleaning." },
               { icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "0% Financing Up to $25,000", body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms." },
               { icon: <MapPin className="w-6 h-6 text-purple-600" />, title: "Local Since 1998", body: "Family-owned out of Wharton, NJ. We're your neighbors, not a call center." },
             ].map((item) => (

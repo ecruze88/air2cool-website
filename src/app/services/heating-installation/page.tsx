@@ -56,7 +56,7 @@ export default function HeatingInstallationPage() {
             "serviceType": "HVAC Installation",
             "offers": {
               "@type": "Offer",
-              "description": "0% financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms. Complimentary professional house cleaning with qualifying new system installation.",
+              "description": "0% financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
               "availability": "https://schema.org/InStock"
             }
           })
@@ -87,7 +87,7 @@ export default function HeatingInstallationPage() {
             </h1>
 
             <p className="text-base md:text-xl text-gray-200 leading-relaxed mb-6 md:mb-8">
-              Professional installation of high-efficiency furnaces and boilers, including hydronic, steam, and NTI systems. Complimentary professional house cleaning is included with qualifying new system installation.
+              Professional installation of high-efficiency furnaces and boilers, including hydronic, steam, and NTI systems.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-6 md:mb-8">
@@ -106,10 +106,6 @@ export default function HeatingInstallationPage() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <div className="bg-white/10 backdrop-blur px-3 md:px-4 py-2 rounded-full text-xs md:text-sm border border-white/20">
-                <CheckCircle className="inline w-3 h-3 md:w-4 md:h-4 mr-1" />
-                Qualifying Installation House Cleaning
-              </div>
               <div className="bg-white/10 backdrop-blur px-3 md:px-4 py-2 rounded-full text-xs md:text-sm border border-white/20">
                 <CheckCircle className="inline w-3 h-3 md:w-4 md:h-4 mr-1" />
                 0% Financing Up to $25,000 for Qualifying Customers
@@ -179,7 +175,7 @@ export default function HeatingInstallationPage() {
               </div>
               <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Clean Installation</h3>
               <p className="text-sm md:text-base text-gray-600">
-                Professional piping, wiring, and setup according to the approved scope. We protect the jobsite and clean up when work is complete. Qualifying new system installations include a complimentary professional house cleaning.
+                Professional piping, wiring, and setup according to the approved scope. We protect the jobsite and clean up when work is complete.
               </p>
             </div>
 

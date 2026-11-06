@@ -33,7 +33,7 @@ const schema = {
           "name": "Do you offer same-day AC repair in Randolph NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — same-day AC repair is available for most Randolph calls. We're based in Wharton, just a few miles away, and we stock common parts on our trucks to resolve most repairs in a single visit.",
+            "text": "Same-day AC repair appointments may be available in Randolph depending on technician availability and current conditions. Air2Cool is based nearby in Wharton.",
           },
         },
         {
@@ -328,7 +328,7 @@ export default function RandolphPage() {
               {[
                 {
                   q: "Do you offer same-day AC repair in Randolph NJ?",
-                  a: "Yes — same-day AC repair is available for most Randolph calls. We're based in Wharton, just a few miles away, and we stock common parts on our trucks to resolve most repairs in a single visit.",
+                  a: "Same-day AC repair appointments may be available in Randolph depending on technician availability and current conditions. Air2Cool is based nearby in Wharton.",
                 },
                 {
                   q: "How far is Air2Cool from Randolph NJ?",

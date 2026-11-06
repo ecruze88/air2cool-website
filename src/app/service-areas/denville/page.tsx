@@ -141,7 +141,7 @@ export default function DenvillePage() {
         <section className="py-10 md:py-14 bg-white">
           <div className="max-w-4xl mx-auto px-6">
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Denville is a central Morris County town we&apos;ve served for decades — sitting at the crossroads of Route 46 and 53 makes it one of our most frequently visited service areas. From the lake communities along Openaki Road to the ranch neighborhoods near Mountain Lakes, our crews know Denville well and can be there fast. We&apos;re based in Wharton, approximately <strong>15–20 minutes away</strong>.
+              Denville is a central Morris County town we&apos;ve served for decades. From the lake communities along Openaki Road to the ranch neighborhoods near Mountain Lakes, our crews know Denville well. Air2Cool is based nearby in Wharton, and scheduling depends on technician availability, call volume, traffic, and current conditions.
             </p>
           </div>
         </section>
@@ -163,7 +163,7 @@ export default function DenvillePage() {
                 Denville also has a large stock of 1960s and 70s ranch homes — particularly in the areas closer to Route 53 — that often have original ductwork in need of evaluation. These homes frequently have undersized systems, outdated equipment, or configurations that waste energy. Our licensed technicians assess the full picture and give you honest recommendations, not just a quote to replace whatever broke.
               </p>
               <p>
-                For <Link href="/services/ac-repair" className="text-blue-600 hover:underline">AC repair</Link> calls, most Denville service requests can be addressed same-day. We stock common parts on our trucks and have relationships with local suppliers for anything we don&apos;t carry. Emergency calls are answered 24/7 — if your heat or AC fails at an inconvenient hour, we&apos;ll be there.
+                For <Link href="/services/ac-repair" className="text-blue-600 hover:underline">AC repair</Link> calls, same-day appointments may be available depending on technician availability and current conditions. Emergency calls are answered 24/7 for heating and cooling problems that cannot wait for normal business hours.
               </p>
             </div>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">

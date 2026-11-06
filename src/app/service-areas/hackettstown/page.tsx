@@ -41,7 +41,7 @@ const schema = {
           "name": "Do you repair boilers in Hackettstown NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — we service and replace boilers throughout Warren County including Hackettstown. Same-day appointments may be available for heating emergencies depending on technician availability and current conditions. We're NTI-certified and handle many major boiler brands.",
+            "text": "Yes — we service and replace boilers throughout Warren County including Hackettstown. Same-day appointments may be available for heating emergencies depending on technician availability and current conditions. Our team has experience with NTI and many other major boiler brands.",
           },
         },
         {
@@ -230,7 +230,7 @@ export default function HackettstownPage() {
                 {
                   icon: <Wrench className="w-6 h-6 text-blue-600" />,
                   title: "Boiler Specialists",
-                  body: "NTI-certified and experienced with all boiler brands. Hydronic, steam, and modern condensing systems.",
+                  body: "Experience with NTI and other major boiler brands, including hydronic, steam, and modern condensing systems.",
                 },
                 {
                   icon: <Star className="w-6 h-6 text-yellow-500" />,
@@ -281,7 +281,7 @@ export default function HackettstownPage() {
                 },
                 {
                   q: "Do you repair boilers in Hackettstown NJ?",
-                  a: "Yes — we service and replace boilers throughout Warren County including Hackettstown. Same-day appointments may be available for heating emergencies depending on technician availability and current conditions. We're NTI-certified and handle many major boiler brands including Weil-McLain, Burnham, and Buderus.",
+                  a: "Yes — we service and replace boilers throughout Warren County including Hackettstown. Same-day appointments may be available for heating emergencies depending on technician availability and current conditions. Our team has experience with NTI, Weil-McLain, Burnham, Buderus, and other major boiler brands.",
                 },
                 {
                   q: "How far is Air2Cool from Hackettstown NJ?",

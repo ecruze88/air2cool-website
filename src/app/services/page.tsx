@@ -4,7 +4,7 @@ import Link from "next/link";
 import { COMPANY } from "@/config/company";
 
 export const metadata: Metadata = {
-  title: "HVAC Services in Morris County & North NJ | Air2Cool | (201) 787-5657",
+  title: "HVAC Services in Morris County & North Jersey | Air2Cool",
   description:
     `Complete HVAC services in Morris County & North NJ: heating and cooling repair, installation, ductless mini splits, and preventative maintenance. Serving since ${COMPANY.foundedYear}. Call ${COMPANY.phone.display}.`,
   keywords: [
@@ -66,7 +66,7 @@ const SERVICES = [
   {
     icon: Waves,
     title: "Heating Installation",
-    description: "New furnaces & boilers professionally installed. Hydronic, steam, NTI systems. Free house cleaning included!",
+    description: "New furnaces and boilers with appropriate sizing, installation and startup based on the approved project scope.",
     href: "/services/heating-installation",
     color: "red",
     category: "installation",
@@ -74,7 +74,7 @@ const SERVICES = [
   {
     icon: Snowflake,
     title: "Cooling Installation",
-    description: "New AC, heat pumps & mini splits. Expert installation with proper sizing. Free house cleaning included!",
+    description: "New AC, heat pumps and mini splits with appropriate sizing and a project-specific installation scope.",
     href: "/services/cooling-installation",
     color: "cyan",
     category: "installation",
@@ -341,7 +341,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="font-bold text-gray-900 mb-1 text-sm md:text-base">Licensed & Insured</h3>
               <p className="text-gray-600 text-xs md:text-sm">
-                Master HVACR technicians
+                NJ Master HVACR License #{COMPANY.license.masterHvacrNumber}
               </p>
             </div>
 
@@ -423,8 +423,15 @@ export default function ServicesPage() {
               Looking for Commercial Services?
             </h2>
             <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-              We handle RTUs, chillers, commercial boilers, LED lighting retrofits, commercial refrigeration, and more. Commercial HVAC and refrigeration experience since {COMPANY.foundedYear}. NJ Master HVACR License #{COMPANY.license.masterHvacrNumber}.
+              Air2Cool provides commercial HVAC and mechanical service, customized maintenance, commercial refrigeration, boiler service and hydronic pump support. Serving North Jersey since {COMPANY.foundedYear} under NJ Master HVACR License #{COMPANY.license.masterHvacrNumber}.
             </p>
+          </div>
+          <div className="flex flex-wrap gap-x-5 gap-y-3 text-sm font-semibold text-blue-200">
+            <Link href="/services/commercial-maintenance" className="underline underline-offset-4 hover:text-white">Commercial maintenance</Link>
+            <Link href="/services/commercial-refrigeration" className="underline underline-offset-4 hover:text-white">Commercial refrigeration</Link>
+            <Link href="/services/commercial-boiler-services" className="underline underline-offset-4 hover:text-white">Commercial boilers</Link>
+            <Link href="/services/heating-pump-services" className="underline underline-offset-4 hover:text-white">Heating circulation pumps</Link>
+            <Link href="/commercial-incentives" className="underline underline-offset-4 hover:text-white">Commercial incentives</Link>
           </div>
           <div className="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto shrink-0">
             <Link

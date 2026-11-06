@@ -42,7 +42,7 @@ const FAQ_CATEGORIES = {
     },
     {
       question: "Do you install new HVAC systems?",
-      answer: `Yes. We install furnaces, central AC, heat pumps, ductless mini-splits, boilers, and commercial HVAC equipment. Project scope can include Manual J load calculations, ductwork review, thermostat installation, permits, and applicable warranty documentation. ${PROMOTIONS.houseCleaning} ${PROMOTIONS.financing} Call (201) 787-5657.`,
+      answer: `Yes. We install furnaces, central AC, heat pumps, ductless mini-splits, boilers, and commercial HVAC equipment. Project scope can include Manual J load calculations, ductwork review, thermostat installation, permits, and applicable warranty documentation. ${PROMOTIONS.financing} Call (201) 787-5657.`,
       keywords: "HVAC installation NJ, new furnace, new AC, heat pump installation"
     },
     {

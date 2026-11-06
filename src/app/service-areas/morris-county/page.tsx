@@ -9,9 +9,9 @@ const countyTowns = (townsData as { towns: Town[] }).towns.filter(
 );
 
 export const metadata: Metadata = {
-  title: "AC Repair Morris County NJ | HVAC Service | Air2Cool | (201) 787-5657",
+  title: "HVAC Services in Morris County NJ | Air2Cool",
   description:
-    "AC repair Morris County NJ by licensed technicians. Same-day service, 24/7 emergency. Furnace repair, HVAC installation & more. Family-owned since 1998. Call (201) 787-5657.",
+    "Heating, cooling, installation, maintenance and commercial HVAC services throughout Morris County from Wharton-based Air2Cool. Serving North Jersey since 1998.",
   alternates: { canonical: "https://www.air2cool.com/service-areas/morris-county" },
 };
 
@@ -24,7 +24,7 @@ export default function MorrisCountyPage() {
             <MapPin className="w-4 h-4" /> Morris County, NJ
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
-            AC Repair &amp; HVAC Service in Morris County NJ
+            HVAC Services in Morris County NJ
           </h1>
           <p className="text-blue-100 text-base md:text-xl mb-8 max-w-2xl mx-auto">
             From Morristown to Wharton, Parsippany to Chester — Air2Cool has served Morris County
@@ -35,7 +35,7 @@ export default function MorrisCountyPage() {
               <Phone className="w-5 h-5" /> (201) 787-5657
             </a>
             <Link href="/contact" className="bg-white/10 border border-white/30 hover:bg-white/20 text-white px-7 py-3.5 rounded-full font-semibold text-lg text-center">
-              Free Estimate
+              Schedule HVAC Service
             </Link>
           </div>
         </div>
@@ -45,19 +45,19 @@ export default function MorrisCountyPage() {
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
-            AC Repair in Morris County NJ — Same-Day Service by Licensed Technicians
+            Heating, Cooling &amp; HVAC Service Across Morris County
           </h2>
           <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
             <p>
               When your air conditioner breaks down in the middle of a Morris County summer, you need a technician on-site fast — not a national call center. Air2Cool Heating &amp; Cooling has been providing{" "}
               <Link href="/services/ac-repair" className="text-blue-600 hover:underline font-semibold">AC repair in Morris County NJ</Link>{" "}
-              since 1998, with same-day appointments available and 24/7 emergency service for those brutal heatwave situations. We're based right in Wharton, meaning we can reach any part of the county quickly — whether you're in Morristown, Parsippany, Denville, Randolph, Rockaway, or anywhere in between.
+              since 1998. Same-day appointments may be available depending on technician availability, call volume, traffic, weather and service conditions. The 24/7 emergency line serves Morristown, Parsippany, Denville, Randolph, Rockaway and communities throughout the county.
             </p>
             <p>
               Air2Cool diagnoses and repairs many types of central air conditioning systems, ductless mini-splits, and heat pumps through its licensed HVACR operation. Common AC problems include compressor failure, refrigerant leaks, frozen evaporator coils, faulty capacitors, and systems that run but will not cool. We work on many major brands, including Carrier, Trane, Lennox, Rheem, and Goodman.
             </p>
             <p>
-              Morris County's climate creates unique HVAC demands. Summers are hot and humid, winters are cold and brutal, and older homes throughout Morristown, Madison, and Chatham often have aging boiler and central AC systems that require expertise not every HVAC company has. Air2Cool's technicians have seen it all — from historic colonial homes in Morristown to modern developments in Parsippany and everything in between. We understand the equipment and the neighborhoods.
+              Morris County&apos;s climate creates unique HVAC demands. Summers are hot and humid, winters are cold and brutal, and older homes throughout Morristown, Madison, and Chatham often have aging boiler and central AC systems that require experienced service. Air2Cool&apos;s team works with equipment in historic colonial homes, modern developments, and many properties in between.
             </p>
             <p>
               Beyond{" "}
@@ -180,8 +180,9 @@ export default function MorrisCountyPage() {
               farmhouse outside Chester, Air2Cool&apos;s trained technicians arrive equipped and ready through our licensed HVACR operation.
             </p>
             <p>
-              We offer 0% financing up to $25,000, free house cleaning with new system installs, and
-              discounts for first responders, veterans, and seniors. Call (201) 787-5657 any time.
+              We offer 0% financing up to $25,000 for qualifying customers, subject to eligibility,
+              approval, and applicable program terms, plus discounts for first responders, veterans,
+              and seniors. Call (201) 787-5657 any time.
             </p>
           </div>
         </div>
@@ -197,7 +198,7 @@ export default function MorrisCountyPage() {
             {[
               {
                 q: "Does Air2Cool offer same-day AC repair in Morris County NJ?",
-                a: "Yes. We offer same-day AC repair throughout Morris County, including Morristown, Parsippany, Denville, Randolph, Rockaway, and all surrounding towns. Call (201) 787-5657 in the morning and we'll do our best to have a technician at your door that same day. For overnight emergencies, we're available 24/7.",
+                a: "Same-day AC repair appointments may be available throughout Morris County depending on technician availability and current conditions. Our emergency line is available 24/7.",
               },
               {
                 q: "What areas of Morris County does Air2Cool serve?",
@@ -205,7 +206,7 @@ export default function MorrisCountyPage() {
               },
               {
                 q: "Do you repair boilers as well as air conditioners in Morris County?",
-                a: "Absolutely. Air2Cool is one of the few Morris County HVAC companies with true boiler expertise. We service and repair hydronic boilers, steam boilers, and NTI boilers, and we're NTI-certified technicians. Many older Morris County homes rely on boiler heating, and we have the specialized knowledge to handle it right.",
+                a: "Yes. Air2Cool services and repairs hydronic boilers, steam boilers, and NTI boilers. Many older Morris County homes rely on boiler heating, and our team has experience diagnosing and servicing these systems.",
               },
               {
                 q: "How much does AC repair cost in Morris County NJ?",
@@ -213,7 +214,7 @@ export default function MorrisCountyPage() {
               },
               {
                 q: "Can Air2Cool install a new HVAC system in Morris County?",
-                a: "Yes. We handle complete HVAC system replacements and new installations throughout Morris County. Our installations include a free house cleaning as a bonus, and we offer 0% APR financing up to $25,000. We'll properly size the system for your home and handle all permits and inspections.",
+                a: "Yes. We handle complete HVAC system replacements and new installations throughout Morris County. We offer 0% APR financing up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms. We'll properly size the system for your home and coordinate permits and inspections where applicable.",
               },
             ].map((item, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">

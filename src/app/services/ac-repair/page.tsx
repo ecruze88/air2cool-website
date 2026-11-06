@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { CheckCircle, Clock, Phone, Snowflake, Zap } from "lucide-react";
+import { Clock, Phone, Snowflake, Zap } from "lucide-react";
 import Link from "next/link";
 import EquipmentArchitectureLinks from "@/components/EquipmentArchitectureLinks";
 
 export const metadata: Metadata = {
-  title: "AC Repair Morris County NJ | Same-Day Service | Air2Cool",
+  title: "AC Repair in Morris County & North Jersey | Air2Cool",
   description:
-    "AC broke down in Morris County? Air2Cool responds fast — same-day AC repair throughout Morris County and North NJ. Licensed since 1998, honest pricing. Call (201) 787-5657.",
+    "AC diagnostics and repair throughout Morris County and North Jersey, with 24/7 emergency HVAC availability. Schedule service with Air2Cool at (201) 787-5657.",
   keywords: [
     "AC repair Morris County NJ",
     "same day AC repair NJ",
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     canonical: "/services/ac-repair",
   },
   openGraph: {
-    title: "AC Repair Morris County NJ | Same-Day Service | Call Now",
+    title: "AC Repair in Morris County & North Jersey | Air2Cool",
     description:
-      "AC broke down in Morris County? Air2Cool responds fast — same-day AC repair throughout Morris County and North NJ. Licensed since 1998, honest pricing. Call (201) 787-5657.",
+      "AC diagnostics and repair throughout Morris County and North Jersey, with 24/7 emergency HVAC availability. Call Air2Cool at (201) 787-5657.",
     url: "/services/ac-repair",
   },
 };
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const repairs = [
   {
     title: "Capacitor replacement",
-    body: "If your outdoor unit hums but will not start, the fan will not spin, or the system clicks and shuts down, a failed capacitor may be the problem. Air2Cool stocks common capacitors and can usually replace them the same day after diagnosis.",
+    body: "If your outdoor unit hums but will not start, the fan will not spin, or the system clicks and shuts down, a failed capacitor may be the problem. Air2Cool diagnoses the electrical circuit before recommending replacement.",
   },
   {
     title: "Refrigerant leak",
@@ -44,7 +44,7 @@ const repairs = [
   },
   {
     title: "Fan motor failure",
-    body: "If the condenser fan or blower motor fails, your AC may run hot, trip breakers, or stop cooling altogether. We diagnose motor and relay issues and handle same-day repairs whenever parts are available.",
+    body: "If the condenser fan or blower motor fails, your AC may run hot, trip breakers, or stop cooling altogether. Air2Cool diagnoses motor, capacitor, relay and control concerns before recommending repair.",
   },
   {
     title: "Dirty condenser coils",
@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     q: "Do you offer emergency AC repair in NJ?",
-    a: "Yes. Air2Cool answers emergency AC repair calls 24/7 across Morris County and North NJ. If your air conditioner stops working during extreme heat, call (201) 787-5657 for priority same-day service.",
+    a: "Yes. Air2Cool answers emergency HVAC calls 24/7 across Morris County and North Jersey. Scheduling and dispatch depend on technician availability, call volume, traffic, weather and service conditions.",
   },
   {
     q: "What are the most common AC repairs in NJ?",
@@ -101,7 +101,7 @@ export default function ACRepairPage() {
             name: "AC Repair",
             alternateName: "Air Conditioner Repair",
             description:
-              "Same-day and emergency air conditioning repair throughout Morris County and North New Jersey.",
+              "Air conditioning diagnostics, repair and 24/7 emergency HVAC availability throughout Morris County and North Jersey.",
             provider: {
               "@type": "HVACBusiness",
               "@id": "https://www.air2cool.com/#organization",
@@ -163,7 +163,7 @@ export default function ACRepairPage() {
               AC REPAIR
             </div>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
-              Same-Day AC Repair in North NJ - We Fix It Fast
+              AC Repair in Morris County &amp; North Jersey
             </h1>
             <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-3xl mb-6 md:mb-8">
               AC stopped working? Air2Cool provides 24/7 emergency AC service throughout Morris County and North Jersey. Same-day appointments may be available, while response timing depends on technician availability, traffic, weather, and call volume. Serving North Jersey since 1998. Call (201) 787-5657.
@@ -180,7 +180,7 @@ export default function ACRepairPage() {
                 href="/contact"
                 className="bg-white text-blue-700 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-all shadow-lg hover:bg-gray-50 text-center min-h-[44px]"
               >
-                Request Same-Day Service
+                Schedule AC Service
               </Link>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function ACRepairPage() {
           <div className="flex items-center justify-center gap-3 text-blue-900">
             <Zap className="w-5 h-5 md:w-6 md:h-6 shrink-0" />
             <p className="text-base md:text-lg font-semibold">
-              Licensed since 1998. Same-day AC repair, honest diagnostics, and upfront pricing before any work begins.
+              Serving North Jersey since 1998 with AC diagnostics, repair and clear service recommendations.
             </p>
           </div>
         </div>
@@ -230,10 +230,10 @@ export default function ACRepairPage() {
             </h2>
             <div className="text-base text-gray-700 space-y-4 leading-relaxed">
               <p>
-                When your AC quits during a Morris County heat wave, it is more than uncomfortable. High indoor heat and humidity can become a health concern for seniors, young children, pets, and anyone with breathing or medical issues.
+                When your AC quits during a Morris County heat wave, indoor conditions can become uncomfortable quickly. Turn the system off if it is making unusual sounds, repeatedly tripping a breaker or leaking water, then call for professional diagnosis.
               </p>
               <p>
-                Air2Cool prioritizes emergency AC repair calls across Morris County. Because our team is based in Wharton, we can often respond faster than companies dispatching from Newark, New York City, or farther out of the area. Call <a href="tel:+12017875657" className="font-semibold text-red-700 hover:underline">(201) 787-5657</a> any time, day or night, and we will work to get a licensed technician to your home the same day.
+                Air2Cool is based in Wharton and prioritizes urgent AC repair calls across Morris County. Call <a href="tel:+12017875657" className="font-semibold text-red-700 hover:underline">(201) 787-5657</a> any time. Dispatch timing depends on technician availability, call volume, traffic, weather and equipment needs.
               </p>
             </div>
           </div>
@@ -309,10 +309,10 @@ export default function ACRepairPage() {
       <section className="py-12 md:py-16 bg-gradient-to-r from-blue-700 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center text-white">
           <h2 className="text-2xl md:text-4xl font-extrabold mb-3 md:mb-4">
-            Need AC Repair Today?
+            Need AC Repair?
           </h2>
           <p className="text-base md:text-xl text-blue-100 mb-6 md:mb-8">
-            Call Air2Cool now for same-day AC repair throughout Morris County and North NJ.
+            Call Air2Cool for AC diagnostics and repair throughout Morris County and North Jersey.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <a
