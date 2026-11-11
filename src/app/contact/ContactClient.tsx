@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Phone, MessageSquare, Clock, CheckCircle, Star, AlertCircle, Mail, DollarSign } from "lucide-react";
+import BusinessInquiryNotice from "@/components/BusinessInquiryNotice";
 
 const EMERGENCY_SERVICES = [
   "No Heat / Furnace Not Working",
@@ -233,12 +234,14 @@ export default function ContactClientDual() {
                           town: data.town,
                           problem: data.problem,
                           description: data.description || "",
+                          companyWebsite: data.companyWebsite || "",
                         }),
                         headers: { "Content-Type": "application/json" },
                       });
 
+                      const result = await res.json().catch(() => ({}));
                       if (!res.ok) {
-                        setEmergencyError("Submission failed. Please call (201) 787-5657");
+                        setEmergencyError(result.error || "Submission failed. Please call (201) 787-5657");
                         return;
                       }
 
@@ -248,6 +251,10 @@ export default function ContactClientDual() {
                     }
                   }}
                 >
+                  <label className="absolute left-[-9999px]" aria-hidden="true">
+                    Company website
+                    <input name="companyWebsite" tabIndex={-1} autoComplete="off" />
+                  </label>
                   {/* Name */}
                   <div>
                     <label className="block text-xs md:text-sm font-semibold text-gray-900 mb-1.5 md:mb-2">
@@ -354,6 +361,7 @@ export default function ContactClientDual() {
                   </div>
 
                   {/* Submit Button */}
+                  <BusinessInquiryNotice />
                   <button
                     type="submit"
                     className="w-full bg-red-600 hover:bg-red-700 text-white px-5 md:px-6 py-3 md:py-4 rounded-lg md:rounded-xl font-bold text-base md:text-lg shadow-lg transition-all"
@@ -437,12 +445,14 @@ export default function ContactClientDual() {
                           service: data.service,
                           message: data.message,
                           financing: data.financing === "on",
+                          companyWebsite: data.companyWebsite || "",
                         }),
                         headers: { "Content-Type": "application/json" },
                       });
 
+                      const result = await res.json().catch(() => ({}));
                       if (!res.ok) {
-                        setEstimateError("Submission failed. Please call (201) 787-5657");
+                        setEstimateError(result.error || "Submission failed. Please call (201) 787-5657");
                         return;
                       }
 
@@ -573,6 +583,11 @@ export default function ContactClientDual() {
                   </div>
 
                   {/* Submit Button */}
+                  <label className="absolute left-[-9999px]" aria-hidden="true">
+                    Company website
+                    <input name="companyWebsite" tabIndex={-1} autoComplete="off" />
+                  </label>
+                  <BusinessInquiryNotice />
                   <button
                     type="submit"
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white px-5 md:px-6 py-3 md:py-4 rounded-lg md:rounded-xl font-bold text-base md:text-lg shadow-lg transition-all"

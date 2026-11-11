@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import BusinessInquiryNotice from "@/components/BusinessInquiryNotice";
 
 const inputClass = "w-full min-h-12 border border-slate-300 bg-white px-3 py-2.5 text-base text-slate-950 focus:border-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-200";
 const initial = { contactName: "", phone: "", email: "", serviceAddress: "", furnaceCount: "0", acCount: "0", boilerCount: "0", heatPumpCount: "0", otherEquipment: "", notes: "", company: "" };
@@ -41,6 +42,7 @@ export default function ResidentialMaintenanceForm() {
     <Field label="Other residential HVAC equipment (optional)" name="otherEquipment" value={form.otherEquipment} onChange={update} />
     <label className="block"><span className="block text-sm font-semibold text-slate-800 mb-1.5">Notes or questions (optional)</span><textarea name="notes" value={form.notes} onChange={(event) => update("notes", event.target.value)} rows={4} className={inputClass} /></label>
     <label className="absolute left-[-9999px]" aria-hidden="true">Company<input tabIndex={-1} autoComplete="off" name="company" value={form.company} onChange={(event) => update("company", event.target.value)} /></label>
+    <BusinessInquiryNotice />
     <button type="submit" disabled={status === "sending"} className="min-h-12 w-full sm:w-auto bg-orange-700 px-7 py-3 font-bold text-white hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 disabled:bg-slate-400">{status === "sending" ? "Sending request..." : "Enroll in Residential Maintenance"}</button>
     <p role="status" aria-live="polite" className={status === "error" ? "text-red-700" : "text-emerald-700"}>{message}</p>
   </form>;

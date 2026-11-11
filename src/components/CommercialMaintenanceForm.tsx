@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { COMMERCIAL_EQUIPMENT, COMMERCIAL_PROPERTY_TYPES, COMMERCIAL_REQUEST_TYPES } from "@/lib/maintenance-requests";
+import BusinessInquiryNotice from "@/components/BusinessInquiryNotice";
 
 const inputClass = "w-full min-h-12 border border-slate-300 bg-white px-3 py-2.5 text-base text-slate-950 focus:border-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-200";
 const initial = { contactName: "", companyName: "", phone: "", email: "", serviceAddress: "", propertyType: "", equipment: [] as string[], equipmentCount: "", requestType: "", notes: "", company: "" };
@@ -44,6 +45,7 @@ export default function CommercialMaintenanceForm() {
     <Field label="Approximate number of systems/equipment (optional)" name="equipmentCount" value={form.equipmentCount} onChange={update} />
     <label className="block"><span className="block text-sm font-semibold text-slate-800 mb-1.5">Facility details and notes (optional)</span><textarea name="notes" value={form.notes} onChange={(event) => update("notes", event.target.value)} rows={5} className={inputClass} /></label>
     <label className="absolute left-[-9999px]" aria-hidden="true">Company website<input tabIndex={-1} autoComplete="off" name="company" value={form.company} onChange={(event) => update("company", event.target.value)} /></label>
+    <BusinessInquiryNotice />
     <button type="submit" disabled={status === "sending"} className="min-h-12 w-full sm:w-auto bg-blue-800 px-7 py-3 font-bold text-white hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 disabled:bg-slate-400">{status === "sending" ? "Sending request..." : "Request Commercial Maintenance Proposal"}</button>
     <p role="status" aria-live="polite" className={status === "error" ? "text-red-700" : "text-emerald-700"}>{message}</p>
   </form>;

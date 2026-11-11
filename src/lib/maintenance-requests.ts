@@ -71,7 +71,7 @@ function validEmail(value: string): boolean {
 export function parseMaintenanceRequest(input: unknown): { data?: MaintenanceRequest; error?: string } {
   if (!input || typeof input !== "object") return { error: "Invalid request" };
   const body = input as Record<string, unknown>;
-  if (text(body.company)) return { error: "Invalid submission" };
+  if (text(body.company) || text(body.companyWebsite)) return { error: "Invalid submission" };
 
   const requestKind = body.requestKind;
   const base = {

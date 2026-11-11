@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Wrench, CheckCircle, Home, Building2 } from "lucide-react";
 import Link from "next/link";
+import BusinessInquiryNotice from "@/components/BusinessInquiryNotice";
 
 export default function MaintenanceContractForm() {
   const [formData, setFormData] = useState({
@@ -274,6 +275,9 @@ export default function MaintenanceContractForm() {
 
       {/* Submit */}
       <div className="text-center">
+        <div className="mb-4 text-left">
+          <BusinessInquiryNotice />
+        </div>
         <button type="submit" disabled={isSubmitting}
           className="bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-8 md:px-12 py-4 rounded-full font-bold text-lg shadow-lg transition-all disabled:cursor-not-allowed w-full sm:w-auto min-h-[52px]">
           {isSubmitting ? "Submitting..." : "Request Maintenance Contract"}

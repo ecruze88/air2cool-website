@@ -1,5 +1,12 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from "next/server";
+import {
+  checkSubmissionRateLimit,
+  detectVendorSolicitation,
+  honeypotIsFilled,
+  logRejectedSubmission,
+  VENDOR_INQUIRY_MESSAGE,
+} from "@/lib/form-spam-protection";
 
 const RESEND_KEY = process.env.RESEND_API_KEY || 'REMOVED';
 const EMAIL_TO = process.env.EMAIL_TO || 'air2cool1@gmail.com';
@@ -11,15 +18,23 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     
-    const { type, name, email, phone, address, town, service, message, problem, description, financing, company, language } = body;
+    const { type, name, email, phone, address, town, service, message, problem, description, financing, language } = body;
     const isSpanishRequest = language === "es";
     
     // Honeypot spam check
-    if (company) {
-      return NextResponse.json(
-        { error: "Invalid submission" },
-        { status: 400 }
-      );
+    if (honeypotIsFilled(body)) {
+      logRejectedSubmission("contact", "honeypot");
+      return NextResponse.json({ success: true });
+    }
+
+    if (!checkSubmissionRateLimit(request, `contact:${String(type)}`, type === "emergency" ? 4 : 6)) {
+      logRejectedSubmission("contact", "rate-limit");
+      return NextResponse.json({ error: "Too many requests. Please try again shortly." }, { status: 429 });
+    }
+
+    if (detectVendorSolicitation(Object.values(body), type === "emergency")) {
+      logRejectedSubmission(type === "emergency" ? "contact-emergency" : "contact-estimate", "vendor");
+      return NextResponse.json({ error: VENDOR_INQUIRY_MESSAGE }, { status: 400 });
     }
 
     // reCAPTCHA v3 verification

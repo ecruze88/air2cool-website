@@ -1,6 +1,13 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from "next/server";
 import { buildMaintenanceEmail } from "@/lib/maintenance-email";
+import {
+  checkSubmissionRateLimit,
+  detectVendorSolicitation,
+  honeypotIsFilled,
+  logRejectedSubmission,
+  VENDOR_INQUIRY_MESSAGE,
+} from "@/lib/form-spam-protection";
 
 const RESEND_KEY = process.env.RESEND_API_KEY || 'REMOVED';
 const EMAIL_TO = process.env.EMAIL_TO || 'air2cool1@gmail.com';
@@ -49,16 +56,23 @@ export async function POST(request: NextRequest) {
       miniSplitBrand,
       miniSplitAge,
       preferredContactMethod,
-      additionalNotes,
-      company 
+      additionalNotes
     } = body;
     
     // Honeypot check
-    if (company) {
-      return NextResponse.json(
-        { error: "Invalid submission" },
-        { status: 400 }
-      );
+    if (honeypotIsFilled(body)) {
+      logRejectedSubmission("maintenance-contract", "honeypot");
+      return NextResponse.json({ success: true });
+    }
+
+    if (!checkSubmissionRateLimit(request, "maintenance-contract")) {
+      logRejectedSubmission("maintenance-contract", "rate-limit");
+      return NextResponse.json({ error: "Too many requests. Please try again shortly." }, { status: 429 });
+    }
+
+    if (detectVendorSolicitation(Object.values(body))) {
+      logRejectedSubmission("maintenance-contract", "vendor");
+      return NextResponse.json({ error: VENDOR_INQUIRY_MESSAGE }, { status: 400 });
     }
     
     // Validation

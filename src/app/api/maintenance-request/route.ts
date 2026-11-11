@@ -1,10 +1,31 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { buildMaintenanceRequestEmail, parseMaintenanceRequest } from "@/lib/maintenance-requests";
+import {
+  checkSubmissionRateLimit,
+  detectVendorSolicitation,
+  honeypotIsFilled,
+  logRejectedSubmission,
+  VENDOR_INQUIRY_MESSAGE,
+} from "@/lib/form-spam-protection";
 
 export async function POST(request: NextRequest) {
   try {
-    const parsed = parseMaintenanceRequest(await request.json());
+    const body = await request.json() as Record<string, unknown>;
+    if (honeypotIsFilled(body)) {
+      logRejectedSubmission("maintenance-request", "honeypot");
+      return NextResponse.json({ success: true });
+    }
+    if (!checkSubmissionRateLimit(request, "maintenance-request")) {
+      logRejectedSubmission("maintenance-request", "rate-limit");
+      return NextResponse.json({ error: "Too many requests. Please try again shortly." }, { status: 429 });
+    }
+    if (detectVendorSolicitation(Object.values(body))) {
+      logRejectedSubmission("maintenance-request", "vendor");
+      return NextResponse.json({ error: VENDOR_INQUIRY_MESSAGE }, { status: 400 });
+    }
+
+    const parsed = parseMaintenanceRequest(body);
     if (!parsed.data) return NextResponse.json({ error: parsed.error }, { status: 400 });
 
     const key = process.env.RESEND_API_KEY;
