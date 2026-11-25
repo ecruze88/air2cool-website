@@ -4,9 +4,9 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "AC Repair Morristown NJ | Same-Day HVAC Service | Air2Cool",
+  title: "AC Repair Morristown NJ | HVAC Service | Air2Cool",
   description:
-    "Same-day AC repair and HVAC service in Morristown NJ. Air2Cool has served Morris County's county seat since 1998 — 17 minutes from our Wharton base. Call (201) 787-5657.",
+    "AC repair and HVAC service in Morristown NJ. Air2Cool has served Morris County since 1998 from its Wharton base. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/morristown",
   },
@@ -64,8 +64,8 @@ export default function MorristownPage() {
               AC Repair &amp; HVAC Service in Morristown, NJ
             </h1>
             <p className="text-base md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Air2Cool has provided AC repair and HVAC service in Morristown since 1998. Same-day
-              service available — we&apos;re based in nearby Wharton. 24/7 emergency response.
+              Air2Cool has provided AC repair and HVAC service in Morristown since 1998. We&apos;re
+              based in nearby Wharton, with a 24/7 emergency line.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
@@ -109,7 +109,7 @@ export default function MorristownPage() {
                 <Snowflake className="w-5 h-5 text-blue-600" />
               </div>
               <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
-                AC Repair in Morristown, NJ — Same-Day Service
+                AC Repair in Morristown, NJ
               </h2>
             </div>
             <div className="text-sm md:text-base text-gray-700 space-y-4 leading-relaxed">
@@ -122,10 +122,8 @@ export default function MorristownPage() {
                 not want to touch.
               </p>
               <p>
-                <strong>Same-day AC repair service is available for Morristown residents.</strong> We&apos;re
-                based in Wharton — just a few miles away — which means we&apos;re not dispatching from
-                the other side of the state. When your air conditioner stops working in the middle of a
-                heat wave, we can often have a technician at your door the same day you call.
+                We&apos;re based in Wharton and serve Morristown throughout the year. Appointment and
+                emergency-response timing depends on technician availability, traffic, weather, and call volume.
               </p>
               <p>
                 We also offer <strong>24/7 emergency AC repair</strong> for situations that can&apos;t

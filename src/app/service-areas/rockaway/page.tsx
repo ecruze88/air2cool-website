@@ -94,7 +94,7 @@ export default function RockawayPage() {
             </h1>
             <p className="text-base md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
               Air2Cool has served Rockaway Borough and Rockaway Township since 1998. We&apos;re based
-              in neighboring Wharton — just minutes away. Same-day service and 24/7 emergency response.
+              in neighboring Wharton. Our 24/7 emergency line serves heating and cooling calls.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a

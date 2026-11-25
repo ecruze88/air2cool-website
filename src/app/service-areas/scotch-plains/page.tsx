@@ -6,7 +6,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "AC Repair & Installation Scotch Plains NJ | Air2Cool HVAC",
   description:
-    "AC repair and installation in Scotch Plains NJ. Air2Cool provides same-day AC service, free estimates on new systems, and 0% financing. Licensed since 1998. Call (201) 787-5657.",
+    "AC repair and installation in Scotch Plains NJ. Free estimates on qualifying new-system projects and financing options for qualifying customers. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/scotch-plains",
   },
@@ -132,7 +132,7 @@ export default function ScotchPlainsPage() {
                 likely already in the area.
               </p>
               <p>
-                For <strong>same-day AC repair in Scotch Plains</strong>, call{" "}
+                For <strong>AC repair in Scotch Plains</strong>, call{" "}
                 <a href="tel:+12017875657" className="text-blue-600 hover:underline font-semibold">
                   (201) 787-5657
                 </a>{" "}
@@ -219,7 +219,7 @@ export default function ScotchPlainsPage() {
                 {
                   icon: <Clock className="w-6 h-6 text-red-600" />,
                   title: "Same-Day AC Repair Available",
-                  body: "Scotch Plains is about 45 minutes from our Wharton base. Same-day and 24/7 emergency service available.",
+                  body: "Air2Cool serves Scotch Plains from its Wharton base. Our emergency line is available 24/7; response timing varies.",
                 },
                 {
                   icon: <MapPin className="w-6 h-6 text-purple-600" />,

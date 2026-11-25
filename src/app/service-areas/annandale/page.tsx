@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "HVAC Service in Annandale NJ | AC & Heating Repair | Air2Cool | (201) 787-5657",
   description:
-    "Air2Cool provides AC repair, furnace & boiler repair, and HVAC installation in Annandale, NJ (Hunterdon County). Same-day service. Family-owned since 1998. Call (201) 787-5657.",
+    "Air2Cool provides AC repair, furnace and boiler repair, and HVAC installation in Annandale, NJ. Family-owned since 1998. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/annandale",
   },
@@ -145,7 +145,7 @@ export default function AnnandaLePage() {
             {[
               {
                 q: "Do you serve Annandale and Clinton Township for HVAC repairs?",
-                a: "Yes. Air2Cool serves Annandale, Clinton Township, and all of Hunterdon County. We offer same-day AC repair and heating repair, plus 24/7 emergency service for urgent situations. Call (201) 787-5657 any time.",
+                a: "Yes. Air2Cool serves Annandale, Clinton Township, and Hunterdon County for AC and heating repair. Our emergency line is available 24/7; response timing depends on technician availability and current conditions.",
               },
               {
                 q: "Can you handle boiler and oil furnace repair in Annandale, NJ?",

@@ -93,8 +93,8 @@ export default function EssexCountyPage() {
             </p>
             <p>
               PSE&G customers across Essex County trust us to handle everything from rooftop units
-              to basement boilers. We offer same-day service for most HVAC emergencies and 0%
-              financing for system replacements.
+              to basement boilers. Emergency scheduling depends on technician availability and current
+              conditions. Financing is available for qualifying system replacements.
             </p>
             <p>
               We offer 0% financing up to $25,000 for qualifying customers, subject to eligibility,

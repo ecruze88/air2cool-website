@@ -1,366 +1,52 @@
 import type { Metadata } from "next";
-import { Phone, CheckCircle, Star, Clock, Shield, Wrench, MapPin } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { MapPin, Phone } from "lucide-react";
+import { PROMOTIONS, RESPONSE_TIME_NOTE } from "@/config/company";
 
 export const metadata: Metadata = {
-  title: "HVAC Service Hackettstown NJ | AC & Heating Repair | Air2Cool",
-  description:
-    "HVAC repair and installation in Hackettstown NJ. Air2Cool serves Warren County including Hackettstown for AC repair, furnace service, and installations. Call (201) 787-5657.",
-  alternates: {
-    canonical: "https://www.air2cool.com/service-areas/hackettstown",
-  },
+  title: "HVAC Repair & Installation Hackettstown NJ | Air2Cool",
+  description: "Heating, boiler and AC repair, HVAC installation, heat pumps, mini splits and commercial service in Hackettstown, NJ. Call Air2Cool at (201) 787-5657.",
+  alternates: { canonical: "https://www.air2cool.com/service-areas/hackettstown" },
+  openGraph: { title: "HVAC Repair & Installation Hackettstown NJ | Air2Cool", description: "Heating, cooling, boiler, installation and commercial HVAC service in Hackettstown and Warren County.", url: "https://www.air2cool.com/service-areas/hackettstown" },
 };
 
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "name": "HVAC Services in Hackettstown, NJ",
-      "provider": {
-        "@id": "https://www.air2cool.com/#organization",
-      },
-      "areaServed": { "@type": "City", "name": "Hackettstown", "addressRegion": "NJ" },
-      "serviceType": "Heating Repair, AC Repair, Furnace Installation",
-      "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" },
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does Air2Cool service HVAC systems in Hackettstown NJ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — Hackettstown is part of our Warren County service area. We provide AC repair, heating service, and full HVAC installations throughout Hackettstown. Call (201) 787-5657.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Do you repair boilers in Hackettstown NJ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — we service and replace boilers throughout Warren County including Hackettstown. Same-day appointments may be available for heating emergencies depending on technician availability and current conditions. Our team has experience with NTI and many other major boiler brands.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "How far is Air2Cool from Hackettstown NJ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "About 25-30 minutes from our Wharton base. We serve Hackettstown regularly as part of our Warren County route, with same-day and emergency service available.",
-          },
-        },
-      ],
-    },
-  ],
-};
-
-const SERVICES = [
-  { name: "Heating Repair", href: "/services/heating-repair", desc: "Furnace, boiler & heat pump repair." },
-  { name: "Heating Installation", href: "/services/heating-installation", desc: "New furnace or boiler with warranty." },
-  { name: "AC Repair", href: "/services/ac-repair", desc: "Fast diagnosis for all makes and models." },
-  { name: "AC Installation", href: "/services/cooling-installation", desc: "Energy-efficient systems with 0% financing." },
-  { name: "Mini Split", href: "/services/mini-split", desc: "Ductless mini-split installs & service." },
-  { name: "Air Filtration", href: "/services/air-quality", desc: "Whole-home air purifiers & filters." },
-  { name: "Humidifiers", href: "/services/humidifier", desc: "Whole-home humidity control systems." },
-  { name: "Preventative Maintenance", href: "/services/preventative-maintenance", desc: "Seasonal tune-ups that help reduce breakdown risk." },
+const faqs = [
+  { q: "Does Air2Cool provide HVAC service in Hackettstown?", a: "Yes. Hackettstown is a priority community within Air2Cool's Warren County service area. We provide heating, cooling, boiler, installation, maintenance and applicable commercial HVAC and refrigeration service." },
+  { q: "Does Air2Cool repair and install boilers in Hackettstown?", a: "Yes. Air2Cool diagnoses, repairs, maintains and replaces applicable hydronic, steam, condensing and combination boiler systems. Our documented North Jersey project work includes NTI and Lochinvar boiler installations; no Hackettstown project location is implied unless specifically documented." },
+  { q: "Is emergency HVAC service available in Hackettstown?", a: `Air2Cool's emergency service line is available 24/7. ${RESPONSE_TIME_NOTE}` },
 ];
 
-const NEARBY = [
-  { name: "Washington", slug: "washington" },
-  { name: "Allamuchy", slug: "allamuchy" },
-  { name: "Mansfield", slug: "mansfield" },
-  { name: "Oxford", slug: "oxford" },
-];
+const schema = { "@context": "https://schema.org", "@graph": [
+  { "@type": "Service", "@id": "https://www.air2cool.com/service-areas/hackettstown#service", name: "Heating and Air Conditioning Services in Hackettstown, NJ", provider: { "@id": "https://www.air2cool.com/#organization" }, areaServed: { "@type": "City", name: "Hackettstown", addressRegion: "NJ" }, serviceType: ["Heating repair", "Boiler service", "AC repair", "HVAC installation", "Commercial HVAC service"], url: "https://www.air2cool.com/service-areas/hackettstown" },
+  { "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) },
+] };
+
+const services = [
+  ["Heating and furnace repair", "/services/heating-repair", "Diagnosis for furnaces, boilers, heat pumps and heating controls."],
+  ["Boiler maintenance", "/services/boiler-maintenance", "Equipment-specific maintenance for applicable hydronic and combi boilers."],
+  ["Heating installation", "/services/heating-installation", "Furnace and boiler replacement based on the approved project scope."],
+  ["AC repair", "/services/ac-repair", "Central-air diagnostics for airflow, electrical, controls and refrigerant-system concerns."],
+  ["Cooling installation", "/services/cooling-installation", "Central AC, heat-pump and matched-system replacement."],
+  ["Mini splits", "/services/mini-split", "Ductless equipment service and installation."],
+  ["Preventative maintenance", "/services/preventative-maintenance", "Residential system maintenance and eligible plan benefits."],
+  ["Commercial HVAC", "/services/commercial", "Mechanical service for applicable commercial equipment and facilities."],
+] as const;
 
 export default function HackettstownPage() {
-  return (
-    <>
-      <Script
-        id="schema-hackettstown"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <main className="bg-white">
+  return <main className="bg-white">
+    <Script id="schema-hackettstown" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    <section className="bg-slate-950 py-14 text-white md:py-20"><div className="mx-auto max-w-6xl px-6"><p className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-cyan-300"><MapPin className="h-4 w-4" />Hackettstown, Warren County</p><h1 className="max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">Heating &amp; Air Conditioning Services in Hackettstown, NJ</h1><p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-200">Air2Cool provides residential heating and cooling, boiler and hydronic service, installation, maintenance, commercial HVAC and refrigeration support in Hackettstown from our Wharton-based operation.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><Link href="/contact" className="inline-flex min-h-12 items-center justify-center bg-red-600 px-6 py-3 font-bold hover:bg-red-700">Request Service</Link><a href="tel:+12017875657" className="inline-flex min-h-12 items-center justify-center gap-2 border border-slate-500 px-6 py-3 font-bold hover:border-white"><Phone className="h-5 w-5" />Call (201) 787-5657</a></div><p className="mt-4 text-sm text-slate-400">24/7 emergency service is available. {RESPONSE_TIME_NOTE}</p></div></section>
 
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-14 md:py-20 relative overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-5"
-            style={{ backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`, backgroundSize: "40px 40px" }}
-          />
-          <div className="relative max-w-4xl mx-auto px-6 text-center">
-            <div className="inline-flex items-center gap-2 bg-blue-600/70 border border-blue-400/30 px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold mb-5">
-              <MapPin className="w-3.5 h-3.5" />
-              Warren County · 07840
-            </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight">
-              HVAC Service in Hackettstown, NJ
-            </h1>
-            <p className="text-base md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Air2Cool serves Hackettstown and all of Warren County for AC repair, heating service, and
-              full HVAC installations. Licensed &amp; insured under NJ Master HVACR License #19HC00847000, with 24/7 emergency service.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href="tel:+12017875657"
-                className="bg-red-600 hover:bg-red-700 text-white px-7 py-3.5 rounded-full font-bold text-lg transition-all shadow-xl inline-flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" /> Call (201) 787-5657
-              </a>
-              <Link
-                href="/contact"
-                className="bg-white/10 border border-white/30 hover:bg-white/20 text-white px-7 py-3.5 rounded-full font-semibold text-lg transition-all text-center"
-              >
-                Free Estimate
-              </Link>
-            </div>
-          </div>
-        </section>
+    <section className="py-12 md:py-16"><div className="mx-auto max-w-6xl px-6"><div className="max-w-3xl"><h2 className="text-3xl font-extrabold text-slate-950">HVAC repair and installation in Hackettstown</h2><p className="mt-4 leading-relaxed text-slate-700">A useful service call begins with the operating symptom and equipment configuration. Air2Cool evaluates heating and cooling equipment as a system, including airflow, electrical components, controls, drainage, venting, combustion, circulation and refrigerant performance where applicable. Repairs and replacement options are based on the diagnosis, equipment condition, compatibility and approved scope.</p></div><div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">{services.map(([title, href, copy]) => <Link key={title} href={href} className="border-t-4 border-blue-700 bg-slate-50 p-5 hover:bg-white hover:shadow-md"><h3 className="font-bold text-slate-950">{title}</h3><p className="mt-2 text-sm leading-relaxed text-slate-600">{copy}</p></Link>)}</div></div></section>
 
-        {/* Trust Bar */}
-        <section className="py-5 bg-blue-50 border-y border-blue-100">
-          <div className="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            {[
-              { value: "5.0 ★", label: "Google Rating" },
-              { value: "300+", label: "5-Star Reviews" },
-              { value: "Since 1998", label: "Family Owned" },
-              { value: "24/7", label: "Emergency Service" },
-            ].map((s) => (
-              <div key={s.label}>
-                <div className="text-lg md:text-2xl font-extrabold text-blue-900">{s.value}</div>
-                <div className="text-xs md:text-sm text-gray-600 font-medium">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </section>
+    <section className="bg-slate-100 py-12 md:py-16"><div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[1fr_1fr]"><div><p className="mb-2 text-sm font-bold uppercase tracking-widest text-orange-700">Boilers &amp; Hydronics</p><h2 className="text-3xl font-extrabold text-slate-950">NTI, condensing and conventional boiler experience</h2><p className="mt-4 leading-relaxed text-slate-700">Air2Cool works on applicable hydronic and steam boilers, high-efficiency condensing boilers, combi systems, controls and circulation components. Domestic-hot-water complaints in combi systems, ignition faults, venting concerns, circulation noise and uneven heating require equipment-specific diagnosis rather than a generic parts recommendation.</p><div className="mt-5 flex flex-wrap gap-x-6 gap-y-3 font-bold"><Link href="/brands/nti" className="text-blue-700 underline">NTI boiler service</Link><Link href="/services/heating-pump-services" className="text-blue-700 underline">Heating circulation pumps</Link><Link href="/projects" className="text-blue-700 underline">Boiler project evidence</Link></div></div><figure><Image src="/nti_wall_hung_boiler_install_with_primary_secondary_piping.webp" alt="Air2Cool NTI boiler installation with primary and secondary hydronic piping" width={900} height={675} className="aspect-4/3 w-full object-cover" /><figcaption className="mt-3 text-sm leading-relaxed text-slate-600">Air2Cool NTI boiler installation work in North Jersey. The photograph demonstrates equipment and piping experience and is not claimed as a Hackettstown project.</figcaption></figure></div></section>
 
-        {/* Intro */}
-        <section className="py-10 md:py-14 bg-white">
-          <div className="max-w-4xl mx-auto px-6">
-            <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Hackettstown is one of Warren County&apos;s main towns and a regular part of our service area west of Wharton. We serve Hackettstown for everything from routine AC tune-ups to emergency furnace repairs in winter. Air2Cool has served North Jersey since 1998 through its licensed HVACR operation.
-            </p>
-          </div>
-        </section>
+    <section className="py-12 md:py-16"><div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-2"><div><h2 className="text-3xl font-extrabold text-slate-950">Commercial HVAC and refrigeration</h2><p className="mt-3 leading-relaxed text-slate-700">Hackettstown businesses and property teams can request service for applicable rooftop units, packaged equipment, commercial heating and cooling, boilers, circulation systems, walk-in refrigeration, ice machines, condensing units, evaporators and compressors. Emergency repair and ongoing maintenance proposals follow separate request paths.</p><div className="mt-5 flex flex-wrap gap-4 font-bold"><Link href="/services/commercial" className="text-blue-700 underline">Commercial mechanical service</Link><Link href="/services/commercial-refrigeration" className="text-blue-700 underline">Commercial refrigeration</Link><Link href="/commercial-maintenance-request" className="text-blue-700 underline">Request a maintenance proposal</Link></div></div><div className="border-l-4 border-emerald-600 pl-6"><h2 className="text-2xl font-extrabold text-slate-950">Financing for qualifying customers</h2><p className="mt-3 leading-relaxed text-slate-700">{PROMOTIONS.financing} Program availability can vary by utility territory, equipment, project and current terms.</p><Link href="/financing" className="mt-4 inline-flex font-bold text-blue-700 underline">Review current financing information</Link></div></div></section>
 
-        {/* Main Content */}
-        <section className="py-10 md:py-14 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
-              Heating &amp; AC Service in Hackettstown, NJ
-            </h2>
-            <div className="text-sm md:text-base text-gray-700 space-y-5 leading-relaxed">
-              <p>
-                Hackettstown has a mix of older downtown housing stock and newer developments along the Route 46 corridor — and both present different HVAC service needs. The older homes near the center of town often have aging boilers or furnaces, original ductwork, and systems that were sized for a different era of energy efficiency. The newer builds along the Route 46 corridor tend to have more modern high-efficiency systems, but they still need regular maintenance and occasional repairs.
-              </p>
-              <p>
-                One thing that stands out about Hackettstown compared to our Morris County service areas: the town gets noticeably colder winters. Elevated terrain and exposure to western weather patterns mean <Link href="/services/heating-repair" className="text-blue-600 hover:underline">heating system reliability</Link> is critical here. We see more boiler and furnace service calls in Hackettstown during winter than in some of our other service areas, and we come prepared with the parts and experience to handle them. If your system has been struggling or making unusual sounds, don&apos;t wait for a complete failure — call us before the temperature drops.
-              </p>
-              <p>
-                The area around <strong>Centenary University</strong> is home to a mix of rental properties and smaller units where deferred maintenance is common. We&apos;re experienced in servicing these properties efficiently and getting systems back online quickly, whether you&apos;re a homeowner, a landlord, or a property manager.
-              </p>
-              <p>
-                For new <Link href="/services/heating-installation" className="text-blue-600 hover:underline">heating system installations</Link>, we carry Lochinvar, NTI, and Weil-McLain boilers along with major furnace brands. We&apos;ll size the system properly for your home using Manual J load calculations — no guesswork, no oversizing — and include proper permits and final inspections.
-              </p>
-            </div>
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <Link
-                href="/services/heating-repair"
-                className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold text-sm transition-colors"
-              >
-                <Wrench className="w-4 h-4" /> Heating Repair
-              </Link>
-              <Link
-                href="/services/heating-installation"
-                className="inline-flex items-center justify-center gap-2 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full font-semibold text-sm transition-colors"
-              >
-                New Heating System
-              </Link>
-            </div>
-          </div>
-        </section>
+    <section className="bg-slate-100 py-12"><div className="mx-auto max-w-6xl px-6"><h2 className="text-3xl font-extrabold text-slate-950">Hackettstown and nearby service areas</h2><p className="mt-3 max-w-3xl leading-relaxed text-slate-700">Hackettstown is linked to Air2Cool&apos;s wider Warren County and western North Jersey coverage. These pages describe service areas, not separate company locations.</p><div className="mt-6 flex flex-wrap gap-3">{[["Warren County", "warren-county"], ["Blairstown", "blairstown"], ["Allamuchy", "allamuchy"], ["Mansfield", "mansfield"], ["Washington", "washington"], ["Mount Olive", "mount-olive"], ["Long Valley", "long-valley"]].map(([name, slug]) => <Link key={slug} href={`/service-areas/${slug}`} className="border border-slate-300 bg-white px-4 py-2 text-sm font-bold text-blue-800 hover:border-blue-700">{name}</Link>)}</div></div></section>
 
-        {/* Services Grid */}
-        <section className="py-10 md:py-14 bg-white">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 text-center mb-3">
-              All HVAC Services in Hackettstown
-            </h2>
-            <p className="text-center text-gray-500 mb-8 text-sm md:text-base">
-            Service for many major brands. Licensed &amp; insured — NJ Master HVACR License #19HC00847000.
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {SERVICES.map((s) => (
-                <Link
-                  key={s.name}
-                  href={s.href}
-                  className="group border border-gray-200 rounded-xl p-4 hover:border-blue-500 hover:shadow-md transition-all bg-white"
-                >
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                    <div>
-                      <div className="font-bold text-sm text-gray-900 group-hover:text-blue-700 transition-colors">
-                        {s.name}
-                      </div>
-                      <div className="text-xs text-gray-500 mt-1">{s.desc}</div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why Hackettstown Residents Choose Air2Cool */}
-        <section className="py-10 md:py-14 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 text-center mb-8">
-              Why Hackettstown Residents Choose Air2Cool
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: <Clock className="w-6 h-6 text-red-600" />,
-                  title: "24/7 Emergency Heating",
-                  body: "Hackettstown winters are no joke. We answer emergency calls around the clock — day, night, weekends, holidays.",
-                },
-                {
-                  icon: <Wrench className="w-6 h-6 text-blue-600" />,
-                  title: "Boiler Specialists",
-                  body: "Experience with NTI and other major boiler brands, including hydronic, steam, and modern condensing systems.",
-                },
-                {
-                  icon: <Star className="w-6 h-6 text-yellow-500" />,
-                  title: "300+ Five-Star Reviews",
-                  body: "Real customers across Morris and Warren County. Check Google before you call.",
-                },
-                {
-                  icon: <Shield className="w-6 h-6 text-green-600" />,
-                  title: "Licensed & Insured",
-                  body: "Air2Cool operates under NJ Master HVACR License #19HC00847000, with work performed through its licensed HVACR operation by trained technicians.",
-                },
-                {
-                  icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-                  title: "0% Financing Up to $25,000",
-                  body: "0% APR financing is available up to $25,000 for qualifying customers, subject to eligibility, approval, and applicable program terms.",
-                },
-                {
-                  icon: <MapPin className="w-6 h-6 text-purple-600" />,
-                  title: "25-30 Min From Wharton",
-                  body: "Family-owned in Wharton, NJ — we serve Hackettstown regularly as part of our Warren County route.",
-                },
-              ].map((item) => (
-                <div key={item.title} className="flex gap-4 items-start">
-                  <div className="shrink-0 w-11 h-11 bg-gray-100 border border-gray-200 rounded-xl flex items-center justify-center">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900 mb-1 text-sm md:text-base">{item.title}</div>
-                    <div className="text-xs md:text-sm text-gray-600">{item.body}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-10 md:py-14 bg-white">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
-              Frequently Asked Questions — HVAC in Hackettstown, NJ
-            </h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "Does Air2Cool service HVAC systems in Hackettstown NJ?",
-                  a: "Yes — Hackettstown is part of our Warren County service area. We provide AC repair, heating service, and full HVAC installations throughout Hackettstown. Call (201) 787-5657 for same-day appointments.",
-                },
-                {
-                  q: "Do you repair boilers in Hackettstown NJ?",
-                  a: "Yes — we service and replace boilers throughout Warren County including Hackettstown. Same-day appointments may be available for heating emergencies depending on technician availability and current conditions. Our team has experience with NTI, Weil-McLain, Burnham, Buderus, and other major boiler brands.",
-                },
-                {
-                  q: "How far is Air2Cool from Hackettstown NJ?",
-                  a: "About 25-30 minutes from our Wharton base. We serve Hackettstown regularly as part of our Warren County route. Emergency calls are prioritized and we'll get there as fast as possible.",
-                },
-              ].map((item) => (
-                <div key={item.q} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
-                  <h3 className="font-bold text-gray-900 mb-2 text-sm md:text-base">{item.q}</h3>
-                  <p className="text-sm text-gray-700 leading-relaxed">{item.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Nearby Areas */}
-        <section className="py-10 md:py-14 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
-              Nearby Areas We Also Serve
-            </h2>
-            <p className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed">
-              Air2Cool serves all of Warren County and the surrounding region. If you&apos;re in Washington, Allamuchy, Mansfield, or Oxford, we&apos;re your HVAC company too.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {NEARBY.map(({ name, slug }) => (
-                <Link
-                  key={slug}
-                  href={`/service-areas/${slug}`}
-                  className="text-xs bg-white border border-blue-200 px-3 py-1.5 rounded-full text-blue-700 hover:bg-blue-50 transition-colors"
-                >
-                  {name}
-                </Link>
-              ))}
-              <Link
-                href="/service-areas/warren-county"
-                className="text-xs bg-white border border-blue-200 px-3 py-1.5 rounded-full text-blue-700 hover:bg-blue-50 transition-colors"
-              >
-                Warren County →
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-12 md:py-16 bg-gradient-to-r from-blue-700 to-blue-600 text-white">
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <h2 className="text-2xl md:text-4xl font-extrabold mb-4">
-              Need HVAC Service in Hackettstown?
-            </h2>
-            <p className="text-blue-100 mb-8 text-base md:text-lg">
-              Call us or request a free estimate online — Warren County&apos;s trusted HVAC company since 1998.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href="tel:+12017875657"
-                className="bg-white text-blue-700 px-7 py-3.5 rounded-full font-bold text-lg hover:bg-gray-50 transition shadow-lg inline-flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" /> (201) 787-5657
-              </a>
-              <Link
-                href="/contact"
-                className="bg-white/10 border-2 border-white/40 text-white px-7 py-3.5 rounded-full font-semibold text-lg hover:bg-white/20 transition text-center"
-              >
-                Request Free Estimate
-              </Link>
-            </div>
-            <p className="mt-5 text-blue-200 text-sm">
-              Also serving: Washington · Allamuchy · Mansfield · Oxford · all of Warren County
-            </p>
-            <p className="mt-2 text-blue-300 text-xs">
-              <Link href="/service-areas" className="underline hover:text-white">
-                ← View all service areas
-              </Link>
-            </p>
-          </div>
-        </section>
-
-      </main>
-    </>
-  );
+    <section className="py-12"><div className="mx-auto max-w-4xl px-6"><h2 className="text-3xl font-extrabold text-slate-950">Hackettstown HVAC questions</h2><div className="mt-6 divide-y divide-slate-200 border-y border-slate-200">{faqs.map((faq) => <div key={faq.q} className="py-5"><h3 className="font-bold text-slate-950">{faq.q}</h3><p className="mt-2 leading-relaxed text-slate-700">{faq.a}</p></div>)}</div></div></section>
+  </main>;
 }

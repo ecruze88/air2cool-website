@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "HVAC Service in Bound Brook NJ | AC & Heating Repair | Air2Cool | (201) 787-5657",
   description:
-    "Air2Cool provides AC repair, furnace & boiler repair, and HVAC installation in Bound Brook, NJ (Somerset County). Same-day service. Family-owned since 1998. Call (201) 787-5657.",
+    "Air2Cool provides AC repair, furnace and boiler repair, and HVAC installation in Bound Brook, NJ. Family-owned since 1998. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/bound-brook",
   },

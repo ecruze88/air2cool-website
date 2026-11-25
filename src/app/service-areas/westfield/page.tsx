@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "HVAC Service in Westfield NJ | AC & Heating Repair | Air2Cool | (201) 787-5657",
   description:
-    "Air2Cool provides AC repair, furnace & boiler repair, and HVAC installation in Westfield, NJ (Union County). Same-day service. Family-owned since 1998. Call (201) 787-5657.",
+    "Air2Cool provides AC repair, furnace and boiler repair, and HVAC installation in Westfield, NJ. Family-owned since 1998. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/westfield",
   },
@@ -114,7 +114,7 @@ export default function WestfieldPage() {
           </h2>
           <div className="text-sm md:text-base text-gray-700 space-y-4 leading-relaxed">
             <p>
-              Westfield is one of Union County's most desirable communities, known for its vibrant downtown along Elm Street, excellent schools, and beautiful residential neighborhoods filled with Colonial, Tudor, and Victorian-style homes. Many of these properties — particularly those near Mindowaskin Park, in the Garden District, and along the tree-lined streets north of the train station — have older, complex HVAC systems including steam boilers, hydronic baseboard heat, and aging central air equipment that demands experienced, knowledgeable care.
+              Westfield is one of Union County&apos;s most desirable communities, known for its vibrant downtown along Elm Street, excellent schools, and beautiful residential neighborhoods filled with Colonial, Tudor, and Victorian-style homes. Many of these properties — particularly those near Mindowaskin Park, in the Garden District, and along the tree-lined streets north of the train station — have older, complex HVAC systems including steam boilers, hydronic baseboard heat, and aging central air equipment that demands experienced, knowledgeable care.
             </p>
             <p>
               Air2Cool Heating &amp; Cooling has served Westfield and Union County since 1998. Our trained technicians work through Air2Cool&apos;s licensed HVACR operation on systems ranging from vintage steam radiators to modern heat pumps and ductless mini-splits. Same-day appointments may be available depending on technician availability and current conditions, and 24/7 emergency HVAC service is available.
@@ -153,7 +153,7 @@ export default function WestfieldPage() {
               },
               {
                 q: "What Union County towns do you serve near Westfield?",
-                a: "We serve all of Union County, including Cranford, Scotch Plains, Clark, Mountainside, Summit, Springfield, and Garwood. We also extend into Morris County, Somerset County, and throughout North NJ. Call (201) 787-5657 any time for same-day service or a free estimate.",
+                a: "We serve Union County communities including Cranford, Scotch Plains, Clark, Mountainside, Summit, Springfield, and Garwood. We also extend into Morris County, Somerset County, and throughout North Jersey. Call (201) 787-5657 to discuss scheduling or request an estimate.",
               },
             ].map((item, idx) => (
               <div key={idx} className="bg-gray-50 rounded-2xl p-6 border border-gray-200">

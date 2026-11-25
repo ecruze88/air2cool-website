@@ -424,17 +424,30 @@ export const BRANDS: readonly BrandProfile[] = [
     commercial: true,
     refrigeration: false,
     boilerHydronic: true,
-    equipmentTypes: ["Hydronic boilers", "Combination boilers", "Boiler controls and circulators"],
-    relatedServices: BOILER_LINKS,
+    equipmentTypes: name === "NTI"
+      ? ["NTI hydronic boilers", "NTI combination boilers", "Applicable NTI TRX equipment", "Boiler controls and circulators"]
+      : ["Hydronic boilers", "Combination boilers", "Boiler controls and circulators"],
+    relatedServices: name === "NTI" ? [
+      ...BOILER_LINKS,
+      { label: "Warren County service", href: "/service-areas/warren-county" },
+      { label: "Hackettstown service", href: "/service-areas/hackettstown" },
+      { label: "Blairstown service", href: "/service-areas/blairstown" },
+    ] : BOILER_LINKS,
     relatedProjects: name === "NTI" || name === "Lochinvar" ? [{ label: `${name} boiler projects`, href: "/projects" }] : [],
     relatedRefrigerants: [],
     publicVisible: true,
     indexed: true,
-    summary: `Air2Cool provides equipment-specific maintenance and service for applicable ${name} boiler and hydronic heating equipment in North Jersey. Model and application determine the service scope.`,
-    seoTitle: `${name} Boiler Maintenance & Service North Jersey`,
-    seoDescription: `${name} boiler maintenance and equipment-specific service in Morris County and North Jersey. Request a proposal from Air2Cool.`,
-    headline: `${name} Boiler Maintenance & Service`,
-    serviceOverview: [
+    summary: name === "NTI"
+      ? "Air2Cool repairs, maintains and installs applicable NTI hydronic and combination boiler equipment in North Jersey, with documented NTI installation photography. Model and application determine the service scope."
+      : `Air2Cool provides equipment-specific maintenance and service for applicable ${name} boiler and hydronic heating equipment in North Jersey. Model and application determine the service scope.`,
+    seoTitle: name === "NTI" ? "NTI Boiler Repair, Maintenance & Installation North Jersey" : `${name} Boiler Maintenance & Service North Jersey`,
+    seoDescription: name === "NTI" ? "NTI boiler repair, maintenance and installation for applicable hydronic, combi and TRX equipment in Morris, Warren and North Jersey. Air2Cool project experience." : `${name} boiler maintenance and equipment-specific service in Morris County and North Jersey. Request a proposal from Air2Cool.`,
+    headline: name === "NTI" ? "NTI Boiler Repair, Maintenance & Installation" : `${name} Boiler Maintenance & Service`,
+    serviceOverview: name === "NTI" ? [
+      "Air2Cool repairs, maintains and installs applicable NTI hydronic and combination boiler systems for North Jersey homes and commercial properties. Documented company project photography includes completed NTI installations and primary/secondary hydronic piping.",
+      "NTI boiler diagnosis can include controls, ignition, combustion, venting, condensate, circulation and system demand. For combination equipment, domestic-hot-water operation is considered alongside space-heating performance.",
+      "Applicable NTI TRX equipment is serviced according to the model, configuration, condition and manufacturer requirements. Air2Cool does not claim factory authorization or coverage of every model.",
+    ] : [
       `Air2Cool services applicable ${name} hydronic and boiler equipment for North Jersey homes and commercial properties.`,
       "The model number, system configuration, operating condition and manufacturer requirements determine the inspection, cleaning and testing scope.",
       "Scheduled maintenance is separate from diagnosis and corrective repair of an existing fault.",
@@ -447,6 +460,7 @@ export const BRANDS: readonly BrandProfile[] = [
     commonProblems: [
       { title: "Boiler does not heat as expected", description: "Controls, ignition, combustion, circulation, venting and system demand can produce similar symptoms and require equipment-specific diagnosis." },
       { title: "Uneven heat or circulation noise", description: "Circulators, valves, controls, air in the system and distribution conditions should be evaluated before a pump or component is condemned." },
+      ...(name === "NTI" ? [{ title: "Combi boiler domestic-hot-water concern", description: "Flow sensing, controls, heat-exchanger condition, valves, temperature settings and system demand may affect domestic-hot-water performance in applicable NTI combination systems." }] : []),
     ],
     replacementGuidance: [
       "Corrective repair may be appropriate when the fault is identified, supported parts are available and the remaining equipment is serviceable.",

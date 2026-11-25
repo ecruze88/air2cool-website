@@ -41,7 +41,7 @@ const schema = {
           "name": "Can you service older HVAC systems in Sparta NJ lake homes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — we work on all makes, models, and ages of equipment including older systems common in Sparta's lake communities. Our technicians carry parts for most common brands and can often complete repairs same-day.",
+            "text": "We service many major HVAC brands and diagnose older as well as newer equipment. Repair timing and parts availability depend on the system, diagnosis, and current inventory.",
           },
         },
         {
@@ -163,7 +163,7 @@ export default function SpartaPage() {
                 <Link href="/services/mini-split" className="text-blue-600 hover:underline">Ductless mini splits</Link> have become increasingly popular in Sparta for lake homes and property additions where running new ductwork isn&apos;t practical. Whether it&apos;s a sunroom addition, a converted cottage, or a home that simply never had central air, mini splits offer an efficient solution that handles both heating and cooling without major renovation work. Modern units are rated for cold-weather operation and hold up well in Sussex County winters.
               </p>
               <p>
-                For <Link href="/services/ac-repair" className="text-blue-600 hover:underline">AC repair</Link>, we service all major brands and carry common parts on our trucks for same-day repairs when possible. Sparta is a regular stop on our Sussex County route — call in the morning and we can often have someone there the same day.
+                For <Link href="/services/ac-repair" className="text-blue-600 hover:underline">AC repair</Link>, we service many major brands. Repair timing and parts availability depend on the equipment, diagnosis, technician availability, and current inventory.
               </p>
             </div>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -277,11 +277,11 @@ export default function SpartaPage() {
               {[
                 {
                   q: "Does Air2Cool service homes in Sparta NJ?",
-                  a: "Yes — we serve Sparta Township in Sussex County including the Lake Mohawk community for AC repair, heating service, and mini split installations. Call (201) 787-5657 for same-day service.",
+                  a: "Yes — we serve Sparta Township in Sussex County, including the Lake Mohawk community, for AC repair, heating service, and mini split installations. Call (201) 787-5657 to discuss scheduling.",
                 },
                 {
                   q: "Can you service older HVAC systems in Sparta NJ lake homes?",
-                  a: "Yes — we work on all makes, models, and ages of equipment including the older systems common in Sparta's lake communities. Our technicians carry parts for most common brands and can often complete repairs same-day.",
+                  a: "We service many major HVAC brands and diagnose older as well as newer equipment. Repair timing and parts availability depend on the system, diagnosis, and current inventory.",
                 },
                 {
                   q: "Do you install mini splits in Sparta NJ?",

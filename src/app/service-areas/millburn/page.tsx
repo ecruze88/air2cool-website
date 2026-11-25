@@ -6,7 +6,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "AC Repair & Replacement Millburn NJ | Air2Cool HVAC",
   description:
-    "Fast AC repair and replacement in Millburn and Short Hills NJ. Air2Cool serves Millburn with same-day AC service, free estimates, and 0% financing. Call (201) 787-5657.",
+    "AC repair and replacement in Millburn and Short Hills NJ. Air2Cool provides HVAC service and financing options for qualifying customers. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/millburn",
   },
@@ -120,7 +120,7 @@ export default function MillburnPage() {
                 Air2Cool serves Millburn and the Short Hills area for <strong>AC repair</strong>,{" "}
                 <strong>AC replacement</strong>, and full HVAC installation. Whether your system is
                 struggling to keep up on a humid summer day or has stopped working entirely, our licensed
-                master technicians respond fast — often the same day you call.
+                trained technicians provide service based on availability and current conditions.
               </p>
               <p>
                 Millburn&apos;s older homes and larger properties — including many of the estate-style
@@ -131,7 +131,7 @@ export default function MillburnPage() {
                 honest assessment of whether repair or replacement makes more financial sense.
               </p>
               <p>
-                For <strong>same-day AC repair in Millburn</strong>, call{" "}
+                For <strong>AC repair in Millburn</strong>, call{" "}
                 <a href="tel:+12017875657" className="text-blue-600 hover:underline font-semibold">
                   (201) 787-5657
                 </a>{" "}

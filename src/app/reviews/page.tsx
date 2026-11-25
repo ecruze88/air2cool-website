@@ -57,7 +57,7 @@ export default function ReviewsPage() {
                   Had a Great Experience?
                 </h2>
                 <p className="text-sm md:text-base text-gray-600 mb-5 md:mb-6">
-                  We'd love to hear about it! Your feedback helps us improve and helps your neighbors find reliable HVAC service.
+                  We&apos;d love to hear about it! Your feedback helps us improve and helps your neighbors find reliable HVAC service.
                 </p>
 
                 <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 justify-center">
@@ -112,7 +112,7 @@ export default function ReviewsPage() {
             Ready to Experience the Air2Cool Difference?
           </h2>
           <p className="text-base md:text-lg text-blue-100 mb-6 md:mb-8">
-            Join hundreds of satisfied North Jersey homeowners. Get a free estimate or call us now for same-day service.
+            Join hundreds of satisfied North Jersey homeowners. Request an estimate or call to discuss scheduling.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

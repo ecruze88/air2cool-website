@@ -284,8 +284,7 @@ export default function KinnelonPage() {
               </p>
               <p>
                 Air2Cool Heating &amp; Cooling has been serving Kinnelon residents since 1998. Based in
-                Wharton, approximately 20–25 minutes away, we offer same-day service for most requests and
-                emergency response around the clock. Whether you need a quick repair or a full system
+                Wharton, we offer scheduling based on technician availability and a 24/7 emergency line. Whether you need a repair or a full system
                 replacement, we perform a <strong>Manual J load calculation</strong> on every job to make
                 sure the system we recommend is properly sized for your specific home — not just a match
                 for whatever was there before.

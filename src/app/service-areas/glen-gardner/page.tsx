@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "HVAC Service in Glen Gardner NJ | AC & Heating Repair | Air2Cool | (201) 787-5657",
   description:
-    "Air2Cool provides AC repair, furnace & boiler repair, and HVAC installation in Glen Gardner, NJ (Hunterdon County). Same-day service. Family-owned since 1998. Call (201) 787-5657.",
+    "Air2Cool provides AC repair, furnace and boiler repair, and HVAC installation in Glen Gardner, NJ. Family-owned since 1998. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/glen-gardner",
   },
@@ -117,7 +117,7 @@ export default function GlenGardnerPage() {
               Glen Gardner is a quiet borough tucked into the rolling hills of western Hunterdon County, situated along the South Branch of the Raritan River between High Bridge and Califon. The area is known for its historic rural character, with farmhouses, older Colonial-era homes, and residential properties that often feature aging heating systems — including oil furnaces, steam radiators, and hydronic boilers — that require experienced care. Air2Cool&apos;s trained technicians service these systems through our licensed HVACR operation.
             </p>
             <p>
-              Whether you're dealing with a no-heat emergency on a cold Hunterdon County night or your central AC isn't keeping up during a summer heat wave, Air2Cool is your local HVAC expert. We offer same-day service throughout Glen Gardner, High Bridge, Lebanon, Hampton, Califon, and surrounding areas. Our 24/7 emergency line means you're never left waiting when it matters most. We also handle complete HVAC system replacements with 0% financing available, making it easy to upgrade an old, inefficient system without a major upfront cost.
+              Whether you&apos;re dealing with a no-heat emergency or your central AC is not keeping up, Air2Cool serves Glen Gardner, High Bridge, Lebanon, Hampton, Califon, and surrounding areas. Our emergency line is available 24/7, with response timing based on technician availability and current conditions. We also handle complete HVAC system replacements, with financing available for qualifying customers subject to approval and program terms.
             </p>
             <p>
               As a family-owned company based in nearby Wharton, NJ, we treat every Glen Gardner home like our own — honest pricing, quality workmanship, and no unnecessary upselling. Learn more about our service coverage on the{" "}
@@ -148,7 +148,7 @@ export default function GlenGardnerPage() {
             {[
               {
                 q: "Do you offer same-day AC repair in Glen Gardner, NJ?",
-                a: "Yes. Air2Cool offers same-day AC repair in Glen Gardner and throughout Hunterdon County. Call (201) 787-5657 early in the day and we'll do our best to dispatch a technician the same day. For after-hours emergencies, our line is open 24/7.",
+                a: "Air2Cool provides AC repair in Glen Gardner and throughout Hunterdon County. Appointment timing depends on technician availability and current conditions, and our emergency line is open 24/7.",
               },
               {
                 q: "Can you service oil furnaces and older boilers in Glen Gardner?",

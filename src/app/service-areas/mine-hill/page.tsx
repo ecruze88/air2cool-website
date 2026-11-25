@@ -6,7 +6,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "HVAC Service Mine Hill NJ | AC & Heating Repair | Air2Cool",
   description:
-    "HVAC service in Mine Hill NJ — right next door to our Wharton base. Air2Cool provides same-day AC repair, furnace service, and installations in Mine Hill. Call (201) 787-5657.",
+    "HVAC service in Mine Hill NJ near Air2Cool's Wharton base. AC repair, furnace service, and HVAC installation. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/mine-hill",
   },
@@ -93,7 +93,7 @@ export default function MineHillPage() {
               HVAC Service in Mine Hill, NJ
             </h1>
             <p className="text-base md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Air2Cool serves Mine Hill from our Wharton base — right next door. Same-day AC repair,
+              Air2Cool serves Mine Hill from our nearby Wharton base. AC repair,
               furnace service, and full HVAC installations. 24/7 emergency response.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

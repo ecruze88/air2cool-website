@@ -68,6 +68,7 @@ const nextConfig: NextConfig = {
       { source: '/locations/sussex-county',          destination: '/service-areas/sussex-county',      permanent: true },
       { source: '/request-estimate-form',            destination: '/contact',                            permanent: true },
       { source: '/heating-system-repair-services',   destination: '/services/heating-repair',            permanent: true },
+      { source: '/heating/repair',                   destination: '/services/heating-repair',            permanent: true },
       { source: '/air-filtration-system-installation', destination: '/services/air-quality',            permanent: true },
       { source: '/what-to-do-if-your-heater-is-not-working', destination: '/services/heating-repair',   permanent: true },
       { source: '/locations/warren-county',           destination: '/service-areas/warren-county',        permanent: true },

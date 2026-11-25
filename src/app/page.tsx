@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Offers from "@/components/Offers";
 import SizingTool from "@/components/SizingTool";
+import Image from "next/image";
 import Link from "next/link";
 import { Flame, Snowflake, Zap, Wind, Wrench, Thermometer, Phone, Star, Award, DollarSign, CheckCircle, Droplets, AlertTriangle } from "lucide-react";
 import { COMPANY } from "@/config/company";
@@ -10,7 +11,7 @@ import { ACTIVE_SEASONAL_CONTENT, orderBySeasonalPriority } from "@/config/seaso
 export const metadata: Metadata = {
   title: "HVAC Contractor Morris County NJ | Air2Cool Heating & Cooling",
   description:
-    "Air2Cool is a heating, cooling and refrigeration contractor based in Wharton and serving Morris County and North Jersey since 1998. Call (201) 787-5657.",
+    "Air2Cool is a heating, cooling and refrigeration contractor based in Wharton and serving Morris County, Warren County and North Jersey since 1998. Call (201) 787-5657.",
   alternates: { canonical: "/" },
 };
 
@@ -194,11 +195,9 @@ export default function HomePage() {
               Based in Wharton, NJ &bull; Serving Morris County &amp; North Jersey Since 1998
             </p>
 
-            <h1 className="text-4xl font-extrabold text-white leading-[1.08] mb-5 md:hidden">
-              Heating &amp; HVAC Service in North Jersey
-            </h1>
-            <h1 className="hidden md:block md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] md:mb-6">
-              {ACTIVE_SEASONAL_CONTENT.heroHeading}
+            <h1 className="font-extrabold text-white leading-[1.08] mb-5 md:mb-6">
+              <span className="block text-4xl md:hidden">Heating &amp; HVAC Service in North Jersey</span>
+              <span className="hidden md:block md:text-6xl lg:text-7xl">{ACTIVE_SEASONAL_CONTENT.heroHeading}</span>
             </h1>
 
             <p className="text-base text-gray-100 max-w-md leading-relaxed mb-6 md:hidden">
@@ -228,9 +227,9 @@ export default function HomePage() {
 
             <a
               href={COMPANY.phone.href}
-              className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-blue-100 hover:text-white underline underline-offset-4 md:hidden"
+              className="inline-flex flex-col items-start gap-0.5 mt-4 text-sm font-semibold text-blue-100 hover:text-white underline underline-offset-4 sm:flex-row sm:items-center sm:gap-1.5 md:hidden"
             >
-              Call {COMPANY.phone.display} <span aria-hidden="true">&middot;</span> 24/7 Emergency Service
+              <span>Call {COMPANY.phone.display}</span><span className="hidden sm:inline" aria-hidden="true">&middot;</span><span>24/7 Emergency Service</span>
             </a>
 
             <a
@@ -291,7 +290,7 @@ export default function HomePage() {
               "Save $500 on qualifying furnace installations",
               "High-efficiency furnaces save on gas bills",
               "0% financing up to $25,000 for qualifying customers, subject to approval and program terms",
-              "Up to 10-year warranties",
+              "Manufacturer warranty terms vary by equipment and application",
             ],
             ctaLabel: "Get Free Estimate",
             ctaHref: "/contact",
@@ -411,9 +410,11 @@ export default function HomePage() {
         <section className="mb-12 bg-gradient-to-r from-green-50 to-blue-50 px-4 py-8 md:px-6 md:py-12">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 max-w-5xl mx-auto">
             <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 text-center md:text-left rounded-2xl shadow-lg border-2 border-green-200">
-              <img
+              <Image
                 src="/neighborhood-fave-2025.webp"
                 alt="Nextdoor Neighborhood Fave 2025 badge"
+                width={112}
+                height={112}
                 className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
               />
               <div>
@@ -423,9 +424,11 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col md:flex-row items-center md:gap-3 bg-white px-3 md:px-4 py-3 text-center md:text-left rounded-2xl shadow-lg border-2 border-blue-200">
-              <img
+              <Image
                 src="/wharton-little-league.png"
                 alt="Wharton Little League logo"
+                width={1536}
+                height={1024}
                 className="w-20 h-20 md:w-28 md:h-28 md:scale-[1.3] object-contain shrink-0 mb-2 md:mb-0"
               />
               <div>
@@ -435,9 +438,11 @@ export default function HomePage() {
             </div>
 
             <div className="col-span-2 lg:col-span-1 flex flex-col overflow-hidden bg-white rounded-2xl shadow-lg border-2 border-amber-200">
-              <img
+              <Image
                 src="/headstart_community_program_group_photo_indoor_event.webp"
                 alt="Air2Cool recognized by NJ Board of Public Utilities President Christine Guhl-Sadovy at Head Start Community Program Dover NJ"
+                width={1200}
+                height={800}
                 className="w-full h-40 object-cover"
               />
               <div className="px-3 md:px-4 py-3 flex flex-col items-center text-center">
@@ -718,9 +723,11 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
               {/* Image - Truck with Google 5-star badge */}
               <div className="order-2 lg:order-1">
-                <img
+                <Image
                   src="/side-truck.jpg"
                   alt="Air2Cool HVAC service truck - Google 5-star rated contractor serving North New Jersey"
+                  width={4032}
+                  height={3024}
                   className="rounded-2xl shadow-2xl w-full"
                 />
                 <p className="text-center text-sm text-gray-600 mt-4 italic">
@@ -790,10 +797,14 @@ export default function HomePage() {
                   Service Areas
                 </h2>
                 <p className="mt-3 text-gray-700 max-w-3xl leading-relaxed">
-                  Proudly serving Morris, Essex, Passaic, Bergen, Sussex, Warren, Hunterdon, Somerset, and Union County.
+                  Based in Wharton and serving Morris County, Warren County, Sussex County and surrounding North Jersey communities.
                 </p>
 
-                <div className="mt-6">
+                <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3">
+                  <Link href="/service-areas/morris-county" className="font-semibold text-brand-blue hover:underline">Morris County HVAC service</Link>
+                  <Link href="/service-areas/warren-county" className="font-semibold text-brand-blue hover:underline">Warren County HVAC service</Link>
+                  <Link href="/service-areas/hackettstown" className="font-semibold text-brand-blue hover:underline">Hackettstown</Link>
+                  <Link href="/service-areas/blairstown" className="font-semibold text-brand-blue hover:underline">Blairstown</Link>
                   <Link
                     href="/service-areas"
                     className="inline-flex items-center text-brand-blue font-semibold hover:underline"

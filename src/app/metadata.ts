@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     
     // Long-tail Keywords
     "24/7 emergency HVAC repair NJ",
-    "same day AC repair Morris County",
+    "AC repair Morris County",
     "affordable furnace installation North NJ",
     "licensed HVAC contractor Morris County",
     "family owned HVAC company NJ",

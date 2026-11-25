@@ -282,8 +282,8 @@ export default function MountOlivePage() {
               <p>
                 Air2Cool Heating &amp; Cooling has been the trusted HVAC contractor for Mount Olive Township
                 since 1998. Whether you&apos;re in Budd Lake, Flanders, or the Netcong border area, we
-                dispatch from nearby Wharton and can often provide same-day service even for routine
-                maintenance requests during the busy season.
+                dispatch from nearby Wharton. Appointment timing depends on technician availability,
+                call volume, and current service conditions.
               </p>
               <p>
                 We also serve nearby{" "}

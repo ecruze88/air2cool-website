@@ -125,7 +125,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-base md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Fast Response</h3>
               <p className="text-xs md:text-base text-gray-600">
-                Same-day service. 24/7 emergency response.
+                Scheduling based on technician availability. 24/7 emergency line.
               </p>
             </div>
           </div>

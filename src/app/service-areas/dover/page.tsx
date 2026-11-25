@@ -6,7 +6,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "HVAC Service Dover NJ | AC Repair & Heating | Air2Cool",
   description:
-    "AC repair and heating service in Dover NJ. Air2Cool is based just minutes away in Wharton and has served Dover since 1998. Same-day service. Call (201) 787-5657.",
+    "AC repair and heating service in Dover NJ. Air2Cool is based in neighboring Wharton and has served Morris County since 1998. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/dover",
   },
@@ -94,7 +94,7 @@ export default function DoverPage() {
             </h1>
             <p className="text-base md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
               Air2Cool has served Dover since 1998 — we&apos;re neighboring towns, based in Wharton just
-              minutes away. Same-day service and 24/7 emergency response.
+              minutes away. Our 24/7 emergency line serves heating and cooling calls.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a

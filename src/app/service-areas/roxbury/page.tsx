@@ -6,7 +6,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "HVAC Service Roxbury NJ | AC Repair & Heating | Air2Cool",
   description:
-    "HVAC repair and installation in Roxbury NJ. Air2Cool serves Succasunna, Ledgewood, and all of Roxbury Township. Same-day service from our Wharton base. Call (201) 787-5657.",
+    "HVAC repair and installation in Roxbury NJ. Air2Cool serves Succasunna, Ledgewood, and Roxbury Township from its Wharton base. Call (201) 787-5657.",
   alternates: {
     canonical: "https://www.air2cool.com/service-areas/roxbury",
   },
@@ -49,7 +49,7 @@ const schema = {
           "name": "How quickly can Air2Cool respond in Roxbury Township?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We're based in Wharton — most Roxbury Township addresses are 10–20 minutes away. Emergency calls are available 24/7 and we prioritize same-day response.",
+            "text": "We're based in Wharton and serve Roxbury Township. Our emergency line is available 24/7; response timing depends on technician availability and current conditions.",
           },
         },
       ],
@@ -94,7 +94,7 @@ export default function RoxburyPage() {
             </h1>
             <p className="text-base md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
               Air2Cool serves all of Roxbury Township — Succasunna, Ledgewood, Landing, and the Lake
-              Hopatcong area. Based in Wharton, we deliver same-day service and 24/7 emergency response.
+              Hopatcong area. Based in Wharton, we provide a 24/7 emergency line.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
@@ -337,7 +337,7 @@ export default function RoxburyPage() {
                 },
                 {
                   q: "How quickly can Air2Cool respond in Roxbury Township?",
-                  a: "We're based in Wharton — most Roxbury Township addresses are 10–20 minutes away. Emergency calls are available 24/7 and we prioritize same-day response.",
+                  a: "We're based in Wharton and serve Roxbury Township. Our emergency line is available 24/7; response timing depends on technician availability and current conditions.",
                 },
               ].map((item) => (
                 <div key={item.q} className="bg-gray-50 border border-gray-200 rounded-xl p-5">

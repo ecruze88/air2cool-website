@@ -33,7 +33,7 @@ const schema = {
           "name": "Do you offer AC repair in Denville NJ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — Denville is one of our most frequently served Morris County communities. Same-day AC repair is available for Denville residents. Call (201) 787-5657.",
+            "text": "Yes — Denville is one of our frequently served Morris County communities. Appointment timing depends on technician availability and current conditions. Call (201) 787-5657.",
           },
         },
         {
@@ -224,8 +224,8 @@ export default function DenvillePage() {
               {[
                 {
                   icon: <Clock className="w-6 h-6 text-red-600" />,
-                  title: "20-Minute Response",
-                  body: "Based in Wharton, we reach most Denville addresses within 20 minutes — faster than any company based outside Morris County.",
+                  title: "Wharton-Based Service",
+                  body: "Air2Cool is based in nearby Wharton and serves Denville, subject to technician availability and current conditions.",
                 },
                 {
                   icon: <Wrench className="w-6 h-6 text-blue-600" />,
@@ -277,7 +277,7 @@ export default function DenvillePage() {
               {[
                 {
                   q: "Do you offer AC repair in Denville NJ?",
-                  a: "Yes — Denville is one of our most frequently served Morris County communities. Same-day AC repair is available for Denville residents. Our technicians are familiar with every part of town, from the Route 46 corridor to the lake communities off Diamond Spring Road.",
+                  a: "Yes — Denville is one of our frequently served Morris County communities. Appointment timing depends on technician availability and current conditions.",
                 },
                 {
                   q: "Can you install a mini split in a Denville lake home?",

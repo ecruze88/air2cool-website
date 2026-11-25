@@ -626,8 +626,8 @@ export default function ContactClientDual() {
             </div>
             <div>
               <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-green-600 mx-auto mb-1.5 md:mb-2" />
-              <p className="font-bold text-gray-900 text-xs md:text-base">Same-Day</p>
-              <p className="text-xs md:text-sm text-gray-600">When needed</p>
+              <p className="font-bold text-gray-900 text-xs md:text-base">Responsive Scheduling</p>
+              <p className="text-xs md:text-sm text-gray-600">Based on availability</p>
             </div>
             <div>
               <CheckCircle className="w-8 h-8 md:w-10 md:h-10 text-green-600 mx-auto mb-1.5 md:mb-2" />
