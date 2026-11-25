@@ -149,11 +149,11 @@ const ICON_MAP = {
 const HOME_BRAND_GROUPS = [
   {
     title: "Heating & Cooling",
-    slugs: ["carrier", "trane", "american-standard", "luxaire", "lennox", "rheem", "goodman"],
+    slugs: ["carrier", "trane", "american-standard", "luxaire", "goodman"],
   },
   {
     title: "Ductless & Heat Pumps",
-    slugs: ["mitsubishi-electric", "daikin", "fujitsu", "bosch"],
+    slugs: ["mitsubishi-electric", "bosch"],
   },
   {
     title: "Boilers & Hydronics",
